@@ -1,5 +1,7 @@
 # SuperTux88 Gentoo overlay
 
+Current build status: [![Build Status](https://travis-ci.org/SuperTux88/gentoo-overlay.svg?branch=master)](https://travis-ci.org/SuperTux88/gentoo-overlay)
+
 **use at your own risk**
 
 ## Usage
