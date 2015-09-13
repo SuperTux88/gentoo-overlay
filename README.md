@@ -33,3 +33,8 @@ The following packages are available in this overlay:
 * app-emulation/vagrant
   * A tool for building and distributing virtual machines using VirtualBox
   * https://www.vagrantup.com/
+* gnome-base/gnome-control-center
+  * Same as upstream, with additional `modemmanager` USE flag
+* gnome-extra/gnome-tweak-tool
+  * Same as upstream, with additional `gnome-shell` USE flag
+
