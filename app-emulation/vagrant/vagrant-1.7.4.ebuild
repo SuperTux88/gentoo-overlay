@@ -60,7 +60,6 @@ all_ruby_prepare() {
 		-e "/net-scp/s/~>/>=/" \
 		-e "/bundler/s/, \"<= .*\"//" \
 		${PN}.gemspec || die
-	cat ${PN}.gemspec
 
 	epatch "${FILESDIR}"/${PN}-1.7.4-rvm.patch
 }
