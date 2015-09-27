@@ -6,7 +6,7 @@ EAPI="5"
 
 QT_MINIMAL="4.6"
 
-inherit eutils multilib qt4-r2 git-r3
+inherit eutils multilib qt4-r2 git-r3 qmake-utils
 
 EGIT_REPO_URI="https://github.com/mumble-voip/mumble.git"
 
@@ -17,7 +17,9 @@ SRC_URI=""
 LICENSE="BSD MIT"
 SLOT="0"
 KEYWORDS=""
-IUSE="+alsa +dbus debug g15 oss pch portaudio pulseaudio speech zeroconf"
+IUSE="+alsa +dbus debug g15 oss pch portaudio pulseaudio qt4 +qt5 speech zeroconf"
+
+REQUIRED_USE="^^ ( qt4 qt5 )"
 
 RDEPEND=">=dev-libs/boost-1.41.0
 	>=dev-libs/openssl-1.0.0b
@@ -28,12 +30,22 @@ RDEPEND=">=dev-libs/boost-1.41.0
 	sys-apps/lsb-release
 	x11-libs/libX11
 	x11-libs/libXi
-	dev-qt/qtcore:4[ssl]
-	dev-qt/qtgui:4
-	dev-qt/qtopengl:4
-	dev-qt/qtsql:4[sqlite]
-	dev-qt/qtsvg:4
-	dev-qt/qtxmlpatterns:4
+	qt4? (
+		dev-qt/qtcore:4[ssl]
+		dev-qt/qtgui:4
+		dev-qt/qtopengl:4
+		dev-qt/qtsql:4[sqlite]
+		dev-qt/qtsvg:4
+		dev-qt/qtxmlpatterns:4
+	)
+	qt5? (
+		dev-qt/qtgui:5
+		dev-qt/qtnetwork:5[ssl]
+		dev-qt/qtopengl:5
+		dev-qt/qtsql:5[sqlite]
+		dev-qt/qtsvg:5
+		dev-qt/qtxmlpatterns:5
+	)
 	x11-proto/inputproto
 	alsa? ( media-libs/alsa-lib )
 	dbus? ( dev-qt/qtdbus:4 )
@@ -64,15 +76,17 @@ src_configure() {
 	use speech || conf_add="${conf_add} no-speechd"
 	use zeroconf || conf_add="${conf_add} no-bonjour"
 
-	eqmake4 "${S}/main.pro" -recursive \
-		CONFIG+="${conf_add} \
-			bundled-celt \
-			no-bundled-opus \
-			no-bundled-speex \
-			no-embed-qt-translations \
-			no-server \
-			no-update" \
-		DEFINES+="PLUGIN_PATH=/usr/$(get_libdir)/mumble"
+	conf_add="${conf_add} bundled-celt no-bundled-opus no-bundled-speex no-embed-qt-translations no-server no-update"
+
+	if use qt4 ; then
+		eqmake4 "${S}/main.pro" -recursive \
+			CONFIG+="${conf_add} qt4-legacy-compat" \
+			DEFINES+="PLUGIN_PATH=/usr/$(get_libdir)/mumble"
+	elif use qt5 ; then
+		eqmake5 "${S}/main.pro" -recursive \
+			CONFIG+="${conf_add}" \
+			DEFINES+="PLUGIN_PATH=/usr/$(get_libdir)/mumble"
+	fi
 }
 
 src_install() {
