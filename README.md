@@ -37,6 +37,11 @@ The following packages are available in this overlay:
   * Same as upstream, with additional `modemmanager` USE flag
 * gnome-extra/gnome-tweak-tool
   * Same as upstream, with additional `gnome-shell` USE flag
+* media-sound/mumble
+  * bleeding edge git version (9999)
+  * with qt5 support
+  * http://www.mumble.info
+  * https://github.com/mumble-voip/mumble
 * sys-kernel/tuxedo-wmi
   * TUXEDO WMI Treiber - Flugmodus-Taste und Tastaturbeleuchtung
   * https://www.linux-onlineshop.de/forum/index.php?page=Thread&threadID=26
