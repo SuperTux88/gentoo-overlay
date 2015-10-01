@@ -37,7 +37,7 @@ ruby_add_rdepend "
 	>=dev-ruby/listen-3.0.2
 	>=dev-ruby/hashicorp-checkpoint-0.1.1
 	>=dev-ruby/log4r-1.1.9
-	>=dev-ruby/net-ssh-2.6.6
+	>=dev-ruby/net-ssh-2.6.6:2.6
 	>=dev-ruby/net-sftp-2.1.0
 	>=dev-ruby/net-scp-1.1.0
 	>=dev-ruby/rest-client-1.6.0

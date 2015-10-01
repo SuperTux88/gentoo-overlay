@@ -27,7 +27,7 @@ IUSE=""
 
 ruby_add_rdepend "
 	>=dev-ruby/mixlib-shellout-1.2
-	>=dev-ruby/net-ssh-2.7
+	>=dev-ruby/net-ssh-2.7:2.6
 	>=dev-ruby/net-scp-1.1.0
 	>=dev-ruby/safe_yaml-1.0
 	>=dev-ruby/thor-0.19
