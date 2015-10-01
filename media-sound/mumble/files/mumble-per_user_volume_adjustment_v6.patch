@@ -1,0 +1,369 @@
+From fb9854e3439a33b9a7a9058f337f98259dfd3139 Mon Sep 17 00:00:00 2001
+From: Mikkel Krautz <mikkel@krautz.dk>
+Date: Sat, 24 Jan 2015 14:43:08 +0100
+Subject: [PATCH] Add per-user volume adjustment.
+
+This adds an entry to the context menu of
+other clients, allowing users to manually
+adjust the volume of other users on the
+server.
+---
+ src/mumble/AudioOutput.cpp            |  12 ++--
+ src/mumble/ClientUser.cpp             |   1 +
+ src/mumble/ClientUser.h               |   1 +
+ src/mumble/Database.cpp               |  22 +++++++
+ src/mumble/Database.h                 |   3 +
+ src/mumble/MainWindow.cpp             |   8 +++
+ src/mumble/Messages.cpp               |   3 +
+ src/mumble/UserVolumeSliderAction.cpp | 107 ++++++++++++++++++++++++++++++++++
+ src/mumble/UserVolumeSliderAction.h   |  58 ++++++++++++++++++
+ src/mumble/mumble.pro                 |   6 +-
+ 10 files changed, 213 insertions(+), 8 deletions(-)
+ create mode 100644 src/mumble/UserVolumeSliderAction.cpp
+ create mode 100644 src/mumble/UserVolumeSliderAction.h
+
+diff --git a/src/mumble/AudioOutput.cpp b/src/mumble/AudioOutput.cpp
+index df88cc5..884416a 100644
+--- a/src/mumble/AudioOutput.cpp
++++ b/src/mumble/AudioOutput.cpp
+@@ -491,15 +491,15 @@ bool AudioOutput::mix(void *outbuff, unsigned int nsamp) {
+ 			const float * RESTRICT pfBuffer = aop->pfBuffer;
+ 			float volumeAdjustment = 1;
+ 
+-			if (prioritySpeakerActive) {
+-				AudioOutputSpeech *speech = qobject_cast<AudioOutputSpeech *>(aop);
+-				if (speech) {
+-					const ClientUser* user = speech->p;
+-					
++			AudioOutputSpeech *speech = qobject_cast<AudioOutputSpeech *>(aop);
++			if (speech) {
++				const ClientUser *user = speech->p;
++				volumeAdjustment = user->fVolume;
++				if (prioritySpeakerActive) {
+ 					if (user->tsState != Settings::Whispering
+ 					    && !user->bPrioritySpeaker) {
+ 						
+-						volumeAdjustment = adjustFactor;
++						volumeAdjustment *= adjustFactor;
+ 					}
+ 				}
+ 			}
+diff --git a/src/mumble/ClientUser.cpp b/src/mumble/ClientUser.cpp
+index ed43221..e20f817 100644
+--- a/src/mumble/ClientUser.cpp
++++ b/src/mumble/ClientUser.cpp
+@@ -50,6 +50,7 @@ ClientUser::ClientUser(QObject *p) : QObject(p),
+ 		fPowerMin(0.0f),
+ 		fPowerMax(0.0f),
+ 		fAverageAvailable(0.0f),
++		fVolume(1.0f),
+ 		iFrames(0),
+ 		iSequence(0) {
+ }
+diff --git a/src/mumble/ClientUser.h b/src/mumble/ClientUser.h
+index 67c5c15..9834165 100644
+--- a/src/mumble/ClientUser.h
++++ b/src/mumble/ClientUser.h
+@@ -55,6 +55,7 @@ class ClientUser : public QObject, public User {
+ 
+ 		float fPowerMin, fPowerMax;
+ 		float fAverageAvailable;
++		float fVolume;
+ 
+ #ifdef REPORT_JITTER
+ 		QMutex qmTiming;
+diff --git a/src/mumble/Database.cpp b/src/mumble/Database.cpp
+index 0004724..004399e 100644
+--- a/src/mumble/Database.cpp
++++ b/src/mumble/Database.cpp
+@@ -173,6 +173,8 @@ Database::Database() {
+ 	execQueryAndLogFailure(query, QLatin1String("CREATE TABLE IF NOT EXISTS `pingcache` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `hostname` TEXT, `port` INTEGER, `ping` INTEGER)"));
+ 	execQueryAndLogFailure(query, QLatin1String("CREATE UNIQUE INDEX IF NOT EXISTS `pingcache_host_port` ON `pingcache`(`hostname`,`port`)"));
+ 
++	execQueryAndLogFailure(query, QLatin1String("CREATE TABLE IF NOT EXISTS `volume` (`hash` TEXT PRIMARY KEY, `volume` REAL)"));
++
+ 	execQueryAndLogFailure(query, QLatin1String("DELETE FROM `comments` WHERE `seen` < datetime('now', '-1 years')"));
+ 	execQueryAndLogFailure(query, QLatin1String("DELETE FROM `blobs` WHERE `seen` < datetime('now', '-1 months')"));
+ 
+@@ -595,6 +597,26 @@ void Database::setUdp(const QByteArray &digest, bool udp) {
+ 	execQueryAndLogFailure(query);
+ }
+ 
++void Database::setUserVolume(const QString &hash, float volume) {
++	QSqlQuery query;
++
++	query.prepare(QLatin1String("REPLACE INTO `volume` (`hash`, `volume`) VALUES (?,?)"));
++	query.addBindValue(hash);
++	query.addBindValue(volume);
++	execQueryAndLogFailure(query);
++}
++
++float Database::getUserVolume(const QString &hash) {
++	QSqlQuery query;
++	query.prepare(QLatin1String("SELECT volume FROM `volume` WHERE `hash` = ? "));
++	query.addBindValue(hash);
++	execQueryAndLogFailure(query);
++	if (query.next()) {
++		return query.value(0).toFloat();
++	}
++	return 1.0f;
++}
++
+ bool Database::fuzzyMatch(QString &name, QString &user, QString &pw, QString &hostname, unsigned short port) {
+ 	QSqlQuery query;
+ 	if (! user.isEmpty()) {
+diff --git a/src/mumble/Database.h b/src/mumble/Database.h
+index a71524a..43547f4 100644
+--- a/src/mumble/Database.h
++++ b/src/mumble/Database.h
+@@ -88,6 +88,9 @@ class Database : public QObject {
+ 
+ 		static bool getUdp(const QByteArray &digest);
+ 		static void setUdp(const QByteArray &digest, bool udp);
++
++		static void setUserVolume(const QString &hash, float volume);
++		static float getUserVolume(const QString &hash);
+ };
+ 
+ #endif
+diff --git a/src/mumble/MainWindow.cpp b/src/mumble/MainWindow.cpp
+index 24116b9..ba0e389 100644
+--- a/src/mumble/MainWindow.cpp
++++ b/src/mumble/MainWindow.cpp
+@@ -67,6 +67,7 @@
+ #include "../SignalCurry.h"
+ #include "Settings.h"
+ #include "Themes.h"
++#include "UserVolumeSliderAction.h"
+ 
+ #ifdef Q_OS_WIN
+ #include "TaskList.h"
+@@ -1233,6 +1234,13 @@ void MainWindow::qmUser_aboutToShow() {
+ 		qmUser->addAction(qaAudioDeaf);
+ 	}
+ 
++	if (p && !self) {
++		qmUser->addSeparator();
++		QMenu *volumeMenu = qmUser->addMenu(tr("Volume"));
++		UserVolumeSliderAction *userVolumeSliderAction = new UserVolumeSliderAction(p->uiSession, this);
++		volumeMenu->addAction(userVolumeSliderAction);
++	}
++
+ #ifndef Q_OS_MAC
+ 	if (g.s.bMinimalView) {
+ 		qmUser->addSeparator();
+diff --git a/src/mumble/Messages.cpp b/src/mumble/Messages.cpp
+index 9b29bce..cee080b 100644
+--- a/src/mumble/Messages.cpp
++++ b/src/mumble/Messages.cpp
+@@ -296,6 +296,9 @@ void MainWindow::msgUserState(const MumbleProto::UserState &msg) {
+ 			pDst->setLocalMute(true);
+ 		if (Database::isLocalIgnored(pDst->qsHash))
+ 			pDst->setLocalIgnore(true);
++
++		float volume = Database::getUserVolume(pDst->qsHash);
++		pDst->fVolume = volume;
+ 	}
+ 
+ 	if (bNewUser)
+diff --git a/src/mumble/UserVolumeSliderAction.cpp b/src/mumble/UserVolumeSliderAction.cpp
+new file mode 100644
+index 0000000..50ffb3a
+--- /dev/null
++++ b/src/mumble/UserVolumeSliderAction.cpp
+@@ -0,0 +1,107 @@
++/* Copyright (C) 2015, Mikkel Krautz <mikkel@krautz.dk>
++
++   All rights reserved.
++
++   Redistribution and use in source and binary forms, with or without
++   modification, are permitted provided that the following conditions
++   are met:
++
++   - Redistributions of source code must retain the above copyright notice,
++     this list of conditions and the following disclaimer.
++   - Redistributions in binary form must reproduce the above copyright notice,
++     this list of conditions and the following disclaimer in the documentation
++     and/or other materials provided with the distribution.
++   - Neither the name of the Mumble Developers nor the names of its
++     contributors may be used to endorse or promote products derived from this
++     software without specific prior written permission.
++
++   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
++   ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
++   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
++   A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR
++   CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
++   EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
++   PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
++   PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
++   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
++   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
++   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
++*/
++
++#include "mumble_pch.hpp"
++
++#include "UserVolumeSliderAction.h"
++
++#include "ClientUser.h"
++#include "Database.h"
++
++UserVolumeSliderAction::UserVolumeSliderAction(unsigned int sessionId, QWidget *parent)
++	: QWidgetAction(parent)
++	, m_valueLabel(NULL)
++	, m_clientSession(sessionId) {
++}
++
++QWidget *UserVolumeSliderAction::createWidget(QWidget *parent) {
++	QWidget *container = new QWidget(parent);
++
++	QHBoxLayout *hbox = new QHBoxLayout();
++	container->setLayout(hbox);
++
++	QLabel *valueLabel = new QLabel();
++	valueLabel->setAlignment(Qt::AlignRight|Qt::AlignVCenter);
++	valueLabel->setMinimumSize(QSize(32, 0));
++	m_valueLabel = valueLabel;
++
++	QSlider *slider = new QSlider(Qt::Horizontal);
++	slider->setMinimumSize(QSize(150, 0));
++	slider->setTickInterval(1);
++	connect(slider, SIGNAL(valueChanged(int)),
++	        this, SLOT(onSliderValueChanged(int)));
++
++	slider->setRange(0, 200);
++
++	ClientUser *p = ClientUser::get(m_clientSession);
++	if (p) {
++		int volume = iroundf(p->fVolume * 100 + 0.5f);
++		if (volume < 0) {
++			volume = 0;
++		} else if (volume > 200) {
++			volume = 200;
++		}
++		slider->setValue(volume);
++	} else {
++		slider->setValue(100);
++	}
++
++	// Ensure the onSliderValueChanged slot
++	// is invoked, even if value == 0.
++	onSliderValueChanged(slider->value());
++
++	hbox->addWidget(slider);
++	hbox->addWidget(valueLabel);
++
++	return container;
++}
++
++void UserVolumeSliderAction::deleteWidget(QWidget *widget) {
++	Q_ASSERT(widget != NULL);
++
++	widget->hide();
++	widget->deleteLater();
++
++	ClientUser *p = ClientUser::get(m_clientSession);
++	if (p && !p->qsHash.isEmpty()) {
++		Database::setUserVolume(p->qsHash, p->fVolume);
++	}
++}
++
++void UserVolumeSliderAction::onSliderValueChanged(int value) {
++	float volume = value / 100.0f;
++
++	ClientUser *p = ClientUser::get(m_clientSession);
++	if (p) {
++		p->fVolume = volume;
++	}
++
++	m_valueLabel->setText(tr("%1%").arg(value, 3));
++}
+diff --git a/src/mumble/UserVolumeSliderAction.h b/src/mumble/UserVolumeSliderAction.h
+new file mode 100644
+index 0000000..2de71ea
+--- /dev/null
++++ b/src/mumble/UserVolumeSliderAction.h
+@@ -0,0 +1,58 @@
++/* Copyright (C) 2015, Mikkel Krautz <mikkel@krautz.dk>
++
++   All rights reserved.
++
++   Redistribution and use in source and binary forms, with or without
++   modification, are permitted provided that the following conditions
++   are met:
++
++   - Redistributions of source code must retain the above copyright notice,
++     this list of conditions and the following disclaimer.
++   - Redistributions in binary form must reproduce the above copyright notice,
++     this list of conditions and the following disclaimer in the documentation
++     and/or other materials provided with the distribution.
++   - Neither the name of the Mumble Developers nor the names of its
++     contributors may be used to endorse or promote products derived from this
++     software without specific prior written permission.
++
++   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
++   ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
++   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
++   A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR
++   CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
++   EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
++   PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
++   PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
++   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
++   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
++   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
++*/
++
++#ifndef MUMBLE_MUMBLE_USERVOLUMESLIDERACTION_H_
++#define MUMBLE_MUMBLE_USERVOLUMESLIDERACTION_H_
++
++#include <QWidget>
++#include <QWidgetAction>
++#include <QLabel>
++
++#include "ClientUser.h"
++
++class UserVolumeSliderAction : public QWidgetAction {
++	private:
++		Q_OBJECT
++		Q_DISABLE_COPY(UserVolumeSliderAction)
++
++	public:
++		UserVolumeSliderAction(unsigned int sessionId, QWidget *parent);
++		QWidget *createWidget(QWidget *parent) Q_DECL_OVERRIDE;
++		void deleteWidget(QWidget *widget) Q_DECL_OVERRIDE;
++
++	public slots:
++		void onSliderValueChanged(int value);
++
++	private:
++		unsigned int   m_clientSession;
++		QLabel        *m_valueLabel;
++};
++
++#endif
+diff --git a/src/mumble/mumble.pro b/src/mumble/mumble.pro
+index 630b3b8..711f7c9 100644
+--- a/src/mumble/mumble.pro
++++ b/src/mumble/mumble.pro
+@@ -120,7 +120,8 @@ HEADERS *= BanEditor.h \
+     MumbleApplication.h \
+     ApplicationPalette.h \
+     ThemeInfo.h \
+-    Themes.h
++    Themes.h \
++    UserVolumeSliderAction.h
+ 
+ SOURCES *= BanEditor.cpp \
+     ACLEditor.cpp \
+@@ -180,7 +181,8 @@ SOURCES *= BanEditor.cpp \
+     MumbleApplication.cpp \
+     smallft.cpp \
+     ThemeInfo.cpp \
+-    Themes.cpp
++    Themes.cpp \
++    UserVolumeSliderAction.cpp
+ 
+ DIST		*= ../../icons/mumble.ico licenses.h smallft.h ../../icons/mumble.xpm murmur_pch.h mumble.plist
+ RESOURCES	*= mumble.qrc mumble_translations.qrc mumble_flags.qrc

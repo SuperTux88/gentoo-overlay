@@ -40,6 +40,7 @@ The following packages are available in this overlay:
 * media-sound/mumble
   * bleeding edge git version (9999)
   * with qt5 support
+  * with per user volume adjustment patch
   * http://www.mumble.info
   * https://github.com/mumble-voip/mumble
 * sys-kernel/tuxedo-wmi
