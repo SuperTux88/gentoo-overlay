@@ -130,15 +130,15 @@ diff --git a/src/mumble/MainWindow.cpp b/src/mumble/MainWindow.cpp
 index 24116b9..ba0e389 100644
 --- a/src/mumble/MainWindow.cpp
 +++ b/src/mumble/MainWindow.cpp
-@@ -67,6 +67,7 @@
- #include "../SignalCurry.h"
- #include "Settings.h"
- #include "Themes.h"
+@@ -62,6 +62,7 @@
+ #include "UserEdit.h"
+ #include "UserInformation.h"
+ #include "UserModel.h"
 +#include "UserVolumeSliderAction.h"
- 
- #ifdef Q_OS_WIN
- #include "TaskList.h"
-@@ -1233,6 +1234,13 @@ void MainWindow::qmUser_aboutToShow() {
+ #include "VersionCheck.h"
+ #include "ViewCert.h"
+ #include "VoiceRecorderDialog.h"
+@@ -1348,6 +1349,13 @@ void MainWindow::qmUser_aboutToShow() {
  		qmUser->addAction(qaAudioDeaf);
  	}
  
@@ -156,7 +156,7 @@ diff --git a/src/mumble/Messages.cpp b/src/mumble/Messages.cpp
 index 9b29bce..cee080b 100644
 --- a/src/mumble/Messages.cpp
 +++ b/src/mumble/Messages.cpp
-@@ -296,6 +296,9 @@ void MainWindow::msgUserState(const MumbleProto::UserState &msg) {
+@@ -305,6 +305,9 @@ void MainWindow::msgUserState(const MumbleProto::UserState &msg) {
  			pDst->setLocalMute(true);
  		if (Database::isLocalIgnored(pDst->qsHash))
  			pDst->setLocalIgnore(true);
@@ -347,23 +347,19 @@ diff --git a/src/mumble/mumble.pro b/src/mumble/mumble.pro
 index 630b3b8..711f7c9 100644
 --- a/src/mumble/mumble.pro
 +++ b/src/mumble/mumble.pro
-@@ -120,7 +120,8 @@ HEADERS *= BanEditor.h \
-     MumbleApplication.h \
-     ApplicationPalette.h \
-     ThemeInfo.h \
--    Themes.h
-+    Themes.h \
-+    UserVolumeSliderAction.h
- 
- SOURCES *= BanEditor.cpp \
-     ACLEditor.cpp \
-@@ -180,7 +181,8 @@ SOURCES *= BanEditor.cpp \
+@@ -137,6 +137,7 @@ HEADERS *= BanEditor.h \
+     VoiceRecorder.h \
+     VoiceRecorderDialog.h \
+     WebFetch.h \
++    UserVolumeSliderAction.h \
+     ../SignalCurry.h \
+     OverlayClient.h \
+     OverlayUser.h \
+@@ -207,6 +208,7 @@ SOURCES *= BanEditor.cpp \
+     VoiceRecorder.cpp \
+     VoiceRecorderDialog.cpp \
+     WebFetch.cpp \
++    UserVolumeSliderAction.cpp \
      MumbleApplication.cpp \
      smallft.cpp \
      ThemeInfo.cpp \
--    Themes.cpp
-+    Themes.cpp \
-+    UserVolumeSliderAction.cpp
- 
- DIST		*= ../../icons/mumble.ico licenses.h smallft.h ../../icons/mumble.xpm murmur_pch.h mumble.plist
- RESOURCES	*= mumble.qrc mumble_translations.qrc mumble_flags.qrc
