@@ -58,7 +58,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-per_user_volume_adjustment_v6.patch"
+	epatch "${FILESDIR}/${PN}-per_user_volume_adjustment_pull-request.patch"
 }
 
 src_configure() {
