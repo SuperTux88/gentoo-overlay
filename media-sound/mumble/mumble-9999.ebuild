@@ -57,10 +57,6 @@ RDEPEND=">=dev-libs/boost-1.41.0
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-src_prepare() {
-	epatch "${FILESDIR}/${PN}-per_user_volume_adjustment_pull-request.patch"
-}
-
 src_configure() {
 	local conf_add
 
