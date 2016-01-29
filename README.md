@@ -19,10 +19,6 @@ The following packages are available in this overlay:
 * app-admin/chefdk-omnibus
   * Omnibus installation of ChefDK
   * https://downloads.chef.io/chef-dk/
-  * berks and kitchen are not installed to the $PATH, you can use *app-admin/berkshelf* and *app-admin/test-kitchen*
-* app-emulation/vagrant-bin
-  * A tool for building and distributing virtual machines using VirtualBox
-  * https://www.vagrantup.com/
 * gnome-base/gnome-control-center
   * Same as upstream, with additional `modemmanager` USE flag
 * gnome-extra/gnome-tweak-tool
