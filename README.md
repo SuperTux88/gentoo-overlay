@@ -35,6 +35,8 @@ The following packages are available in this overlay:
   * Same as upstream, with additional `modemmanager` USE flag
 * gnome-extra/gnome-tweak-tool
   * Same as upstream, with additional `gnome-shell` USE flag
+* media-libs/libshout-idjc
+  * needed for media-sound/idjc-9999
 * media-sound/mumble
   * bleeding edge git version (9999)
   * with qt5 support
