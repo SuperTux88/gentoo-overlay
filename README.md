@@ -51,4 +51,6 @@ The following packages are available in this overlay:
 * sys-kernel/tuxedo-wmi
   * TUXEDO WMI Treiber - Flugmodus-Taste und Tastaturbeleuchtung
   * https://www.linux-onlineshop.de/forum/index.php?page=Thread&threadID=26
-
+* x11-apps/xfhd
+  * xfhd is a utility for resizing an X window to Full HD
+  * https://github.com/r41d/xfhd
