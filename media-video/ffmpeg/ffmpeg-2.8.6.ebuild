@@ -282,7 +282,7 @@ REQUIRED_USE="
 	${GPL_REQUIRED_USE}
 	${CPU_REQUIRED_USE}"
 RESTRICT="
-	encode? ( faac? ( bindist ) aacplus? ( bindist ) )
+	encode? ( faac? ( bindist ) aacplus? ( bindist ) nvenc? ( bindist ) )
 	gpl? ( openssl? ( bindist ) fdk? ( bindist ) )
 "
 
@@ -314,7 +314,7 @@ multilib_src_configure() {
 		if use aac || use amrenc ; then
 			myconf+=( --enable-version3 )
 		fi
-		if use aacplus || use faac ; then
+		if use aacplus || use faac || use nvenc ; then
 			myconf+=( --enable-nonfree )
 		fi
 	else
@@ -395,7 +395,7 @@ multilib_src_configure() {
 			*freebsd*)
 				myconf+=( --target-os=freebsd )
 				;;
-			mingw32*)
+			*mingw32*)
 				myconf+=( --target-os=mingw32 )
 				;;
 			*linux*)
