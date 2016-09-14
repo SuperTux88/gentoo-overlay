@@ -19,4 +19,3 @@ IUSE=""
 
 RDEPEND="virtual/libusb:1"
 DEPEND="${RDEPEND}"
-
