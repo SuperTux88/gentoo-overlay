@@ -1,11 +1,11 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python2_7 )
 
-inherit eutils gnome2 python-r1
+inherit gnome2 python-r1
 
 DESCRIPTION="Tool to customize GNOME 3 options"
 HOMEPAGE="https://wiki.gnome.org/action/show/Apps/GnomeTweakTool"
@@ -16,14 +16,13 @@ SLOT="0"
 IUSE="gnome-shell"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~ia64 ~x86"
 
-# Newer pygobject needed due upstream bug #723951
 COMMON_DEPEND="
 	${PYTHON_DEPS}
 	dev-libs/glib:2[dbus]
 	>=dev-python/pygobject-3.10.2:3[${PYTHON_USEDEP}]
-	>=gnome-base/gsettings-desktop-schemas-3.4
+	>=gnome-base/gsettings-desktop-schemas-3.23.3
 "
 # g-s-d, gnome-desktop, gnome-shell etc. needed at runtime for the gsettings schemas
 RDEPEND="${COMMON_DEPEND}
@@ -34,7 +33,7 @@ RDEPEND="${COMMON_DEPEND}
 	x11-libs/libnotify[introspection]
 
 	>=gnome-base/gnome-settings-daemon-3
-	gnome-shell? ( gnome-base/gnome-shell )
+	gnome-shell? ( >=gnome-base/gnome-shell-3.24 )
 	>=gnome-base/nautilus-3
 "
 DEPEND="${COMMON_DEPEND}
