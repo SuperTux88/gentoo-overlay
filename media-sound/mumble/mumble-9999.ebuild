@@ -45,7 +45,7 @@ RDEPEND=">=dev-libs/boost-1.41.0
 		dev-qt/qtsvg:5
 		dev-qt/qtxmlpatterns:5
 	)
-	x11-proto/inputproto
+	x11-base/xorg-proto
 	alsa? ( media-libs/alsa-lib )
 	dbus? ( dev-qt/qtdbus:4 )
 	g15? ( app-misc/g15daemon )
