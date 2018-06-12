@@ -28,9 +28,6 @@ layman -o https://raw.github.com/SuperTux88/gentoo-overlay/master/overlay.xml -f
 
 The following packages are available in this overlay:
 
-* app-admin/chefdk-omnibus
-  * Omnibus installation of ChefDK
-  * https://downloads.chef.io/chef-dk/
 * gnome-base/gnome-control-center
   * Same as upstream, with additional `modemmanager` USE flag
 * gnome-extra/gnome-tweak-tool
