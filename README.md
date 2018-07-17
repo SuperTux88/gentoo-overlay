@@ -34,11 +34,6 @@ The following packages are available in this overlay:
   * Same as upstream, with additional `gnome-shell` USE flag
 * media-libs/libshout-idjc
   * needed for media-sound/idjc-9999
-* media-sound/mumble
-  * bleeding edge git version (9999)
-  * with qt5 support
-  * http://www.mumble.info
-  * https://github.com/mumble-voip/mumble
 * sys-apps/skiller-ctl
   * Control the additional features (e.g., LEDs) of Sharkoon Skiller (Pro/Pro+) keyboards
   * https://github.com/anyc/skiller-ctl
