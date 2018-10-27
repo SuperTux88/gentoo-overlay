@@ -8,7 +8,7 @@ inherit kde5
 DESCRIPTION="Breeze visual style for the Plasma desktop"
 HOMEPAGE="https://cgit.kde.org/breeze.git"
 KEYWORDS="amd64 ~arm ~arm64 x86"
-IUSE="wayland X kde-cli-tools"
+IUSE="wayland X +kde-cli-tools"
 
 RDEPEND="
 	$(add_frameworks_dep frameworkintegration)
