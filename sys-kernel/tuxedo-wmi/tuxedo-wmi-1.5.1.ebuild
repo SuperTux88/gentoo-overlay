@@ -6,8 +6,8 @@ EAPI=5
 inherit linux-mod
 
 DESCRIPTION="TUXEDO WMI Treiber - Flugmodus-Taste und Tastaturbeleuchtung"
-HOMEPAGE="https://www.linux-onlineshop.de/forum/index.php?page=Thread&threadID=26"
-SRC_URI="https://www.linux-onlineshop.de/forum/index.php?page=Attachment&attachmentID=424 -> tuxedo-wmi-1.5.1.src.tar.gz"
+HOMEPAGE="https://github.com/tuxedocomputers/tuxedo.sh"
+SRC_URI="https://github.com/tuxedocomputers/tuxedo.sh/blob/master/tuxedo-wmi-1.5.1.src.tar.gz?raw=true"
 
 LICENSE="GPL-2"
 SLOT="0"
