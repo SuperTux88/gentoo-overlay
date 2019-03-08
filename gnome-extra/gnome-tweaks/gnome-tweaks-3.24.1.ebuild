@@ -1,14 +1,15 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python2_7 )
+GNOME_ORG_MODULE="gnome-tweak-tool"
 
 inherit gnome2 python-r1
 
 DESCRIPTION="Tool to customize GNOME 3 options"
-HOMEPAGE="https://wiki.gnome.org/action/show/Apps/GnomeTweakTool"
+HOMEPAGE="https://wiki.gnome.org/Apps/Tweaks"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -16,7 +17,7 @@ SLOT="0"
 IUSE="gnome-shell"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-KEYWORDS="amd64 ~ia64 ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 x86"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
@@ -35,6 +36,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=gnome-base/gnome-settings-daemon-3
 	gnome-shell? ( >=gnome-base/gnome-shell-3.24 )
 	>=gnome-base/nautilus-3
+	<gnome-base/nautilus-3.27
 "
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40.0
@@ -43,7 +45,7 @@ DEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	# Add contents of Gentoo's cursor theme directory to cursor theme list
-	eapply "${FILESDIR}/${PN}-3.10.1-gentoo-cursor-themes.patch"
+	eapply "${FILESDIR}/3.10.1-gentoo-cursor-themes.patch"
 
 	if ! use gnome-shell ; then
 		rm gtweak/tweaks/tweak_group_shell*

@@ -30,7 +30,7 @@ The following packages are available in this overlay:
 
 * gnome-base/gnome-control-center
   * Same as upstream, with additional `modemmanager` USE flag
-* gnome-extra/gnome-tweak-tool
+* gnome-extra/gnome-tweaks
   * Same as upstream, with additional `gnome-shell` USE flag
 * kde-plasma/breeze
   * Same as upstream, with additional `kde-cli-tools` USE flag
