@@ -40,6 +40,9 @@ The following packages are available in this overlay:
 * media-gfx/flameshot
   * Powerful yet simple to use screenshot software
   * https://github.com/lupoDharkael/flameshot
+* net-im/teams-for-linux
+  * Unofficial client for Microsoft Teams for Linux
+  * https://github.com/IsmaelMartinez/teams-for-linux
 * sys-apps/skiller-ctl
   * Control the additional features (e.g., LEDs) of Sharkoon Skiller (Pro/Pro+) keyboards
   * https://github.com/anyc/skiller-ctl
