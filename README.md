@@ -28,6 +28,9 @@ layman -o https://raw.github.com/SuperTux88/gentoo-overlay/master/overlay.xml -f
 
 The following packages are available in this overlay:
 
+* app-misc/google-cloud-sdk
+  * Google Cloud SDK
+  * https://cloud.google.com/sdk
 * gnome-base/gnome-control-center
   * Same as upstream, with additional `modemmanager` USE flag
 * gnome-extra/gnome-tweaks
