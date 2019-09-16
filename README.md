@@ -51,7 +51,7 @@ The following packages are available in this overlay:
   * https://github.com/anyc/skiller-ctl
 * sys-firmware/navi10-firmware
   * AMD Radeon Navi10 firmware files
-  * https://people.freedesktop.org/~agd5f/radeon\_ucode/navi10/
+  * https://people.freedesktop.org/~agd5f/radeon_ucode/navi10/
 * sys-kernel/tuxedo-wmi
   * TUXEDO WMI Treiber - Flugmodus-Taste und Tastaturbeleuchtung
   * https://www.linux-onlineshop.de/forum/index.php?page=Thread&threadID=26
