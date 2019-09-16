@@ -10,9 +10,9 @@ Add this to `/etc/portage/repos.conf/supertux88.conf`:
 
 ```
 [supertux88]
-location = /usr/local/portage-supertux88/
+location = /var/db/repos/supertux88/
 sync-type = git
-sync-uri = git://github.com/SuperTux88/gentoo-overlay.git
+sync-uri = https://github.com/SuperTux88/gentoo-overlay.git
 auto-sync = yes
 ```
 
