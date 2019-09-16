@@ -43,6 +43,9 @@ The following packages are available in this overlay:
 * net-im/teams-for-linux
   * Unofficial client for Microsoft Teams for Linux
   * https://github.com/IsmaelMartinez/teams-for-linux
+* sys-apps/it87
+  * IT87 sensors module
+  * https://github.com/a1wong/it87
 * sys-apps/skiller-ctl
   * Control the additional features (e.g., LEDs) of Sharkoon Skiller (Pro/Pro+) keyboards
   * https://github.com/anyc/skiller-ctl
