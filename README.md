@@ -43,15 +43,15 @@ The following packages are available in this overlay:
 * net-im/teams-for-linux
   * Unofficial client for Microsoft Teams for Linux
   * https://github.com/IsmaelMartinez/teams-for-linux
-* sys-apps/it87
-  * IT87 sensors module
-  * https://github.com/a1wong/it87
 * sys-apps/skiller-ctl
   * Control the additional features (e.g., LEDs) of Sharkoon Skiller (Pro/Pro+) keyboards
   * https://github.com/anyc/skiller-ctl
 * sys-firmware/navi10-firmware
   * AMD Radeon Navi10 firmware files
   * https://people.freedesktop.org/~agd5f/radeon_ucode/navi10/
+* sys-kernel/it87
+  * IT87 sensors module
+  * https://github.com/a1wong/it87
 * sys-kernel/tuxedo-wmi
   * TUXEDO WMI Treiber - Flugmodus-Taste und Tastaturbeleuchtung
   * https://www.linux-onlineshop.de/forum/index.php?page=Thread&threadID=26
