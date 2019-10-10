@@ -46,6 +46,9 @@ The following packages are available in this overlay:
 * sys-apps/skiller-ctl
   * Control the additional features (e.g., LEDs) of Sharkoon Skiller (Pro/Pro+) keyboards
   * https://github.com/anyc/skiller-ctl
+* sys-apps/zenmonitor
+  * Monitoring software for AMD Zen-based CPUs
+  * https://github.com/ocerman/zenmonitor
 * sys-kernel/it87
   * IT87 sensors module
   * https://github.com/a1wong/it87
