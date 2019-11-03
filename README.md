@@ -40,6 +40,8 @@ The following packages are available in this overlay:
 * media-gfx/flameshot
   * Powerful yet simple to use screenshot software
   * https://github.com/lupoDharkael/flameshot
+* media-libs/mesa
+  * RC versions for 19.3.0
 * net-im/teams-for-linux
   * Unofficial client for Microsoft Teams for Linux
   * https://github.com/IsmaelMartinez/teams-for-linux
