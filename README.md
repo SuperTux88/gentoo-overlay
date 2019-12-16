@@ -42,6 +42,9 @@ The following packages are available in this overlay:
   * https://github.com/lupoDharkael/flameshot
 * media-libs/mesa
   * RC versions for 19.3.0
+* net-im/teams
+  * Microsoft Teams for Linux is your chat-centered workspace in Office 365
+  * https://aka.ms/get-teams-linux
 * net-im/teams-for-linux
   * Unofficial client for Microsoft Teams for Linux
   * https://github.com/IsmaelMartinez/teams-for-linux
