@@ -42,6 +42,9 @@ The following packages are available in this overlay:
   * https://github.com/lupoDharkael/flameshot
 * media-libs/mesa
   * RC versions for 19.3.0
+* media-libs/wlrobs
+  * An obs-studio plugin that allows you to screen capture on wlroots based wayland compositors
+  * https://hg.sr.ht/~scoopta/wlrobs
 * net-im/teams
   * Microsoft Teams for Linux is your chat-centered workspace in Office 365
   * https://aka.ms/get-teams-linux
