@@ -35,6 +35,9 @@ The following packages are available in this overlay:
   * Same as upstream, with additional `modemmanager` USE flag
 * gnome-extra/gnome-tweaks
   * Same as upstream, with additional `gnome-shell` USE flag
+* gui-libs/gtk-layer-shell
+  * A library to create panels and other desktop components for Wayland using the Layer Shell protocol
+  * https://github.com/wmww/gtk-layer-shell
 * kde-plasma/breeze
   * Same as upstream, with additional `kde-cli-tools` USE flag
 * media-gfx/flameshot
