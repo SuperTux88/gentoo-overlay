@@ -1,0 +1,44 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index f025a3a..04198c4 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -79,6 +79,12 @@ target_include_directories(tz PUBLIC
+
+ add_library(date_interface INTERFACE) # an interface (not a library), to enable automatic include_directory (for when just date.h, but not "tz.h and its lib" are needed)
+
++# Cflags: -I${includedir} @TZ_COMPILE_DEFINITIONS@
++set( TZ_COMPILE_DEFINITIONS "$<IF:$<TARGET_EXISTS:tz>,-D$<JOIN:$<TARGET_PROPERTY:tz,INTERFACE_COMPILE_DEFINITIONS>, -D>,>" )
++configure_file(date.pc.in date.pc.cf @ONLY)
++file( GENERATE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/date.pc"
++  INPUT "${CMAKE_CURRENT_BINARY_DIR}/date.pc.cf" )
++
+ # add include folders to the INTERFACE and targets that consume it
+ target_include_directories(date_interface INTERFACE
+     "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
+@@ -99,6 +105,10 @@ install( TARGETS tz
+ 	RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})  # This is for Windows
+ install( DIRECTORY ${HEADER_FOLDER}/ DESTINATION include/ )
+
++install(
++  FILES ${CMAKE_BINARY_DIR}/date.pc
++  DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
++
+ if ( ENABLE_DATE_TESTING )
+
+     enable_testing( )
+diff --git a/date.pc.in b/date.pc.in
+new file mode 100644
+index 0000000..bb343c9
+--- /dev/null
++++ b/date.pc.in
+@@ -0,0 +1,10 @@
++prefix=@CMAKE_INSTALL_PREFIX@
++exec_prefix=@CMAKE_INSTALL_PREFIX@/bin
++libdir=@CMAKE_INSTALL_PREFIX@/lib@LIB_SUFFIX@
++includedir=@CMAKE_INSTALL_PREFIX@/include
++
++Name: date
++Description: A date and time library based on the C++11/14/17 <chrono> header
++Version: @PACKAGE_VERSION@
++Libs: -L${libdir} -ltz
++Cflags: -I${includedir} @TZ_COMPILE_DEFINITIONS@

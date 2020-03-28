@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>benjamin@coding4.coffee</email>
+	</maintainer>
+	<longdescription lang="en">
+		<![CDATA[
+			A date and time library based on the C++11/14/17 <chrono> header
+		]]>
+	</longdescription>
+</pkgmetadata>

@@ -41,6 +41,7 @@ DEPEND="
 	tray? ( dev-libs/libdbusmenu[gtk3] )
 	udev? ( virtual/libudev:= )
 	gtk-layer-shell? ( gui-libs/gtk-layer-shell )
+	dev-libs/date
 "
 
 RDEPEND="${DEPEND}"
