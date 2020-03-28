@@ -35,6 +35,9 @@ The following packages are available in this overlay:
   * Same as upstream, with additional `modemmanager` USE flag
 * gnome-extra/gnome-tweaks
   * Same as upstream, with additional `gnome-shell` USE flag
+* gui-apps/waybar
+  * Highly customizable Wayland bar for Sway and Wlroots based compositors
+  * https://github.com/Alexays/Waybar
 * gui-libs/gtk-layer-shell
   * A library to create panels and other desktop components for Wayland using the Layer Shell protocol
   * https://github.com/wmww/gtk-layer-shell
