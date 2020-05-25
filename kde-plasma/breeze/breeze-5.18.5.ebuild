@@ -1,18 +1,19 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-KFMIN=5.64.0
+KFMIN=5.66.0
 PVCUT=$(ver_cut 1-3)
 QTMIN=5.12.3
 inherit ecm kde.org
 
 DESCRIPTION="Breeze visual style for the Plasma desktop"
-HOMEPAGE="https://cgit.kde.org/breeze.git"
+HOMEPAGE="https://invent.kde.org/plasma/breeze"
+
 LICENSE="GPL-2" # TODO: CHECK
 SLOT="5"
-KEYWORDS="amd64 ~arm arm64 x86"
+KEYWORDS="amd64 ~arm arm64 ~ppc64 x86"
 IUSE="wayland X +kde-cli-tools"
 
 # drop qtwidgets subslot operator when QT_MINIMAL >= 5.13.0
