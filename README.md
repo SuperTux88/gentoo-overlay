@@ -54,6 +54,9 @@ The following packages are available in this overlay:
 * media-libs/wlrobs
   * An obs-studio plugin that allows you to screen capture on wlroots based wayland compositors
   * https://hg.sr.ht/~scoopta/wlrobs
+* net-im/teams
+  * Microsoft Teams, an Office 365 multimedia collaboration client
+  * https://aka.ms/get-teams-linux
 * sys-apps/skiller-ctl
   * Control the additional features (e.g., LEDs) of Sharkoon Skiller (Pro/Pro+) keyboards
   * https://github.com/anyc/skiller-ctl
