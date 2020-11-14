@@ -31,8 +31,6 @@ The following packages are available in this overlay:
 * app-misc/google-cloud-sdk
   * Google Cloud SDK
   * https://cloud.google.com/sdk
-* gnome-base/gnome-control-center
-  * Same as upstream, with additional `modemmanager` USE flag
 * gnome-extra/gnome-tweaks
   * Same as upstream, with additional `gnome-shell` USE flag
 * kde-plasma/breeze
