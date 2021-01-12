@@ -6,15 +6,15 @@ EAPI=7
 inherit cmake xdg-utils
 
 DESCRIPTION="Powerful yet simple to use screenshot software"
-HOMEPAGE="https://flameshot.js.org"
+HOMEPAGE="https://flameshot.org"
 
 if [[ ${PV} == 9999 ]];then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/lupoDharkael/${PN}"
+	EGIT_REPO_URI="https://github.com/flameshot-org/${PN}"
 	SRC_URI=""
 	KEYWORDS=""
 else
-	SRC_URI="https://github.com/lupoDharkael/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/flameshot-org/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
 
