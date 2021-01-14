@@ -37,7 +37,7 @@ The following packages are available in this overlay:
   * Same as upstream, with additional `kde-cli-tools` USE flag
 * media-gfx/flameshot
   * Powerful yet simple to use screenshot software
-  * https://github.com/lupoDharkael/flameshot
+  * https://github.com/flameshot-org/flameshot
 * media-libs/wlrobs
   * An obs-studio plugin that allows you to screen capture on wlroots based wayland compositors
   * https://hg.sr.ht/~scoopta/wlrobs
