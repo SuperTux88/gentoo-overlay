@@ -18,3 +18,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: lucianposton/repoman-ebuild-qa-action@v1
+      with:
+        portage_version: 3.0.17
