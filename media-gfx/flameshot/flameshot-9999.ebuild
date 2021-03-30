@@ -24,12 +24,9 @@ IUSE=""
 
 RDEPEND="
 	dev-qt/qtcore:5
-	dev-qt/qtgui:5
-	dev-qt/qtwidgets:5
 	dev-qt/qtsvg:5
 	dev-qt/qtnetwork:5
 	dev-qt/qtdbus:5
-	sys-apps/dbus
 "
 DEPEND="${RDEPEND}
 	dev-qt/linguist-tools:5
