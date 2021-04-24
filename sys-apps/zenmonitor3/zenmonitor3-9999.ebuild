@@ -19,7 +19,7 @@ IUSE="cli"
 CONFIG_CHECK="X86_MSR"
 
 DEPEND="
-	!sys-apps/zenmonitor
+	!!sys-apps/zenmonitor
 	sys-kernel/zenpower"
 RDEPEND="${DEPEND}"
 BDEPEND=""
