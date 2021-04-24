@@ -9,7 +9,7 @@ DESCRIPTION="Monitoring software for AMD Zen-based CPUs"
 HOMEPAGE="https://github.com/ocerman/zenmonitor"
 SRC_URI="https://github.com/ocerman/${PN}/archive/v${PV}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""

@@ -11,7 +11,7 @@ DESCRIPTION="Monitoring software for AMD Zen-based CPUs"
 HOMEPAGE="https://github.com/ocerman/zenmonitor"
 SRC_URI=""
 
-LICENSE="GPL-2"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS=""
 IUSE=""
