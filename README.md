@@ -47,6 +47,9 @@ The following packages are available in this overlay:
 * sys-apps/zenmonitor
   * Monitoring software for AMD Zen-based CPUs
   * https://github.com/ocerman/zenmonitor
+* sys-apps/zenmonitor3
+  * Monitoring software for AMD Zen-based CPUs with Zen 3 support
+  * https://github.com/Ta180m/zenmonitor3
 * sys-kernel/it87
   * IT87 sensors module
   * https://github.com/a1wong/it87

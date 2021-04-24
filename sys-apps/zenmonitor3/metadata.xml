@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>benjamin@coding4.coffee</email>
+	</maintainer>
+	<longdescription lang="en">
+		Monitoring software for AMD Zen-based CPUs with Zen 3 support
+	</longdescription>
+	<use>
+		<flag name="cli">Enables the CLI</flag>
+	</use>
+</pkgmetadata>
