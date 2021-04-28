@@ -3,7 +3,7 @@
 
 EAPI="5"
 
-inherit xorg-2 git-r3
+inherit xorg-3 git-r3
 
 EGIT_REPO_URI="https://github.com/r41d/xfhd.git"
 
