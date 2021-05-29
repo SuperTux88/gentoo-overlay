@@ -49,8 +49,8 @@ src_prepare() {
 	default_src_prepare
 
 	if ! use gnome-shell ; then
-		rm gtweak/tweaks/tweak_group_shell_extensions.py gtweak/tweaks/tweak_group_workspaces.py
-		eapply "${FILESDIR}/3.30.2-disable-gnome-shell.patch"
+		rm gtweak/tweaks/tweak_group_workspaces.py
+		eapply "${FILESDIR}/40.0-disable-gnome-shell.patch"
 	fi
 }
 
