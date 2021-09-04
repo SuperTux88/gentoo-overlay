@@ -31,6 +31,10 @@ The following packages are available in this overlay:
 * app-misc/google-cloud-sdk
   * Google Cloud SDK
   * https://cloud.google.com/sdk
+* dev-python/hidapi
+  * Python wrapper for the HIDAPI
+  * Dependency for liquidctl
+  * https://github.com/trezor/cython-hidapi
 * gnome-extra/gnome-tweaks
   * Same as upstream, with additional `gnome-shell` USE flag
 * kde-plasma/breeze
