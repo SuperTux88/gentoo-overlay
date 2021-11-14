@@ -42,6 +42,9 @@ The following packages are available in this overlay:
 * media-libs/wlrobs
   * An obs-studio plugin that allows you to screen capture on wlroots based wayland compositors
   * https://hg.sr.ht/~scoopta/wlrobs
+* sys-apps/dstat
+  * Same as upstream, with additional patch for `cannot convert float infinity to integer`
+  * https://github.com/dagwieers/dstat
 * sys-apps/liquidctl
   * Cross-platform CLI and Python drivers for AIO liquid coolers and other devices 
   * https://github.com/liquidctl/liquidctl

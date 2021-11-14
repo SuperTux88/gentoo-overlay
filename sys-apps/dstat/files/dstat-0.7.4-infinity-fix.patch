@@ -1,0 +1,20 @@
+diff --git a/dstat b/dstat
+index 9359965..18c4948 100755
+--- a/dstat
++++ b/dstat
+@@ -2030,6 +2030,7 @@ def snmpwalk(server, community, oid):
+ def dchg(var, width, base):
+     "Convert decimal to string given base and length"
+     c = 0
++    var = max(min(var, sys.maxsize), -sys.maxsize)
+     while True:
+         ret = str(int(round(var)))
+         if len(ret) <= width:
+@@ -2165,6 +2166,7 @@ def cprint(var, ctype = 'f', width = 4, scale = 1000):
+ 
+     ### Add unit to output
+     if unit:
++        var = max(min(var, sys.maxsize), -sys.maxsize)
+         if c != -1 and round(var) != 0:
+             ret += cunit + units[c]
+         else:
