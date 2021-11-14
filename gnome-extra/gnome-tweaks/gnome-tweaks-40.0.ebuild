@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-PYTHON_COMPAT=( python3_{7..9} )
+PYTHON_COMPAT=( python3_{8..10} )
 
 inherit gnome.org gnome2-utils meson python-single-r1 xdg
 
@@ -15,13 +15,13 @@ SLOT="0"
 IUSE="gnome-shell"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-KEYWORDS="amd64 ~arm ~arm64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~arm ~arm64 ~ppc64 x86"
 
 DEPEND="${PYTHON_DEPS}"
 # See README.md for list of deps
 RDEPEND="${DEPEND}
 	$(python_gen_cond_dep '
-		>=dev-python/pygobject-3.10.2:3[${PYTHON_MULTI_USEDEP}]
+		>=dev-python/pygobject-3.10.2:3[${PYTHON_USEDEP}]
 	')
 	>=gnome-base/gnome-settings-daemon-3
 	x11-themes/sound-theme-freedesktop
