@@ -1,9 +1,9 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="5"
+EAPI=7
 
-DESCRIPTION="Control the additional features (e.g., LEDs) of Sharkoon Skiller (Pro/Pro+) keyboards"
+DESCRIPTION="Control the additional features of Sharkoon Skiller (Pro/Pro+) keyboards"
 HOMEPAGE="https://github.com/anyc/skiller-ctl"
 SRC_URI="https://github.com/anyc/${PN}/archive/v${PV}.tar.gz"
 
