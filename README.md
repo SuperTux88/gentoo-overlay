@@ -60,9 +60,6 @@ The following packages are available in this overlay:
 * sys-kernel/it87
   * IT87 sensors module
   * https://github.com/a1wong/it87
-* sys-kernel/tuxedo-wmi
-  * TUXEDO WMI Treiber - Flugmodus-Taste und Tastaturbeleuchtung
-  * https://www.linux-onlineshop.de/forum/index.php?page=Thread&threadID=26
 * sys-kernel/zenpower
   * Linux kernel driver for reading sensors of AMD Zen family CPUs
   * https://github.com/ocerman/zenpower
