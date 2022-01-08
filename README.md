@@ -42,6 +42,9 @@ The following packages are available in this overlay:
 * media-libs/wlrobs
   * An obs-studio plugin that allows you to screen capture on wlroots based wayland compositors
   * https://hg.sr.ht/~scoopta/wlrobs
+* sci-electronics/openhantek6022
+  * a DSO software for Hantek USB digital signal oscilloscopes 6022BE / BL
+  * https://github.com/OpenHantek/OpenHantek6022
 * sys-apps/dstat
   * Same as upstream, with additional patch for `cannot convert float infinity to integer`
   * https://github.com/dagwieers/dstat
