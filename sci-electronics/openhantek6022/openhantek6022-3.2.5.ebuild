@@ -29,3 +29,7 @@ src_configure() {
 	cmake_src_configure
 }
 
+src_install () {
+	cmake_src_install
+	mv ${D}/usr/share/doc/openhantek ${D}/usr/share/doc/${P}
+}
