@@ -1,9 +1,9 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-KFMIN=5.82.0
+KFMIN=5.86.0
 PVCUT=$(ver_cut 1-3)
 QTMIN=5.15.2
 inherit ecm kde.org
@@ -13,7 +13,7 @@ HOMEPAGE="https://invent.kde.org/plasma/breeze"
 
 LICENSE="GPL-2" # TODO: CHECK
 SLOT="5"
-KEYWORDS="amd64 ~arm arm64 ~ppc64 ~riscv x86"
+KEYWORDS="amd64 ~arm ~arm64 ~ppc64 ~riscv x86"
 IUSE="X +kde-cli-tools"
 
 RDEPEND="
