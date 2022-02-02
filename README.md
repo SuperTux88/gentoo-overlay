@@ -65,7 +65,7 @@ The following packages are available in this overlay:
   * https://github.com/a1wong/it87
 * sys-kernel/zenpower
   * Linux kernel driver for reading sensors of AMD Zen family CPUs
-  * https://github.com/ocerman/zenpower
+  * https://github.com/Ta180m/zenpower3
 * x11-apps/xfhd
   * xfhd is a utility for resizing an X window to Full HD
   * https://github.com/r41d/xfhd
