@@ -57,9 +57,9 @@ The following packages are available in this overlay:
 * sci-electronics/openhantek6022
   * a DSO software for Hantek USB digital signal oscilloscopes 6022BE / BL
   * https://github.com/OpenHantek/OpenHantek6022
-* sys-apps/dstat
-  * Same as upstream, with additional patch for `cannot convert float infinity to integer`
-  * https://github.com/dagwieers/dstat
+* sys-apps/dool
+  * Versatile replacement for vmstat, iostat and ifstat (clone of dstat)
+  * https://github.com/scottchiefbaker/dool
 * sys-apps/liquidctl
   * Cross-platform CLI and Python drivers for AIO liquid coolers and other devices 
   * https://github.com/liquidctl/liquidctl
