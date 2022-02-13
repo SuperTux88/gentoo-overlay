@@ -42,6 +42,9 @@ The following packages are available in this overlay:
 * media-fonts/meslo-nerd
   * Nerd Font build of Apple's Menlo font
   * https://github.com/ryanoasis/nerd-fonts
+* media-fonts/terminus-ttf
+  * A TrueType version of Terminus Font
+  * https://files.ax86.net/terminus-ttf/
 * media-libs/wlrobs
   * An obs-studio plugin that allows you to screen capture on wlroots based wayland compositors
   * https://hg.sr.ht/~scoopta/wlrobs
