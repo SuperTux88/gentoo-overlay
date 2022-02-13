@@ -31,5 +31,5 @@ src_configure() {
 
 src_install () {
 	cmake_src_install
-	mv ${D}/usr/share/doc/openhantek ${D}/usr/share/doc/${P}
+	mv "${D}/usr/share/doc/openhantek" "${D}/usr/share/doc/${P}"
 }
