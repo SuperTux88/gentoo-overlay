@@ -31,6 +31,9 @@ The following packages are available in this overlay:
 * app-misc/google-cloud-sdk
   * Google Cloud SDK
   * https://cloud.google.com/sdk
+* app-shells/gitstatus
+  * Git status for Bash and Zsh prompt
+  * https://github.com/romkatv/gitstatus
 * dev-python/hidapi
   * Python wrapper for the HIDAPI
   * Dependency for liquidctl
