@@ -34,6 +34,9 @@ The following packages are available in this overlay:
 * app-shells/gitstatus
   * Git status for Bash and Zsh prompt
   * https://github.com/romkatv/gitstatus
+* app-shells/powerlevel10k
+  * A theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience
+  * https://github.com/romkatv/powerlevel10k
 * dev-python/hidapi
   * Python wrapper for the HIDAPI
   * Dependency for liquidctl

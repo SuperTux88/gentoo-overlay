@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>benjamin@coding4coffee.ch</email>
+    <name>Benjamin Neff</name>
+  </maintainer>
+  <use>
+    <flag name="nerd-fonts">Install MesloLGS Nerd Font</flag>
+  </use>
+</pkgmetadata>
