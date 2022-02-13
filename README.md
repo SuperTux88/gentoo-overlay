@@ -39,6 +39,9 @@ The following packages are available in this overlay:
   * Same as upstream, with additional `gnome-shell` USE flag
 * kde-plasma/breeze
   * Same as upstream, with additional `kde-cli-tools` USE flag
+* media-fonts/meslo-nerd
+  * Nerd Font build of Apple's Menlo font
+  * https://github.com/ryanoasis/nerd-fonts
 * media-libs/wlrobs
   * An obs-studio plugin that allows you to screen capture on wlroots based wayland compositors
   * https://hg.sr.ht/~scoopta/wlrobs

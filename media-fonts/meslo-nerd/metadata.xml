@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>benjamin@coding4coffee.ch</email>
+    <name>Benjamin Neff</name>
+  </maintainer>
+  <use>
+    <flag name="lgs">Install small line gap variant</flag>
+    <flag name="lgm">Install medium line gap variant</flag>
+    <flag name="lgl">Install large line gap variant</flag>
+    <flag name="wide">Install with wide Nerd Font glyphs</flag>
+    <flag name="mono">Install with monospaced Nerd Font glyphs</flag>
+  </use>
+</pkgmetadata>
