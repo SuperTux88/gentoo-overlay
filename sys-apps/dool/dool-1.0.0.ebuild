@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-1.0.0-fix-overflow-error.patch" # https://github.com/scottchiefbaker/dool/pull/16
+	"${FILESDIR}/${PN}-1.0.0-bytes-by-default.patch" # https://github.com/scottchiefbaker/dool/issues/13
 )
 
 src_prepare() {
