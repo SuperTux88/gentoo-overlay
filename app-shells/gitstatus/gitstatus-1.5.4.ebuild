@@ -5,7 +5,8 @@ EAPI=8
 
 inherit cmake flag-o-matic
 
-LIBGIT_TAG=tag-5860a42d19bcd226cb6eff2dcbfcbf155d570c73
+# from build.info
+LIBGIT_TAG=tag-0ad3d776aa86dd607dc86dcd7f77ad3ed7ebec61
 LIBGIT_P="libgit2-romkatv-${LIBGIT_TAG}"
 LIBGIT_DIR="${LIBGIT_P/-romkatv/}"
 
