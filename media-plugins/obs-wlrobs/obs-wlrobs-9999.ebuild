@@ -4,7 +4,7 @@
 EAPI=7
 
 inherit mercurial
-EHG_REPO_URI="https://hg.sr.ht/~scoopta/${PN}"
+EHG_REPO_URI="https://hg.sr.ht/~scoopta/wlrobs"
 
 inherit meson
 
