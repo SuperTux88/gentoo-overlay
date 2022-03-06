@@ -15,15 +15,23 @@ SRC_URI=""
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="+dmabuf +scpy"
 
 DEPEND="
+	dev-libs/wayland
 	media-video/obs-studio
-	gui-libs/wlroots"
+	dmabuf? ( x11-libs/libdrm )
+"
 RDEPEND="${DEPEND}"
-BDEPEND="virtual/pkgconfig"
+BDEPEND="
+	virtual/pkgconfig
+	dev-util/meson
+"
 
-src_install() {
-	insinto /usr/lib64/obs-plugins
-	doins "${BUILD_DIR}/libwlrobs.so"
+src_configure() {
+	local emesonargs=(
+		$(meson_use dmabuf use_dmabuf)
+		$(meson_use scpy use_scpy)
+	)
+	meson_src_configure
 }

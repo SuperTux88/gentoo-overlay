@@ -7,4 +7,8 @@
 	<longdescription lang="en">
 		An obs-studio plugin that allows you to screen capture on wlroots based wayland compositors
 	</longdescription>
+	<use>
+		<flag name="dmabuf">Enable the dmabuf backend</flag>
+		<flag name="scpy">Enable the scpy backend</flag>
+	</use>
 </pkgmetadata>
