@@ -51,6 +51,9 @@ The following packages are available in this overlay:
 * media-fonts/terminus-ttf
   * A TrueType version of Terminus Font
   * https://files.ax86.net/terminus-ttf/
+* media-plugins/obs-livesplit-one
+  * A plugin for OBS Studio that allows adding LiveSplit One as a source
+  * https://github.com/CryZe/obs-livesplit-one
 * media-plugins/obs-wlrobs
   * An obs-studio plugin that allows you to screen capture on wlroots based wayland compositors
   * https://hg.sr.ht/~scoopta/wlrobs
