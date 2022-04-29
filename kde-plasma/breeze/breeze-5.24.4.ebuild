@@ -1,9 +1,9 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-KFMIN=5.86.0
+KFMIN=5.90.0
 PVCUT=$(ver_cut 1-3)
 QTMIN=5.15.2
 inherit ecm kde.org
@@ -13,7 +13,7 @@ HOMEPAGE="https://invent.kde.org/plasma/breeze"
 
 LICENSE="GPL-2" # TODO: CHECK
 SLOT="5"
-KEYWORDS="amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86"
+KEYWORDS="amd64 ~arm arm64 ~ppc64 ~riscv x86"
 IUSE="X +kde-cli-tools"
 
 RDEPEND="
@@ -35,15 +35,11 @@ RDEPEND="
 	>=kde-plasma/kdecoration-${PVCUT}:5
 	X? ( x11-libs/libxcb )
 "
-DEPEND="${RDEPEND}
-	>=kde-frameworks/kpackage-${KFMIN}:5
-"
+DEPEND="${RDEPEND}"
 PDEPEND="
 	>=kde-frameworks/breeze-icons-${KFMIN}:5
 	kde-cli-tools? ( >=kde-plasma/kde-cli-tools-${PVCUT}:5 )
 "
-
-PATCHES=( "${FILESDIR}"/${P}-fix-kstyle-crash.patch )
 
 src_configure() {
 	local mycmakeargs=(
