@@ -1,4 +1,4 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -32,5 +32,6 @@ src_install() {
 	cp -R "${S}/" "${D}/usr/share/" || die "Install failed!"
 	dosym "../share/google-cloud-sdk/bin/gcloud" /usr/bin/gcloud
 	dosym "../share/google-cloud-sdk/bin/gsutil" /usr/bin/gsutil
+	dosym "../share/google-cloud-sdk/bin/docker-credential-gcloud" /usr/bin/docker-credential-gcloud
 	#python_optimize "${D}/usr/share/${PN}"
 }
