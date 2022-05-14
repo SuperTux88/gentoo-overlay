@@ -57,6 +57,9 @@ The following packages are available in this overlay:
 * media-plugins/obs-wlrobs
   * An obs-studio plugin that allows you to screen capture on wlroots based wayland compositors
   * https://hg.sr.ht/~scoopta/wlrobs
+* net-misc/warpinator
+  * Share files across the LAN
+  * https://github.com/linuxmint/warpinator
 * sci-electronics/openhantek6022
   * a DSO software for Hantek USB digital signal oscilloscopes 6022BE / BL
   * https://github.com/OpenHantek/OpenHantek6022
