@@ -5,4 +5,7 @@
 		<name>Benjamin Neff</name>
 		<email>gentoo@benjaminneff.ch</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">CryZe/obs-livesplit-one</remote-id>
+	</upstream>
 </pkgmetadata>

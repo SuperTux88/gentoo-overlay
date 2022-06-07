@@ -8,4 +8,7 @@
 	<longdescription lang="en">
 		IT87 sensors module
 	</longdescription>
+	<upstream>
+		<remote-id type="github">a1wong/it87</remote-id>
+	</upstream>
 </pkgmetadata>

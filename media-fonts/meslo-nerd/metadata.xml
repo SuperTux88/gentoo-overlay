@@ -5,6 +5,9 @@
 		<name>Benjamin Neff</name>
 		<email>gentoo@benjaminneff.ch</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">ryanoasis/nerd-fonts</remote-id>
+	</upstream>
 	<use>
 		<flag name="lgs">Install small line gap variant</flag>
 		<flag name="lgm">Install medium line gap variant</flag>

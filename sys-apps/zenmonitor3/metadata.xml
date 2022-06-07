@@ -8,6 +8,9 @@
 	<longdescription lang="en">
 		Monitoring software for AMD Zen-based CPUs with Zen 3 support
 	</longdescription>
+	<upstream>
+		<remote-id type="github">Ta180m/zenmonitor3</remote-id>
+	</upstream>
 	<use>
 		<flag name="cli">Enables the CLI</flag>
 	</use>
