@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <maintainer type="person">
-    <email>benjamin@coding4.coffee</email>
-  </maintainer>
-  <upstream>
-    <remote-id type="pypi">hidapi</remote-id>
-    <remote-id type="github">trezor/cython-hidapi</remote-id>
-  </upstream>
+	<maintainer type="person">
+		<name>Benjamin Neff</name>
+		<email>gentoo@benjaminneff.ch</email>
+	</maintainer>
+	<upstream>
+		<remote-id type="pypi">hidapi</remote-id>
+		<remote-id type="github">trezor/cython-hidapi</remote-id>
+	</upstream>
 </pkgmetadata>
