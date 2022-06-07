@@ -43,6 +43,9 @@ The following packages are available in this overlay:
   * https://github.com/trezor/cython-hidapi
 * gnome-extra/gnome-tweaks
   * Same as upstream, with additional `gnome-shell` USE flag
+* gui-apps/wev
+  * wayland event viewer
+  * https://git.sr.ht/~sircmpwn/wev
 * gui-apps/ydotool
   * Generic command-line automation tool (no X!)
   * https://github.com/ReimuNotMoe/ydotool
