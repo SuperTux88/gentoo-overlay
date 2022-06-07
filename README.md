@@ -43,6 +43,9 @@ The following packages are available in this overlay:
   * https://github.com/trezor/cython-hidapi
 * gnome-extra/gnome-tweaks
   * Same as upstream, with additional `gnome-shell` USE flag
+* gui-apps/ydotool
+  * Generic command-line automation tool (no X!)
+  * https://github.com/ReimuNotMoe/ydotool
 * kde-plasma/breeze
   * Same as upstream, with additional `kde-cli-tools` USE flag
 * media-fonts/meslo-nerd
