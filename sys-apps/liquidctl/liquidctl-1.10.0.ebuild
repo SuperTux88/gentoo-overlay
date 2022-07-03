@@ -3,8 +3,8 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..9} )
-DISTUTILS_USE_SETUPTOOLS="rdepend"
+PYTHON_COMPAT=( python3_{8..10} )
+DISTUTILS_USE_PEP517=setuptools
 inherit distutils-r1 udev
 
 DESCRIPTION="Cross-platform CLI and Python drivers for AIO liquid coolers and other devices"
