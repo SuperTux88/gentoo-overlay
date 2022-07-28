@@ -3,17 +3,17 @@
 
 EAPI=8
 
-KFMIN=5.90.0
+KFMIN=5.92.0
 PVCUT=$(ver_cut 1-3)
-QTMIN=5.15.2
-inherit ecm kde.org
+QTMIN=5.15.4
+inherit ecm plasma.kde.org
 
 DESCRIPTION="Breeze visual style for the Plasma desktop"
 HOMEPAGE="https://invent.kde.org/plasma/breeze"
 
 LICENSE="GPL-2" # TODO: CHECK
 SLOT="5"
-KEYWORDS="amd64 ~arm arm64 ~ppc64 ~riscv x86"
+KEYWORDS="amd64 ~arm ~arm64 ~loong ~ppc64 ~riscv ~x86"
 IUSE="X +kde-cli-tools"
 
 RDEPEND="
@@ -40,6 +40,11 @@ PDEPEND="
 	>=kde-frameworks/breeze-icons-${KFMIN}:5
 	kde-cli-tools? ( >=kde-plasma/kde-cli-tools-${PVCUT}:5 )
 "
+
+PATCHES=(
+	"${FILESDIR}/${P}-fix-qqc2-sliders-in-rtl.patch" # KDE-bug #430101
+	"${FILESDIR}/${P}-fix-qqc2-progressbar-style-in-rtl.patch" # KDE-bug #430101
+)
 
 src_configure() {
 	local mycmakeargs=(
