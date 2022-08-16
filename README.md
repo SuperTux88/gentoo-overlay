@@ -31,6 +31,9 @@ The following packages are available in this overlay:
 * app-misc/google-cloud-cli
   * Google Cloud SDK
   * https://cloud.google.com/sdk
+* app-misc/google-cloud-cli-gke-gcloud-auth-plugin
+  * A google-cloud-sdk component that provides a kubectl authentication plugin for GKE
+  * https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
 * app-shells/gitstatus
   * Git status for Bash and Zsh prompt
   * https://github.com/romkatv/gitstatus
