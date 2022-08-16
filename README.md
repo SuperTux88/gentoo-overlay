@@ -28,7 +28,7 @@ layman -o https://raw.github.com/SuperTux88/gentoo-overlay/master/overlay.xml -f
 
 The following packages are available in this overlay:
 
-* app-misc/google-cloud-sdk
+* app-misc/google-cloud-cli
   * Google Cloud SDK
   * https://cloud.google.com/sdk
 * app-shells/gitstatus
