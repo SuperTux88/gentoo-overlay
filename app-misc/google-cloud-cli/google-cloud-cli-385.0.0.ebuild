@@ -28,7 +28,7 @@ src_prepare() {
 	rm -rf "platform/gsutil/third_party/crcmod_osx"
 
 	rm -rf "platform/gsutil_py2"
-	find -type d -name "python2" -exec rm -rf "{}" \;
+	find -type d -name "python2" -prune -exec rm -rf "{}" \;
 
 	python_fix_shebang --force .
 }
