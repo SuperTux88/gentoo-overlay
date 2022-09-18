@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install setup
+DEPEND=!!sys-apps/zenmonitor sys-kernel/zenpower
+DESCRIPTION=Monitoring software for AMD Zen-based CPUs with Zen 3 support
+EAPI=8
+HOMEPAGE=https://github.com/Ta180m/zenmonitor3
+INHERIT=linux-info
+IUSE=cli
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=!!sys-apps/zenmonitor sys-kernel/zenpower
+SLOT=0
+SRC_URI=https://github.com/Ta180m/zenmonitor3/archive/v2.0.0.tar.gz
+_eclasses_=toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	linux-info	bbfa385d6907d7948d49a5e107bd654d
+_md5_=3ce4450051f1e58fadbee51ee05d9148
