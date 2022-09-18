@@ -5,9 +5,6 @@
 		<name>Benjamin Neff</name>
 		<email>gentoo@benjaminneff.ch</email>
 	</maintainer>
-	<longdescription lang="en">
-		DSO software for Hantek USB digital signal oscilloscopes 6022BE / BL
-	</longdescription>
 	<upstream>
 		<remote-id type="github">OpenHantek/OpenHantek6022</remote-id>
 	</upstream>

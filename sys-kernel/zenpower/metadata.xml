@@ -5,9 +5,6 @@
 		<name>Benjamin Neff</name>
 		<email>gentoo@benjaminneff.ch</email>
 	</maintainer>
-	<longdescription lang="en">
-		Linux kernel driver for reading sensors of AMD Zen family CPUs
-	</longdescription>
 	<upstream>
 		<remote-id type="github">Ta180m/zenpower3</remote-id>
 	</upstream>

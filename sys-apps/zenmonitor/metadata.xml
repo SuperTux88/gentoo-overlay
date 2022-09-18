@@ -5,9 +5,6 @@
 		<name>Benjamin Neff</name>
 		<email>gentoo@benjaminneff.ch</email>
 	</maintainer>
-	<longdescription lang="en">
-		Monitoring software for AMD Zen-based CPUs
-	</longdescription>
 	<upstream>
 		<remote-id type="github">ocerman/zenmonitor</remote-id>
 	</upstream>

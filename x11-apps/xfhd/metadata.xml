@@ -5,9 +5,6 @@
 		<name>Benjamin Neff</name>
 		<email>gentoo@benjaminneff.ch</email>
 	</maintainer>
-	<longdescription lang="en">
-		xfhd is a utility for resizing an X window to Full HD
-	</longdescription>
 	<upstream>
 		<remote-id type="github">r41d/xfhd</remote-id>
 	</upstream>

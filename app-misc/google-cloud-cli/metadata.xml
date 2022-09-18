@@ -5,7 +5,4 @@
 		<name>Benjamin Neff</name>
 		<email>gentoo@benjaminneff.ch</email>
 	</maintainer>
-	<longdescription lang="en">
-		Google Cloud SDK
-	</longdescription>
 </pkgmetadata>
