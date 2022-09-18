@@ -7,7 +7,7 @@ inherit linux-info
 
 DESCRIPTION="Monitoring software for AMD Zen-based CPUs"
 HOMEPAGE="https://github.com/ocerman/zenmonitor"
-SRC_URI="https://github.com/ocerman/${PN}/archive/v${PV}.tar.gz"
+SRC_URI="https://github.com/ocerman/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

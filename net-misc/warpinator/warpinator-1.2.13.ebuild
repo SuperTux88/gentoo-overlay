@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="Share files across the LAN"
 HOMEPAGE="https://github.com/linuxmint/warpinator"
-SRC_URI="https://github.com/linuxmint/${PN}/archive/${PV}.tar.gz"
+SRC_URI="https://github.com/linuxmint/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

@@ -7,7 +7,7 @@ inherit linux-info
 
 DESCRIPTION="Monitoring software for AMD Zen-based CPUs with Zen 3 support"
 HOMEPAGE="https://github.com/Ta180m/zenmonitor3"
-SRC_URI="https://github.com/Ta180m/${PN}/archive/v${PV}.tar.gz"
+SRC_URI="https://github.com/Ta180m/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

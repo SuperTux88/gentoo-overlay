@@ -5,7 +5,7 @@ EAPI=7
 
 DESCRIPTION="Control the additional features of Sharkoon Skiller (Pro/Pro+) keyboards"
 HOMEPAGE="https://github.com/anyc/skiller-ctl"
-SRC_URI="https://github.com/anyc/${PN}/archive/v${PV}.tar.gz"
+SRC_URI="https://github.com/anyc/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2 GPL-3"
 SLOT="0"

@@ -7,7 +7,7 @@ inherit xdg cmake toolchain-funcs
 
 DESCRIPTION="DSO software for Hantek USB digital signal oscilloscopes 6022BE / BL"
 HOMEPAGE="https://github.com/OpenHantek/OpenHantek6022"
-SRC_URI="https://github.com/OpenHantek/OpenHantek6022/archive/${PV}.tar.gz"
+SRC_URI="https://github.com/OpenHantek/OpenHantek6022/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
