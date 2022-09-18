@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit xdg desktop cmake toolchain-funcs
+inherit xdg cmake toolchain-funcs
 
 DESCRIPTION="DSO software for Hantek USB digital signal oscilloscopes 6022BE / BL"
 HOMEPAGE="https://github.com/OpenHantek/OpenHantek6022"
