@@ -1,3 +1,0 @@
-# Benjamin Neff <benjamin@coding4coffee.ch> (08 Mar 2019)
-# requires gnome-base/gnome-shell (masked on selinux)
-gnome-extra/gnome-tweaks
