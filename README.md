@@ -40,10 +40,6 @@ The following packages are available in this overlay:
 * app-shells/powerlevel10k
   * A theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience
   * https://github.com/romkatv/powerlevel10k
-* dev-python/hidapi
-  * Python wrapper for the HIDAPI
-  * Dependency for liquidctl
-  * https://github.com/trezor/cython-hidapi
 * gnome-extra/gnome-tweaks
   * Same as upstream, with additional `gnome-shell` USE flag
 * gui-apps/clipman
