@@ -1,4 +1,4 @@
-name: CI
+name: pkgcheck
 
 on:
   push:
@@ -13,8 +13,11 @@ on:
   - cron: "30 0 * * 6"
 
 jobs:
-  repoman:
+  pkgcheck:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: ferki/repoman-ebuild-qa-action@ferki
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Run pkgcheck
+      uses: pkgcore/pkgcheck-action@v1
