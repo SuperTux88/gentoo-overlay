@@ -9,7 +9,7 @@ DESCRIPTION="A simple clipboard manager for Wayland"
 HOMEPAGE="https://github.com/yory8/clipman"
 SRC_URI="
 	https://github.com/yory8/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	https://raw.githubusercontent.com/SuperTux88/gentoo-overlay/files/gui-apps/clipman/files/clipman-1.6.1-deps.tar.xz
+	https://raw.githubusercontent.com/SuperTux88/gentoo-overlay/files/gui-apps/clipman/files/${P}-deps.tar.xz
 "
 
 LICENSE="GPL-3"
