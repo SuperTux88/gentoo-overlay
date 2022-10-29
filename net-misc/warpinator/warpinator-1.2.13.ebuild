@@ -21,7 +21,7 @@ DEPEND="
 	dev-python/pynacl
 	dev-python/python3-xapp
 	dev-python/setproctitle
-	dev-python/zeroconf
+	dev-python/python-zeroconf
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
