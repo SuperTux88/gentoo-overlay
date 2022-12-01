@@ -15,7 +15,8 @@ SRC_URI="
 	https://github.com/nullgemm/argoat/archive/${ARGOAT_COMMIT}.tar.gz -> argoat-${ARGOAT_COMMIT}.tar.gz
 	https://github.com/nullgemm/configator/archive/${CONFIGATOR_COMMIT}.tar.gz -> configator-${CONFIGATOR_COMMIT}.tar.gz
 	https://github.com/nullgemm/dragonfail/archive/${DRAGONFAIL_COMMIT}.tar.gz -> dragonfail-${DRAGONFAIL_COMMIT}.tar.gz
-	https://github.com/nullgemm/termbox_next/archive/${TERMBOX_NEXT_COMMIT}.tar.gz -> termbox_next-${TERMBOX_NEXT_COMMIT}.tar.gz
+	https://github.com/nullgemm/termbox_next/archive/${TERMBOX_NEXT_COMMIT}.tar.gz ->
+		termbox_next-${TERMBOX_NEXT_COMMIT}.tar.gz
 "
 
 LICENSE="WTFPL-2"
