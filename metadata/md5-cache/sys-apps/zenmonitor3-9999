@@ -10,5 +10,5 @@ LICENSE=MIT
 PROPERTIES=live
 RDEPEND=!!sys-apps/zenmonitor sys-kernel/zenpower
 SLOT=0
-_eclasses_=toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	linux-info	bbfa385d6907d7948d49a5e107bd654d	git-r3	2347f8fe2d392b2a091191f94be37e6f
+_eclasses_=toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	linux-info	7a3f8b289bc442b8151fb29bfefe3b76	git-r3	2347f8fe2d392b2a091191f94be37e6f
 _md5_=1c6acb938701250662706f662e3a3c1b
