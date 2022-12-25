@@ -40,6 +40,9 @@ The following packages are available in this overlay:
 * app-shells/powerlevel10k
   * A theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience
   * https://github.com/romkatv/powerlevel10k
+* dev-util/cargo-watch
+  * Watches over your Cargo project's source
+  * https://github.com/watchexec/cargo-watch
 * gnome-extra/gnome-tweaks
   * Same as upstream, with additional `gnome-shell` USE flag
 * gui-apps/clipman
