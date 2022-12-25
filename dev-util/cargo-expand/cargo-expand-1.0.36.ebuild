@@ -125,7 +125,10 @@ inherit cargo
 
 DESCRIPTION="Subcommand to show the result of macro expansion and #[derive] expansion."
 HOMEPAGE="https://github.com/dtolnay/cargo-expand"
-SRC_URI="$(cargo_crate_uris)"
+SRC_URI="
+	https://github.com/dtolnay/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz
+	$(cargo_crate_uris)
+"
 
 LICENSE="Apache-2.0 BSD CC0-1.0 LGPL-3+ MIT Unicode-DFS-2016"
 SLOT="0"
