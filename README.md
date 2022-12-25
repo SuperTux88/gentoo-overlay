@@ -40,6 +40,9 @@ The following packages are available in this overlay:
 * app-shells/powerlevel10k
   * A theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience
   * https://github.com/romkatv/powerlevel10k
+* dev-util/cargo-expand
+  * Wrapper around rustc -Zunpretty=expanded. Shows the result of macro expansion and #[derive] expansion.
+  * https://github.com/dtolnay/cargo-expand
 * dev-util/cargo-watch
   * Watches over your Cargo project's source
   * https://github.com/watchexec/cargo-watch
