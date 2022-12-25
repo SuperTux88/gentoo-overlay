@@ -219,3 +219,9 @@ SRC_URI="
 LICENSE="Apache-2.0 BSD BSD-2 CC0-1.0 ISC MIT WTFPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
+
+src_install() {
+	cargo_src_install
+	einstalldocs
+	doman "${PN}.1"
+}
