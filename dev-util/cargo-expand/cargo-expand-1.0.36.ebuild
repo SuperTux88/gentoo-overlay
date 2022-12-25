@@ -133,3 +133,8 @@ SRC_URI="
 LICENSE="Apache-2.0 BSD CC0-1.0 LGPL-3+ MIT Unicode-DFS-2016"
 SLOT="0"
 KEYWORDS="~amd64"
+
+src_install() {
+	cargo_src_install
+	einstalldocs
+}
