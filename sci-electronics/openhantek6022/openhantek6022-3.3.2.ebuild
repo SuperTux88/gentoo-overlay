@@ -25,6 +25,9 @@ BDEPEND=">=dev-util/cmake-3.5"
 S=${WORKDIR}/OpenHantek6022-${PV}
 
 src_configure() {
+	local mycmakeargs=(
+		-DVERSION=${PV}
+	)
 	local CXX=/usr/bin/$(tc-getCXX)
 	cmake_src_configure
 }
