@@ -54,9 +54,6 @@ The following packages are available in this overlay:
 * gui-apps/wev
   * wayland event viewer
   * https://git.sr.ht/~sircmpwn/wev
-* gui-apps/wofi
-  * Launcher/menu program for wlroots based wayland compositors such as sway
-  * https://hg.sr.ht/~scoopta/wofi
 * gui-apps/ydotool
   * Generic command-line automation tool (no X!)
   * https://github.com/ReimuNotMoe/ydotool
