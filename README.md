@@ -34,6 +34,9 @@ The following packages are available in this overlay:
 * app-misc/google-cloud-cli-gke-gcloud-auth-plugin
   * A google-cloud-sdk component that provides a kubectl authentication plugin for GKE
   * https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
+* app-misc/liquidctl
+  * Cross-platform CLI and Python drivers for AIO liquid coolers and other devices 
+  * https://github.com/liquidctl/liquidctl
 * app-shells/gitstatus
   * Git status for Bash and Zsh prompt
   * https://github.com/romkatv/gitstatus
@@ -95,9 +98,6 @@ The following packages are available in this overlay:
 * sys-apps/dool
   * Versatile replacement for vmstat, iostat and ifstat (clone of dstat)
   * https://github.com/scottchiefbaker/dool
-* sys-apps/liquidctl
-  * Cross-platform CLI and Python drivers for AIO liquid coolers and other devices 
-  * https://github.com/liquidctl/liquidctl
 * sys-apps/skiller-ctl
   * Control the additional features (e.g., LEDs) of Sharkoon Skiller (Pro/Pro+) keyboards
   * https://github.com/anyc/skiller-ctl
