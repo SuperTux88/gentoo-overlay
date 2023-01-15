@@ -3,7 +3,7 @@
 
 EAPI=8
 
-DESCRIPTION="Unofficial Microsoft Teams for Linux client "
+DESCRIPTION="Unofficial Microsoft Teams for Linux client"
 HOMEPAGE="https://github.com/IsmaelMartinez/teams-for-linux"
 SRC_URI="https://github.com/IsmaelMartinez/${PN}/releases/download/v${PV}/${P}.tar.gz"
 

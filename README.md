@@ -46,6 +46,12 @@ The following packages are available in this overlay:
 * dev-util/cargo-watch
   * Watches over your Cargo project's source
   * https://github.com/watchexec/cargo-watch
+* dev-util/trunk
+  * Build, bundle & ship your Rust WASM application to the web
+  * https://trunkrs.dev
+* dev-util/wasm-pack
+  * Your favorite rust -> wasm workflow tool
+  * https://rustwasm.github.io/wasm-pack
 * gnome-extra/gnome-tweaks
   * Same as upstream, with additional `gnome-shell` USE flag
 * gui-apps/clipman
@@ -77,6 +83,9 @@ The following packages are available in this overlay:
 * media-plugins/obs-wlrobs
   * An obs-studio plugin that allows you to screen capture on wlroots based wayland compositors
   * https://hg.sr.ht/~scoopta/wlrobs
+* net-im/teams-for-linux
+  * Unofficial Microsoft Teams for Linux client
+  * https://github.com/IsmaelMartinez/teams-for-linux
 * net-misc/warpinator
   * Share files across the LAN
   * https://github.com/linuxmint/warpinator
