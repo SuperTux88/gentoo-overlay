@@ -86,6 +86,9 @@ The following packages are available in this overlay:
 * net-im/teams-for-linux
   * Unofficial Microsoft Teams for Linux client
   * https://github.com/IsmaelMartinez/teams-for-linux
+* net-misc/synology-drive-client
+  * Desktop utility of the DSM add-on package Synology Drive Server
+  * https://www.synology.com/en-global/releaseNote/SynologyDriveClient
 * net-misc/warpinator
   * Share files across the LAN
   * https://github.com/linuxmint/warpinator
