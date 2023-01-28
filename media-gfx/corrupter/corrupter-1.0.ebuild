@@ -20,8 +20,8 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND="dev-lang/go"
 
-src_prepare() {
-	default_src_prepare
+src_unpack() {
+	default_src_unpack
 
 	cp "${DISTDIR}/${P}-go.mod" "${S}/go.mod"
 }
