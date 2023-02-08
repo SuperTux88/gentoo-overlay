@@ -63,6 +63,9 @@ The following packages are available in this overlay:
 * gui-apps/wev
   * wayland event viewer
   * https://git.sr.ht/~sircmpwn/wev
+* gui-apps/wluma
+  * Automatic brightness adjustment based on screen contents and ALS
+  * https://github.com/maximbaz/wluma
 * gui-apps/ydotool
   * Generic command-line automation tool (no X!)
   * https://github.com/ReimuNotMoe/ydotool
