@@ -1,0 +1,46 @@
+From 12f05eab5582e76c7700f52dbb8ae3d6efecfec3 Mon Sep 17 00:00:00 2001
+From: Benjamin Neff <benjamin@coding4coffee.ch>
+Date: Mon, 27 Feb 2023 03:39:40 +0100
+Subject: [PATCH] Change default back to bytes
+
+https://github.com/scottchiefbaker/dool/issues/13#issuecomment-1038348638
+---
+ docs/dool.1 | 4 ++--
+ dool        | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/docs/dool.1 b/docs/dool.1
+index be913ee..6697188 100644
+--- a/docs/dool.1
++++ b/docs/dool.1
+@@ -262,12 +262,12 @@ equals \-pmgdsc \-D total
+ .PP
+ \-\-bits
+ .RS 4
+-force output values in bits (default)
++force output values in bits
+ .RE
+ .PP
+ \-\-bytes
+ .RS 4
+-force output values in bytes
++force output values in bytes (default)
+ .RE
+ .PP
+ \-\-float
+diff --git a/dool b/dool
+index a251932..6c207f4 100755
+--- a/dool
++++ b/dool
+@@ -63,7 +63,7 @@ else:
+ class Options:
+     def __init__(self, args):
+         self.args         = args
+-        self.bits         = True
++        self.bits         = False
+         self.blackonwhite = False
+         self.count        = -1
+         self.cpulist      = None
+-- 
+2.39.2
+
