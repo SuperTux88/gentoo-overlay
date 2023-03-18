@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit linux-info linux-mod git-r3
+inherit linux-mod git-r3
 EGIT_REPO_URI="https://github.com/Ta180m/zenpower3.git"
 EGIT_BRANCH="master"
 

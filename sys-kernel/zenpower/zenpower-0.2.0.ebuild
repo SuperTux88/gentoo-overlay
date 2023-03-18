@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit linux-info linux-mod
+inherit linux-mod
 
 DESCRIPTION="Linux kernel driver for reading sensors of AMD Zen family CPUs"
 HOMEPAGE="https://github.com/Ta180m/zenpower3"

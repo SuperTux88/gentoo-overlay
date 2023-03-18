@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit linux-info linux-mod
+inherit linux-mod
 
 DESCRIPTION="IT87 sensors module"
 HOMEPAGE="https://github.com/a1wong/it87"
