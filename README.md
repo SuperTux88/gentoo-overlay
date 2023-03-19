@@ -74,6 +74,9 @@ The following packages are available in this overlay:
 * media-fonts/meslo-nerd
   * Nerd Font build of Apple's Menlo font
   * https://github.com/ryanoasis/nerd-fonts
+* media-fonts/terminess-nerd
+  * Nerd Font build of Terminus font
+  * https://github.com/ryanoasis/nerd-fonts
 * media-fonts/terminus-ttf
   * A TrueType version of Terminus Font
   * https://files.ax86.net/terminus-ttf/
