@@ -28,6 +28,9 @@ layman -o https://raw.github.com/SuperTux88/gentoo-overlay/master/overlay.xml -f
 
 The following packages are available in this overlay:
 
+* app-admin/dotter
+  * A dotfile manager and templater written in rust
+  * https://github.com/SuperCuber/dotter
 * app-containers/dnsname-cni-plugin
   * name resolution for containers
   * https://github.com/containers/dnsname
