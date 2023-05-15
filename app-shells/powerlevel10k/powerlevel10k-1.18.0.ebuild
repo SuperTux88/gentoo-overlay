@@ -14,7 +14,11 @@ IUSE="nerd-fonts"
 
 DEPEND="app-shells/zsh
 		app-shells/gitstatus[zsh-completion]
-		nerd-fonts? ( media-fonts/meslo-nerd )"
+		nerd-fonts? ( || (
+			media-fonts/nerd-fonts-symbols
+			media-fonts/meslo-nerd
+			media-fonts/terminess-nerd
+		) )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {

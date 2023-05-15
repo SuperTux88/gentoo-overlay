@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile install postinst prepare
-DEPEND=app-shells/zsh app-shells/gitstatus[zsh-completion] nerd-fonts? ( media-fonts/meslo-nerd )
+DEPEND=app-shells/zsh app-shells/gitstatus[zsh-completion] nerd-fonts? ( || ( media-fonts/nerd-fonts-symbols media-fonts/meslo-nerd media-fonts/terminess-nerd ) )
 DESCRIPTION=A theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience.
 EAPI=8
 HOMEPAGE=https://github.com/romkatv/powerlevel10k
 IUSE=nerd-fonts
 KEYWORDS=~amd64
 LICENSE=MIT
-RDEPEND=app-shells/zsh app-shells/gitstatus[zsh-completion] nerd-fonts? ( media-fonts/meslo-nerd )
+RDEPEND=app-shells/zsh app-shells/gitstatus[zsh-completion] nerd-fonts? ( || ( media-fonts/nerd-fonts-symbols media-fonts/meslo-nerd media-fonts/terminess-nerd ) )
 SLOT=0
 SRC_URI=https://github.com/romkatv/powerlevel10k/archive/refs/tags/v1.18.0.tar.gz -> powerlevel10k-1.18.0.tar.gz
-_md5_=3281a20abb24b636bf63229bf6a98e9d
+_md5_=5e2514475bce71a31b21579fb6998d75
