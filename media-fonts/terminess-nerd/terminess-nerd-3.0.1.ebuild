@@ -7,7 +7,7 @@ inherit font
 
 DESCRIPTION="Nerd Font build of Terminus font, patched by ryanoasis"
 HOMEPAGE="https://github.com/ryanoasis/nerd-fonts"
-SRC_URI="https://github.com/ryanoasis/nerd-fonts/releases/download/v${PV}/Terminus.zip -> ${P}.zip"
+SRC_URI="https://github.com/ryanoasis/nerd-fonts/releases/download/v${PV}/Terminus.tar.xz -> ${P}.tar.xz"
 
 LICENSE="Apache-2.0 MIT OFL-1.1"
 SLOT="0"
@@ -16,8 +16,6 @@ KEYWORDS="~amd64"
 IUSE="+wide mono"
 REQUIRED_USE="|| ( wide mono )"
 
-BDEPEND="app-arch/unzip"
-
 FONT_SUFFIX="ttf"
 
 S="${WORKDIR}"
@@ -25,11 +23,11 @@ S="${WORKDIR}"
 src_prepare() {
 	default_src_prepare
 
-	rm "${S}/"*"Windows Compatible.ttf"
+	rm "${S}/"*"NerdFontPropo-"*.ttf
 	if ! use wide; then
-		rm "${S}/"*"Complete.ttf"
+		rm "${S}/"*"NerdFont-"*.ttf
 	fi
 	if ! use mono; then
-		rm "${S}/"*"Complete Mono.ttf"
+		rm "${S}/"*"NerdFontMono-"*.ttf
 	fi
 }
