@@ -1,0 +1,17 @@
+diff --git a/cmake/FetchOnnxruntime.cmake b/cmake/FetchOnnxruntime.cmake
+index 1bf1d15..54b175c 100644
+--- a/cmake/FetchOnnxruntime.cmake
++++ b/cmake/FetchOnnxruntime.cmake
+@@ -63,11 +63,7 @@ elseif(OS_WINDOWS)
+ 
+   install(IMPORTED_RUNTIME_ARTIFACTS Ort::DirectML DESTINATION "${OBS_PLUGIN_DESTINATION}")
+ elseif(OS_LINUX)
+-  FetchContent_Declare(
+-    Onnxruntime
+-    URL "https://github.com/microsoft/onnxruntime/releases/download/v${Onnxruntime_VERSION}/onnxruntime-linux-x64-gpu-${Onnxruntime_VERSION}.tgz"
+-    URL_HASH MD5=6a3866eb7dce86a17922c0662623f77e)
+-  FetchContent_MakeAvailable(Onnxruntime)
++  set(onnxruntime_SOURCE_DIR "${CMAKE_CURRENT_BINARY_DIR}/../onnxruntime-linux-x64-gpu-${Onnxruntime_VERSION}")
+   set(Onnxruntime_LINK_LIBS
+       "${onnxruntime_SOURCE_DIR}/lib/libonnxruntime.so.${Onnxruntime_VERSION}")
+   set(Onnxruntime_INSTALL_LIBS
