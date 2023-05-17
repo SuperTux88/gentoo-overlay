@@ -77,6 +77,9 @@ The following packages are available in this overlay:
 * media-fonts/meslo-nerd
   * Nerd Font build of Apple's Menlo font
   * https://github.com/ryanoasis/nerd-fonts
+* media-fonts/nerd-fonts-symbols
+  * High number of extra glyphs from popular 'iconic fonts'
+  * https://github.com/ryanoasis/nerd-fonts
 * media-fonts/terminess-nerd
   * Nerd Font build of Terminus font
   * https://github.com/ryanoasis/nerd-fonts
@@ -86,6 +89,9 @@ The following packages are available in this overlay:
 * media-gfx/corrupter
   * Simple image glitcher suitable for producing nice looking lockscreens
   * https://github.com/r00tman/corrupter
+* media-plugins/obs-backgroundremoval
+  * OBS plugin for removing backgrounds
+  * https://github.com/royshil/obs-backgroundremoval
 * media-plugins/obs-livesplit-one
   * A plugin for OBS Studio that allows adding LiveSplit One as a source
   * https://github.com/CryZe/obs-livesplit-one
