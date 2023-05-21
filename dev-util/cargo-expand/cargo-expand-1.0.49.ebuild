@@ -10,7 +10,7 @@ CRATES="
 	aho-corasick-0.7.20
 	aho-corasick-1.0.1
 	ansi_colours-1.2.1
-	anstream-0.3.1
+	anstream-0.3.2
 	anstyle-1.0.0
 	anstyle-parse-0.2.0
 	anstyle-query-1.0.0
@@ -29,8 +29,8 @@ CRATES="
 	cargo-subcommand-metadata-0.1.0
 	cc-1.0.79
 	cfg-if-1.0.0
-	clap-4.2.4
-	clap_builder-4.2.4
+	clap-4.2.7
+	clap_builder-4.2.7
 	clap_derive-4.2.0
 	clap_lex-0.4.1
 	clircle-0.3.0
@@ -38,8 +38,8 @@ CRATES="
 	console-0.15.5
 	content_inspector-0.2.4
 	crc32fast-1.3.2
-	dirs-5.0.0
-	dirs-sys-0.4.0
+	dirs-5.0.1
+	dirs-sys-0.4.1
 	encode_unicode-0.3.6
 	encoding-0.2.33
 	encoding-index-japanese-1.20141219.5
@@ -52,7 +52,7 @@ CRATES="
 	errno-dragonfly-0.1.2
 	fancy-regex-0.7.1
 	fastrand-1.9.0
-	flate2-1.0.25
+	flate2-1.0.26
 	fnv-1.0.7
 	getrandom-0.2.9
 	globset-0.4.10
@@ -68,21 +68,22 @@ CRATES="
 	is-terminal-0.4.7
 	itoa-1.0.6
 	lazy_static-1.4.0
-	libc-0.2.142
+	libc-0.2.144
 	line-wrap-0.1.1
 	linked-hash-map-0.5.6
-	linux-raw-sys-0.3.4
+	linux-raw-sys-0.3.7
 	log-0.4.17
 	memchr-2.5.0
-	miniz_oxide-0.6.2
+	miniz_oxide-0.7.1
 	nu-ansi-term-0.47.0
 	once_cell-1.17.1
+	option-ext-0.2.0
 	path_abs-0.5.1
 	plist-1.4.3
-	prettyplease-0.2.4
+	prettyplease-0.2.5
 	proc-macro2-1.0.56
 	quick-xml-0.28.2
-	quote-1.0.26
+	quote-1.0.27
 	redox_syscall-0.2.16
 	redox_syscall-0.3.5
 	redox_users-0.4.3
@@ -91,29 +92,29 @@ CRATES="
 	regex-syntax-0.6.29
 	regex-syntax-0.7.1
 	rgb-0.8.36
-	rustix-0.37.14
+	rustix-0.37.19
 	ryu-1.0.13
 	safemem-0.3.3
 	same-file-1.0.6
 	semver-1.0.17
-	serde-1.0.160
-	serde_derive-1.0.160
+	serde-1.0.163
+	serde_derive-1.0.163
 	serde_json-1.0.96
 	serde_spanned-0.6.1
 	serde_yaml-0.8.26
 	shell-words-1.1.0
 	std_prelude-0.2.12
 	strsim-0.10.0
-	syn-2.0.15
+	syn-2.0.16
 	syn-select-next-0.3.0-alpha.1
 	syntect-5.0.0
 	tempfile-3.5.0
 	termcolor-1.2.0
 	thiserror-1.0.40
 	thiserror-impl-1.0.40
-	time-0.3.20
-	time-core-0.1.0
-	time-macros-0.2.8
+	time-0.3.21
+	time-core-0.1.1
+	time-macros-0.2.9
 	toml-0.7.3
 	toml_datetime-0.6.1
 	toml_edit-0.19.8
@@ -146,7 +147,7 @@ CRATES="
 	windows_x86_64_gnullvm-0.48.0
 	windows_x86_64_msvc-0.42.2
 	windows_x86_64_msvc-0.48.0
-	winnow-0.4.1
+	winnow-0.4.6
 	yaml-rust-0.4.5
 "
 
@@ -159,7 +160,7 @@ SRC_URI="
 	$(cargo_crate_uris)
 "
 
-LICENSE="Apache-2.0 BSD CC0-1.0 LGPL-3+ MIT Unicode-DFS-2016"
+LICENSE="Apache-2.0 BSD CC0-1.0 LGPL-3+ MIT MPL-2.0 Unicode-DFS-2016"
 SLOT="0"
 KEYWORDS="~amd64"
 
