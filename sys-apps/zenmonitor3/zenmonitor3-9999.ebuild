@@ -1,7 +1,7 @@
-# Copyright 2019 Gentoo Authors
+# Copyright 2019-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit linux-info git-r3
 EGIT_REPO_URI="https://github.com/Ta180m/zenmonitor3.git"
