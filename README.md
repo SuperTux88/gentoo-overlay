@@ -10,7 +10,7 @@ Add this to `/etc/portage/repos.conf/supertux88.conf`:
 
 ```
 [supertux88]
-location = /var/db/repos/supertux88/
+location = /var/db/repos/supertux88
 sync-type = git
 sync-uri = https://github.com/SuperTux88/gentoo-overlay.git
 auto-sync = yes
@@ -18,11 +18,7 @@ auto-sync = yes
 
 **or**
 
-Install using [Layman](https://wiki.gentoo.org/wiki/Layman):
-
-```
-layman -o https://raw.github.com/SuperTux88/gentoo-overlay/master/overlay.xml -f -a supertux88
-```
+Run `wget https://raw.githubusercontent.com/SuperTux88/gentoo-overlay/master/supertux88.conf -O /etc/portage/repos.conf/supertux88.conf`
 
 ## Packages
 
