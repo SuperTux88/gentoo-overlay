@@ -17,25 +17,25 @@ CRATES="
 	anstyle-wincon-1.0.1
 	atty-0.2.14
 	autocfg-1.1.0
-	base64-0.21.0
+	base64-0.21.1
 	bat-0.23.0
 	bincode-1.3.3
 	bit-set-0.5.3
 	bit-vec-0.6.3
 	bitflags-1.3.2
-	bstr-1.4.0
+	bstr-1.5.0
 	bytemuck-1.13.1
 	bytesize-1.2.0
 	cargo-subcommand-metadata-0.1.0
 	cc-1.0.79
 	cfg-if-1.0.0
-	clap-4.2.7
-	clap_builder-4.2.7
-	clap_derive-4.2.0
-	clap_lex-0.4.1
+	clap-4.3.0
+	clap_builder-4.3.0
+	clap_derive-4.3.0
+	clap_lex-0.5.0
 	clircle-0.3.0
 	colorchoice-1.0.0
-	console-0.15.5
+	console-0.15.7
 	content_inspector-0.2.4
 	crc32fast-1.3.2
 	dirs-5.0.1
@@ -71,7 +71,7 @@ CRATES="
 	libc-0.2.144
 	line-wrap-0.1.1
 	linked-hash-map-0.5.6
-	linux-raw-sys-0.3.7
+	linux-raw-sys-0.3.8
 	log-0.4.17
 	memchr-2.5.0
 	miniz_oxide-0.7.1
@@ -80,17 +80,17 @@ CRATES="
 	option-ext-0.2.0
 	path_abs-0.5.1
 	plist-1.4.3
-	prettyplease-0.2.5
-	proc-macro2-1.0.56
+	prettyplease-0.2.6
+	proc-macro2-1.0.58
 	quick-xml-0.28.2
 	quote-1.0.27
 	redox_syscall-0.2.16
 	redox_syscall-0.3.5
 	redox_users-0.4.3
-	regex-1.8.1
+	regex-1.8.2
 	regex-automata-0.1.10
 	regex-syntax-0.6.29
-	regex-syntax-0.7.1
+	regex-syntax-0.7.2
 	rgb-0.8.36
 	rustix-0.37.19
 	ryu-1.0.13
@@ -100,13 +100,13 @@ CRATES="
 	serde-1.0.163
 	serde_derive-1.0.163
 	serde_json-1.0.96
-	serde_spanned-0.6.1
+	serde_spanned-0.6.2
 	serde_yaml-0.8.26
 	shell-words-1.1.0
 	std_prelude-0.2.12
 	strsim-0.10.0
 	syn-2.0.16
-	syn-select-next-0.3.0-alpha.1
+	syn-select-0.3.0
 	syntect-5.0.0
 	tempfile-3.5.0
 	termcolor-1.2.0
@@ -115,9 +115,9 @@ CRATES="
 	time-0.3.21
 	time-core-0.1.1
 	time-macros-0.2.9
-	toml-0.7.3
-	toml_datetime-0.6.1
-	toml_edit-0.19.8
+	toml-0.7.4
+	toml_datetime-0.6.2
+	toml_edit-0.19.9
 	toolchain_find-0.3.0
 	unicode-ident-1.0.8
 	unicode-width-0.1.10
@@ -128,7 +128,6 @@ CRATES="
 	winapi-i686-pc-windows-gnu-0.4.0
 	winapi-util-0.1.5
 	winapi-x86_64-pc-windows-gnu-0.4.0
-	windows-sys-0.42.0
 	windows-sys-0.45.0
 	windows-sys-0.48.0
 	windows-targets-0.42.2
