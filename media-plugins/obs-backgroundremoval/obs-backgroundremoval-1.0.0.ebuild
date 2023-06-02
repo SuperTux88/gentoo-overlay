@@ -20,7 +20,7 @@ KEYWORDS="~amd64"
 IUSE="video_cards_nvidia"
 
 DEPEND="
-	>=media-video/obs-studio-27
+	>=media-video/obs-studio-28
 	>=media-libs/opencv-4.7.0
 	video_cards_nvidia? (
 		dev-libs/cudnn
