@@ -17,7 +17,7 @@ CRATES="
 	anstyle-wincon-1.0.1
 	atty-0.2.14
 	autocfg-1.1.0
-	base64-0.21.1
+	base64-0.21.2
 	bat-0.23.0
 	bincode-1.3.3
 	bit-set-0.5.3
@@ -64,7 +64,7 @@ CRATES="
 	home-0.5.5
 	indexmap-1.9.3
 	instant-0.1.12
-	io-lifetimes-1.0.10
+	io-lifetimes-1.0.11
 	is-terminal-0.4.7
 	itoa-1.0.6
 	lazy_static-1.4.0
@@ -72,7 +72,7 @@ CRATES="
 	line-wrap-0.1.1
 	linked-hash-map-0.5.6
 	linux-raw-sys-0.3.8
-	log-0.4.17
+	log-0.4.18
 	memchr-2.5.0
 	miniz_oxide-0.7.1
 	nu-ansi-term-0.47.0
@@ -81,13 +81,13 @@ CRATES="
 	path_abs-0.5.1
 	plist-1.4.3
 	prettyplease-0.2.6
-	proc-macro2-1.0.58
+	proc-macro2-1.0.59
 	quick-xml-0.28.2
-	quote-1.0.27
+	quote-1.0.28
 	redox_syscall-0.2.16
 	redox_syscall-0.3.5
 	redox_users-0.4.3
-	regex-1.8.2
+	regex-1.8.3
 	regex-automata-0.1.10
 	regex-syntax-0.6.29
 	regex-syntax-0.7.2
@@ -105,7 +105,7 @@ CRATES="
 	shell-words-1.1.0
 	std_prelude-0.2.12
 	strsim-0.10.0
-	syn-2.0.16
+	syn-2.0.18
 	syn-select-0.3.0
 	syntect-5.0.0
 	tempfile-3.5.0
@@ -117,9 +117,9 @@ CRATES="
 	time-macros-0.2.9
 	toml-0.7.4
 	toml_datetime-0.6.2
-	toml_edit-0.19.9
-	toolchain_find-0.3.0
-	unicode-ident-1.0.8
+	toml_edit-0.19.10
+	toolchain_find-0.4.0
+	unicode-ident-1.0.9
 	unicode-width-0.1.10
 	utf8parse-0.2.1
 	walkdir-2.3.3
