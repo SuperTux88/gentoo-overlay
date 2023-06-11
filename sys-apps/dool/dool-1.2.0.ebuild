@@ -1,9 +1,9 @@
 # Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-PYTHON_COMPAT=( python3_{9..12} )
+PYTHON_COMPAT=( python3_{10..12} )
 
 inherit python-r1
 
@@ -22,17 +22,8 @@ RDEPEND="${PYTHON_DEPS}
 DEPEND="${RDEPEND}"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-1.0.0-fix-overflow-error.patch" # https://github.com/scottchiefbaker/dool/pull/16
-	"${FILESDIR}/${PN}-1.1.0-bytes-by-default.patch" # https://github.com/scottchiefbaker/dool/issues/13
+	"${FILESDIR}/${PN}-1.2.0-bytes-by-default.patch" # https://github.com/scottchiefbaker/dool/issues/13
 )
-
-src_prepare() {
-	# docs still have some references for dstat
-	# https://github.com/scottchiefbaker/dool/pull/14
-	sed -i -e 's/dstat/dool/g' "${S}/docs/Makefile" || die
-
-	default
-}
 
 src_install() {
 	python_foreach_impl python_doscript "${PN}"

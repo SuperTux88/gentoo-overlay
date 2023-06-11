@@ -1,0 +1,13 @@
+diff --git a/dool b/dool
+index bfd97cf..f4c9bcf 100755
+--- a/dool
++++ b/dool
+@@ -54,7 +54,7 @@ pluginpath = [
+ class Options:
+     def __init__(self, args):
+         self.args         = args
+-        self.bits         = True
++        self.bits         = False
+         self.blackonwhite = False
+         self.count        = -1
+         self.cpulist      = None
