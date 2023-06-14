@@ -10,5 +10,5 @@ LICENSE=MIT
 RDEPEND=!!sys-apps/zenmonitor sys-kernel/zenpower
 SLOT=0
 SRC_URI=https://github.com/Ta180m/zenmonitor3/archive/v2.0.0.tar.gz -> zenmonitor3-2.0.0.tar.gz
-_eclasses_=toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	104e1332efb829e2f7cbf89307a474f1	linux-info	c4f1201b96a8a2c1f3b86cc8b2c71c91
+_eclasses_=toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	linux-info	c4f1201b96a8a2c1f3b86cc8b2c71c91
 _md5_=51605a19af89b19e18e639a308a2422b
