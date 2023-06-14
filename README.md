@@ -6,7 +6,15 @@ Current build status: [![Continuous Integration](https://github.com/SuperTux88/g
 
 ## Usage
 
-Add this to `/etc/portage/repos.conf/supertux88.conf`:
+Enable it using `app-eselect/eselect-repository`:
+
+```
+eselect repository enable supertux88
+```
+
+**or**
+
+Manually add this to `/etc/portage/repos.conf/supertux88.conf`:
 
 ```
 [supertux88]
@@ -18,7 +26,11 @@ auto-sync = yes
 
 **or**
 
-Run `wget https://raw.githubusercontent.com/SuperTux88/gentoo-overlay/master/supertux88.conf -O /etc/portage/repos.conf/supertux88.conf`
+Download it with:
+
+```
+wget https://raw.githubusercontent.com/SuperTux88/gentoo-overlay/master/supertux88.conf -O /etc/portage/repos.conf/supertux88.conf
+```
 
 ## Packages
 
