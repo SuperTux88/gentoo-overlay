@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2022-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -22,12 +22,16 @@ SRC_URI="
 LICENSE="WTFPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="openrc runit systemd"
 
 DEPEND="sys-libs/pam
 		x11-libs/libxcb
 		x11-base/xorg-server
 		x11-apps/xauth"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+		openrc? ( sys-apps/openrc )
+		runit? ( sys-process/runit )
+		systemd? ( sys-apps/systemd )"
 BDEPEND=""
 
 src_unpack() {
@@ -44,4 +48,12 @@ src_unpack() {
 
 	rm -d "${P}/sub/termbox_next" || die
 	mv "termbox_next-${TERMBOX_NEXT_COMMIT}" "${P}/sub/termbox_next" || die
+}
+
+src_install(){
+	default
+
+	use openrc && emake DESTDIR="${D}" install installopenrc
+	use runit && emake DESTDIR="${D}" install installrunit
+	use systemd && emake DESTDIR="${D}" install installsystemd
 }
