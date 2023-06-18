@@ -8,7 +8,7 @@ EAPI=8
 CRATES="
 	adler-1.0.2
 	aho-corasick-0.7.20
-	aho-corasick-1.0.1
+	aho-corasick-1.0.2
 	ansi_colours-1.2.1
 	anstream-0.3.2
 	anstyle-1.0.0
@@ -29,9 +29,9 @@ CRATES="
 	cargo-subcommand-metadata-0.1.0
 	cc-1.0.79
 	cfg-if-1.0.0
-	clap-4.3.0
-	clap_builder-4.3.0
-	clap_derive-4.3.0
+	clap-4.3.4
+	clap_builder-4.3.4
+	clap_derive-4.3.2
 	clap_lex-0.5.0
 	clircle-0.3.0
 	colorchoice-1.0.0
@@ -54,7 +54,7 @@ CRATES="
 	fastrand-1.9.0
 	flate2-1.0.26
 	fnv-1.0.7
-	getrandom-0.2.9
+	getrandom-0.2.10
 	globset-0.4.10
 	grep-cli-0.1.7
 	hashbrown-0.12.3
@@ -68,38 +68,38 @@ CRATES="
 	is-terminal-0.4.7
 	itoa-1.0.6
 	lazy_static-1.4.0
-	libc-0.2.144
+	libc-0.2.146
 	line-wrap-0.1.1
 	linked-hash-map-0.5.6
 	linux-raw-sys-0.3.8
-	log-0.4.18
+	log-0.4.19
 	memchr-2.5.0
 	miniz_oxide-0.7.1
 	nu-ansi-term-0.47.0
-	once_cell-1.17.1
+	once_cell-1.18.0
 	option-ext-0.2.0
 	path_abs-0.5.1
 	plist-1.4.3
-	prettyplease-0.2.6
-	proc-macro2-1.0.59
+	prettyplease-0.2.7
+	proc-macro2-1.0.60
 	quick-xml-0.28.2
 	quote-1.0.28
 	redox_syscall-0.2.16
 	redox_syscall-0.3.5
 	redox_users-0.4.3
-	regex-1.8.3
+	regex-1.8.4
 	regex-automata-0.1.10
 	regex-syntax-0.6.29
 	regex-syntax-0.7.2
 	rgb-0.8.36
-	rustix-0.37.19
+	rustix-0.37.20
 	ryu-1.0.13
 	safemem-0.3.3
 	same-file-1.0.6
 	semver-1.0.17
-	serde-1.0.163
-	serde_derive-1.0.163
-	serde_json-1.0.96
+	serde-1.0.164
+	serde_derive-1.0.164
+	serde_json-1.0.97
 	serde_spanned-0.6.2
 	serde_yaml-0.8.26
 	shell-words-1.1.0
@@ -108,11 +108,11 @@ CRATES="
 	syn-2.0.18
 	syn-select-0.3.0
 	syntect-5.0.0
-	tempfile-3.5.0
+	tempfile-3.6.0
 	termcolor-1.2.0
 	thiserror-1.0.40
 	thiserror-impl-1.0.40
-	time-0.3.21
+	time-0.3.22
 	time-core-0.1.1
 	time-macros-0.2.9
 	toml-0.7.4
@@ -146,7 +146,7 @@ CRATES="
 	windows_x86_64_gnullvm-0.48.0
 	windows_x86_64_msvc-0.42.2
 	windows_x86_64_msvc-0.48.0
-	winnow-0.4.6
+	winnow-0.4.7
 	yaml-rust-0.4.5
 "
 
