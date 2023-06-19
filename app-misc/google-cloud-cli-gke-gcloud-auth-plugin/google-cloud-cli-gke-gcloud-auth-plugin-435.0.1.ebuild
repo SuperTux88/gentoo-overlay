@@ -1,11 +1,11 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2022-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 inherit unpacker
 
-DEB_SHA="17e1471a8e560108532bd0e6feb74aa3c47f8278d81d5f4800604493f9ba1f1c"
+DEB_SHA="c8fa8e04a01fa8164475c5d83b7a175f3186fa5027017753fe81a68e87321f53"
 
 DESCRIPTION="A kubectl authentication plugin for GKE"
 HOMEPAGE="https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke"
