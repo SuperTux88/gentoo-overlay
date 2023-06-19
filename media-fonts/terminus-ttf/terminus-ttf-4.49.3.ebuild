@@ -7,14 +7,12 @@ inherit font
 
 DESCRIPTION="A TrueType version of Terminus Font"
 HOMEPAGE="https://files.ax86.net/terminus-ttf/"
-SRC_URI="https://raw.githubusercontent.com/SuperTux88/gentoo-overlay-deps/main/media-fonts/terminus-ttf/${P}.zip"
+SRC_URI="https://files.ax86.net/${PN}/files/$PV/${P}.zip"
 
 LICENSE="OFL-1.1"
 SLOT="0"
 KEYWORDS="~amd64"
 
 BDEPEND="app-arch/unzip"
-
-RESTRICT="mirror"
 
 FONT_SUFFIX="ttf"
