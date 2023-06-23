@@ -74,6 +74,9 @@ The following packages are available in this overlay:
 * gui-apps/wev
   * wayland event viewer
   * https://git.sr.ht/~sircmpwn/wev
+* gui-apps/wl-mirror
+  * A simple Wayland output mirror client
+  * https://github.com/Ferdi265/wl-mirror
 * gui-apps/wluma
   * Automatic brightness adjustment based on screen contents and ALS
   * https://github.com/maximbaz/wluma
