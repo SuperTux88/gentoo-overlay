@@ -173,7 +173,7 @@ CRATES="
 	yaml-rust-0.4.5
 "
 
-inherit cargo udev systemd
+inherit cargo udev systemd llvm
 
 DESCRIPTION="Automatic brightness adjustment based on screen contents and ALS"
 HOMEPAGE="https://github.com/maximbaz/wluma"
@@ -187,6 +187,8 @@ LICENSE="Apache-2.0 BSD BSD-2 ISC MIT Unicode-DFS-2016"
 SLOT="0"
 KEYWORDS="~amd64"
 
+LLVM_MAX_SLOT=15
+
 DEPEND="
 	dev-util/vulkan-headers
 	media-libs/vulkan-loader
@@ -194,7 +196,7 @@ DEPEND="
 	virtual/libudev
 "
 RDEPEND="${DEPEND}"
-BDEPEND=""
+BDEPEND="<sys-devel/clang-16"
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
