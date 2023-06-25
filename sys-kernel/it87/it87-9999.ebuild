@@ -6,7 +6,7 @@ EAPI=7
 inherit linux-mod
 
 DESCRIPTION="IT87 sensors module"
-HOMEPAGE="https://github.com/a1wong/it87"
+HOMEPAGE="https://github.com/frankcrawford/it87"
 
 inherit git-r3
 EGIT_REPO_URI="${HOMEPAGE}.git"
