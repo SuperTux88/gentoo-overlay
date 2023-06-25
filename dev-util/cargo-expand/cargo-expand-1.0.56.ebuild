@@ -11,8 +11,8 @@ CRATES="
 	aho-corasick-1.0.2
 	ansi_colours-1.2.1
 	anstream-0.3.2
-	anstyle-1.0.0
-	anstyle-parse-0.2.0
+	anstyle-1.0.1
+	anstyle-parse-0.2.1
 	anstyle-query-1.0.0
 	anstyle-wincon-1.0.1
 	atty-0.2.14
@@ -29,8 +29,8 @@ CRATES="
 	cargo-subcommand-metadata-0.1.0
 	cc-1.0.79
 	cfg-if-1.0.0
-	clap-4.3.4
-	clap_builder-4.3.4
+	clap-4.3.8
+	clap_builder-4.3.8
 	clap_derive-4.3.2
 	clap_lex-0.5.0
 	clircle-0.3.0
@@ -48,6 +48,7 @@ CRATES="
 	encoding-index-singlebyte-1.20141219.5
 	encoding-index-tradchinese-1.20141219.5
 	encoding_index_tests-0.1.4
+	equivalent-1.0.0
 	errno-0.3.1
 	errno-dragonfly-0.1.2
 	fancy-regex-0.7.1
@@ -58,11 +59,13 @@ CRATES="
 	globset-0.4.10
 	grep-cli-0.1.7
 	hashbrown-0.12.3
+	hashbrown-0.14.0
 	heck-0.4.1
 	hermit-abi-0.1.19
 	hermit-abi-0.3.1
 	home-0.5.5
 	indexmap-1.9.3
+	indexmap-2.0.0
 	instant-0.1.12
 	io-lifetimes-1.0.11
 	is-terminal-0.4.7
@@ -80,8 +83,8 @@ CRATES="
 	option-ext-0.2.0
 	path_abs-0.5.1
 	plist-1.4.3
-	prettyplease-0.2.7
-	proc-macro2-1.0.60
+	prettyplease-0.2.9
+	proc-macro2-1.0.63
 	quick-xml-0.28.2
 	quote-1.0.28
 	redox_syscall-0.2.16
@@ -99,13 +102,13 @@ CRATES="
 	semver-1.0.17
 	serde-1.0.164
 	serde_derive-1.0.164
-	serde_json-1.0.97
-	serde_spanned-0.6.2
+	serde_json-1.0.99
+	serde_spanned-0.6.3
 	serde_yaml-0.8.26
 	shell-words-1.1.0
 	std_prelude-0.2.12
 	strsim-0.10.0
-	syn-2.0.18
+	syn-2.0.22
 	syn-select-0.3.0
 	syntect-5.0.0
 	tempfile-3.6.0
@@ -115,9 +118,9 @@ CRATES="
 	time-0.3.22
 	time-core-0.1.1
 	time-macros-0.2.9
-	toml-0.7.4
-	toml_datetime-0.6.2
-	toml_edit-0.19.10
+	toml-0.7.5
+	toml_datetime-0.6.3
+	toml_edit-0.19.11
 	toolchain_find-0.4.0
 	unicode-ident-1.0.9
 	unicode-width-0.1.10
