@@ -1,15 +1,17 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2022-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-inherit linux-mod git-r3
-EGIT_REPO_URI="https://github.com/Ta180m/zenpower3.git"
-EGIT_BRANCH="master"
+inherit linux-mod
 
 DESCRIPTION="Linux kernel driver for reading sensors of AMD Zen family CPUs"
-HOMEPAGE="https://github.com/Ta180m/zenpower3"
+HOMEPAGE="https://git.exozy.me/a/zenpower3"
 SRC_URI=""
+
+inherit git-r3
+EGIT_REPO_URI="https://git.exozy.me/a/zenpower3.git"
+EGIT_BRANCH="master"
 
 LICENSE="GPL-2"
 SLOT="0"
