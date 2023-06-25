@@ -1,9 +1,9 @@
-# Copyright 2019 Gentoo Authors
+# Copyright 2019-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-inherit linux-mod
+inherit linux-mod-r1
 
 DESCRIPTION="IT87 sensors module"
 HOMEPAGE="https://github.com/frankcrawford/it87"
@@ -22,12 +22,15 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-MODULE_NAMES="it87(misc:${S})"
-BUILD_TARGETS="modules"
-
 src_prepare() {
 	# Set kernel build dir
 	sed -i "s@^KERNEL_BUILD.*@KERNEL_BUILD := ${KV_DIR}@" "${S}/Makefile" || die "Could not fix build path"
 
 	default
+}
+
+src_compile() {
+	local modlist=( it87=misc:"${S}" )
+
+	linux-mod-r1_src_compile
 }
