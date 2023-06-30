@@ -1,18 +1,18 @@
 diff --git a/cmake/FetchOnnxruntime.cmake b/cmake/FetchOnnxruntime.cmake
-index 0f0e723..597dd62 100644
+index 0958ea2..05c87dd 100644
 --- a/cmake/FetchOnnxruntime.cmake
 +++ b/cmake/FetchOnnxruntime.cmake
-@@ -100,9 +100,7 @@ elseif(OS_LINUX)
-   set(Onnxruntime_LINK_LIBS
-       "${onnxruntime_SOURCE_DIR}/lib/libonnxruntime.so.${Onnxruntime_VERSION}")
-   set(Onnxruntime_INSTALL_LIBS
--      ${Onnxruntime_LINK_LIBS} "${onnxruntime_SOURCE_DIR}/lib/libonnxruntime_providers_shared.so"
--      "${onnxruntime_SOURCE_DIR}/lib/libonnxruntime_providers_cuda.so"
--      "${onnxruntime_SOURCE_DIR}/lib/libonnxruntime_providers_tensorrt.so")
-+      ${Onnxruntime_LINK_LIBS} "${onnxruntime_SOURCE_DIR}/lib/libonnxruntime_providers_shared.so")
+@@ -117,9 +117,7 @@ elseif(OS_LINUX)
+     set(Onnxruntime_LINK_LIBS
+         "${onnxruntime_SOURCE_DIR}/lib/libonnxruntime.so.${Onnxruntime_VERSION}")
+     set(Onnxruntime_INSTALL_LIBS
+-        ${Onnxruntime_LINK_LIBS} "${onnxruntime_SOURCE_DIR}/lib/libonnxruntime_providers_shared.so"
+-        "${onnxruntime_SOURCE_DIR}/lib/libonnxruntime_providers_cuda.so"
+-        "${onnxruntime_SOURCE_DIR}/lib/libonnxruntime_providers_tensorrt.so")
++        ${Onnxruntime_LINK_LIBS} "${onnxruntime_SOURCE_DIR}/lib/libonnxruntime_providers_shared.so")
+   endif()
    target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE ${Onnxruntime_LINK_LIBS})
    target_include_directories(${CMAKE_PROJECT_NAME} SYSTEM
-                              PUBLIC "${onnxruntime_SOURCE_DIR}/include")
 diff --git a/src/background-filter.cpp b/src/background-filter.cpp
 index 6a1c004..bc991a2 100644
 --- a/src/background-filter.cpp
