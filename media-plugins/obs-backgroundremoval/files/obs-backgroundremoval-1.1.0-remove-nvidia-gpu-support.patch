@@ -1,0 +1,45 @@
+diff --git a/cmake/FetchOnnxruntime.cmake b/cmake/FetchOnnxruntime.cmake
+index 952eb2d..ec064ec 100644
+--- a/cmake/FetchOnnxruntime.cmake
++++ b/cmake/FetchOnnxruntime.cmake
+@@ -108,9 +108,7 @@ elseif(OS_LINUX)
+     set(onnxruntime_SOURCE_DIR "${CMAKE_CURRENT_BINARY_DIR}/../onnxruntime-linux-x64-gpu-${Onnxruntime_VERSION}")
+     set(Onnxruntime_LINK_LIBS "${onnxruntime_SOURCE_DIR}/lib/libonnxruntime.so.${Onnxruntime_VERSION}")
+     set(Onnxruntime_INSTALL_LIBS
+-        ${Onnxruntime_LINK_LIBS} "${onnxruntime_SOURCE_DIR}/lib/libonnxruntime_providers_shared.so"
+-        "${onnxruntime_SOURCE_DIR}/lib/libonnxruntime_providers_cuda.so"
+-        "${onnxruntime_SOURCE_DIR}/lib/libonnxruntime_providers_tensorrt.so")
++        ${Onnxruntime_LINK_LIBS} "${onnxruntime_SOURCE_DIR}/lib/libonnxruntime_providers_shared.so")
+   endif()
+   target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE ${Onnxruntime_LINK_LIBS})
+   target_include_directories(${CMAKE_PROJECT_NAME} SYSTEM PUBLIC "${onnxruntime_SOURCE_DIR}/include")
+diff --git a/src/background-filter.cpp b/src/background-filter.cpp
+index 47ece78..2cb40eb 100644
+--- a/src/background-filter.cpp
++++ b/src/background-filter.cpp
+@@ -102,10 +102,6 @@ obs_properties_t *background_filter_properties(void *data)
+ 
+ 	obs_property_list_add_string(p_use_gpu, obs_module_text("CPU"),
+ 				     USEGPU_CPU);
+-#if defined(__linux__) && defined(__x86_64__)
+-	obs_property_list_add_string(p_use_gpu, obs_module_text("GPUTensorRT"),
+-				     USEGPU_TENSORRT);
+-#endif
+ #if _WIN32
+ 	obs_property_list_add_string(p_use_gpu, obs_module_text("GPUDirectML"),
+ 				     USEGPU_DML);
+diff --git a/src/enhance-filter.cpp b/src/enhance-filter.cpp
+index 7009eec..84e20ca 100644
+--- a/src/enhance-filter.cpp
++++ b/src/enhance-filter.cpp
+@@ -61,10 +61,6 @@ obs_properties_t *enhance_filter_properties(void *data)
+ 		OBS_COMBO_TYPE_LIST, OBS_COMBO_FORMAT_STRING);
+ 	obs_property_list_add_string(p_use_gpu, obs_module_text("CPU"),
+ 				     USEGPU_CPU);
+-#ifdef __linux__
+-	obs_property_list_add_string(p_use_gpu, obs_module_text("GPUTensorRT"),
+-				     USEGPU_TENSORRT);
+-#endif
+ #if _WIN32
+ 	obs_property_list_add_string(p_use_gpu, obs_module_text("GPUDirectML"),
+ 				     USEGPU_DML);

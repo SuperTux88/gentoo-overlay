@@ -20,8 +20,10 @@ KEYWORDS="~amd64"
 IUSE="video_cards_nvidia"
 
 DEPEND="
-	>=media-video/obs-studio-28
+	dev-qt/qtwidgets
+	>=media-video/obs-studio-29
 	>=media-libs/opencv-4.7.0
+	net-misc/curl
 	video_cards_nvidia? (
 		dev-libs/cudnn
 		sci-libs/tensorflow
@@ -32,15 +34,18 @@ BDEPEND=""
 
 QA_PRESTRIPPED="/usr/lib64/obs-plugins/obs-backgroundremoval/libonnxruntime.so.${ONNXRUNTIME_VERSION} /usr/lib64/obs-plugins/obs-backgroundremoval/libonnxruntime_providers_shared.so"
 
-PATCHES=( "${FILESDIR}"/fetch-onnxruntime-from-path.patch )
+PATCHES=(
+	"${FILESDIR}"/${P}-fetch-onnxruntime-from-path.patch
+	"${FILESDIR}"/${P}-system-curl.patch
+)
 
 src_configure() {
 	if ! use video_cards_nvidia; then
-		eapply "${FILESDIR}"/remove-nvidia-gpu-support.patch
+		eapply "${FILESDIR}"/${P}-remove-nvidia-gpu-support.patch
 	fi
 
 	mycmakeargs=(
-		-DLINUX_PORTABLE=OFF
+		-DENABLE_QT=ON
 		-DUSE_SYSTEM_OPENCV=ON
 	)
 	cmake_src_configure
