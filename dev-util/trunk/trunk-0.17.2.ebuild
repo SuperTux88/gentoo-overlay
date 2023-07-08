@@ -6,9 +6,10 @@
 EAPI=8
 
 CRATES="
-	addr2line-0.19.0
+	addr2line-0.20.0
 	adler-1.0.2
 	aes-0.8.3
+	aho-corasick-1.0.2
 	aligned-0.4.1
 	ansi_term-0.12.1
 	anstream-0.3.2
@@ -18,11 +19,11 @@ CRATES="
 	anstyle-wincon-1.0.1
 	anyhow-1.0.71
 	as-slice-0.2.1
-	async-trait-0.1.68
+	async-trait-0.1.71
 	autocfg-1.1.0
 	axum-0.6.18
 	axum-core-0.3.4
-	backtrace-0.3.67
+	backtrace-0.3.68
 	base64-0.13.1
 	base64-0.21.2
 	base64ct-1.6.0
@@ -42,15 +43,15 @@ CRATES="
 	cfg-if-0.1.10
 	cfg-if-1.0.0
 	cipher-0.4.4
-	clap-4.3.8
-	clap_builder-4.3.8
+	clap-4.3.11
+	clap_builder-4.3.11
 	clap_derive-4.3.2
 	clap_lex-0.5.0
 	colorchoice-1.0.0
 	console-0.15.7
 	constant_time_eq-0.1.5
 	convert_case-0.4.0
-	cpufeatures-0.2.8
+	cpufeatures-0.2.9
 	crc32fast-1.3.2
 	crossbeam-utils-0.8.16
 	crypto-common-0.1.6
@@ -62,7 +63,7 @@ CRATES="
 	digest-0.10.7
 	directories-5.0.1
 	dirs-sys-0.4.1
-	dtoa-1.0.6
+	dtoa-1.0.8
 	dtoa-short-0.3.4
 	dunce-1.0.4
 	either-1.8.1
@@ -101,8 +102,7 @@ CRATES="
 	hashbrown-0.12.3
 	hashbrown-0.14.0
 	heck-0.4.1
-	hermit-abi-0.2.6
-	hermit-abi-0.3.1
+	hermit-abi-0.3.2
 	hmac-0.12.1
 	hostname-0.3.1
 	html5ever-0.25.2
@@ -112,7 +112,7 @@ CRATES="
 	httparse-1.8.0
 	httpdate-1.0.2
 	hyper-0.14.27
-	hyper-rustls-0.24.0
+	hyper-rustls-0.24.1
 	idna-0.2.3
 	idna-0.4.0
 	indexmap-1.9.3
@@ -126,10 +126,10 @@ CRATES="
 	ipconfig-0.3.2
 	ipnet-2.8.0
 	is-docker-0.2.0
-	is-terminal-0.4.7
+	is-terminal-0.4.9
 	is-wsl-0.4.0
 	itoa-0.4.8
-	itoa-1.0.6
+	itoa-1.0.8
 	jobserver-0.1.26
 	js-sys-0.3.64
 	kernel32-sys-0.2.2
@@ -138,6 +138,7 @@ CRATES="
 	libc-0.2.147
 	linked-hash-map-0.5.6
 	linux-raw-sys-0.3.8
+	linux-raw-sys-0.4.3
 	local-ip-address-0.5.3
 	lock_api-0.4.10
 	log-0.4.19
@@ -151,7 +152,6 @@ CRATES="
 	memchr-2.5.0
 	mime-0.3.17
 	mime_guess-2.0.4
-	miniz_oxide-0.6.2
 	miniz_oxide-0.7.1
 	mio-0.6.23
 	mio-0.8.8
@@ -167,8 +167,8 @@ CRATES="
 	normpath-1.1.1
 	notify-4.0.17
 	nu-ansi-term-0.46.0
-	num_cpus-1.15.0
-	object-0.30.4
+	num_cpus-1.16.0
+	object-0.31.1
 	once_cell-1.18.0
 	open-5.0.0
 	option-ext-0.2.0
@@ -186,9 +186,9 @@ CRATES="
 	phf_macros-0.8.0
 	phf_shared-0.8.0
 	phf_shared-0.10.0
-	pin-project-1.1.0
-	pin-project-internal-1.1.0
-	pin-project-lite-0.2.9
+	pin-project-1.1.2
+	pin-project-internal-1.1.2
+	pin-project-lite-0.2.10
 	pin-utils-0.1.0
 	pkg-config-0.3.27
 	ppv-lite86-0.2.17
@@ -196,7 +196,7 @@ CRATES="
 	proc-macro-hack-0.5.20+deprecated
 	proc-macro2-1.0.63
 	quick-error-1.2.3
-	quote-1.0.28
+	quote-1.0.29
 	rand-0.7.3
 	rand-0.8.5
 	rand_chacha-0.2.2
@@ -208,32 +208,34 @@ CRATES="
 	redox_syscall-0.2.16
 	redox_syscall-0.3.5
 	redox_users-0.4.3
-	regex-1.8.4
+	regex-1.9.0
 	regex-automata-0.1.10
+	regex-automata-0.3.0
 	regex-syntax-0.6.29
-	regex-syntax-0.7.2
+	regex-syntax-0.7.3
 	remove_dir_all-0.8.2
 	reqwest-0.11.18
 	resolv-conf-0.7.0
 	ring-0.16.20
 	rustc-demangle-0.1.23
 	rustc_version-0.4.0
-	rustix-0.37.20
-	rustls-0.21.2
-	rustls-pemfile-1.0.2
-	rustls-webpki-0.100.1
-	rustversion-1.0.12
-	ryu-1.0.13
+	rustix-0.37.23
+	rustix-0.38.3
+	rustls-0.21.3
+	rustls-pemfile-1.0.3
+	rustls-webpki-0.101.1
+	rustversion-1.0.13
+	ryu-1.0.14
 	same-file-1.0.6
 	scopeguard-1.1.0
 	sct-0.7.0
 	seahash-4.1.0
 	selectors-0.22.0
 	semver-1.0.17
-	serde-1.0.164
-	serde_derive-1.0.164
-	serde_json-1.0.99
-	serde_path_to_error-0.1.11
+	serde-1.0.167
+	serde_derive-1.0.167
+	serde_json-1.0.100
+	serde_path_to_error-0.1.13
 	serde_spanned-0.6.3
 	serde_urlencoded-0.7.1
 	servo_arc-0.1.1
@@ -243,7 +245,7 @@ CRATES="
 	signal-hook-registry-1.4.1
 	siphasher-0.3.10
 	slab-0.4.8
-	smallvec-1.10.0
+	smallvec-1.11.0
 	socket2-0.4.9
 	socket2-0.5.3
 	spin-0.5.2
@@ -254,29 +256,29 @@ CRATES="
 	strsim-0.10.0
 	subtle-2.5.0
 	syn-1.0.109
-	syn-2.0.22
+	syn-2.0.23
 	sync_wrapper-0.1.2
 	tar-0.4.38
 	tempfile-3.6.0
 	tendril-0.4.3
 	thin-slice-0.1.1
-	thiserror-1.0.40
-	thiserror-impl-1.0.40
+	thiserror-1.0.43
+	thiserror-impl-1.0.43
 	thread_local-1.1.7
 	time-0.3.22
 	time-core-0.1.1
 	tinyvec-1.6.0
 	tinyvec_macros-0.1.1
-	tokio-1.29.0
+	tokio-1.29.1
 	tokio-macros-2.1.0
 	tokio-rustls-0.24.1
 	tokio-stream-0.1.14
 	tokio-tungstenite-0.18.0
 	tokio-tungstenite-0.19.0
 	tokio-util-0.7.8
-	toml-0.7.5
+	toml-0.7.6
 	toml_datetime-0.6.3
-	toml_edit-0.19.11
+	toml_edit-0.19.12
 	tower-0.4.13
 	tower-http-0.4.1
 	tower-layer-0.3.2
@@ -294,7 +296,7 @@ CRATES="
 	typenum-1.16.0
 	unicase-2.6.0
 	unicode-bidi-0.3.13
-	unicode-ident-1.0.9
+	unicode-ident-1.0.10
 	unicode-normalization-0.1.22
 	unicode-width-0.1.10
 	untrusted-0.7.1
@@ -328,7 +330,7 @@ CRATES="
 	windows-sys-0.45.0
 	windows-sys-0.48.0
 	windows-targets-0.42.2
-	windows-targets-0.48.0
+	windows-targets-0.48.1
 	windows_aarch64_gnullvm-0.42.2
 	windows_aarch64_gnullvm-0.48.0
 	windows_aarch64_msvc-0.42.2
@@ -343,7 +345,7 @@ CRATES="
 	windows_x86_64_gnullvm-0.48.0
 	windows_x86_64_msvc-0.42.2
 	windows_x86_64_msvc-0.48.0
-	winnow-0.4.7
+	winnow-0.4.8
 	winreg-0.10.1
 	winreg-0.50.0
 	ws2_32-sys-0.2.1
