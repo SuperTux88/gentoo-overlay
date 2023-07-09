@@ -17,10 +17,15 @@ SRC_URI="
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="video_cards_nvidia"
+IUSE="qt6 video_cards_nvidia"
 
 DEPEND="
-	dev-qt/qtwidgets
+	qt6? (
+		dev-qt/qtbase:6[widgets]
+	)
+	!qt6? (
+		dev-qt/qtwidgets:5
+	)
 	>=media-video/obs-studio-29
 	>=media-libs/opencv-4.7.0
 	net-misc/curl
@@ -45,7 +50,9 @@ src_configure() {
 	fi
 
 	mycmakeargs=(
-		-DENABLE_QT=ON
+		--preset linux-x86_64
+		-B "${BUILD_DIR}"
+		-DQT_VERSION=$(usex qt6 6 5)
 		-DUSE_SYSTEM_OPENCV=ON
 	)
 	cmake_src_configure
