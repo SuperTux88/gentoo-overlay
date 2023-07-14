@@ -39,13 +39,13 @@ BDEPEND=""
 QA_PRESTRIPPED="/usr/lib64/obs-plugins/obs-backgroundremoval/libonnxruntime.so.${ONNXRUNTIME_VERSION} /usr/lib64/obs-plugins/obs-backgroundremoval/libonnxruntime_providers_shared.so"
 
 PATCHES=(
-	"${FILESDIR}"/${P}-fetch-onnxruntime-from-path.patch
+	"${FILESDIR}"/fetch-onnxruntime-from-path.patch
 	"${FILESDIR}"/remove-update-check.patch
 )
 
 src_configure() {
 	if ! use video_cards_nvidia; then
-		eapply "${FILESDIR}"/${P}-remove-nvidia-gpu-support.patch
+		eapply "${FILESDIR}"/remove-nvidia-gpu-support.patch
 	fi
 
 	mycmakeargs=(
