@@ -28,7 +28,6 @@ DEPEND="
 	)
 	>=media-video/obs-studio-29
 	>=media-libs/opencv-4.7.0
-	net-misc/curl
 	video_cards_nvidia? (
 		dev-libs/cudnn
 		sci-libs/tensorflow
@@ -39,7 +38,10 @@ BDEPEND=""
 
 QA_PRESTRIPPED="/usr/lib64/obs-plugins/obs-backgroundremoval/libonnxruntime.so.${ONNXRUNTIME_VERSION} /usr/lib64/obs-plugins/obs-backgroundremoval/libonnxruntime_providers_shared.so"
 
-PATCHES=( "${FILESDIR}"/${P}-fetch-onnxruntime-from-path.patch )
+PATCHES=(
+	"${FILESDIR}"/${P}-fetch-onnxruntime-from-path.patch
+	"${FILESDIR}"/remove-update-check.patch
+)
 
 src_configure() {
 	if ! use video_cards_nvidia; then
@@ -50,7 +52,6 @@ src_configure() {
 		--preset linux-x86_64
 		-B "${BUILD_DIR}"
 		-DQT_VERSION=$(usex qt6 6 5)
-		-DUSE_SYSTEM_CURL=ON
 		-DUSE_SYSTEM_OPENCV=ON
 	)
 	cmake_src_configure

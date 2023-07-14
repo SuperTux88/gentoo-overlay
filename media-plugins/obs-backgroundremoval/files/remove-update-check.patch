@@ -1,0 +1,65 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index d50d308..2b77b0b 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -68,28 +68,12 @@ else()
+   target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE OpenCV)
+ endif()
+ 
+-set(USE_SYSTEM_CURL
+-    OFF
+-    CACHE STRING "Use system cURL")
+-
+-if(USE_SYSTEM_CURL)
+-  find_package(CURL REQUIRED)
+-  target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE "${CURL_LIBRARIES}")
+-  target_include_directories(${CMAKE_PROJECT_NAME} SYSTEM PUBLIC "${CURL_INCLUDE_DIRS}")
+-else()
+-  include(cmake/BuildMyCurl.cmake)
+-  target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE libcurl)
+-endif()
+-
+ target_sources(
+   ${CMAKE_PROJECT_NAME}
+   PRIVATE src/plugin-main.c
+           src/ort-utils/ort-session-utils.cpp
+           src/obs-utils/obs-utils.cpp
+           src/obs-utils/obs-config-utils.cpp
+-          src/update-checker/github-utils.cpp
+-          src/update-checker/update-checker.cpp
+-          src/update-checker/UpdateDialog.cpp
+           src/background-filter-info.c
+           src/background-filter.cpp
+           src/enhance-filter.cpp
+diff --git a/src/plugin-main.c b/src/plugin-main.c
+index 9df9991..564b89d 100644
+--- a/src/plugin-main.c
++++ b/src/plugin-main.c
+@@ -20,9 +20,6 @@ with this program. If not, see <https://www.gnu.org/licenses/>
+ 
+ #include "plugin-support.h"
+ 
+-#include "update-checker/github-utils.h"
+-#include "update-checker/update-checker.h"
+-
+ OBS_DECLARE_MODULE()
+ OBS_MODULE_USE_DEFAULT_LOCALE(PLUGIN_NAME, "en-US")
+ 
+@@ -41,17 +38,6 @@ bool obs_module_load(void)
+ 	obs_log(LOG_INFO, "plugin loaded successfully (version %s)",
+ 		PLUGIN_VERSION);
+ 
+-	const struct github_utils_release_information latestRelease =
+-		github_utils_get_release_information();
+-	if (latestRelease.responseCode == OBS_BGREMOVAL_GITHUB_UTILS_SUCCESS) {
+-		obs_log(LOG_INFO, "Latest release is %s",
+-			latestRelease.version);
+-		check_update(latestRelease);
+-	} else {
+-		obs_log(LOG_INFO, "failed to get latest release information");
+-	}
+-	github_utils_release_information_free(latestRelease);
+-
+ 	return true;
+ }
+ 
