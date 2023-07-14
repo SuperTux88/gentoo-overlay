@@ -10,7 +10,7 @@ ONNXRUNTIME_VERSION=1.15.1
 DESCRIPTION="OBS plugin for removing background"
 HOMEPAGE="https://github.com/royshil/obs-backgroundremoval"
 SRC_URI="
-	https://github.com/royshil/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/royshil/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/microsoft/onnxruntime/releases/download/v${ONNXRUNTIME_VERSION}/onnxruntime-linux-x64-gpu-${ONNXRUNTIME_VERSION}.tgz
 "
 
@@ -39,10 +39,7 @@ BDEPEND=""
 
 QA_PRESTRIPPED="/usr/lib64/obs-plugins/obs-backgroundremoval/libonnxruntime.so.${ONNXRUNTIME_VERSION} /usr/lib64/obs-plugins/obs-backgroundremoval/libonnxruntime_providers_shared.so"
 
-PATCHES=(
-	"${FILESDIR}"/${P}-fetch-onnxruntime-from-path.patch
-	"${FILESDIR}"/${P}-system-curl.patch
-)
+PATCHES=( "${FILESDIR}"/${P}-fetch-onnxruntime-from-path.patch )
 
 src_configure() {
 	if ! use video_cards_nvidia; then
@@ -53,6 +50,7 @@ src_configure() {
 		--preset linux-x86_64
 		-B "${BUILD_DIR}"
 		-DQT_VERSION=$(usex qt6 6 5)
+		-DUSE_SYSTEM_CURL=ON
 		-DUSE_SYSTEM_OPENCV=ON
 	)
 	cmake_src_configure
