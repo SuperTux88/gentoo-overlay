@@ -7,9 +7,8 @@ EAPI=8
 
 CRATES="
 	adler-1.0.2
-	aho-corasick-0.7.20
 	aho-corasick-1.0.2
-	ansi_colours-1.2.1
+	ansi_colours-1.2.2
 	anstream-0.3.2
 	anstyle-1.0.1
 	anstyle-parse-0.2.1
@@ -29,9 +28,9 @@ CRATES="
 	cargo-subcommand-metadata-0.1.0
 	cc-1.0.79
 	cfg-if-1.0.0
-	clap-4.3.11
-	clap_builder-4.3.11
-	clap_derive-4.3.2
+	clap-4.3.12
+	clap_builder-4.3.12
+	clap_derive-4.3.12
 	clap_lex-0.5.0
 	clircle-0.3.0
 	colorchoice-1.0.0
@@ -48,7 +47,7 @@ CRATES="
 	encoding-index-singlebyte-1.20141219.5
 	encoding-index-tradchinese-1.20141219.5
 	encoding_index_tests-0.1.4
-	equivalent-1.0.0
+	equivalent-1.0.1
 	errno-0.3.1
 	errno-dragonfly-0.1.2
 	fancy-regex-0.7.1
@@ -56,7 +55,7 @@ CRATES="
 	flate2-1.0.26
 	fnv-1.0.7
 	getrandom-0.2.10
-	globset-0.4.10
+	globset-0.4.11
 	grep-cli-0.1.8
 	hashbrown-0.12.3
 	hashbrown-0.14.0
@@ -67,8 +66,8 @@ CRATES="
 	indexmap-2.0.0
 	instant-0.1.12
 	io-lifetimes-1.0.11
-	is-terminal-0.4.8
-	itoa-1.0.8
+	is-terminal-0.4.9
+	itoa-1.0.9
 	lazy_static-1.4.0
 	libc-0.2.147
 	line-wrap-0.1.1
@@ -82,48 +81,48 @@ CRATES="
 	once_cell-1.18.0
 	option-ext-0.2.0
 	path_abs-0.5.1
-	plist-1.4.3
+	plist-1.5.0
 	prettyplease-0.2.10
-	proc-macro2-1.0.63
-	quick-xml-0.28.2
-	quote-1.0.29
+	proc-macro2-1.0.66
+	quick-xml-0.29.0
+	quote-1.0.31
 	redox_syscall-0.2.16
 	redox_syscall-0.3.5
 	redox_users-0.4.3
-	regex-1.9.0
-	regex-automata-0.3.0
+	regex-1.9.1
+	regex-automata-0.3.3
 	regex-syntax-0.6.29
-	regex-syntax-0.7.3
+	regex-syntax-0.7.4
 	rgb-0.8.36
 	rustix-0.37.23
-	rustix-0.38.3
-	ryu-1.0.14
+	rustix-0.38.4
+	ryu-1.0.15
 	safemem-0.3.3
 	same-file-1.0.6
-	semver-1.0.17
-	serde-1.0.166
-	serde_derive-1.0.166
-	serde_json-1.0.100
+	semver-1.0.18
+	serde-1.0.171
+	serde_derive-1.0.171
+	serde_json-1.0.103
 	serde_spanned-0.6.3
 	serde_yaml-0.8.26
 	shell-words-1.1.0
 	std_prelude-0.2.12
 	strsim-0.10.0
-	syn-2.0.23
+	syn-2.0.26
 	syn-select-0.3.0
 	syntect-5.0.0
 	tempfile-3.6.0
 	termcolor-1.2.0
-	thiserror-1.0.41
-	thiserror-impl-1.0.41
-	time-0.3.22
+	thiserror-1.0.43
+	thiserror-impl-1.0.43
+	time-0.3.23
 	time-core-0.1.1
-	time-macros-0.2.9
+	time-macros-0.2.10
 	toml-0.7.6
 	toml_datetime-0.6.3
-	toml_edit-0.19.12
+	toml_edit-0.19.14
 	toolchain_find-0.4.0
-	unicode-ident-1.0.10
+	unicode-ident-1.0.11
 	unicode-width-0.1.10
 	utf8parse-0.2.1
 	walkdir-2.3.3
@@ -150,7 +149,7 @@ CRATES="
 	windows_x86_64_gnullvm-0.48.0
 	windows_x86_64_msvc-0.42.2
 	windows_x86_64_msvc-0.48.0
-	winnow-0.4.7
+	winnow-0.5.0
 	yaml-rust-0.4.5
 "
 
