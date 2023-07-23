@@ -249,8 +249,6 @@ BDEPEND=""
 # update with proper path to binaries this crate installs, omit leading /
 QA_FLAGS_IGNORED="usr/bin/${PN}"
 
-PATCHES=( "${FILESDIR}"/${P}-fix-version.patch )
-
 src_compile() {
 	cargo_src_compile
 
