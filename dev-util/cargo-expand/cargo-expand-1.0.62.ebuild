@@ -28,8 +28,8 @@ CRATES="
 	cargo-subcommand-metadata-0.1.0
 	cc-1.0.79
 	cfg-if-1.0.0
-	clap-4.3.12
-	clap_builder-4.3.12
+	clap-4.3.17
+	clap_builder-4.3.17
 	clap_derive-4.3.12
 	clap_lex-0.5.0
 	clircle-0.3.0
@@ -51,12 +51,12 @@ CRATES="
 	errno-0.3.1
 	errno-dragonfly-0.1.2
 	fancy-regex-0.7.1
-	fastrand-1.9.0
+	fastrand-2.0.0
 	flate2-1.0.26
 	fnv-1.0.7
 	getrandom-0.2.10
 	globset-0.4.11
-	grep-cli-0.1.8
+	grep-cli-0.1.9
 	hashbrown-0.12.3
 	hashbrown-0.14.0
 	heck-0.4.1
@@ -64,15 +64,12 @@ CRATES="
 	home-0.5.5
 	indexmap-1.9.3
 	indexmap-2.0.0
-	instant-0.1.12
-	io-lifetimes-1.0.11
 	is-terminal-0.4.9
 	itoa-1.0.9
 	lazy_static-1.4.0
 	libc-0.2.147
 	line-wrap-0.1.1
 	linked-hash-map-0.5.6
-	linux-raw-sys-0.3.8
 	linux-raw-sys-0.4.3
 	log-0.4.19
 	memchr-2.5.0
@@ -82,7 +79,7 @@ CRATES="
 	option-ext-0.2.0
 	path_abs-0.5.1
 	plist-1.5.0
-	prettyplease-0.2.10
+	prettyplease-0.2.11
 	proc-macro2-1.0.66
 	quick-xml-0.29.0
 	quote-1.0.31
@@ -94,14 +91,13 @@ CRATES="
 	regex-syntax-0.6.29
 	regex-syntax-0.7.4
 	rgb-0.8.36
-	rustix-0.37.23
 	rustix-0.38.4
 	ryu-1.0.15
 	safemem-0.3.3
 	same-file-1.0.6
 	semver-1.0.18
-	serde-1.0.171
-	serde_derive-1.0.171
+	serde-1.0.173
+	serde_derive-1.0.173
 	serde_json-1.0.103
 	serde_spanned-0.6.3
 	serde_yaml-0.8.26
@@ -111,7 +107,7 @@ CRATES="
 	syn-2.0.26
 	syn-select-0.3.0
 	syntect-5.0.0
-	tempfile-3.6.0
+	tempfile-3.7.0
 	termcolor-1.2.0
 	thiserror-1.0.43
 	thiserror-impl-1.0.43
@@ -162,7 +158,7 @@ SRC_URI="
 	$(cargo_crate_uris)
 "
 
-LICENSE="Apache-2.0 BSD CC0-1.0 LGPL-3+ MIT MPL-2.0 Unicode-DFS-2016"
+LICENSE="Apache-2.0 CC0-1.0 LGPL-3+ MIT MPL-2.0 Unicode-DFS-2016"
 SLOT="0"
 KEYWORDS="~amd64"
 
