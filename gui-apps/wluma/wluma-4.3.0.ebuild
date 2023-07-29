@@ -8,21 +8,19 @@ EAPI=8
 CRATES="
 	aho-corasick-0.7.20
 	android_system_properties-0.1.5
-	ansi_term-0.12.1
 	anyhow-1.0.68
 	ash-0.37.2+1.3.238
 	atty-0.2.14
 	autocfg-1.1.0
-	bindgen-0.56.0
+	bindgen-0.65.1
 	bitflags-1.3.2
 	bumpalo-3.11.1
 	byteorder-1.4.3
 	cc-1.0.78
-	cexpr-0.4.0
+	cexpr-0.6.0
 	cfg-if-1.0.0
 	chrono-0.4.23
 	clang-sys-1.4.0
-	clap-2.34.0
 	codespan-reporting-0.11.1
 	core-foundation-0.9.3
 	core-foundation-sys-0.6.2
@@ -46,8 +44,7 @@ CRATES="
 	downcast-rs-1.2.0
 	dtoa-0.4.8
 	edid-0.3.0
-	either-1.8.0
-	env_logger-0.8.4
+	either-1.8.1
 	env_logger-0.9.3
 	float-cmp-0.9.0
 	foreign-types-0.3.2
@@ -73,7 +70,7 @@ CRATES="
 	js-sys-0.3.60
 	lazy_static-1.4.0
 	lazycell-1.3.0
-	libc-0.2.139
+	libc-0.2.141
 	libloading-0.7.4
 	libudev-sys-0.1.4
 	link-cplusplus-1.0.8
@@ -87,12 +84,13 @@ CRATES="
 	memchr-1.0.2
 	memchr-2.5.0
 	memoffset-0.6.5
+	minimal-lexical-0.2.1
 	mio-0.8.5
-	mockall-0.11.3
-	mockall_derive-0.11.3
+	mockall-0.11.4
+	mockall_derive-0.11.4
 	nix-0.24.3
 	nom-3.2.1
-	nom-5.1.2
+	nom-7.1.3
 	normalize-line-endings-0.3.0
 	num-integer-0.1.45
 	num-traits-0.2.15
@@ -105,12 +103,13 @@ CRATES="
 	predicates-2.1.5
 	predicates-core-1.0.5
 	predicates-tree-1.0.7
-	proc-macro2-1.0.49
-	quote-1.0.23
+	prettyplease-0.2.9
+	proc-macro2-1.0.62
+	quote-1.0.28
 	redox_syscall-0.2.16
 	redox_users-0.4.3
-	regex-1.7.1
-	regex-syntax-0.6.28
+	regex-1.7.3
+	regex-syntax-0.6.29
 	resize-slice-0.1.3
 	rustc-hash-1.1.0
 	ryu-1.0.12
@@ -120,27 +119,24 @@ CRATES="
 	serde_derive-1.0.152
 	serde_yaml-0.7.5
 	serde_yaml-0.9.16
-	shlex-0.1.1
+	shlex-1.1.0
 	smallvec-1.10.0
 	socket2-0.4.7
-	strsim-0.8.0
-	syn-1.0.107
+	syn-1.0.109
+	syn-2.0.22
 	termcolor-1.2.0
 	termtree-0.4.0
-	textwrap-0.11.0
 	thiserror-1.0.38
 	thiserror-impl-1.0.38
 	time-0.1.45
 	tokio-1.24.1
 	udev-0.2.0
-	unicode-ident-1.0.6
+	unicode-ident-1.0.8
 	unicode-width-0.1.10
 	uninitialized-0.0.2
 	unsafe-libyaml-0.2.5
-	v4l-0.13.1
-	v4l-sys-0.2.0
-	vec_map-0.8.2
-	version_check-0.9.4
+	v4l-0.14.0
+	v4l-sys-0.3.0
 	void-1.0.2
 	wasi-0.10.0+wasi-snapshot-preview1
 	wasi-0.11.0+wasi-snapshot-preview1
@@ -154,7 +150,7 @@ CRATES="
 	wayland-protocols-0.29.5
 	wayland-scanner-0.29.5
 	wayland-sys-0.29.5
-	which-3.1.1
+	which-4.4.0
 	widestring-0.3.0
 	winapi-0.3.9
 	winapi-i686-pc-windows-gnu-0.4.0
@@ -173,7 +169,7 @@ CRATES="
 	yaml-rust-0.4.5
 "
 
-inherit cargo udev systemd llvm
+inherit cargo udev systemd
 
 DESCRIPTION="Automatic brightness adjustment based on screen contents and ALS"
 HOMEPAGE="https://github.com/maximbaz/wluma"
@@ -184,10 +180,9 @@ SRC_URI="
 "
 
 LICENSE="Apache-2.0 BSD BSD-2 ISC MIT Unicode-DFS-2016"
+LICENSE="Apache-2.0 BSD BSD-2 ISC MIT Unicode-DFS-2016"
 SLOT="0"
 KEYWORDS="~amd64"
-
-LLVM_MAX_SLOT=15
 
 DEPEND="
 	dev-util/vulkan-headers
@@ -196,7 +191,7 @@ DEPEND="
 	virtual/libudev
 "
 RDEPEND="${DEPEND}"
-BDEPEND="<sys-devel/clang-16"
+BDEPEND=""
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
