@@ -240,6 +240,7 @@ SRC_URI="
 LICENSE="Apache-2.0 BSD BSD-2 CC-PD CC0-1.0 ISC MIT MPL-2.0 Unicode-DFS-2016 Unlicense WTFPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="+scripting +watch"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
@@ -248,6 +249,14 @@ BDEPEND=""
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
 QA_FLAGS_IGNORED="usr/bin/${PN}"
+
+src_configure() {
+	local myfeatures=(
+		$(usev scripting)
+		$(usev watch)
+	)
+	cargo_src_configure --no-default-features
+}
 
 src_compile() {
 	cargo_src_compile

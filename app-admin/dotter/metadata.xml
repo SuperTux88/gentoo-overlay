@@ -8,4 +8,8 @@
 	<upstream>
 		<remote-id type="github">SuperCuber/dotter</remote-id>
 	</upstream>
+	<use>
+		<flag name="scripting">Enable scripting support with rhai helpers</flag>
+		<flag name="watch">Enable watch sub-command</flag>
+	</use>
 </pkgmetadata>
