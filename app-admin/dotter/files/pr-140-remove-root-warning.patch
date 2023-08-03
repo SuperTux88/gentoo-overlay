@@ -1,0 +1,37 @@
+From 62ae20f84536126aca61fb8933293983e4ad42ab Mon Sep 17 00:00:00 2001
+From: Benjamin Neff <benjamin@coding4coffee.ch>
+Date: Sat, 29 Jul 2023 18:51:37 +0200
+Subject: [PATCH] Allow running as root if global config is owned by root
+
+If the global config is owned by root, we can assume that the whole
+dotfiles repo is owned by root and running as root is fine then, as it's
+not a problem if the cache is also owned by root.
+
+Also, the check only need to run on unix.
+---
+ src/main.rs | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+
+diff --git a/src/main.rs b/src/main.rs
+index 80b0a32..2a2e7c1 100644
+--- a/src/main.rs
++++ b/src/main.rs
+@@ -78,10 +78,16 @@ fn run() -> Result<bool> {
+ 
+     trace!("Loaded options: {:#?}", opt);
+ 
+-    if std::env::var("USER").unwrap_or_default() == "root" {
+-        warn!("It is not recommended to run Dotter as root, since the cache files and all files not marked with an `owner` field will default to being owned by root.
++    #[cfg(unix)]
++    {
++        use std::os::unix::prelude::MetadataExt;
++        if std::env::var("USER").unwrap_or_default() == "root"
++            && !std::fs::metadata(&opt.global_config).is_ok_and(|m| m.uid() == 0)
++        {
++            warn!("It is not recommended to run Dotter as root, since the cache files and all files not marked with an `owner` field will default to being owned by root.
+ If you're truly logged in as root, it is safe to ignore this message.
+ Otherwise, run `dotter undeploy` as root, remove cache.toml and cache/ folders, then use Dotter as a regular user.");
++        }
+     }
+ 
+     match opt.action.clone().unwrap_or_default() {

@@ -246,6 +246,12 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
+PATCHES=(
+	"${FILESDIR}"/pr-136-run-hooks-from-cache.patch
+	"${FILESDIR}"/pr-138-add-env-helper.patch
+	"${FILESDIR}"/pr-140-remove-root-warning.patch
+)
+
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
 QA_FLAGS_IGNORED="usr/bin/${PN}"
