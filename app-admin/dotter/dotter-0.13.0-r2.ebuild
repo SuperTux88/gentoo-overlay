@@ -253,7 +253,6 @@ BDEPEND=""
 
 PATCHES=(
 	"${FILESDIR}"/pr-136-run-hooks-from-cache.patch
-	"${FILESDIR}"/pr-138-add-env-helper.patch
 	"${FILESDIR}"/pr-140-remove-root-warning.patch
 )
 
