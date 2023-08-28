@@ -351,10 +351,18 @@ LICENSE+="
 "
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="+auto-splitting"
 
 DEPEND="media-video/obs-studio"
 RDEPEND="${DEPEND}"
 BDEPEND="dev-util/patchelf"
+
+src_configure() {
+	local myfeatures=(
+		$(usev auto-splitting)
+	)
+	cargo_src_configure --no-default-features
+}
 
 src_compile() {
 	cargo_src_compile

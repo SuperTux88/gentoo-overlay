@@ -8,4 +8,7 @@
 	<upstream>
 		<remote-id type="github">CryZe/obs-livesplit-one</remote-id>
 	</upstream>
+	<use>
+		<flag name="auto-splitting">Enable auto-splitting feature</flag>
+	</use>
 </pkgmetadata>
