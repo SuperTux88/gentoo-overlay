@@ -201,7 +201,7 @@ CRATES="
 	rustls@0.21.6
 	rustls-native-certs@0.6.3
 	rustls-pemfile@1.0.3
-	rustls-webpki@0.101.3
+	rustls-webpki@0.101.4
 	rustybuzz@0.8.0
 	ryu@1.0.15
 	schannel@0.1.22
