@@ -23,7 +23,7 @@ CRATES="
 	bitflags@1.3.2
 	bitflags@2.4.0
 	bstr@1.6.2
-	bytemuck@1.13.1
+	bytemuck@1.14.0
 	bytesize@1.3.0
 	cargo-subcommand-metadata@0.1.0
 	cc@1.0.83
@@ -78,7 +78,7 @@ CRATES="
 	option-ext@0.2.0
 	path_abs@0.5.1
 	plist@1.5.0
-	prettyplease@0.2.14
+	prettyplease@0.2.15
 	proc-macro2@1.0.66
 	quick-xml@0.29.0
 	quote@1.0.33
@@ -119,7 +119,7 @@ CRATES="
 	unicode-ident@1.0.11
 	unicode-width@0.1.10
 	utf8parse@0.2.1
-	walkdir@2.3.3
+	walkdir@2.4.0
 	wasi@0.11.0+wasi-snapshot-preview1
 	winapi@0.3.9
 	winapi-i686-pc-windows-gnu@0.4.0
