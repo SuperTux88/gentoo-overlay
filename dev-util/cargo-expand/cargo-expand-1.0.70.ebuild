@@ -10,12 +10,12 @@ CRATES="
 	aho-corasick@1.0.5
 	ansi_colours@1.2.2
 	anstream@0.5.0
-	anstyle@1.0.2
+	anstyle@1.0.3
 	anstyle-parse@0.2.1
 	anstyle-query@1.0.0
 	anstyle-wincon@2.1.0
 	autocfg@1.1.0
-	base64@0.21.3
+	base64@0.21.4
 	bat@0.23.0
 	bincode@1.3.3
 	bit-set@0.5.3
@@ -28,7 +28,7 @@ CRATES="
 	cargo-subcommand-metadata@0.1.0
 	cc@1.0.83
 	cfg-if@1.0.0
-	clap@4.4.2
+	clap@4.4.3
 	clap_builder@4.4.2
 	clap_derive@4.4.2
 	clap_lex@0.5.1
@@ -66,10 +66,10 @@ CRATES="
 	indexmap@2.0.0
 	itoa@1.0.9
 	lazy_static@1.4.0
-	libc@0.2.147
+	libc@0.2.148
 	line-wrap@0.1.1
 	linked-hash-map@0.5.6
-	linux-raw-sys@0.4.5
+	linux-raw-sys@0.4.7
 	log@0.4.20
 	memchr@2.6.3
 	miniz_oxide@0.7.1
@@ -79,7 +79,7 @@ CRATES="
 	path_abs@0.5.1
 	plist@1.5.0
 	prettyplease@0.2.15
-	proc-macro2@1.0.66
+	proc-macro2@1.0.67
 	quick-xml@0.29.0
 	quote@1.0.33
 	redox_syscall@0.2.16
@@ -89,20 +89,20 @@ CRATES="
 	regex-automata@0.3.8
 	regex-syntax@0.7.5
 	rgb@0.8.36
-	rustix@0.38.11
+	rustix@0.38.13
 	ryu@1.0.15
 	safemem@0.3.3
 	same-file@1.0.6
 	semver@1.0.18
 	serde@1.0.188
 	serde_derive@1.0.188
-	serde_json@1.0.105
+	serde_json@1.0.106
 	serde_spanned@0.6.3
 	serde_yaml@0.8.26
 	shell-words@1.1.0
 	std_prelude@0.2.12
 	strsim@0.10.0
-	syn@2.0.31
+	syn@2.0.33
 	syn-select@0.3.0
 	syntect@5.1.0
 	tempfile@3.8.0
@@ -112,11 +112,11 @@ CRATES="
 	time@0.3.28
 	time-core@0.1.1
 	time-macros@0.2.14
-	toml@0.7.6
+	toml@0.8.0
 	toml_datetime@0.6.3
-	toml_edit@0.19.14
+	toml_edit@0.20.0
 	toolchain_find@0.4.0
-	unicode-ident@1.0.11
+	unicode-ident@1.0.12
 	unicode-width@0.1.10
 	utf8parse@0.2.1
 	walkdir@2.4.0
