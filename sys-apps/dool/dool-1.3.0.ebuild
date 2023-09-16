@@ -22,7 +22,7 @@ RDEPEND="${PYTHON_DEPS}
 DEPEND="${RDEPEND}"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-1.2.0-bytes-by-default.patch" # https://github.com/scottchiefbaker/dool/issues/13
+	"${FILESDIR}/${PN}-bytes-by-default.patch" # https://github.com/scottchiefbaker/dool/issues/13
 )
 
 src_install() {
