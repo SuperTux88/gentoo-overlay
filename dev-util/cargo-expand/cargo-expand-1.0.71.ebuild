@@ -7,7 +7,7 @@ EAPI=8
 
 CRATES="
 	adler@1.0.2
-	aho-corasick@1.0.5
+	aho-corasick@1.1.1
 	ansi_colours@1.2.2
 	anstream@0.5.0
 	anstyle@1.0.3
@@ -28,8 +28,8 @@ CRATES="
 	cargo-subcommand-metadata@0.1.0
 	cc@1.0.83
 	cfg-if@1.0.0
-	clap@4.4.3
-	clap_builder@4.4.2
+	clap@4.4.4
+	clap_builder@4.4.4
 	clap_derive@4.4.2
 	clap_lex@0.5.1
 	clircle@0.3.0
@@ -89,24 +89,24 @@ CRATES="
 	regex-automata@0.3.8
 	regex-syntax@0.7.5
 	rgb@0.8.36
-	rustix@0.38.13
+	rustix@0.38.14
 	ryu@1.0.15
 	safemem@0.3.3
 	same-file@1.0.6
-	semver@1.0.18
+	semver@1.0.19
 	serde@1.0.188
 	serde_derive@1.0.188
-	serde_json@1.0.106
+	serde_json@1.0.107
 	serde_spanned@0.6.3
 	serde_yaml@0.8.26
 	shell-words@1.1.0
 	std_prelude@0.2.12
 	strsim@0.10.0
-	syn@2.0.33
+	syn@2.0.37
 	syn-select@0.3.0
 	syntect@5.1.0
 	tempfile@3.8.0
-	termcolor@1.2.0
+	termcolor@1.3.0
 	thiserror@1.0.48
 	thiserror-impl@1.0.48
 	time@0.3.28
@@ -117,13 +117,13 @@ CRATES="
 	toml_edit@0.20.0
 	toolchain_find@0.4.0
 	unicode-ident@1.0.12
-	unicode-width@0.1.10
+	unicode-width@0.1.11
 	utf8parse@0.2.1
 	walkdir@2.4.0
 	wasi@0.11.0+wasi-snapshot-preview1
 	winapi@0.3.9
 	winapi-i686-pc-windows-gnu@0.4.0
-	winapi-util@0.1.5
+	winapi-util@0.1.6
 	winapi-x86_64-pc-windows-gnu@0.4.0
 	windows-sys@0.45.0
 	windows-sys@0.48.0
