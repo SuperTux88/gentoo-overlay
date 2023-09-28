@@ -42,6 +42,9 @@ The following packages are available in this overlay:
 * app-containers/dnsname-cni-plugin
   * name resolution for containers
   * https://github.com/containers/dnsname
+* app-containers/podman-compose
+  * A script to run docker-compose.yml using podman
+  * https://github.com/containers/podman-compose
 * app-misc/google-cloud-cli
   * Google Cloud SDK
   * https://cloud.google.com/sdk
