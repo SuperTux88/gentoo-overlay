@@ -9,11 +9,11 @@ CRATES="
 	adler@1.0.2
 	aho-corasick@1.1.1
 	ansi_colours@1.2.2
-	anstream@0.5.0
-	anstyle@1.0.3
-	anstyle-parse@0.2.1
+	anstream@0.6.4
+	anstyle@1.0.4
+	anstyle-parse@0.2.2
 	anstyle-query@1.0.0
-	anstyle-wincon@2.1.0
+	anstyle-wincon@3.0.1
 	autocfg@1.1.0
 	base64@0.21.4
 	bat@0.23.0
@@ -28,8 +28,8 @@ CRATES="
 	cargo-subcommand-metadata@0.1.0
 	cc@1.0.83
 	cfg-if@1.0.0
-	clap@4.4.4
-	clap_builder@4.4.4
+	clap@4.4.6
+	clap_builder@4.4.6
 	clap_derive@4.4.2
 	clap_lex@0.5.1
 	clircle@0.3.0
@@ -49,29 +49,29 @@ CRATES="
 	encoding-index-tradchinese@1.20141219.5
 	encoding_index_tests@0.1.4
 	equivalent@1.0.1
-	errno@0.3.3
+	errno@0.3.4
 	errno-dragonfly@0.1.2
 	fancy-regex@0.11.0
-	fastrand@2.0.0
+	fastrand@2.0.1
 	flate2@1.0.27
 	fnv@1.0.7
 	getrandom@0.2.10
 	globset@0.4.13
 	grep-cli@0.1.9
 	hashbrown@0.12.3
-	hashbrown@0.14.0
+	hashbrown@0.14.1
 	heck@0.4.1
 	home@0.5.5
 	indexmap@1.9.3
-	indexmap@2.0.0
+	indexmap@2.0.2
 	itoa@1.0.9
 	lazy_static@1.4.0
 	libc@0.2.148
 	line-wrap@0.1.1
 	linked-hash-map@0.5.6
-	linux-raw-sys@0.4.7
+	linux-raw-sys@0.4.8
 	log@0.4.20
-	memchr@2.6.3
+	memchr@2.6.4
 	miniz_oxide@0.7.1
 	nu-ansi-term@0.47.0
 	once_cell@1.18.0
@@ -85,11 +85,11 @@ CRATES="
 	redox_syscall@0.2.16
 	redox_syscall@0.3.5
 	redox_users@0.4.3
-	regex@1.9.5
-	regex-automata@0.3.8
+	regex@1.9.6
+	regex-automata@0.3.9
 	regex-syntax@0.7.5
 	rgb@0.8.36
-	rustix@0.38.14
+	rustix@0.38.15
 	ryu@1.0.15
 	safemem@0.3.3
 	same-file@1.0.6
@@ -107,14 +107,14 @@ CRATES="
 	syntect@5.1.0
 	tempfile@3.8.0
 	termcolor@1.3.0
-	thiserror@1.0.48
-	thiserror-impl@1.0.48
-	time@0.3.28
-	time-core@0.1.1
-	time-macros@0.2.14
-	toml@0.8.0
+	thiserror@1.0.49
+	thiserror-impl@1.0.49
+	time@0.3.29
+	time-core@0.1.2
+	time-macros@0.2.15
+	toml@0.8.1
 	toml_datetime@0.6.3
-	toml_edit@0.20.0
+	toml_edit@0.20.1
 	toolchain_find@0.4.0
 	unicode-ident@1.0.12
 	unicode-width@0.1.11
