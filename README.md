@@ -115,9 +115,6 @@ The following packages are available in this overlay:
 * media-plugins/obs-wlrobs
   * An obs-studio plugin that allows you to screen capture on wlroots based wayland compositors
   * https://hg.sr.ht/~scoopta/wlrobs
-* media-sound/qpwgraph
-  * PipeWire Graph Qt GUI Interface
-  * https://gitlab.freedesktop.org/rncbc/qpwgraph
 * net-im/teams-for-linux
   * Unofficial Microsoft Teams for Linux client
   * https://github.com/IsmaelMartinez/teams-for-linux
