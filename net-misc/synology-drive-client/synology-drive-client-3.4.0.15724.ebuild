@@ -9,7 +9,7 @@ BUILD=${PV##*.}
 
 DESCRIPTION="Desktop utility of the DSM add-on package Synology Drive Server"
 HOMEPAGE="https://www.synology.com/en-global/releaseNote/SynologyDriveClient"
-SRC_URI="https://global.download.synology.com/download/Utility/SynologyDriveClient/${VER}-${BUILD}/Ubuntu/Installer/x86_64/${PN}-${BUILD}.x86_64.deb"
+SRC_URI="https://global.synologydownload.com/download/Utility/SynologyDriveClient/${VER}-${BUILD}/Ubuntu/Installer/${PN}-${BUILD}.x86_64.deb"
 
 LICENSE="Synology"
 SLOT="0"
