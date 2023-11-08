@@ -7,7 +7,7 @@ EAPI=8
 
 CRATES="
 	adler@1.0.2
-	aho-corasick@1.1.1
+	aho-corasick@1.1.2
 	ansi_colours@1.2.2
 	anstream@0.6.4
 	anstyle@1.0.4
@@ -16,46 +16,35 @@ CRATES="
 	anstyle-wincon@3.0.1
 	autocfg@1.1.0
 	base64@0.21.4
-	bat@0.23.0
+	bat@0.24.0
 	bincode@1.3.3
 	bit-set@0.5.3
 	bit-vec@0.6.3
 	bitflags@1.3.2
 	bitflags@2.4.0
-	bstr@1.6.2
+	bstr@1.7.0
 	bytemuck@1.14.0
 	bytesize@1.3.0
 	cargo-subcommand-metadata@0.1.0
-	cc@1.0.83
 	cfg-if@1.0.0
 	clap@4.4.6
 	clap_builder@4.4.6
 	clap_derive@4.4.2
 	clap_lex@0.5.1
-	clircle@0.3.0
+	clircle@0.4.0
 	colorchoice@1.0.0
 	console@0.15.7
 	content_inspector@0.2.4
 	crc32fast@1.3.2
 	deranged@0.3.8
-	dirs@5.0.1
-	dirs-sys@0.4.1
 	encode_unicode@0.3.6
-	encoding@0.2.33
-	encoding-index-japanese@1.20141219.5
-	encoding-index-korean@1.20141219.5
-	encoding-index-simpchinese@1.20141219.5
-	encoding-index-singlebyte@1.20141219.5
-	encoding-index-tradchinese@1.20141219.5
-	encoding_index_tests@0.1.4
+	encoding_rs@0.8.33
 	equivalent@1.0.1
-	errno@0.3.4
-	errno-dragonfly@0.1.2
+	errno@0.3.5
 	fancy-regex@0.11.0
 	fastrand@2.0.1
-	flate2@1.0.27
+	flate2@1.0.28
 	fnv@1.0.7
-	getrandom@0.2.10
 	globset@0.4.13
 	grep-cli@0.1.9
 	hashbrown@0.12.3
@@ -66,43 +55,40 @@ CRATES="
 	indexmap@2.0.2
 	itoa@1.0.9
 	lazy_static@1.4.0
-	libc@0.2.148
+	libc@0.2.149
 	line-wrap@0.1.1
-	linked-hash-map@0.5.6
-	linux-raw-sys@0.4.8
+	linux-raw-sys@0.4.10
 	log@0.4.20
 	memchr@2.6.4
 	miniz_oxide@0.7.1
-	nu-ansi-term@0.47.0
+	nu-ansi-term@0.49.0
 	once_cell@1.18.0
-	option-ext@0.2.0
 	path_abs@0.5.1
 	plist@1.5.0
 	prettyplease@0.2.15
-	proc-macro2@1.0.67
+	proc-macro2@1.0.69
 	quick-xml@0.29.0
 	quote@1.0.33
-	redox_syscall@0.2.16
 	redox_syscall@0.3.5
-	redox_users@0.4.3
-	regex@1.9.6
-	regex-automata@0.3.9
+	regex@1.10.0
+	regex-automata@0.4.1
 	regex-syntax@0.7.5
+	regex-syntax@0.8.1
 	rgb@0.8.36
-	rustix@0.38.15
+	rustix@0.38.19
 	ryu@1.0.15
 	safemem@0.3.3
 	same-file@1.0.6
-	semver@1.0.19
-	serde@1.0.188
-	serde_derive@1.0.188
+	semver@1.0.20
+	serde@1.0.189
+	serde_derive@1.0.189
 	serde_json@1.0.107
 	serde_spanned@0.6.3
-	serde_yaml@0.8.26
+	serde_yaml@0.9.25
 	shell-words@1.1.0
 	std_prelude@0.2.12
 	strsim@0.10.0
-	syn@2.0.37
+	syn@2.0.38
 	syn-select@0.3.0
 	syntect@5.1.0
 	tempfile@3.8.0
@@ -112,15 +98,15 @@ CRATES="
 	time@0.3.29
 	time-core@0.1.2
 	time-macros@0.2.15
-	toml@0.8.1
+	toml@0.8.2
 	toml_datetime@0.6.3
-	toml_edit@0.20.1
+	toml_edit@0.20.2
 	toolchain_find@0.4.0
 	unicode-ident@1.0.12
 	unicode-width@0.1.11
+	unsafe-libyaml@0.2.9
 	utf8parse@0.2.1
 	walkdir@2.4.0
-	wasi@0.11.0+wasi-snapshot-preview1
 	winapi@0.3.9
 	winapi-i686-pc-windows-gnu@0.4.0
 	winapi-util@0.1.6
@@ -143,8 +129,7 @@ CRATES="
 	windows_x86_64_gnullvm@0.48.5
 	windows_x86_64_msvc@0.42.2
 	windows_x86_64_msvc@0.48.5
-	winnow@0.5.15
-	yaml-rust@0.4.5
+	winnow@0.5.16
 "
 
 inherit cargo
@@ -158,7 +143,7 @@ SRC_URI="
 
 LICENSE="|| ( Apache-2.0 MIT )"
 # Dependent crate licenses
-LICENSE+=" Apache-2.0 CC0-1.0 LGPL-3+ MIT MPL-2.0 Unicode-DFS-2016"
+LICENSE+=" Apache-2.0 BSD LGPL-3+ MIT Unicode-DFS-2016"
 SLOT="0"
 KEYWORDS="~amd64"
 
