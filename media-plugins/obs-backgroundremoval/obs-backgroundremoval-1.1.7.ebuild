@@ -5,7 +5,7 @@ EAPI=8
 
 inherit cmake
 
-ONNXRUNTIME_VERSION=1.15.1
+ONNXRUNTIME_VERSION=1.16.0
 
 DESCRIPTION="OBS plugin for removing background"
 HOMEPAGE="https://github.com/royshil/obs-backgroundremoval"

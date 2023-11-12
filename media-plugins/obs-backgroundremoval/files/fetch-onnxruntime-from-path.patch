@@ -1,5 +1,5 @@
 diff --git a/cmake/FetchOnnxruntime.cmake b/cmake/FetchOnnxruntime.cmake
-index bf9d25c..952eb2d 100644
+index f9231f6..0e19ff6 100644
 --- a/cmake/FetchOnnxruntime.cmake
 +++ b/cmake/FetchOnnxruntime.cmake
 @@ -105,18 +105,7 @@ elseif(OS_LINUX)
@@ -10,7 +10,7 @@ index bf9d25c..952eb2d 100644
 -      FetchContent_Declare(
 -        Onnxruntime
 -        URL "https://github.com/microsoft/onnxruntime/releases/download/v${Onnxruntime_VERSION}/onnxruntime-linux-x64-gpu-${Onnxruntime_VERSION}.tgz"
--        URL_HASH MD5=8d2f5ee9f449bdecb10a45715fe74c53)
+-        URL_HASH MD5=21b3eb42e0bee9e7b51cbf508352f188)
 -    else()
 -      FetchContent_Declare(
 -        Onnxruntime
