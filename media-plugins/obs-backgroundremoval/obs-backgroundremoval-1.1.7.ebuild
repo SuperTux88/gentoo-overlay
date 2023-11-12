@@ -27,7 +27,7 @@ DEPEND="
 		dev-qt/qtwidgets:5
 	)
 	>=media-video/obs-studio-29
-	>=media-libs/opencv-4.7.0
+	>=media-libs/opencv-4.7.0:=
 	video_cards_nvidia? (
 		dev-libs/cudnn
 		sci-libs/tensorflow
