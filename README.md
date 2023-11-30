@@ -57,6 +57,9 @@ The following packages are available in this overlay:
 * app-shells/powerlevel10k
   * A theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience
   * https://github.com/romkatv/powerlevel10k
+* app-shells/zoxide
+  * A smarter cd command. Supports all major shells.
+  * https://github.com/ajeetdsouza/zoxide
 * dev-util/cargo-expand
   * Wrapper around rustc -Zunpretty=expanded. Shows the result of macro expansion and #[derive] expansion.
   * https://github.com/dtolnay/cargo-expand
