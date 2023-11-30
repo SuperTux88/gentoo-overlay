@@ -334,7 +334,7 @@ CRATES="
 	zstd@0.12.3+zstd.1.5.2
 "
 
-inherit bash-completion-r1 cargo systemd
+inherit cargo shell-completion systemd
 
 DESCRIPTION="For when you really just want to serve some files over HTTP right now!"
 HOMEPAGE="https://github.com/svenstaro/miniserve"
@@ -356,6 +356,7 @@ BDEPEND=""
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
 QA_FLAGS_IGNORED="usr/bin/${PN}"
+QA_PRESTRIPPED="${QA_FLAGS_IGNORED}"
 
 src_compile() {
 	cargo_src_compile
@@ -373,9 +374,7 @@ src_install() {
 	dodoc README.md
 
 	newbashcomp bash-completion.sh ${PN}
-
-	insinto /usr/share/zsh/site-functions
-	newins zsh-completion.zsh _${PN}
+	newzshcomp zsh-completion.zsh _${PN}
 
 	systemd_dounit "packaging/${PN}@.service"
 }
