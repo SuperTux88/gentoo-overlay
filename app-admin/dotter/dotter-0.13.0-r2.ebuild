@@ -228,7 +228,7 @@ CRATES="
 	yaml-rust@0.4.5
 "
 
-inherit bash-completion-r1 cargo
+inherit cargo shell-completion
 
 DESCRIPTION="A dotfile manager and templater written in rust"
 HOMEPAGE="https://github.com/SuperCuber/dotter"
@@ -279,7 +279,5 @@ src_install() {
 	cargo_src_install
 
 	newbashcomp bash-completion.sh ${PN}
-
-	insinto /usr/share/zsh/site-functions
-	newins zsh-completion.zsh _${PN}
+	newzshcomp zsh-completion.zsh _${PN}
 }
