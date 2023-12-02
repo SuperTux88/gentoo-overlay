@@ -281,3 +281,10 @@ src_install() {
 	newbashcomp bash-completion.sh ${PN}
 	newzshcomp zsh-completion.zsh _${PN}
 }
+
+pkg_postinst() {
+	if ! has_version "app-admin/sudo"; then
+		elog "If you want to manage files with a different owner, you"
+		elog "need to also install app-admin/sudo."
+	fi
+}
