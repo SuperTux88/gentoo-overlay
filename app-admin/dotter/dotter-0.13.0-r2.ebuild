@@ -228,7 +228,7 @@ CRATES="
 	yaml-rust@0.4.5
 "
 
-inherit cargo shell-completion
+inherit cargo shell-completion optfeature
 
 DESCRIPTION="A dotfile manager and templater written in rust"
 HOMEPAGE="https://github.com/SuperCuber/dotter"
@@ -283,8 +283,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	if ! has_version "app-admin/sudo"; then
-		elog "If you want to manage files with a different owner, you"
-		elog "need to also install app-admin/sudo."
-	fi
+	optfeature "managing files with different owners" app-admin/sudo
 }
