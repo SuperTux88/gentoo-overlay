@@ -1,13 +1,13 @@
 diff --git a/dool b/dool
-index bfd97cf..f4c9bcf 100755
+index a70cb7a..9baf356 100755
 --- a/dool
 +++ b/dool
-@@ -54,7 +54,7 @@ pluginpath = [
+@@ -60,7 +60,7 @@ DOOL_DISKFILTER = re.compile(r'^([hsv]d[a-z]+\d+|cciss/c\d+d\d+p\d+|dm-\d+|md\d+
  class Options:
      def __init__(self, args):
-         self.args         = args
--        self.bits         = True
-+        self.bits         = False
-         self.blackonwhite = False
-         self.count        = -1
-         self.cpulist      = None
+         self.args          = args
+-        self.bits          = True
++        self.bits          = False
+         self.blackonwhite  = False
+         self.count         = -1
+         self.cpulist       = None
