@@ -60,6 +60,9 @@ The following packages are available in this overlay:
 * app-shells/zoxide
   * A smarter cd command. Supports all major shells.
   * https://github.com/ajeetdsouza/zoxide
+* dev-util/bacon
+  * background rust code check
+  * https://github.com/Canop/bacon
 * dev-util/cargo-expand
   * Wrapper around rustc -Zunpretty=expanded. Shows the result of macro expansion and #[derive] expansion.
   * https://github.com/dtolnay/cargo-expand
