@@ -80,6 +80,9 @@ The following packages are available in this overlay:
 * gui-apps/clipman
   * A simple clipboard manager for Wayland
   * https://github.com/yory8/clipman
+* gui-apps/wdisplays
+  * A graphical application for configuring displays in Wayland compositors
+  * https://github.com/artizirk/wdisplays
 * gui-apps/wev
   * wayland event viewer
   * https://git.sr.ht/~sircmpwn/wev
