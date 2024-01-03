@@ -1,4 +1,4 @@
-# Copyright 2023 Gentoo Authors
+# Copyright 2023-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -24,7 +24,6 @@ DEPEND="
 	man? ( app-text/scdoc )
 "
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 src_configure() {
 	mycmakeargs=(
