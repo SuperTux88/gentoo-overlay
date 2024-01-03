@@ -151,6 +151,9 @@ The following packages are available in this overlay:
 * sys-apps/zenmonitor3
   * Monitoring software for AMD Zen-based CPUs with Zen 3 support
   * https://github.com/Ta180m/zenmonitor3
+* sys-cluster/open-lens
+  * Open Source IDE for Kubernetes
+  * https://github.com/MuhammedKalkan/OpenLens
 * sys-kernel/it87
   * IT87 sensors module
   * https://github.com/a1wong/it87
