@@ -166,6 +166,9 @@ The following packages are available in this overlay:
 * x11-apps/xfhd
   * xfhd is a utility for resizing an X window to Full HD
   * https://github.com/r41d/xfhd
+* x11-drivers/displaylink-driver
+  * DisplayLink USB Graphics Software
+  * https://www.synaptics.com/products/displaylink-graphics
 * x11-drivers/evdi
   * Extensible Virtual Display Interface
   * https://github.com/DisplayLink/evdi
