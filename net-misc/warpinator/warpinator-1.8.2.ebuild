@@ -1,4 +1,4 @@
-# Copyright 2022-2023 Gentoo Authors
+# Copyright 2022-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -17,11 +17,17 @@ DEPEND="
 	dev-libs/gobject-introspection
 	dev-python/cryptography
 	>=dev-python/grpcio-1.16.0
+	dev-python/ifaddr
+	dev-python/netaddr
 	dev-python/netifaces
+	dev-python/protobuf-python
+	dev-python/pygobject
 	dev-python/pynacl
 	>=dev-python/python3-xapp-1.6.0
+	dev-python/qrcode
 	dev-python/setproctitle
 	>=dev-python/zeroconf-0.27.0
+	x11-libs/gtk+:3
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
@@ -33,6 +39,7 @@ BDEPEND="
 src_configure() {
 	local emesonargs=(
 		-Dbundle-zeroconf=false
+		-Dbundle-grpc=false
 	)
 	meson_src_configure
 }
