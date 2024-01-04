@@ -18,15 +18,15 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
-	app-admin/chrpath
-	app-arch/unzip
-"
-RDEPEND="
-	${DEPEND}
 	~x11-drivers/evdi-1.14.1
 	virtual/libusb:1
 "
-BDEPEND="sys-apps/grep[pcre]"
+RDEPEND="${DEPEND}"
+BDEPEND="
+	app-admin/chrpath
+	app-arch/unzip
+	sys-apps/grep[pcre]
+"
 
 RESTRICT="mirror bindist"
 QA_PRESTRIPPED="/opt/displaylink/DisplayLinkManager"
