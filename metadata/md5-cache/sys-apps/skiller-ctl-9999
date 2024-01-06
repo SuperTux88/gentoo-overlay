@@ -2,12 +2,12 @@ BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=unpack
 DEPEND=virtual/libusb:1
 DESCRIPTION=Control the additional features of Sharkoon Skiller (Pro/Pro+) keyboards
-EAPI=7
+EAPI=8
 HOMEPAGE=https://github.com/anyc/skiller-ctl
 INHERIT=git-r3
 LICENSE=GPL-2 GPL-3
 PROPERTIES=live
 RDEPEND=virtual/libusb:1
 SLOT=0
-_eclasses_=git-r3	2358a7b20091609e24bd3a83b3ac5991
-_md5_=76d73933ca71b93ecd0664d33c3fd8f9
+_eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
+_md5_=c24c94a4cb8dfa24f0740c2615b4e901
