@@ -1,5 +1,5 @@
 BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile install setup unpack
+DEFINED_PHASES=compile install prepare setup unpack
 DEPEND=!!sys-apps/zenmonitor sys-kernel/zenpower
 DESCRIPTION=Monitoring software for AMD Zen-based CPUs with Zen 3 support
 EAPI=8
@@ -10,5 +10,5 @@ LICENSE=MIT
 PROPERTIES=live
 RDEPEND=!!sys-apps/zenmonitor sys-kernel/zenpower
 SLOT=0
-_eclasses_=toolchain-funcs	edeef89edaf21d30225d31702ab117ac	multilib	c19072c3cd7ac5cb21de013f7e9832e0	linux-info	c4f1201b96a8a2c1f3b86cc8b2c71c91	git-r3	2358a7b20091609e24bd3a83b3ac5991
-_md5_=b718e31cb664d14140bd42a0c31d9d71
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	linux-info	c4f1201b96a8a2c1f3b86cc8b2c71c91	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
+_md5_=7f544935fb8e0a30a9f503ea4898247a

@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2022-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -18,9 +18,15 @@ CONFIG_CHECK="X86_MSR"
 
 DEPEND="
 	!!sys-apps/zenmonitor
-	sys-kernel/zenpower"
+	sys-kernel/zenpower
+"
 RDEPEND="${DEPEND}"
-BDEPEND=""
+
+src_prepare() {
+	default_src_prepare
+
+	use cli && eapply "${FILESDIR}"/${PN}-cli-tinfo-fix.patch
+}
 
 src_compile() {
 	default_src_compile

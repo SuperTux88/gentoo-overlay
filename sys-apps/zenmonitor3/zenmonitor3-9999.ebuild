@@ -1,4 +1,4 @@
-# Copyright 2019-2023 Gentoo Authors
+# Copyright 2019-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -9,20 +9,24 @@ EGIT_BRANCH="master"
 
 DESCRIPTION="Monitoring software for AMD Zen-based CPUs with Zen 3 support"
 HOMEPAGE="https://github.com/Ta180m/zenmonitor3"
-SRC_URI=""
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
 IUSE="cli"
 
 CONFIG_CHECK="X86_MSR"
 
 DEPEND="
 	!!sys-apps/zenmonitor
-	sys-kernel/zenpower"
+	sys-kernel/zenpower
+"
 RDEPEND="${DEPEND}"
-BDEPEND=""
+
+src_prepare() {
+	default_src_prepare
+
+	use cli && eapply "${FILESDIR}"/${PN}-cli-tinfo-fix.patch
+}
 
 src_compile() {
 	default_src_compile
