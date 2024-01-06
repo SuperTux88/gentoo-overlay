@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index c7fc9de..5a5b41e 100644
+index 9af53c4..6d163b8 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -74,9 +74,6 @@ if(APPLE)
@@ -11,8 +11,8 @@ index c7fc9de..5a5b41e 100644
 -  target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE CurlClient)
  endif()
  
- target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE vendor/onnxruntime/include)
-@@ -87,9 +84,6 @@ target_sources(
+ target_sources(
+@@ -85,9 +82,6 @@ target_sources(
            src/ort-utils/ort-session-utils.cpp
            src/obs-utils/obs-utils.cpp
            src/obs-utils/obs-config-utils.cpp

@@ -1,9 +1,9 @@
 diff --git a/cmake/FetchOnnxruntime.cmake b/cmake/FetchOnnxruntime.cmake
-index 88b3862..2443268 100644
+index a687c6c..2e9586b 100644
 --- a/cmake/FetchOnnxruntime.cmake
 +++ b/cmake/FetchOnnxruntime.cmake
-@@ -108,9 +108,7 @@ elseif(OS_LINUX)
-     set(onnxruntime_SOURCE_DIR "${CMAKE_CURRENT_BINARY_DIR}/../onnxruntime-linux-x64-gpu-${Onnxruntime_VERSION}")
+@@ -97,9 +97,7 @@ else()
+   else()
      set(Onnxruntime_LINK_LIBS "${onnxruntime_SOURCE_DIR}/lib/libonnxruntime.so.${Onnxruntime_VERSION}")
      set(Onnxruntime_INSTALL_LIBS
 -        ${Onnxruntime_LINK_LIBS} "${onnxruntime_SOURCE_DIR}/lib/libonnxruntime_providers_shared.so"
