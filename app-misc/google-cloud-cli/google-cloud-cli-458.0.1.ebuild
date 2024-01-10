@@ -36,9 +36,9 @@ src_prepare() {
 
 src_install() {
 	dodir /usr/share/google-cloud-sdk
-	cp -R "${S}/" "${D}/usr/share/" || die "Install failed!"
+	cp -R "${S}/" "${ED}/usr/share/" || die "Install failed!"
 	dosym "../share/google-cloud-sdk/bin/gcloud" /usr/bin/gcloud
 	dosym "../share/google-cloud-sdk/bin/gsutil" /usr/bin/gsutil
 	dosym "../share/google-cloud-sdk/bin/docker-credential-gcloud" /usr/bin/docker-credential-gcloud
-	python_optimize "${D}/usr/share/google-cloud-sdk"
+	python_optimize "${ED}/usr/share/google-cloud-sdk"
 }
