@@ -27,6 +27,6 @@ RDEPEND="${DEPEND}"
 
 src_install() {
 	dodir /opt/teams-for-linux
-	cp -R "${WORKDIR}/teams-for-linux-${PV}/." "${D}/opt/teams-for-linux/" || die "Install failed!"
+	cp -R "${WORKDIR}/teams-for-linux-${PV}/." "${ED}/opt/teams-for-linux/" || die "Install failed!"
 	dosym "../../opt/teams-for-linux/teams-for-linux" /usr/bin/teams-for-linux
 }

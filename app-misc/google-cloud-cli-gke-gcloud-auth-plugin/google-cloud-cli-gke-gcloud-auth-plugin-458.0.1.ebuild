@@ -28,6 +28,6 @@ src_unpack() {
 
 src_install() {
 	dodir /usr/share/google-cloud-sdk
-	cp -R "${S}/" "${D}/usr/share/" || die "Install failed!"
+	cp -R "${S}/" "${ED}/usr/share/" || die "Install failed!"
 	dosym "../share/google-cloud-sdk/bin/gke-gcloud-auth-plugin" /usr/bin/gke-gcloud-auth-plugin
 }
