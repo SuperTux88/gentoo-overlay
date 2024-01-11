@@ -1,4 +1,4 @@
-# Copyright 2022-2023 Gentoo Authors
+# Copyright 2022-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -7,7 +7,6 @@ inherit linux-mod-r1
 
 DESCRIPTION="Linux kernel driver for reading sensors of AMD Zen family CPUs"
 HOMEPAGE="https://git.exozy.me/a/zenpower3"
-SRC_URI=""
 
 inherit git-r3
 EGIT_REPO_URI="https://git.exozy.me/a/zenpower3.git"
@@ -15,14 +14,8 @@ EGIT_BRANCH="master"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
-IUSE=""
 
 CONFIG_CHECK="HWMON PCI AMD_NB ~!SENSORS_K10TEMP"
-
-DEPEND=""
-RDEPEND="${DEPEND}"
-BDEPEND=""
 
 src_prepare() {
 	# Set kernel build dir

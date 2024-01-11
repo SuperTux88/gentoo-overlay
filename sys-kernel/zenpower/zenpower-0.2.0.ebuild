@@ -1,4 +1,4 @@
-# Copyright 2022-2023 Gentoo Authors
+# Copyright 2022-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -12,13 +12,8 @@ SRC_URI="https://git.exozy.me/a/zenpower3/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 CONFIG_CHECK="HWMON PCI AMD_NB ~!SENSORS_K10TEMP"
-
-DEPEND=""
-RDEPEND="${DEPEND}"
-BDEPEND=""
 
 S=${WORKDIR}/zenpower3
 

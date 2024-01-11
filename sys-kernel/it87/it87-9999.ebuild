@@ -1,4 +1,4 @@
-# Copyright 2019-2023 Gentoo Authors
+# Copyright 2019-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -13,14 +13,8 @@ EGIT_REPO_URI="${HOMEPAGE}.git"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS=""
-IUSE=""
 
 CONFIG_CHECK="HWMON ~!CONFIG_SENSORS_IT87"
-
-DEPEND=""
-RDEPEND="${DEPEND}"
-BDEPEND=""
 
 src_prepare() {
 	# Set kernel build dir

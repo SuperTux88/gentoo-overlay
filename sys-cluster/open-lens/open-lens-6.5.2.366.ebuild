@@ -28,7 +28,6 @@ DEPEND="
 	x11-misc/xdg-utils
 "
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 RESTRICT="bindist mirror"
 QA_PRESTRIPPED="/opt/OpenLens/resources/x64/helm /opt/OpenLens/resources/x64/kubectl"
