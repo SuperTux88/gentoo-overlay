@@ -1,6 +1,6 @@
 # SuperTux88 Gentoo overlay
 
-Current build status: [![Continuous Integration](https://github.com/SuperTux88/gentoo-overlay/workflows/CI/badge.svg)](https://github.com/SuperTux88/gentoo-overlay/actions?query=workflow%3ACI)
+Current build status: [![pkgcheck](https://github.com/SuperTux88/gentoo-overlay/actions/workflows/ci.yml/badge.svg)](https://github.com/SuperTux88/gentoo-overlay/actions/workflows/ci.yml)
 
 **use at your own risk**
 
