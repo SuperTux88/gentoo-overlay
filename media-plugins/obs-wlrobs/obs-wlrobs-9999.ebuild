@@ -23,7 +23,6 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND="
 	virtual/pkgconfig
-	dev-util/meson
 "
 
 src_configure() {

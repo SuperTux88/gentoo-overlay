@@ -20,7 +20,7 @@ DEPEND="
 	>=sci-libs/fftw-3
 	virtual/libusb:1"
 RDEPEND="${DEPEND}"
-BDEPEND=">=dev-util/cmake-3.5"
+BDEPEND=">=dev-build/cmake-3.5"
 
 S=${WORKDIR}/OpenHantek6022-${PV}
 
