@@ -9,6 +9,7 @@ CRATES="
 	addr2line@0.21.0
 	adler@1.0.2
 	aes@0.8.3
+	ahash@0.7.7
 	ahash@0.8.7
 	aho-corasick@0.7.20
 	aho-corasick@1.1.2
@@ -30,12 +31,15 @@ CRATES="
 	axum-server@0.5.1
 	backtrace@0.3.69
 	base64@0.21.5
+	base64-simd@0.7.0
 	base64ct@1.6.0
 	bitflags@1.3.2
 	bitflags@2.4.1
 	bitvec@1.0.1
 	block-buffer@0.10.4
 	bumpalo@3.14.0
+	bytecheck@0.6.11
+	bytecheck_derive@0.6.11
 	bytemuck@1.14.0
 	byteorder@1.5.0
 	bytes@1.5.0
@@ -54,6 +58,8 @@ CRATES="
 	clap_lex@0.6.0
 	colorchoice@1.0.0
 	console@0.15.7
+	const-str@0.3.2
+	const-str-proc-macro@0.3.2
 	constant_time_eq@0.1.5
 	convert_case@0.4.0
 	core-foundation@0.9.4
@@ -67,9 +73,13 @@ CRATES="
 	crypto-common@0.1.6
 	css-minify@0.3.1
 	cssparser@0.27.2
+	cssparser@0.33.0
+	cssparser-color@0.1.0
 	cssparser-macros@0.6.1
 	cvt@0.1.2
+	dashmap@5.5.3
 	data-encoding@2.5.0
+	data-url@0.1.1
 	deranged@0.3.11
 	derive_more@0.99.17
 	digest@0.10.7
@@ -142,6 +152,8 @@ CRATES="
 	is-docker@0.2.0
 	is-terminal@0.4.10
 	is-wsl@0.4.0
+	itertools@0.10.5
+	itertools@0.12.0
 	itoa@0.4.8
 	itoa@1.0.10
 	jobserver@0.1.27
@@ -153,6 +165,7 @@ CRATES="
 	libdeflate-sys@1.19.0
 	libdeflater@1.19.0
 	libredox@0.0.1
+	lightningcss@1.0.0-alpha.51
 	linked-hash-map@0.5.6
 	linux-raw-sys@0.4.12
 	local-ip-address@0.5.6
@@ -168,8 +181,8 @@ CRATES="
 	memchr@2.7.1
 	mime@0.3.17
 	mime_guess@2.0.4
-	minify-html@0.11.1
-	minify-js@0.4.3
+	minify-html@0.15.0
+	minify-html-common@0.0.2
 	minify-js@0.5.6
 	minimal-lexical@0.2.1
 	miniz_oxide@0.7.1
@@ -191,21 +204,27 @@ CRATES="
 	open@5.0.1
 	openssl-probe@0.1.5
 	option-ext@0.2.0
+	outref@0.1.0
 	overload@0.1.1
 	oxipng@9.0.0
+	parcel_selectors@0.26.4
+	parcel_sourcemap@2.1.1
 	parking_lot@0.12.1
 	parking_lot_core@0.9.9
-	parse-js@0.10.3
 	parse-js@0.17.0
 	password-hash@0.4.2
+	paste@1.0.14
 	pathdiff@0.2.1
 	pbkdf2@0.11.0
 	percent-encoding@2.3.1
 	phf@0.8.0
+	phf@0.10.1
 	phf_codegen@0.8.0
+	phf_codegen@0.10.0
 	phf_generator@0.8.0
 	phf_generator@0.10.0
 	phf_macros@0.8.0
+	phf_macros@0.10.0
 	phf_shared@0.8.0
 	phf_shared@0.10.0
 	pin-project@1.1.3
@@ -218,6 +237,8 @@ CRATES="
 	precomputed-hash@0.1.1
 	proc-macro-hack@0.5.20+deprecated
 	proc-macro2@1.0.76
+	ptr_meta@0.1.4
+	ptr_meta_derive@0.1.4
 	quick-error@1.2.3
 	quote@1.0.35
 	radium@0.7.0
@@ -239,10 +260,13 @@ CRATES="
 	regex-syntax@0.6.29
 	regex-syntax@0.8.2
 	remove_dir_all@0.8.2
+	rend@0.4.1
 	reqwest@0.11.23
 	resolv-conf@0.7.0
 	rgb@0.8.37
 	ring@0.17.7
+	rkyv@0.7.43
+	rkyv_derive@0.7.43
 	rustc-demangle@0.1.23
 	rustc-hash@1.1.0
 	rustc_version@0.4.0
@@ -273,7 +297,9 @@ CRATES="
 	sha2@0.10.8
 	sharded-slab@0.1.7
 	signal-hook-registry@1.4.1
+	simd-abstraction@0.7.1
 	simd-adler32@0.3.7
+	simdutf8@0.1.4
 	siphasher@0.3.11
 	slab@0.4.9
 	smallvec@1.11.2
@@ -340,8 +366,10 @@ CRATES="
 	url@2.5.0
 	utf-8@0.7.6
 	utf8parse@0.2.1
+	uuid@1.6.1
 	valuable@0.1.0
 	version_check@0.9.4
+	vlq@0.5.1
 	walkdir@2.4.0
 	want@0.3.1
 	wasi@0.9.0+wasi-snapshot-preview1
@@ -420,5 +448,3 @@ BDEPEND=">=virtual/rust-1.70"
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
 QA_FLAGS_IGNORED="usr/bin/${PN}"
-
-PATCHES=( "${FILESDIR}"/${P}-downgrade-minify-html.patch )
