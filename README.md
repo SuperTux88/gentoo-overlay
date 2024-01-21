@@ -133,6 +133,9 @@ The following packages are available in this overlay:
 * net-misc/warpinator
   * Share files across the LAN
   * https://github.com/linuxmint/warpinator
+* net-misc/xh
+  * Friendly and fast tool for sending HTTP requests
+  * https://github.com/ducaale/xh
 * sci-electronics/openhantek6022
   * a DSO software for Hantek USB digital signal oscilloscopes 6022BE / BL
   * https://github.com/OpenHantek/OpenHantek6022
