@@ -282,7 +282,7 @@ CRATES="
 	zvariant_utils@1.0.1
 "
 
-inherit cargo
+inherit cargo shell-completion
 
 DESCRIPTION="Watches over your Cargo project’s source"
 HOMEPAGE="https://watchexec.github.io/#cargo-watch"
@@ -305,6 +305,9 @@ QA_FLAGS_IGNORED="usr/bin/${PN}"
 
 src_install() {
 	cargo_src_install
+
 	einstalldocs
 	doman "${PN}.1"
+
+	newzshcomp completions/zsh _${PN}
 }
