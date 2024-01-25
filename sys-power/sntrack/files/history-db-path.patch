@@ -1,0 +1,13 @@
+diff --git a/main.py b/main.py
+index 3162bd6..989333d 100755
+--- a/main.py
++++ b/main.py
+@@ -289,7 +289,7 @@ def main() -> None:
+     args = parse_args()
+     logging.basicConfig(format=LOGGING_FORMAT, level=args.loglevel)
+ 
+-    cur = init()
++    cur = init(f'/var/lib/{__pkgname__}/history.db')
+     fun_map[args.main_action](cur, args)
+     cleanup(cur)
+ 

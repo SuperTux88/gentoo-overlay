@@ -1,0 +1,15 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install setup unpack
+DEPEND=>=dev-python/matplotlib-3.5.0 systemd? ( sys-apps/systemd )
+DESCRIPTION=Tracks the battery discharge rate during sleep
+EAPI=8
+HOMEPAGE=https://github.com/xsmile/sntrack
+INHERIT=python-single-r1 git-r3
+IUSE=systemd python_single_target_python3_10 python_single_target_python3_11 python_single_target_python3_12
+LICENSE=GPL-3
+PROPERTIES=live
+RDEPEND=>=dev-python/matplotlib-3.5.0 systemd? ( sys-apps/systemd ) python_single_target_python3_10? ( dev-lang/python:3.10 ) python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_12? ( dev-lang/python:3.12 )
+REQUIRED_USE=^^ ( python_single_target_python3_10 python_single_target_python3_11 python_single_target_python3_12 )
+SLOT=0
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	042f4cc53680245bf99a84669b94155a	python-single-r1	75118e916668a74c660a13b0ecb22562	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
+_md5_=74ef7bb9de48ba966fea58d9ad490efa

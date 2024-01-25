@@ -163,6 +163,9 @@ The following packages are available in this overlay:
 * sys-kernel/zenpower
   * Linux kernel driver for reading sensors of AMD Zen family CPUs
   * https://github.com/Ta180m/zenpower3
+* sys-power/sntrack
+  * Tracks the battery discharge rate during sleep
+  * https://github.com/xsmile/sntrack
 * www-servers/miniserve
   * A CLI tool to serve files and dirs over HTTP
   * https://github.com/svenstaro/miniserve
