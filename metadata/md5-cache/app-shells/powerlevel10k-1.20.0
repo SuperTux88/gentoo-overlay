@@ -8,5 +8,5 @@ KEYWORDS=~amd64
 LICENSE=MIT
 RDEPEND=app-shells/zsh app-shells/gitstatus[zsh-completion] nerd-fonts? ( || ( media-fonts/nerd-fonts-symbols media-fonts/meslo-nerd media-fonts/terminess-nerd ) )
 SLOT=0
-SRC_URI=https://github.com/romkatv/powerlevel10k/archive/refs/tags/v1.19.0.tar.gz -> powerlevel10k-1.19.0.tar.gz
-_md5_=d8551afcb0a0ef08b3156b206b8e8e87
+SRC_URI=https://github.com/romkatv/powerlevel10k/archive/refs/tags/v1.20.0.tar.gz -> powerlevel10k-1.20.0.tar.gz
+_md5_=78569e72bda3ae23ef389f7b6099a7d7
