@@ -69,6 +69,9 @@ The following packages are available in this overlay:
 * dev-util/cargo-watch
   * Watches over your Cargo project's source
   * https://github.com/watchexec/cargo-watch
+* dev-util/kopium
+  * Kubernetes OPenapI UnMangler
+  * https://github.com/kube-rs/kopium
 * dev-util/trunk
   * Build, bundle & ship your Rust WASM application to the web
   * https://trunkrs.dev
