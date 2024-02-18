@@ -69,6 +69,9 @@ The following packages are available in this overlay:
 * dev-util/cargo-expand
   * Wrapper around rustc -Zunpretty=expanded. Shows the result of macro expansion and #[derive] expansion.
   * https://github.com/dtolnay/cargo-expand
+* dev-util/cargo-geiger
+  * Detects usage of unsafe Rust in a Rust crate and its dependencies
+  * https://github.com/geiger-rs/cargo-geiger
 * dev-util/cargo-watch
   * Watches over your Cargo project's source
   * https://github.com/watchexec/cargo-watch
