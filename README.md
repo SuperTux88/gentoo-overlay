@@ -75,6 +75,9 @@ The following packages are available in this overlay:
 * dev-util/cargo-watch
   * Watches over your Cargo project's source
   * https://github.com/watchexec/cargo-watch
+* dev-util/diesel-cli
+  * Diesel CLI is a tool that aids in managing your database schema
+  * https://github.com/diesel-rs/diesel/tree/master/diesel_cli
 * dev-util/kopium
   * Kubernetes OPenapI UnMangler
   * https://github.com/kube-rs/kopium
