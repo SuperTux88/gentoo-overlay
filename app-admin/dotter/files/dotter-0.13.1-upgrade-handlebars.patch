@@ -1,0 +1,705 @@
+From: Benjamin Neff <benjamin@coding4coffee.ch>
+Date: Sat, 17 Feb 2024 16:40:55 +0100
+Subject: [PATCH] Upgrade handlebars to 5.1 to support chained else expression
+ (#162)
+
+Also update handlebars_misc_helpers to be compatible with the new
+handlebars version.
+
+Refactor RenderErrors to RenderErrorReasons to fix deprecation warnings.
+---
+ Cargo.lock                | 249 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-------------------------------------
+ Cargo.toml                |   4 +--
+ src/handlebars_helpers.rs |  71 +++++++++++++++++++++++++++++++--------------------
+ 3 files changed, 243 insertions(+), 81 deletions(-)
+
+diff --git a/Cargo.lock b/Cargo.lock
+index f3fbb3e..834bed8 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -2,16 +2,6 @@
+ # It is not intended for manual editing.
+ version = 3
+ 
+-[[package]]
+-name = "Inflector"
+-version = "0.11.4"
+-source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "fe438c63458706e03479442743baae6c88256498e6431708f6dfc520a26515d3"
+-dependencies = [
+- "lazy_static",
+- "regex",
+-]
+-
+ [[package]]
+ name = "ahash"
+ version = "0.8.3"
+@@ -160,6 +150,12 @@ version = "1.3.2"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a"
+ 
++[[package]]
++name = "bitflags"
++version = "2.4.2"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "ed570934406eb16438a4e976b1b4500774099c13b8cb96eec99f620f05090ddf"
++
+ [[package]]
+ name = "block-buffer"
+ version = "0.10.4"
+@@ -188,6 +184,12 @@ dependencies = [
+  "serde",
+ ]
+ 
++[[package]]
++name = "bumpalo"
++version = "3.15.0"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "d32a994c2b3ca201d9b263612a374263f05e7adde37c4707f693dcd375076d1f"
++
+ [[package]]
+ name = "bytes"
+ version = "1.4.0"
+@@ -225,7 +227,7 @@ checksum = "0fdc5d93c358224b4d6867ef1356d740de2303e9892edc06c5340daeccd96bab"
+ dependencies = [
+  "anstream",
+  "anstyle",
+- "bitflags",
++ "bitflags 1.3.2",
+  "clap_lex",
+  "strsim",
+ ]
+@@ -344,7 +346,7 @@ version = "0.25.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "e64e6c0fbe2c17357405f7c758c1ef960fce08bdfb2c03d88d2a18d7e09c4b67"
+ dependencies = [
+- "bitflags",
++ "bitflags 1.3.2",
+  "crossterm_winapi",
+  "libc",
+  "mio",
+@@ -363,6 +365,16 @@ dependencies = [
+  "winapi",
+ ]
+ 
++[[package]]
++name = "cruet"
++version = "0.14.0"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "6132609543972496bc97b1e01f1ce6586768870aeb4cabeb3385f4e05b5caead"
++dependencies = [
++ "once_cell",
++ "regex",
++]
++
+ [[package]]
+ name = "crunchy"
+ version = "0.2.2"
+@@ -379,6 +391,12 @@ dependencies = [
+  "typenum",
+ ]
+ 
++[[package]]
++name = "deunicode"
++version = "1.4.3"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "b6e854126756c496b8c81dec88f9a706b15b875c5849d4097a3854476b9fdf94"
++
+ [[package]]
+ name = "diff"
+ version = "0.1.13"
+@@ -474,6 +492,12 @@ dependencies = [
+  "thiserror",
+ ]
+ 
++[[package]]
++name = "equivalent"
++version = "1.0.1"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "5443807d6dff69373d433ab9ef5378ad8df50ca6298caf15de6e52e24aaf54d5"
++
+ [[package]]
+ name = "errno"
+ version = "0.3.1"
+@@ -698,9 +722,9 @@ dependencies = [
+ 
+ [[package]]
+ name = "handlebars"
+-version = "4.3.6"
++version = "5.1.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "035ef95d03713f2c347a72547b7cd38cbc9af7cd51e6099fb62d586d4a6dee3a"
++checksum = "ab283476b99e66691dee3f1640fea91487a8d81f50fb5ecc75538f8f8879a1e4"
+ dependencies = [
+  "log",
+  "pest",
+@@ -713,27 +737,28 @@ dependencies = [
+ 
+ [[package]]
+ name = "handlebars_misc_helpers"
+-version = "0.12.2"
++version = "0.15.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "db49f3f5b103a1230ad36a264eaabe679585767f1afe3ad1bf6affab54950b07"
++checksum = "3d23af2de02b372be35cf2c6a99a8481064dd9e5fc39c625a82b45da9ea22838"
+ dependencies = [
+- "Inflector",
++ "cruet",
+  "enquote",
+  "handlebars",
++ "jmespath",
+  "lazy_static",
+  "log",
+  "serde",
+  "serde_json",
+  "serde_yaml",
+  "thiserror",
+- "toml 0.5.11",
++ "toml 0.8.10",
+ ]
+ 
+ [[package]]
+ name = "hashbrown"
+-version = "0.12.3"
++version = "0.14.3"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "8a9ee70c43aaf417c914396645a0fa852624801b24ebb7ae78fe8272889ac888"
++checksum = "290f1a1d9242c78d09ce40a5e87e7554ee637af1351968159f4952f028f75604"
+ 
+ [[package]]
+ name = "heck"
+@@ -792,11 +817,11 @@ dependencies = [
+ 
+ [[package]]
+ name = "indexmap"
+-version = "1.9.3"
++version = "2.2.3"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "bd070e393353796e801d209ad339e89596eb4c8d430d18ede6a1cced8fafbd99"
++checksum = "233cf39063f058ea2caae4091bf4a3ef70a653afbc026f5c4a4135d114e3c177"
+ dependencies = [
+- "autocfg",
++ "equivalent",
+  "hashbrown",
+ ]
+ 
+@@ -806,7 +831,7 @@ version = "0.9.6"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "f8069d3ec154eb856955c1c0fbffefbf5f3c40a104ec912d4797314c1801abff"
+ dependencies = [
+- "bitflags",
++ "bitflags 1.3.2",
+  "inotify-sys",
+  "libc",
+ ]
+@@ -867,6 +892,18 @@ version = "1.0.6"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "453ad9f582a441959e5f0d088b02ce04cfe8d51a8eaf077f12ac6d3e94164ca6"
+ 
++[[package]]
++name = "jmespath"
++version = "0.3.0"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "017f8f53dd3b8ada762acb1f850da2a742d0ef3f921c60849a644380de1d683a"
++dependencies = [
++ "lazy_static",
++ "serde",
++ "serde_json",
++ "slug",
++]
++
+ [[package]]
+ name = "kqueue"
+ version = "1.0.7"
+@@ -883,7 +920,7 @@ version = "1.0.3"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "8367585489f01bc55dd27404dcf56b95e6da061a256a666ab23be9ba96a2e587"
+ dependencies = [
+- "bitflags",
++ "bitflags 1.3.2",
+  "libc",
+ ]
+ 
+@@ -899,12 +936,6 @@ version = "0.2.142"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "6a987beff54b60ffa6d51982e1aa1146bc42f19bd26be28b0586f252fccf5317"
+ 
+-[[package]]
+-name = "linked-hash-map"
+-version = "0.5.6"
+-source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "0717cef1bc8b636c6e1c1bbdefc09e6322da8a9321966e8928ef80d20f7f770f"
+-
+ [[package]]
+ name = "linux-raw-sys"
+ version = "0.3.5"
+@@ -1040,7 +1071,7 @@ version = "0.22.3"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "e4916f159ed8e5de0082076562152a76b7a1f64a01fd9d1e0fea002c37624faf"
+ dependencies = [
+- "bitflags",
++ "bitflags 1.3.2",
+  "cc",
+  "cfg-if",
+  "libc",
+@@ -1053,7 +1084,7 @@ version = "0.24.3"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "fa52e972a9a719cecb6864fb88568781eb706bac2cd1d4f04a648542dbf78069"
+ dependencies = [
+- "bitflags",
++ "bitflags 1.3.2",
+  "cfg-if",
+  "libc",
+ ]
+@@ -1096,7 +1127,7 @@ version = "5.0.0-pre.14"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "d13c22db70a63592e098fb51735bab36646821e6389a0ba171f3549facdf0b74"
+ dependencies = [
+- "bitflags",
++ "bitflags 1.3.2",
+  "crossbeam-channel",
+  "filetime",
+  "fsevent-sys",
+@@ -1350,7 +1381,7 @@ version = "0.2.16"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "fb5a58c1855b4b6819d59012155603f0b22ad30cad752600aadfcb695265519a"
+ dependencies = [
+- "bitflags",
++ "bitflags 1.3.2",
+ ]
+ 
+ [[package]]
+@@ -1383,29 +1414,31 @@ checksum = "a5996294f19bd3aae0453a862ad728f60e6600695733dd5df01da90c54363a3c"
+ 
+ [[package]]
+ name = "rhai"
+-version = "1.13.0"
++version = "1.17.1"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "fd29fa1f740be6dc91982013957e08c3c4232d7efcfe19e12da87d50bad47758"
++checksum = "f6273372244d04a8a4b0bec080ea1e710403e88c5d9d83f9808b2bfa64f0982a"
+ dependencies = [
+  "ahash",
+- "bitflags",
++ "bitflags 2.4.2",
+  "instant",
+  "num-traits",
++ "once_cell",
+  "rhai_codegen",
+  "serde",
+  "smallvec",
+  "smartstring",
++ "thin-vec",
+ ]
+ 
+ [[package]]
+ name = "rhai_codegen"
+-version = "1.5.0"
++version = "2.0.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "db74e3fdd29d969a0ec1f8e79171a6f0f71d0429293656901db382d248c4c021"
++checksum = "9db7f8dc4c9d48183a17ce550574c42995252b82d267eaca3fcd1b979159856c"
+ dependencies = [
+  "proc-macro2",
+  "quote",
+- "syn 1.0.109",
++ "syn 2.0.15",
+ ]
+ 
+ [[package]]
+@@ -1414,7 +1447,7 @@ version = "0.37.15"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "a0661814f891c57c930a610266415528da53c4933e6dea5fb350cbfe048a9ece"
+ dependencies = [
+- "bitflags",
++ "bitflags 1.3.2",
+  "errno",
+  "io-lifetimes",
+  "libc",
+@@ -1474,16 +1507,26 @@ dependencies = [
+  "serde",
+ ]
+ 
++[[package]]
++name = "serde_spanned"
++version = "0.6.5"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "eb3622f419d1296904700073ea6cc23ad690adbd66f13ea683df73298736f0c1"
++dependencies = [
++ "serde",
++]
++
+ [[package]]
+ name = "serde_yaml"
+-version = "0.8.26"
++version = "0.9.25"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "578a7433b776b56a35785ed5ce9a7e777ac0598aac5a6dd1b4b18a307c7fc71b"
++checksum = "1a49e178e4452f45cb61d0cd8cebc1b0fafd3e41929e996cef79aa3aca91f574"
+ dependencies = [
+  "indexmap",
++ "itoa",
+  "ryu",
+  "serde",
+- "yaml-rust",
++ "unsafe-libyaml",
+ ]
+ 
+ [[package]]
+@@ -1562,6 +1605,16 @@ dependencies = [
+  "autocfg",
+ ]
+ 
++[[package]]
++name = "slug"
++version = "0.1.5"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "3bd94acec9c8da640005f8e135a39fc0372e74535e6b368b7a04b875f784c8c4"
++dependencies = [
++ "deunicode",
++ "wasm-bindgen",
++]
++
+ [[package]]
+ name = "smallvec"
+ version = "1.10.0"
+@@ -1645,6 +1698,15 @@ version = "0.4.1"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "3369f5ac52d5eb6ab48c6b4ffdc8efbcad6b89c765749064ba298f2c68a16a76"
+ 
++[[package]]
++name = "thin-vec"
++version = "0.2.13"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "a38c90d48152c236a3ab59271da4f4ae63d678c5d7ad6b7714d7cb9760be5e4b"
++dependencies = [
++ "serde",
++]
++
+ [[package]]
+ name = "thiserror"
+ version = "1.0.40"
+@@ -1764,12 +1826,37 @@ dependencies = [
+ 
+ [[package]]
+ name = "toml"
+-version = "0.5.11"
++version = "0.8.10"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "9a9aad4a3066010876e8dcf5a8a06e70a558751117a145c6ce2b82c2e2054290"
++dependencies = [
++ "indexmap",
++ "serde",
++ "serde_spanned",
++ "toml_datetime",
++ "toml_edit",
++]
++
++[[package]]
++name = "toml_datetime"
++version = "0.6.5"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "3550f4e9685620ac18a50ed434eb3aec30db8ba93b0287467bca5826ea25baf1"
++dependencies = [
++ "serde",
++]
++
++[[package]]
++name = "toml_edit"
++version = "0.22.6"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "f4f7f0dd8d50a853a531c426359045b1998f04219d88799810762cd4ad314234"
++checksum = "2c1b5fd4128cc8d3e0cb74d4ed9a9cc7c7284becd4df68f5f940e1ad123606f6"
+ dependencies = [
+  "indexmap",
+  "serde",
++ "serde_spanned",
++ "toml_datetime",
++ "winnow",
+ ]
+ 
+ [[package]]
+@@ -1836,6 +1923,12 @@ version = "1.0.8"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "e5464a87b239f13a63a501f2701565754bae92d243d4bb7eb12f6d57d2269bf4"
+ 
++[[package]]
++name = "unsafe-libyaml"
++version = "0.2.10"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "ab4c90930b95a82d00dc9e9ac071b4991924390d46cbd0dfe566148667605e4b"
++
+ [[package]]
+ name = "utf8parse"
+ version = "0.2.1"
+@@ -1864,6 +1957,60 @@ version = "0.11.0+wasi-snapshot-preview1"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "9c8d87e72b64a3b4db28d11ce29237c246188f4f51057d65a7eab63b7987e423"
+ 
++[[package]]
++name = "wasm-bindgen"
++version = "0.2.91"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "c1e124130aee3fb58c5bdd6b639a0509486b0338acaaae0c84a5124b0f588b7f"
++dependencies = [
++ "cfg-if",
++ "wasm-bindgen-macro",
++]
++
++[[package]]
++name = "wasm-bindgen-backend"
++version = "0.2.91"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "c9e7e1900c352b609c8488ad12639a311045f40a35491fb69ba8c12f758af70b"
++dependencies = [
++ "bumpalo",
++ "log",
++ "once_cell",
++ "proc-macro2",
++ "quote",
++ "syn 2.0.15",
++ "wasm-bindgen-shared",
++]
++
++[[package]]
++name = "wasm-bindgen-macro"
++version = "0.2.91"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "b30af9e2d358182b5c7449424f017eba305ed32a7010509ede96cdc4696c46ed"
++dependencies = [
++ "quote",
++ "wasm-bindgen-macro-support",
++]
++
++[[package]]
++name = "wasm-bindgen-macro-support"
++version = "0.2.91"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "642f325be6301eb8107a83d12a8ac6c1e1c54345a7ef1a9261962dfefda09e66"
++dependencies = [
++ "proc-macro2",
++ "quote",
++ "syn 2.0.15",
++ "wasm-bindgen-backend",
++ "wasm-bindgen-shared",
++]
++
++[[package]]
++name = "wasm-bindgen-shared"
++version = "0.2.91"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "4f186bd2dcf04330886ce82d6f33dd75a7bfcf69ecf5763b89fcde53b6ac9838"
++
+ [[package]]
+ name = "watchexec"
+ version = "2.0.0-pre.14"
+@@ -2068,10 +2215,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "1a515f5799fe4961cb532f983ce2b23082366b898e52ffbce459c86f67c8378a"
+ 
+ [[package]]
+-name = "yaml-rust"
+-version = "0.4.5"
++name = "winnow"
++version = "0.6.1"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "56c1936c4cc7a1c9ab21a1ebb602eb942ba868cbd44a99cb7cdc5892335e1c85"
++checksum = "d90f4e0f530c4c69f62b80d839e9ef3855edc9cba471a160c4d692deed62b401"
+ dependencies = [
+- "linked-hash-map",
++ "memchr",
+ ]
+diff --git a/Cargo.toml b/Cargo.toml
+index b551245..c735eb0 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -16,7 +16,7 @@ clap = { version = "4.0.26", features = ["derive"] }
+ clap_complete = "4.0.5"
+ crossterm = "0.25.0"
+ diff = "0.1.*"
+-handlebars = "4.*"
++handlebars = "5.*"
+ hostname = "0.3.*"
+ log = "0.4.*"
+ maplit = "1.*"
+@@ -34,7 +34,7 @@ scripting = ["handlebars/script_helper"]
+ watch = ["watchexec"]
+ 
+ [dependencies.handlebars_misc_helpers]
+-version = "0.12.*"
++version = "0.15.*"
+ default-features = false
+ features = ["string", "json"]
+ 
+diff --git a/src/handlebars_helpers.rs b/src/handlebars_helpers.rs
+index 304a04d..6996bc3 100644
+--- a/src/handlebars_helpers.rs
++++ b/src/handlebars_helpers.rs
+@@ -1,6 +1,8 @@
+ use anyhow::{Context as AnyhowContext, Result};
+ 
+-use handlebars::{Context, Handlebars, Helper, HelperResult, Output, RenderContext, RenderError};
++use handlebars::{
++    Context, Handlebars, Helper, HelperResult, Output, RenderContext, RenderErrorReason,
++};
+ use toml::value::{Table, Value};
+ 
+ use std::collections::{BTreeMap, BTreeSet};
+@@ -65,7 +67,7 @@ fn eval_condition(handlebars: &Handlebars, variables: &Variables, condition: &st
+ }
+ 
+ fn math_helper(
+-    h: &Helper<'_, '_>,
++    h: &Helper<'_>,
+     _: &Handlebars<'_>,
+     _: &Context,
+     _: &mut RenderContext<'_, '_>,
+@@ -79,7 +81,7 @@ fn math_helper(
+     let expression = params.join(" ");
+ 
+     let parsed = expression.parse::<meval::Expr>().map_err(|e| {
+-        RenderError::new(format!(
++        RenderErrorReason::Other(format!(
+             "Cannot parse math expression {} because {}",
+             expression, e
+         ))
+@@ -89,7 +91,7 @@ fn math_helper(
+         &parsed
+             .eval()
+             .map_err(|e| {
+-                RenderError::new(format!(
++                RenderErrorReason::Other(format!(
+                     "Cannot evaluate expression {} because {}",
+                     expression, e
+                 ))
+@@ -100,7 +102,7 @@ fn math_helper(
+ }
+ 
+ fn include_template_helper(
+-    h: &Helper<'_, '_>,
++    h: &Helper<'_>,
+     handlebars: &Handlebars<'_>,
+     ctx: &Context,
+     rc: &mut RenderContext<'_, '_>,
+@@ -109,19 +111,23 @@ fn include_template_helper(
+     let mut params = h.params().iter();
+     let path = params
+         .next()
+-        .ok_or_else(|| RenderError::new("include_template: No path given"))?
++        .ok_or(RenderErrorReason::ParamNotFoundForIndex(
++            "include_template",
++            0,
++        ))?
+         .render();
+     if params.next().is_some() {
+-        return Err(RenderError::new(
+-            "include_template: More than one parameter given",
+-        ));
++        return Err(RenderErrorReason::Other(
++            "include_template: More than one parameter given".to_owned(),
++        )
++        .into());
+     }
+ 
+-    let included_file = std::fs::read_to_string(path)
+-        .map_err(|e| RenderError::from_error("include_template", e))?;
++    let included_file =
++        std::fs::read_to_string(path).map_err(|e| RenderErrorReason::NestedError(Box::new(e)))?;
+     let rendered_file = handlebars
+         .render_template_with_context(&included_file, rc.context().as_deref().unwrap_or(ctx))
+-        .map_err(|e| RenderError::from_error("include_template", e))?;
++        .map_err(|e| RenderErrorReason::NestedError(Box::new(e)))?;
+ 
+     out.write(&rendered_file)?;
+ 
+@@ -129,7 +135,7 @@ fn include_template_helper(
+ }
+ 
+ fn is_executable_helper(
+-    h: &Helper<'_, '_>,
++    h: &Helper<'_>,
+     _: &Handlebars<'_>,
+     _: &Context,
+     _: &mut RenderContext<'_, '_>,
+@@ -138,16 +144,17 @@ fn is_executable_helper(
+     let mut params = h.params().iter();
+     let executable = params
+         .next()
+-        .ok_or_else(|| RenderError::new("is_executable: No executable name given"))?
++        .ok_or(RenderErrorReason::ParamNotFoundForIndex("is_executable", 0))?
+         .render();
+     if params.next().is_some() {
+-        return Err(RenderError::new(
+-            "is_executable: More than one parameter given",
+-        ));
++        return Err(RenderErrorReason::Other(
++            "is_executable: More than one parameter given".to_owned(),
++        )
++        .into());
+     }
+ 
+     let status =
+-        is_executable(&executable).map_err(|e| RenderError::from_error("is_executable", e))?;
++        is_executable(&executable).map_err(|e| RenderErrorReason::NestedError(Box::new(e)))?;
+     if status {
+         out.write("true")?;
+     }
+@@ -157,7 +164,7 @@ fn is_executable_helper(
+ }
+ 
+ fn command_success_helper(
+-    h: &Helper<'_, '_>,
++    h: &Helper<'_>,
+     _: &Handlebars<'_>,
+     _: &Context,
+     _: &mut RenderContext<'_, '_>,
+@@ -166,12 +173,16 @@ fn command_success_helper(
+     let mut params = h.params().iter();
+     let command = params
+         .next()
+-        .ok_or_else(|| RenderError::new("command_success: No executable name given"))?
++        .ok_or(RenderErrorReason::ParamNotFoundForIndex(
++            "command_success",
++            0,
++        ))?
+         .render();
+     if params.next().is_some() {
+-        return Err(RenderError::new(
+-            "command_success: More than one parameter given",
+-        ));
++        return Err(RenderErrorReason::Other(
++            "command_success: More than one parameter given".to_owned(),
++        )
++        .into());
+     }
+ 
+     let status = os_shell()
+@@ -190,7 +201,7 @@ fn command_success_helper(
+ }
+ 
+ fn command_output_helper(
+-    h: &Helper<'_, '_>,
++    h: &Helper<'_>,
+     _: &Handlebars<'_>,
+     _: &Context,
+     _: &mut RenderContext<'_, '_>,
+@@ -199,12 +210,16 @@ fn command_output_helper(
+     let mut params = h.params().iter();
+     let command = params
+         .next()
+-        .ok_or_else(|| RenderError::new("command_success: No executable name given"))?
++        .ok_or(RenderErrorReason::ParamNotFoundForIndex(
++            "command_success",
++            0,
++        ))?
+         .render();
+     if params.next().is_some() {
+-        return Err(RenderError::new(
+-            "command_success: More than one parameter given",
+-        ));
++        return Err(RenderErrorReason::Other(
++            "command_success: More than one parameter given".to_owned(),
++        )
++        .into());
+     }
+ 
+     let output = os_shell()

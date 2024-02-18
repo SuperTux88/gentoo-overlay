@@ -6,7 +6,6 @@
 EAPI=8
 
 CRATES="
-	Inflector@0.11.4
 	ahash@0.8.3
 	aho-corasick@0.7.20
 	aho-corasick@1.0.1
@@ -23,9 +22,11 @@ CRATES="
 	atomic-take@1.1.0
 	autocfg@1.1.0
 	bitflags@1.3.2
+	bitflags@2.4.2
 	block-buffer@0.10.4
 	bstr@0.2.17
 	bstr@1.4.0
+	bumpalo@3.15.0
 	bytes@1.4.0
 	cc@1.0.79
 	cfg-if@1.0.0
@@ -44,8 +45,10 @@ CRATES="
 	crossbeam-utils@0.8.15
 	crossterm@0.25.0
 	crossterm_winapi@0.9.0
+	cruet@0.14.0
 	crunchy@0.2.2
 	crypto-common@0.1.6
+	deunicode@1.4.3
 	diff@0.1.13
 	difflib@0.4.0
 	digest@0.10.6
@@ -55,6 +58,7 @@ CRATES="
 	dunce@1.0.4
 	either@1.8.1
 	enquote@1.1.0
+	equivalent@1.0.1
 	errno@0.3.1
 	errno-dragonfly@0.1.2
 	filetime@0.2.21
@@ -77,16 +81,16 @@ CRATES="
 	git-features@0.20.0
 	git-hash@0.9.11
 	globset@0.4.10
-	handlebars@4.3.6
-	handlebars_misc_helpers@0.12.2
-	hashbrown@0.12.3
+	handlebars@5.1.0
+	handlebars_misc_helpers@0.15.0
+	hashbrown@0.14.3
 	heck@0.4.1
 	hermit-abi@0.2.6
 	hermit-abi@0.3.1
 	hex@0.4.3
 	hostname@0.3.1
 	ignore@0.4.20
-	indexmap@1.9.3
+	indexmap@2.2.3
 	inotify@0.9.6
 	inotify-sys@0.1.5
 	instant@0.1.12
@@ -94,11 +98,11 @@ CRATES="
 	is-terminal@0.4.7
 	itertools@0.10.5
 	itoa@1.0.6
+	jmespath@0.3.0
 	kqueue@1.0.7
 	kqueue-sys@1.0.3
 	lazy_static@1.4.0
 	libc@0.2.142
-	linked-hash-map@0.5.6
 	linux-raw-sys@0.3.5
 	lock_api@0.4.9
 	log@0.4.17
@@ -150,8 +154,8 @@ CRATES="
 	redox_users@0.4.3
 	regex@1.8.1
 	regex-syntax@0.7.1
-	rhai@1.13.0
-	rhai_codegen@1.5.0
+	rhai@1.17.1
+	rhai_codegen@2.0.0
 	rustix@0.37.15
 	ryu@1.0.13
 	same-file@1.0.6
@@ -159,7 +163,8 @@ CRATES="
 	serde@1.0.160
 	serde_derive@1.0.160
 	serde_json@1.0.96
-	serde_yaml@0.8.26
+	serde_spanned@0.6.5
+	serde_yaml@0.9.25
 	sha2@0.10.6
 	shellexpand@2.1.2
 	signal-hook@0.3.15
@@ -168,6 +173,7 @@ CRATES="
 	simplelog@0.12.1
 	siphasher@0.3.10
 	slab@0.4.8
+	slug@0.1.5
 	smallvec@1.10.0
 	smartstring@1.0.1
 	static_assertions@1.1.0
@@ -177,6 +183,7 @@ CRATES="
 	termcolor@1.1.3
 	terminfo@0.7.5
 	termtree@0.4.1
+	thin-vec@0.2.13
 	thiserror@1.0.40
 	thiserror-impl@1.0.40
 	thread_local@1.1.7
@@ -188,7 +195,9 @@ CRATES="
 	tokio-macros@2.1.0
 	tokio-stream@0.1.14
 	toml@0.4.10
-	toml@0.5.11
+	toml@0.8.10
+	toml_datetime@0.6.5
+	toml_edit@0.22.6
 	tracing@0.1.38
 	tracing-attributes@0.1.24
 	tracing-core@0.1.30
@@ -197,10 +206,16 @@ CRATES="
 	unicase@2.6.0
 	unicode-bom@1.1.4
 	unicode-ident@1.0.8
+	unsafe-libyaml@0.2.10
 	utf8parse@0.2.1
 	version_check@0.9.4
 	walkdir@2.3.3
 	wasi@0.11.0+wasi-snapshot-preview1
+	wasm-bindgen@0.2.91
+	wasm-bindgen-backend@0.2.91
+	wasm-bindgen-macro@0.2.91
+	wasm-bindgen-macro-support@0.2.91
+	wasm-bindgen-shared@0.2.91
 	watchexec@2.0.0-pre.14
 	which@4.4.0
 	winapi@0.3.9
@@ -225,7 +240,7 @@ CRATES="
 	windows_x86_64_gnullvm@0.48.0
 	windows_x86_64_msvc@0.42.2
 	windows_x86_64_msvc@0.48.0
-	yaml-rust@0.4.5
+	winnow@0.6.1
 "
 
 inherit cargo shell-completion optfeature
@@ -251,6 +266,7 @@ BDEPEND=">=virtual/rust-1.70"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-fix-version.patch
+	"${FILESDIR}"/${P}-upgrade-handlebars.patch
 )
 
 # rust does not use *FLAGS from make.conf, silence portage warning
