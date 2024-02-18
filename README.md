@@ -60,6 +60,9 @@ The following packages are available in this overlay:
 * app-shells/zoxide
   * A smarter cd command. Supports all major shells.
   * https://github.com/ajeetdsouza/zoxide
+* dev-util/cargo-auditable
+  * Make production Rust binaries auditable
+  * https://github.com/rust-secure-code/cargo-auditable
 * dev-util/bacon
   * background rust code check
   * https://github.com/Canop/bacon
