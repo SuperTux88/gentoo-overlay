@@ -75,6 +75,9 @@ The following packages are available in this overlay:
 * dev-util/kopium
   * Kubernetes OPenapI UnMangler
   * https://github.com/kube-rs/kopium
+* dev-util/rust-audit-info
+  * Command-line tool to extract the dependency trees embedded in binaries by cargo auditable
+  * https://github.com/rust-secure-code/cargo-auditable/tree/master/rust-audit-info
 * dev-util/trunk
   * Build, bundle & ship your Rust WASM application to the web
   * https://trunkrs.dev
