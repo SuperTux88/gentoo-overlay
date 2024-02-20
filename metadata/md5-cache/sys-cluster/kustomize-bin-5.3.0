@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=Customization of kubernetes YAML configurations
+EAPI=8
+HOMEPAGE=https://github.com/kubernetes-sigs/kustomize
+INHERIT=shell-completion
+KEYWORDS=~amd64
+LICENSE=Apache-2.0
+SLOT=0
+SRC_URI=https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv5.3.0/kustomize_v5.3.0_linux_amd64.tar.gz
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff	shell-completion	bb7eb6bc232cd6c4bf8af739cdd2ee14
+_md5_=083da8c2f4f4270e2bbb4937feb935d3
