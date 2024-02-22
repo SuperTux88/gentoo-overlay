@@ -90,6 +90,9 @@ The following packages are available in this overlay:
 * dev-util/wasm-pack
   * Your favorite rust -> wasm workflow tool
   * https://rustwasm.github.io/wasm-pack
+* dev-vcs/git-interactive-rebase-tool
+  * Native cross-platform full feature terminal-based sequence editor for git interactive rebase
+  * https://github.com/MitMaro/git-interactive-rebase-tool
 * gnome-extra/gnome-tweaks
   * Same as upstream, with additional `gnome-shell` USE flag
 * gui-apps/clipman
