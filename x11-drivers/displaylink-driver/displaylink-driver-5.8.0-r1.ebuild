@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
-	~x11-drivers/evdi-1.14.1
+	>=x11-drivers/evdi-1.14.1
 	virtual/libusb:1
 "
 RDEPEND="${DEPEND}"

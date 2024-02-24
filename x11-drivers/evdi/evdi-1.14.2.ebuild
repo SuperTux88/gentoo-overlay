@@ -18,10 +18,6 @@ RDEPEND="${DEPEND}"
 
 CONFIG_CHECK="~FB_VIRTUAL ~I2C DRM ~USB_SUPPORT USB_ARCH_HAS_HCD"
 
-PATCHES=(
-	"${FILESDIR}"/${P}-fix-kernel-6-6.patch
-)
-
 src_compile() {
 	local modlist=( evdi=video:"${S}/module" )
 	linux-mod-r1_src_compile
