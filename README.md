@@ -110,9 +110,6 @@ The following packages are available in this overlay:
 * gui-apps/wluma
   * Automatic brightness adjustment based on screen contents and ALS
   * https://github.com/maximbaz/wluma
-* gui-apps/ydotool
-  * Generic command-line automation tool (no X!)
-  * https://github.com/ReimuNotMoe/ydotool
 * kde-plasma/breeze
   * Same as upstream, with additional `kde-cli-tools` USE flag
 * media-fonts/meslo-nerd
@@ -186,7 +183,7 @@ The following packages are available in this overlay:
   * https://github.com/a1wong/it87
 * sys-kernel/zenpower
   * Linux kernel driver for reading sensors of AMD Zen family CPUs
-  * https://github.com/Ta180m/zenpower3
+  * https://git.exozy.me/a/zenpower3
 * sys-power/sntrack
   * Tracks the battery discharge rate during sleep
   * https://github.com/xsmile/sntrack
