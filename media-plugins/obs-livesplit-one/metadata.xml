@@ -6,7 +6,7 @@
 		<email>gentoo@benjaminneff.ch</email>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">CryZe/obs-livesplit-one</remote-id>
+		<remote-id type="github">LiveSplit/obs-livesplit-one</remote-id>
 	</upstream>
 	<use>
 		<flag name="auto-splitting">Enable auto-splitting feature</flag>

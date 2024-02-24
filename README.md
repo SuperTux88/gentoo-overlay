@@ -129,7 +129,7 @@ The following packages are available in this overlay:
   * https://github.com/royshil/obs-backgroundremoval
 * media-plugins/obs-livesplit-one
   * A plugin for OBS Studio that allows adding LiveSplit One as a source
-  * https://github.com/CryZe/obs-livesplit-one
+  * https://github.com/LiveSplit/obs-livesplit-one
 * media-plugins/obs-vkcapture
   * OBS Linux Vulkan/OpenGL game capture
   * https://github.com/nowrep/obs-vkcapture
