@@ -17,16 +17,11 @@ SRC_URI="
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="video_cards_nvidia"
 
 DEPEND="
 	dev-qt/qtbase:6[widgets]
 	>=media-video/obs-studio-29
 	>=media-libs/opencv-4.7.0:=
-	video_cards_nvidia? (
-		dev-libs/cudnn
-		sci-libs/tensorflow
-	)
 "
 RDEPEND="${DEPEND}"
 BDEPEND="app-admin/chrpath"
@@ -36,13 +31,10 @@ QA_PRESTRIPPED="/usr/lib64/obs-plugins/obs-backgroundremoval/libonnxruntime.so.$
 PATCHES=(
 	"${FILESDIR}"/fetch-onnxruntime-from-path.patch
 	"${FILESDIR}"/remove-update-check.patch
+	"${FILESDIR}"/remove-tensorflow-support.patch
 )
 
 src_configure() {
-	if ! use video_cards_nvidia; then
-		eapply "${FILESDIR}"/remove-nvidia-gpu-support.patch
-	fi
-
 	mycmakeargs=(
 		--preset linux-x86_64
 		-B "${BUILD_DIR}"
