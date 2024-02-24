@@ -11,7 +11,7 @@ CRATES="
 	autocfg@1.1.0
 	binfarce@0.2.1
 	camino@1.1.1
-	cargo-lock@8.0.2
+	cargo-lock@9.0.0
 	cargo-platform@0.1.2
 	cargo_metadata@0.15.0
 	cfg-if@1.0.0
@@ -26,7 +26,6 @@ CRATES="
 	itoa@1.0.3
 	libc@0.2.132
 	memchr@2.5.0
-	miniz_oxide@0.5.4
 	miniz_oxide@0.6.2
 	object@0.30.3
 	once_cell@1.14.0
@@ -42,10 +41,13 @@ CRATES="
 	serde_derive@1.0.147
 	serde_derive_internals@0.26.0
 	serde_json@1.0.85
+	serde_spanned@0.6.1
 	syn@1.0.99
 	tinyvec@1.6.0
 	tinyvec_macros@0.1.0
-	toml@0.5.9
+	toml@0.7.3
+	toml_datetime@0.6.1
+	toml_edit@0.19.8
 	topological-sort@0.2.2
 	unicode-bidi@0.3.8
 	unicode-ident@1.0.4
@@ -53,6 +55,7 @@ CRATES="
 	url@2.3.1
 	version_check@0.9.4
 	which@4.3.0
+	winnow@0.4.1
 "
 
 inherit cargo
