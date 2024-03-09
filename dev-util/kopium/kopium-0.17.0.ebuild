@@ -9,12 +9,12 @@ CRATES="
 	aho-corasick@1.0.4
 	android-tzdata@0.1.1
 	android_system_properties@0.1.5
-	anstream@0.6.4
+	anstream@0.6.7
 	anstyle@1.0.2
 	anstyle-parse@0.2.1
 	anstyle-query@1.0.0
 	anstyle-wincon@3.0.1
-	anyhow@1.0.79
+	anyhow@1.0.80
 	autocfg@1.1.0
 	base64@0.21.5
 	bitflags@1.3.2
@@ -25,11 +25,11 @@ CRATES="
 	cc@1.0.74
 	cfg-if@1.0.0
 	chrono@0.4.26
-	clap@4.4.14
-	clap_builder@4.4.14
-	clap_complete@4.4.6
-	clap_derive@4.4.7
-	clap_lex@0.6.0
+	clap@4.5.1
+	clap_builder@4.5.1
+	clap_complete@4.5.1
+	clap_derive@4.5.0
+	clap_lex@0.7.0
 	codespan-reporting@0.11.1
 	colorchoice@1.0.0
 	core-foundation@0.9.3
@@ -46,7 +46,7 @@ CRATES="
 	digest@0.10.7
 	dyn-clone@1.0.9
 	either@1.8.0
-	env_logger@0.10.1
+	env_logger@0.10.2
 	equivalent@1.0.1
 	errno@0.3.2
 	errno-dragonfly@0.1.2
@@ -62,7 +62,7 @@ CRATES="
 	futures-task@0.3.25
 	futures-util@0.3.25
 	generic-array@0.14.7
-	hashbrown@0.14.0
+	hashbrown@0.14.3
 	heck@0.4.1
 	hermit-abi@0.1.19
 	hermit-abi@0.3.2
@@ -79,21 +79,21 @@ CRATES="
 	iana-time-zone@0.1.53
 	iana-time-zone-haiku@0.1.1
 	ident_case@1.0.1
-	indexmap@2.0.0
+	indexmap@2.2.1
 	is-terminal@0.4.9
 	itoa@1.0.4
 	js-sys@0.3.60
-	jsonpath-rust@0.3.5
-	k8s-openapi@0.20.0
-	kube@0.87.2
-	kube-client@0.87.2
-	kube-core@0.87.2
-	kube-derive@0.87.2
-	libc@0.2.152
+	jsonpath-rust@0.4.0
+	k8s-openapi@0.21.1
+	kube@0.88.1
+	kube-client@0.88.1
+	kube-core@0.88.1
+	kube-derive@0.88.1
+	libc@0.2.153
 	link-cplusplus@1.0.7
 	linux-raw-sys@0.4.5
 	lock_api@0.4.9
-	log@0.4.20
+	log@0.4.21
 	memchr@2.5.0
 	mime@0.3.17
 	mio@0.8.5
@@ -136,12 +136,12 @@ CRATES="
 	secrecy@0.8.0
 	security-framework@2.9.2
 	security-framework-sys@2.9.1
-	serde@1.0.195
+	serde@1.0.197
 	serde-value@0.7.0
-	serde_derive@1.0.195
+	serde_derive@1.0.197
 	serde_derive_internals@0.26.0
-	serde_json@1.0.109
-	serde_yaml@0.9.30
+	serde_json@1.0.114
+	serde_yaml@0.9.32
 	sha2@0.10.8
 	signal-hook-registry@1.4.0
 	slab@0.4.7
@@ -149,8 +149,9 @@ CRATES="
 	socket2@0.4.7
 	spin@0.5.2
 	strsim@0.10.0
+	strsim@0.11.0
 	syn@1.0.109
-	syn@2.0.48
+	syn@2.0.52
 	termcolor@1.2.0
 	thiserror@1.0.52
 	thiserror-impl@1.0.52
@@ -167,8 +168,8 @@ CRATES="
 	tracing-attributes@0.1.23
 	tracing-core@0.1.30
 	try-lock@0.2.3
-	typed-builder@0.18.0
-	typed-builder-macro@0.18.0
+	typed-builder@0.18.1
+	typed-builder-macro@0.18.1
 	typenum@1.17.0
 	ucd-trie@0.1.6
 	unicode-ident@1.0.11
@@ -240,7 +241,7 @@ src_compile() {
 src_install() {
 	cargo_src_install
 
-	dodoc README.md
+	einstalldocs
 
 	newbashcomp bash-completion.sh ${PN}
 	newzshcomp zsh-completion.zsh _${PN}
