@@ -160,6 +160,9 @@ The following packages are available in this overlay:
 * sys-apps/dool
   * Versatile replacement for vmstat, iostat and ifstat (clone of dstat)
   * https://github.com/scottchiefbaker/dool
+* sys-apps/hexyl
+  * A command-line hex viewer
+  * https://github.com/sharkdp/hexyl
 * sys-apps/jless
   * A command-line JSON viewer designed for reading, exploring, and searching through JSON data
   * https://jless.io
