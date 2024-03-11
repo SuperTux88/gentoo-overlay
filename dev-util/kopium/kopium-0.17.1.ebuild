@@ -25,8 +25,8 @@ CRATES="
 	cc@1.0.74
 	cfg-if@1.0.0
 	chrono@0.4.26
-	clap@4.5.1
-	clap_builder@4.5.1
+	clap@4.5.2
+	clap_builder@4.5.2
 	clap_complete@4.5.1
 	clap_derive@4.5.0
 	clap_lex@0.7.0
