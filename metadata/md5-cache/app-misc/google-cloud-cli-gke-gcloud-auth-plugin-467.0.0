@@ -1,13 +1,13 @@
 DEFINED_PHASES=install unpack
-DEPEND=~app-misc/google-cloud-cli-462.0.1
+DEPEND=~app-misc/google-cloud-cli-467.0.0
 DESCRIPTION=A kubectl authentication plugin for GKE
 EAPI=8
 HOMEPAGE=https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
 INHERIT=unpacker
 KEYWORDS=~amd64
 LICENSE=Apache-2.0
-RDEPEND=~app-misc/google-cloud-cli-462.0.1
+RDEPEND=~app-misc/google-cloud-cli-467.0.0
 SLOT=0
-SRC_URI=https://packages.cloud.google.com/apt/pool/google-cloud-cli-gke-gcloud-auth-plugin_462.0.1-0_amd64_3e3462417480a973b7b4e15dc92816202357bc749248f2a6f7fffbddda291f54.deb
+SRC_URI=https://packages.cloud.google.com/apt/pool/google-cloud-cli-gke-gcloud-auth-plugin_467.0.0-0_amd64_f2576cc05f8af00dd294f83fdd27d03d59ab20f10dcf8616d04c01810ae70f44.deb
 _eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	7b40f3faa3e2e12f5cf6d36d0fbfcd09
-_md5_=bd19b21c8d8983f070fc2c2384c87c52
+_md5_=c16e49aecc36bf04dc67af04254a5a0f
