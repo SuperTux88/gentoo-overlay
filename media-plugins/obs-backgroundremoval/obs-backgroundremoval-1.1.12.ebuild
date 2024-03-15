@@ -39,6 +39,7 @@ src_configure() {
 		--preset linux-x86_64
 		-B "${BUILD_DIR}"
 		-DUSE_SYSTEM_OPENCV=ON
+		-DDISABLE_ONNXRUNTIME_GPU=ON
 	)
 	cmake_src_configure
 }

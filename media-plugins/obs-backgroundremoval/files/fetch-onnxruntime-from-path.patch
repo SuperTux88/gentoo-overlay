@@ -1,8 +1,8 @@
 diff --git a/cmake/FetchOnnxruntime.cmake b/cmake/FetchOnnxruntime.cmake
-index ad3c7d3..a687c6c 100644
+index 78d2766..93487eb 100644
 --- a/cmake/FetchOnnxruntime.cmake
 +++ b/cmake/FetchOnnxruntime.cmake
-@@ -45,11 +45,7 @@ else()
+@@ -46,11 +46,7 @@ else()
    set(Onnxruntime_HASH "${CUSTOM_ONNXRUNTIME_HASH}")
  endif()
  
