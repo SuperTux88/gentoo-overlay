@@ -23,5 +23,6 @@ DEPEND="
 RDEPEND="
 	${DEPEND}
 	app-containers/podman
-	app-containers/dnsname-cni-plugin
+	app-containers/netavark
+	app-containers/aardvark-dns
 "
