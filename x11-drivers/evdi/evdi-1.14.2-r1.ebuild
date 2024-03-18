@@ -18,6 +18,11 @@ RDEPEND="${DEPEND}"
 
 CONFIG_CHECK="~FB_VIRTUAL ~I2C DRM ~USB_SUPPORT USB_ARCH_HAS_HCD"
 
+pkg_setup() {
+	linux-mod-r1_pkg_setup
+	export KVER=${KV_FULL}
+}
+
 src_compile() {
 	local modlist=( evdi=video:"${S}/module" )
 	linux-mod-r1_src_compile
