@@ -39,9 +39,6 @@ The following packages are available in this overlay:
 * app-admin/dotter
   * A dotfile manager and templater written in rust
   * https://github.com/SuperCuber/dotter
-* app-containers/dnsname-cni-plugin
-  * name resolution for containers
-  * https://github.com/containers/dnsname
 * app-containers/podman-compose
   * A script to run docker-compose.yml using podman
   * https://github.com/containers/podman-compose
