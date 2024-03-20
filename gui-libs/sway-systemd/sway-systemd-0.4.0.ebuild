@@ -1,0 +1,40 @@
+# Copyright 2024 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=8
+
+inherit meson
+
+DESCRIPTION="Systemd integration for Sway session"
+HOMEPAGE="https://github.com/alebastr/sway-systemd"
+SRC_URI="https://github.com/alebastr/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+
+LICENSE="MIT"
+SLOT="0"
+KEYWORDS="~amd64"
+IUSE="autostart locale1"
+
+DEPEND="
+	gui-wm/sway
+	sys-apps/systemd
+"
+RDEPEND="
+	${DEPEND}
+	sys-apps/dbus
+"
+
+join_comma() {
+	local IFS=','
+	echo "${*}"
+}
+
+src_configure() {
+	local args=(
+		$(usev autostart)
+		$(usev locale1)
+	)
+	local emesonargs=(
+		-Dautoload-configs=$(join_comma ${args[@]})
+	)
+	meson_src_configure
+}

@@ -107,6 +107,9 @@ The following packages are available in this overlay:
 * gui-apps/wluma
   * Automatic brightness adjustment based on screen contents and ALS
   * https://github.com/maximbaz/wluma
+* gui-libs/sway-systemd
+  * Systemd integration for Sway session
+  * https://github.com/alebastr/sway-systemd
 * kde-plasma/breeze
   * Same as upstream, with additional `kde-cli-tools` USE flag
 * media-fonts/meslo-nerd

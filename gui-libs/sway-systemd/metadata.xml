@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Benjamin Neff</name>
+		<email>gentoo@benjaminneff.ch</email>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">alebastr/sway-systemd</remote-id>
+	</upstream>
+	<use>
+		<flag name="autostart">Include sway-xdg-autostart.target to allow delayed start from a script</flag>
+		<flag name="locale1">Read the system-wide input configuration from systemd</flag>
+	</use>
+</pkgmetadata>
