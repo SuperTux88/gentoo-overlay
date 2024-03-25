@@ -5,4 +5,7 @@
 		<name>Benjamin Neff</name>
 		<email>gentoo@benjaminneff.ch</email>
 	</maintainer>
+	<use>
+		<flag name="anthoscli">Install anthoscli command</flag>
+	</use>
 </pkgmetadata>
