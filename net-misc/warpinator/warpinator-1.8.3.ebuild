@@ -11,7 +11,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-inherit meson gnome2-utils xdg
+inherit meson gnome2-utils xdg optfeature
 
 DEPEND="
 	dev-libs/gobject-introspection
@@ -47,6 +47,8 @@ src_configure() {
 pkg_postinst() {
 	xdg_pkg_postinst
 	gnome2_schemas_update
+
+	optfeature "use bubblewrap for incoming file isolation" sys-apps/bubblewrap
 }
 
 pkg_postrm() {
