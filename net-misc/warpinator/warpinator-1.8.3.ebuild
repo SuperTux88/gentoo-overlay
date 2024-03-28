@@ -11,7 +11,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-inherit meson gnome2-utils xdg optfeature
+inherit meson gnome2-utils xdg optfeature linux-info
 
 DEPEND="
 	dev-libs/gobject-introspection
@@ -35,6 +35,9 @@ BDEPEND="
 	>=dev-python/grpcio-tools-1.14.0
 	>=dev-python/protobuf-python-3.6.1
 "
+
+CONFIG_CHECK="~SECURITY_LANDLOCK"
+WARNING_SECURITY_LANDLOCK="SECURITY_LANDLOCK: enable to use landlock for incoming file isolation"
 
 src_configure() {
 	local emesonargs=(
