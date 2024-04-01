@@ -14,6 +14,7 @@ CRATES="
 	anstyle-parse@0.2.3
 	anstyle-query@1.0.2
 	anstyle-wincon@3.0.2
+	autocfg@1.2.0
 	base64@0.21.7
 	bat@0.24.0
 	bincode@1.3.3
@@ -26,9 +27,9 @@ CRATES="
 	bytesize@1.3.0
 	cargo-subcommand-metadata@0.1.0
 	cfg-if@1.0.0
-	clap@4.5.3
+	clap@4.5.4
 	clap_builder@4.5.2
-	clap_derive@4.5.3
+	clap_derive@4.5.4
 	clap_lex@0.7.0
 	clircle@0.4.0
 	colorchoice@1.0.0
@@ -44,19 +45,20 @@ CRATES="
 	fastrand@2.0.2
 	flate2@1.0.28
 	fnv@1.0.7
+	fs-err@2.11.0
 	globset@0.4.14
 	grep-cli@0.1.10
 	hashbrown@0.14.3
 	heck@0.5.0
 	home@0.5.9
 	indexmap@2.2.6
-	itoa@1.0.10
+	itoa@1.0.11
 	lazy_static@1.4.0
 	libc@0.2.153
 	line-wrap@0.2.0
 	linux-raw-sys@0.4.13
 	log@0.4.21
-	memchr@2.7.1
+	memchr@2.7.2
 	miniz_oxide@0.7.2
 	nu-ansi-term@0.49.0
 	num-conv@0.1.0
@@ -70,7 +72,7 @@ CRATES="
 	quote@1.0.35
 	regex@1.10.4
 	regex-automata@0.4.6
-	regex-syntax@0.8.2
+	regex-syntax@0.8.3
 	rgb@0.8.37
 	rustix@0.38.32
 	ryu@1.0.17
@@ -78,7 +80,7 @@ CRATES="
 	semver@1.0.22
 	serde@1.0.197
 	serde_derive@1.0.197
-	serde_json@1.0.114
+	serde_json@1.0.115
 	serde_spanned@0.6.5
 	serde_yaml@0.9.34+deprecated
 	shell-words@1.1.0
