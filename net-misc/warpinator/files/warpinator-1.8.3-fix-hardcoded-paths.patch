@@ -1,0 +1,32 @@
+From 1aeae3a4789ea9726cb70bdeaa93647980183abd Mon Sep 17 00:00:00 2001
+From: Michael Webster <miketwebster@gmail.com>
+Date: Thu, 1 Feb 2024 11:41:50 -0500
+Subject: [PATCH] warpinator-launch.py: Fix hardcoded paths.
+
+Fixes #206
+---
+ src/warpinator-launch.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/warpinator-launch.py b/src/warpinator-launch.py
+index db73f9304..817e4a215 100644
+--- a/src/warpinator-launch.py
++++ b/src/warpinator-launch.py
+@@ -135,7 +135,7 @@
+ 
+     launch_args = []
+ 
+-    launch_args += ["/bin/bwrap"]
++    launch_args += ["/usr/bin/bwrap"]
+     launch_args += ["--ro-bind",         "/",                                               "/"]
+     launch_args += ["--dev",             "/dev"]
+     launch_args += ["--bind",            rundir + "/dconf",                                 rundir + "/dconf"]
+@@ -156,7 +156,7 @@
+     launch_args += ["--die-with-parent"]
+ 
+     # launch_args += ["/bin/sh"]
+-    launch_args += ["/bin/python3",      warpinator_path]
++    launch_args += ["/usr/bin/python3",      warpinator_path]
+ 
+     ret = 0
+ 
