@@ -3,10 +3,11 @@
 
 EAPI=8
 
-inherit cmake flag-o-matic
+VERIFY_SIG_OPENPGP_KEY_PATH=/usr/share/openpgp-keys/romkatv.asc
+inherit cmake flag-o-matic verify-sig
 
 # from build.info
-LIBGIT_TAG=tag-0ad3d776aa86dd607dc86dcd7f77ad3ed7ebec61
+LIBGIT_TAG=tag-2ecf33948a4df9ef45a66c68b8ef24a5e60eaac6
 LIBGIT_P="libgit2-romkatv-${LIBGIT_TAG}"
 LIBGIT_DIR="${LIBGIT_P/-romkatv/}"
 
@@ -17,7 +18,11 @@ DESCRIPTION="Git status for Bash and Zsh prompt"
 HOMEPAGE="https://github.com/romkatv/gitstatus"
 SRC_URI="
 	https://github.com/romkatv/gitstatus/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/romkatv/libgit2/archive/${LIBGIT_TAG}.tar.gz -> ${LIBGIT_P}.tar.gz"
+	https://github.com/romkatv/libgit2/archive/${LIBGIT_TAG}.tar.gz -> ${LIBGIT_P}.tar.gz
+	verify-sig? (
+		https://github.com/romkatv/${PN}/releases/download/v${PV}/${P}.tar.gz.asc
+	)
+"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -27,6 +32,16 @@ IUSE="zsh-completion"
 
 DEPEND="zsh-completion? ( app-shells/zsh )"
 RDEPEND="${DEPEND}"
+BDEPEND="verify-sig? ( sec-keys/openpgp-keys-romkatv )"
+
+DOCS=( {README,docs/listdir}.md )
+
+src_unpack() {
+	if use verify-sig; then
+		verify-sig_verify_detached "${DISTDIR}"/${P}.tar.gz{,.asc}
+	fi
+	default
+}
 
 src_configure() {
 	mycmakeargs=(
@@ -92,5 +107,5 @@ src_install() {
 	dosym "../../../libexec/${PN}/gitstatusd" \
 		"/usr/share/${PN}/usrbin/gitstatusd"
 
-	dodoc {README,docs/listdir}.md
+	einstalldocs
 }
