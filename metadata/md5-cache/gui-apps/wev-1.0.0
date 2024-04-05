@@ -9,4 +9,4 @@ LICENSE=MIT
 RDEPEND=dev-libs/wayland dev-libs/wayland-protocols x11-libs/libxkbcommon[wayland]
 SLOT=0
 SRC_URI=https://git.sr.ht/~sircmpwn/wev/archive/1.0.0.tar.gz -> wev-1.0.0.tar.gz
-_md5_=493ba20231b48964bc6bc8dc04f25370
+_md5_=e62f1624ab937d91ce9a4a0e304d6a33
