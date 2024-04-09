@@ -84,9 +84,10 @@ CRATES="
 	serde_spanned@0.6.5
 	serde_yaml@0.9.34+deprecated
 	shell-words@1.1.0
+	shlex@1.3.0
 	std_prelude@0.2.12
-	strsim@0.11.0
-	syn@2.0.55
+	strsim@0.11.1
+	syn@2.0.58
 	syn-select@0.3.0
 	syntect@5.2.0
 	tempfile@3.10.1
