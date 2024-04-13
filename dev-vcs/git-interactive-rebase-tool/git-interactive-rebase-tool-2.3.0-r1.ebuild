@@ -166,7 +166,7 @@ LICENSE+=" Apache-2.0 BSD ISC MIT Unicode-DFS-2016"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND="dev-libs/libgit2"
+DEPEND="dev-libs/libgit2:="
 RDEPEND="${DEPEND}"
 
 PATCHES=(
