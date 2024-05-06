@@ -15,6 +15,8 @@ DESCRIPTION="Unofficial Microsoft Teams for Linux client"
 HOMEPAGE="https://github.com/IsmaelMartinez/teams-for-linux"
 SRC_URI="https://github.com/IsmaelMartinez/${PN}/releases/download/v${PV}/${PN}_${PV}_amd64.deb"
 
+S="${WORKDIR}"
+
 LICENSE="GPL-3"
 # Electron bundles a bunch of things
 LICENSE+="
@@ -50,8 +52,6 @@ RDEPEND="${DEPEND}"
 
 RESTRICT="bindist mirror"
 QA_PREBUILT="opt/${PN}/*"
-
-S="${WORKDIR}"
 
 src_unpack() {
 	unpack_deb ${A}
