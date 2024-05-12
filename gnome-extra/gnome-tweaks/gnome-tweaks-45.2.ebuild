@@ -12,10 +12,10 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Tweaks"
 LICENSE="GPL-3+ CC0-1.0"
 SLOT="0"
 
+KEYWORDS="amd64 ~arm arm64 ~loong ~ppc64 ~riscv x86"
+
 IUSE="gnome-shell"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
-
-KEYWORDS="amd64 ~arm arm64 ~loong ~ppc64 ~riscv ~x86"
 
 DEPEND="${PYTHON_DEPS}"
 # See README.md for list of deps
