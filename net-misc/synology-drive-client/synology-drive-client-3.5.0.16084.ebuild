@@ -11,6 +11,8 @@ DESCRIPTION="Desktop utility of the DSM add-on package Synology Drive Server"
 HOMEPAGE="https://www.synology.com/en-global/releaseNote/SynologyDriveClient"
 SRC_URI="https://global.synologydownload.com/download/Utility/SynologyDriveClient/${VER}-${BUILD}/Ubuntu/Installer/${PN}-${BUILD}.x86_64.deb"
 
+S="${WORKDIR}"
+
 LICENSE="Synology"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -27,8 +29,6 @@ RDEPEND="${DEPEND}"
 RESTRICT="bindist mirror strip"
 QA_PREBUILT="*"
 REQUIRES_EXCLUDE="/opt/Synology/SynologyDrive/package/cloudstation/icon-overlay/14/lib/plugin-cb.so"
-
-S="${WORKDIR}"
 
 src_unpack() {
 	unpack_deb ${A}
