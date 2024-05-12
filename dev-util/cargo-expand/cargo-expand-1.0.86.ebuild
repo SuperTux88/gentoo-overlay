@@ -9,12 +9,12 @@ CRATES="
 	adler@1.0.2
 	aho-corasick@1.1.3
 	ansi_colours@1.2.2
-	anstream@0.6.13
-	anstyle@1.0.6
-	anstyle-parse@0.2.3
-	anstyle-query@1.0.2
-	anstyle-wincon@3.0.2
-	autocfg@1.2.0
+	anstream@0.6.14
+	anstyle@1.0.7
+	anstyle-parse@0.2.4
+	anstyle-query@1.0.3
+	anstyle-wincon@3.0.3
+	autocfg@1.3.0
 	base64@0.21.7
 	bat@0.24.0
 	bincode@1.3.3
@@ -32,29 +32,30 @@ CRATES="
 	clap_derive@4.5.4
 	clap_lex@0.7.0
 	clircle@0.4.0
-	colorchoice@1.0.0
+	colorchoice@1.0.1
 	console@0.15.8
 	content_inspector@0.2.4
 	crc32fast@1.4.0
 	deranged@0.3.11
 	encode_unicode@0.3.6
-	encoding_rs@0.8.33
+	encoding_rs@0.8.34
 	equivalent@1.0.1
 	errno@0.3.8
 	fancy-regex@0.11.0
-	fastrand@2.0.2
-	flate2@1.0.28
+	fastrand@2.1.0
+	flate2@1.0.30
 	fnv@1.0.7
 	fs-err@2.11.0
 	globset@0.4.14
 	grep-cli@0.1.10
-	hashbrown@0.14.3
+	hashbrown@0.14.5
 	heck@0.5.0
 	home@0.5.9
 	indexmap@2.2.6
+	is_terminal_polyfill@1.70.0
 	itoa@1.0.11
 	lazy_static@1.4.0
-	libc@0.2.153
+	libc@0.2.154
 	line-wrap@0.2.0
 	linux-raw-sys@0.4.13
 	log@0.4.21
@@ -66,69 +67,70 @@ CRATES="
 	path_abs@0.5.1
 	plist@1.6.1
 	powerfmt@0.2.0
-	prettyplease@0.2.17
-	proc-macro2@1.0.79
+	prettyplease@0.2.19
+	proc-macro2@1.0.81
 	quick-xml@0.31.0
-	quote@1.0.35
+	quote@1.0.36
 	regex@1.10.4
 	regex-automata@0.4.6
 	regex-syntax@0.8.3
 	rgb@0.8.37
-	rustix@0.38.32
+	rustix@0.38.34
 	ryu@1.0.17
 	same-file@1.0.6
 	semver@1.0.22
-	serde@1.0.197
-	serde_derive@1.0.197
-	serde_json@1.0.115
+	serde@1.0.200
+	serde_derive@1.0.200
+	serde_json@1.0.116
 	serde_spanned@0.6.5
 	serde_yaml@0.9.34+deprecated
 	shell-words@1.1.0
 	shlex@1.3.0
 	std_prelude@0.2.12
 	strsim@0.11.1
-	syn@2.0.58
+	syn@2.0.60
 	syn-select@0.3.0
 	syntect@5.2.0
 	tempfile@3.10.1
 	termcolor@1.4.1
-	thiserror@1.0.58
-	thiserror-impl@1.0.58
-	time@0.3.34
+	thiserror@1.0.59
+	thiserror-impl@1.0.59
+	time@0.3.36
 	time-core@0.1.2
-	time-macros@0.2.17
+	time-macros@0.2.18
 	toml@0.8.12
 	toml_datetime@0.6.5
-	toml_edit@0.22.9
+	toml_edit@0.22.12
 	toolchain_find@0.4.0
 	unicode-ident@1.0.12
-	unicode-width@0.1.11
+	unicode-width@0.1.12
 	unsafe-libyaml@0.2.11
 	utf8parse@0.2.1
 	walkdir@2.5.0
 	winapi@0.3.9
 	winapi-i686-pc-windows-gnu@0.4.0
-	winapi-util@0.1.6
+	winapi-util@0.1.8
 	winapi-x86_64-pc-windows-gnu@0.4.0
 	windows-sys@0.48.0
 	windows-sys@0.52.0
 	windows-targets@0.48.5
-	windows-targets@0.52.4
+	windows-targets@0.52.5
 	windows_aarch64_gnullvm@0.48.5
-	windows_aarch64_gnullvm@0.52.4
+	windows_aarch64_gnullvm@0.52.5
 	windows_aarch64_msvc@0.48.5
-	windows_aarch64_msvc@0.52.4
+	windows_aarch64_msvc@0.52.5
 	windows_i686_gnu@0.48.5
-	windows_i686_gnu@0.52.4
+	windows_i686_gnu@0.52.5
+	windows_i686_gnullvm@0.52.5
 	windows_i686_msvc@0.48.5
-	windows_i686_msvc@0.52.4
+	windows_i686_msvc@0.52.5
 	windows_x86_64_gnu@0.48.5
-	windows_x86_64_gnu@0.52.4
+	windows_x86_64_gnu@0.52.5
 	windows_x86_64_gnullvm@0.48.5
-	windows_x86_64_gnullvm@0.52.4
+	windows_x86_64_gnullvm@0.52.5
 	windows_x86_64_msvc@0.48.5
-	windows_x86_64_msvc@0.52.4
-	winnow@0.6.5
+	windows_x86_64_msvc@0.52.5
+	winnow@0.6.8
 "
 
 inherit cargo
