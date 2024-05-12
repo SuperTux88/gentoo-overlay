@@ -21,7 +21,7 @@ src_compile() {
 }
 
 src_install() {
-	default
+	dobin ${PN}
 
-	dobin clipman
+	doman docs/${PN}.1
 }
