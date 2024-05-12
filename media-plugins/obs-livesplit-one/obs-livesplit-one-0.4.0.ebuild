@@ -9,31 +9,31 @@ CRATES="
 	addr2line@0.21.0
 	adler@1.0.2
 	ahash@0.8.11
-	aho-corasick@1.1.2
+	aho-corasick@1.1.3
 	allocator-api2@0.2.16
 	ambient-authority@0.0.2
 	android_system_properties@0.1.5
 	anyhow@1.0.81
 	arbitrary@1.3.2
-	arc-swap@1.7.0
+	arc-swap@1.7.1
 	arrayref@0.3.7
 	arrayvec@0.7.4
-	async-trait@0.1.77
+	async-trait@0.1.78
 	autocfg@1.1.0
-	backtrace@0.3.69
+	backtrace@0.3.71
 	base64@0.21.7
 	base64-simd@0.8.0
 	bincode@1.3.3
 	bindgen@0.69.4
 	bitflags@1.3.2
-	bitflags@2.4.2
+	bitflags@2.5.0
 	bitvec@1.0.1
 	block-buffer@0.10.4
 	bumpalo@3.15.4
 	bytemuck@1.15.0
 	bytemuck_derive@1.6.0
 	byteorder@1.5.0
-	bytes@1.5.0
+	bytes@1.6.0
 	cap-fs-ext@2.0.1
 	cap-primitives@2.0.1
 	cap-rand@2.0.1
@@ -42,6 +42,7 @@ CRATES="
 	cc@1.0.90
 	cexpr@0.6.0
 	cfg-if@1.0.0
+	cfg_aliases@0.1.1
 	clang-sys@1.7.0
 	color_quant@1.1.0
 	core-foundation@0.9.4
@@ -70,7 +71,6 @@ CRATES="
 	dirs@4.0.0
 	dirs-sys@0.3.7
 	either@1.10.0
-	encoding_rs@0.8.33
 	equivalent@1.0.1
 	errno@0.3.8
 	evdev@0.12.1
@@ -94,23 +94,24 @@ CRATES="
 	gif@0.13.1
 	gimli@0.28.1
 	glob@0.3.1
-	h2@0.3.24
+	h2@0.4.3
 	hashbrown@0.13.2
 	hashbrown@0.14.3
 	heck@0.4.1
 	hermit-abi@0.3.9
-	http@0.2.12
-	http-body@0.4.6
+	http@1.1.0
+	http-body@1.0.0
+	http-body-util@0.1.1
 	httparse@1.8.0
-	httpdate@1.0.3
-	hyper@0.14.28
-	hyper-rustls@0.24.2
+	hyper@1.2.0
+	hyper-rustls@0.26.0
+	hyper-util@0.1.3
 	iana-time-zone@0.1.60
 	iana-time-zone-haiku@0.1.2
 	idna@0.5.0
 	image@0.25.0
-	image-webp@0.1.0
-	indexmap@2.2.5
+	image-webp@0.1.1
+	indexmap@2.2.6
 	io-extras@0.18.1
 	io-lifetimes@2.0.3
 	ipnet@2.9.0
@@ -140,11 +141,12 @@ CRATES="
 	memoffset@0.6.5
 	memoffset@0.9.0
 	mime@0.3.17
+	mime_guess@2.0.4
 	minimal-lexical@0.2.1
 	miniz_oxide@0.7.2
 	mio@0.8.11
 	nix@0.23.2
-	nix@0.27.1
+	nix@0.28.0
 	nom@7.1.3
 	ntapi@0.4.1
 	num-conv@0.1.0
@@ -159,6 +161,8 @@ CRATES="
 	paste@1.0.14
 	pathdiff@0.2.1
 	percent-encoding@2.3.1
+	pin-project@1.1.5
+	pin-project-internal@1.1.5
 	pin-project-lite@0.2.13
 	pin-utils@0.1.0
 	pkg-config@0.3.30
@@ -182,22 +186,23 @@ CRATES="
 	redox_syscall@0.4.1
 	redox_users@0.4.4
 	regalloc2@0.9.3
-	regex@1.10.3
+	regex@1.10.4
 	regex-automata@0.4.6
 	regex-syntax@0.8.2
-	reqwest@0.11.26
+	reqwest@0.12.1
 	ring@0.17.8
 	rustc-demangle@0.1.23
 	rustc-hash@1.1.0
-	rustix@0.38.31
-	rustls@0.21.10
-	rustls-native-certs@0.6.3
+	rustix@0.38.32
+	rustls@0.22.2
+	rustls-native-certs@0.7.0
 	rustls-pemfile@1.0.4
-	rustls-webpki@0.101.7
+	rustls-pemfile@2.1.1
+	rustls-pki-types@1.4.0
+	rustls-webpki@0.102.2
 	rustybuzz@0.11.0
 	ryu@1.0.17
 	schannel@0.1.23
-	sct@0.7.1
 	security-framework@2.9.2
 	security-framework-sys@2.9.1
 	self_cell@1.0.3
@@ -214,7 +219,7 @@ CRATES="
 	slice-group-by@0.3.1
 	slotmap@1.0.7
 	smallstr@0.3.0
-	smallvec@1.13.1
+	smallvec@1.13.2
 	snafu@0.8.2
 	snafu-derive@0.8.2
 	socket2@0.5.6
@@ -222,7 +227,8 @@ CRATES="
 	sptr@0.3.2
 	stable_deref_trait@1.2.0
 	strict-num@0.1.1
-	syn@2.0.52
+	subtle@2.5.0
+	syn@2.0.53
 	sync_wrapper@0.1.2
 	sys-locale@0.3.1
 	sysinfo@0.30.7
@@ -242,8 +248,10 @@ CRATES="
 	tinyvec@1.6.0
 	tinyvec_macros@0.1.1
 	tokio@1.36.0
-	tokio-rustls@0.24.1
+	tokio-rustls@0.25.0
 	tokio-util@0.7.10
+	tower@0.4.13
+	tower-layer@0.3.2
 	tower-service@0.3.2
 	tracing@0.1.40
 	tracing-attributes@0.1.27
@@ -326,15 +334,16 @@ CRATES="
 	x11-dl@2.21.0
 	zerocopy@0.7.32
 	zerocopy-derive@0.7.32
+	zeroize@1.7.0
 	zune-core@0.4.12
 	zune-jpeg@0.4.11
 "
 
 declare -A GIT_CRATES=(
-	[livesplit-auto-splitting]='https://github.com/LiveSplit/livesplit-core;ef37e67adecc46ffe003851f0e97b8a3b1da7842;livesplit-core-%commit%/crates/livesplit-auto-splitting'
-	[livesplit-core]='https://github.com/LiveSplit/livesplit-core;ef37e67adecc46ffe003851f0e97b8a3b1da7842;livesplit-core-%commit%'
-	[livesplit-hotkey]='https://github.com/LiveSplit/livesplit-core;ef37e67adecc46ffe003851f0e97b8a3b1da7842;livesplit-core-%commit%/crates/livesplit-hotkey'
-	[livesplit-title-abbreviations]='https://github.com/LiveSplit/livesplit-core;ef37e67adecc46ffe003851f0e97b8a3b1da7842;livesplit-core-%commit%/crates/livesplit-title-abbreviations'
+	[livesplit-auto-splitting]='https://github.com/LiveSplit/livesplit-core;a13ea1b3b0f15fb8e4474a755cbb5fbb6cdb1ecc;livesplit-core-%commit%/crates/livesplit-auto-splitting'
+	[livesplit-core]='https://github.com/LiveSplit/livesplit-core;a13ea1b3b0f15fb8e4474a755cbb5fbb6cdb1ecc;livesplit-core-%commit%'
+	[livesplit-hotkey]='https://github.com/LiveSplit/livesplit-core;a13ea1b3b0f15fb8e4474a755cbb5fbb6cdb1ecc;livesplit-core-%commit%/crates/livesplit-hotkey'
+	[livesplit-title-abbreviations]='https://github.com/LiveSplit/livesplit-core;a13ea1b3b0f15fb8e4474a755cbb5fbb6cdb1ecc;livesplit-core-%commit%/crates/livesplit-title-abbreviations'
 	[simdutf8]='https://github.com/CryZe/simdutf8;6462aef317a3685c5d2749d3d8e7221a693da0b5;simdutf8-%commit%'
 )
 
@@ -359,7 +368,10 @@ IUSE="+auto-splitting"
 
 DEPEND="media-video/obs-studio"
 RDEPEND="${DEPEND}"
-BDEPEND="dev-util/patchelf"
+BDEPEND="
+	>=virtual/rust-1.77
+	dev-util/patchelf
+"
 
 src_configure() {
 	local myfeatures=(
