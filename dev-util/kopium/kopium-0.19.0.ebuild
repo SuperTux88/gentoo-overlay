@@ -9,29 +9,27 @@ CRATES="
 	addr2line@0.21.0
 	adler@1.0.2
 	aho-corasick@1.1.2
-	android-tzdata@0.1.1
-	android_system_properties@0.1.5
 	anstream@0.6.13
 	anstyle@1.0.6
 	anstyle-parse@0.2.3
 	anstyle-query@1.0.2
 	anstyle-wincon@3.0.2
-	anyhow@1.0.80
+	anyhow@1.0.82
 	autocfg@1.1.0
 	backtrace@0.3.69
 	base64@0.21.7
+	base64@0.22.0
 	bitflags@1.3.2
 	bitflags@2.4.2
 	block-buffer@0.10.4
-	bumpalo@3.15.4
 	bytes@1.5.0
 	cc@1.0.90
 	cfg-if@1.0.0
 	chrono@0.4.35
-	clap@4.5.2
+	clap@4.5.4
 	clap_builder@4.5.2
-	clap_complete@4.5.1
-	clap_derive@4.5.0
+	clap_complete@4.5.2
+	clap_derive@4.5.4
 	clap_lex@0.7.0
 	colorchoice@1.0.0
 	core-foundation@0.9.4
@@ -52,9 +50,7 @@ CRATES="
 	futures@0.3.30
 	futures-channel@0.3.30
 	futures-core@0.3.30
-	futures-executor@0.3.30
 	futures-io@0.3.30
-	futures-macro@0.3.30
 	futures-sink@0.3.30
 	futures-task@0.3.30
 	futures-util@0.3.30
@@ -62,31 +58,29 @@ CRATES="
 	getrandom@0.2.12
 	gimli@0.28.1
 	hashbrown@0.14.3
-	heck@0.4.1
+	heck@0.5.0
 	hermit-abi@0.3.9
 	home@0.5.9
-	http@0.2.12
-	http-body@0.4.6
-	http-range-header@0.3.1
+	http@1.1.0
+	http-body@1.0.0
+	http-body-util@0.1.1
 	httparse@1.8.0
-	httpdate@1.0.3
 	humantime@2.1.0
-	hyper@0.14.28
-	hyper-rustls@0.24.2
-	hyper-timeout@0.4.1
-	iana-time-zone@0.1.60
-	iana-time-zone-haiku@0.1.2
+	hyper@1.2.0
+	hyper-rustls@0.27.0
+	hyper-timeout@0.5.1
+	hyper-util@0.1.3
 	ident_case@1.0.1
 	indexmap@2.2.5
 	itoa@1.0.10
-	js-sys@0.3.69
-	jsonpath-rust@0.4.0
+	jsonpath-rust@0.5.0
 	k8s-openapi@0.21.1
-	kube@0.88.1
-	kube-client@0.88.1
-	kube-core@0.88.1
-	kube-derive@0.88.1
-	libc@0.2.153
+	kube@0.90.0
+	kube-client@0.90.0
+	kube-core@0.90.0
+	kube-derive@0.90.0
+	lazy_static@1.4.0
+	libc@0.2.154
 	lock_api@0.4.11
 	log@0.4.21
 	memchr@2.7.1
@@ -111,33 +105,33 @@ CRATES="
 	pin-project-internal@1.1.5
 	pin-project-lite@0.2.13
 	pin-utils@0.1.0
-	proc-macro2@1.0.78
-	quote@1.0.35
+	proc-macro2@1.0.80
+	quote@1.0.36
 	redox_syscall@0.4.1
 	regex@1.10.3
 	regex-automata@0.4.6
 	regex-syntax@0.8.2
 	ring@0.17.8
 	rustc-demangle@0.1.23
-	rustls@0.21.10
-	rustls-native-certs@0.6.3
-	rustls-pemfile@1.0.4
-	rustls-webpki@0.101.7
+	rustls@0.23.4
+	rustls-native-certs@0.7.0
+	rustls-pemfile@2.1.1
+	rustls-pki-types@1.4.1
+	rustls-webpki@0.102.2
 	ryu@1.0.17
 	schannel@0.1.23
-	schemars@0.8.16
-	schemars_derive@0.8.16
+	schemars@0.8.17
+	schemars_derive@0.8.17
 	scopeguard@1.2.0
-	sct@0.7.1
 	secrecy@0.8.0
 	security-framework@2.9.2
 	security-framework-sys@2.9.1
-	serde@1.0.197
+	serde@1.0.199
 	serde-value@0.7.0
-	serde_derive@1.0.197
-	serde_derive_internals@0.26.0
-	serde_json@1.0.114
-	serde_yaml@0.9.32
+	serde_derive@1.0.199
+	serde_derive_internals@0.29.0
+	serde_json@1.0.116
+	serde_yaml@0.9.34+deprecated
 	sha2@0.10.8
 	signal-hook-registry@1.4.1
 	slab@0.4.9
@@ -146,40 +140,33 @@ CRATES="
 	spin@0.9.8
 	strsim@0.10.0
 	strsim@0.11.0
-	syn@1.0.109
-	syn@2.0.52
+	subtle@2.5.0
+	syn@2.0.60
 	thiserror@1.0.57
 	thiserror-impl@1.0.57
-	tokio@1.36.0
-	tokio-io-timeout@1.2.0
+	tokio@1.37.0
 	tokio-macros@2.2.0
-	tokio-rustls@0.24.1
+	tokio-rustls@0.26.0
 	tokio-util@0.7.10
 	tower@0.4.13
-	tower-http@0.4.4
+	tower-http@0.5.2
 	tower-layer@0.3.2
 	tower-service@0.3.2
 	tracing@0.1.40
 	tracing-attributes@0.1.27
 	tracing-core@0.1.32
 	try-lock@0.2.5
-	typed-builder@0.18.1
-	typed-builder-macro@0.18.1
+	typed-builder@0.18.2
+	typed-builder-macro@0.18.2
 	typenum@1.17.0
 	ucd-trie@0.1.6
 	unicode-ident@1.0.12
-	unsafe-libyaml@0.2.10
+	unsafe-libyaml@0.2.11
 	untrusted@0.9.0
 	utf8parse@0.2.1
 	version_check@0.9.4
 	want@0.3.1
 	wasi@0.11.0+wasi-snapshot-preview1
-	wasm-bindgen@0.2.92
-	wasm-bindgen-backend@0.2.92
-	wasm-bindgen-macro@0.2.92
-	wasm-bindgen-macro-support@0.2.92
-	wasm-bindgen-shared@0.2.92
-	windows-core@0.52.0
 	windows-sys@0.48.0
 	windows-sys@0.52.0
 	windows-targets@0.48.5
@@ -212,7 +199,7 @@ SRC_URI="
 
 LICENSE="Apache-2.0"
 # Dependent crate licenses
-LICENSE+=" Apache-2.0 ISC MIT Unicode-DFS-2016"
+LICENSE+=" Apache-2.0 BSD ISC MIT Unicode-DFS-2016"
 SLOT="0"
 KEYWORDS="~amd64"
 
