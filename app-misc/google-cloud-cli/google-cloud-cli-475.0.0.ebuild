@@ -3,13 +3,15 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 
 inherit python-single-r1
 
 DESCRIPTION="Google Cloud CLI"
 HOMEPAGE="https://cloud.google.com/sdk/"
 SRC_URI="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/${P}-linux-x86_64.tar.gz"
+
+S="${WORKDIR}/google-cloud-sdk"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -19,8 +21,6 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DEPEND="${PYTHON_DEPS}"
 RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/google-cloud-sdk"
 
 src_prepare() {
 	default
