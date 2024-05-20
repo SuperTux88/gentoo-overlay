@@ -23,7 +23,7 @@ CRATES="
 	bitflags@1.3.2
 	bitflags@2.5.0
 	bstr@1.9.1
-	bytemuck@1.15.0
+	bytemuck@1.16.0
 	bytesize@1.3.0
 	cargo-subcommand-metadata@0.1.0
 	cfg-if@1.0.0
@@ -40,7 +40,7 @@ CRATES="
 	encode_unicode@0.3.6
 	encoding_rs@0.8.34
 	equivalent@1.0.1
-	errno@0.3.8
+	errno@0.3.9
 	fancy-regex@0.11.0
 	fastrand@2.1.0
 	flate2@1.0.30
@@ -55,9 +55,9 @@ CRATES="
 	is_terminal_polyfill@1.70.0
 	itoa@1.0.11
 	lazy_static@1.4.0
-	libc@0.2.154
+	libc@0.2.153
 	line-wrap@0.2.0
-	linux-raw-sys@0.4.13
+	linux-raw-sys@0.4.14
 	log@0.4.21
 	memchr@2.7.2
 	miniz_oxide@0.7.2
@@ -67,8 +67,8 @@ CRATES="
 	path_abs@0.5.1
 	plist@1.6.1
 	powerfmt@0.2.0
-	prettyplease@0.2.19
-	proc-macro2@1.0.81
+	prettyplease@0.2.20
+	proc-macro2@1.0.82
 	quick-xml@0.31.0
 	quote@1.0.36
 	regex@1.10.4
@@ -76,31 +76,31 @@ CRATES="
 	regex-syntax@0.8.3
 	rgb@0.8.37
 	rustix@0.38.34
-	ryu@1.0.17
+	ryu@1.0.18
 	same-file@1.0.6
-	semver@1.0.22
-	serde@1.0.200
-	serde_derive@1.0.200
-	serde_json@1.0.116
-	serde_spanned@0.6.5
+	semver@1.0.23
+	serde@1.0.202
+	serde_derive@1.0.202
+	serde_json@1.0.117
+	serde_spanned@0.6.6
 	serde_yaml@0.9.34+deprecated
 	shell-words@1.1.0
 	shlex@1.3.0
 	std_prelude@0.2.12
 	strsim@0.11.1
-	syn@2.0.60
+	syn@2.0.64
 	syn-select@0.3.0
 	syntect@5.2.0
 	tempfile@3.10.1
 	termcolor@1.4.1
-	thiserror@1.0.59
-	thiserror-impl@1.0.59
+	thiserror@1.0.60
+	thiserror-impl@1.0.60
 	time@0.3.36
 	time-core@0.1.2
 	time-macros@0.2.18
-	toml@0.8.12
-	toml_datetime@0.6.5
-	toml_edit@0.22.12
+	toml@0.8.13
+	toml_datetime@0.6.6
+	toml_edit@0.22.13
 	toolchain_find@0.4.0
 	unicode-ident@1.0.12
 	unicode-width@0.1.12
