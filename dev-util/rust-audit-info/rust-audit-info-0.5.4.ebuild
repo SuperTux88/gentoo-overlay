@@ -8,29 +8,29 @@ EAPI=8
 CRATES="
 	adler@1.0.2
 	binfarce@0.2.1
+	bitflags@2.5.0
 	miniz_oxide@0.6.2
+	wasmparser@0.207.0
 "
 
-MY_PN="cargo-auditable"
-MY_PV="0.6.1"
-MY_P="${MY_PN}-${MY_PV}"
+REPO_PN="cargo-auditable"
 
 inherit cargo
 
 DESCRIPTION="Command-line tool to extract the dependency trees embedded in binaries"
 HOMEPAGE="https://github.com/rust-secure-code/cargo-auditable/tree/master/rust-audit-info"
 SRC_URI="
-	https://github.com/rust-secure-code/${MY_PN}/archive/v${MY_PV}.tar.gz -> ${MY_P}.tar.gz
+	https://github.com/rust-secure-code/${REPO_PN}/archive/${PN}/v${PV}.tar.gz -> ${P}.tar.gz
 	${CARGO_CRATE_URIS}
 "
 
+S="${WORKDIR}/${REPO_PN}-${PN}-v${PV}/${PN}"
+
 LICENSE="|| ( Apache-2.0 MIT )"
 # Dependent crate licenses
-LICENSE+=" MIT"
+LICENSE+=" Apache-2.0-with-LLVM-exceptions MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-
-S="${WORKDIR}/${MY_P}/${PN}"
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
