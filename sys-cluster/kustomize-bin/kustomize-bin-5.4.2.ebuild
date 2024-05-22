@@ -11,11 +11,11 @@ DESCRIPTION="Customization of kubernetes YAML configurations"
 HOMEPAGE="https://github.com/kubernetes-sigs/kustomize"
 SRC_URI="https://github.com/kubernetes-sigs/${MY_PN}/releases/download/${MY_PN}%2Fv${PV}/kustomize_v${PV}_linux_amd64.tar.gz"
 
+S="${WORKDIR}"
+
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
-
-S="${WORKDIR}"
 
 QA_FLAGS_IGNORED="usr/bin/${MY_PN}"
 QA_PRESTRIPPED="${QA_FLAGS_IGNORED}"
