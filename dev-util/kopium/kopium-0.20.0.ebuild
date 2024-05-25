@@ -14,7 +14,7 @@ CRATES="
 	anstyle-parse@0.2.3
 	anstyle-query@1.0.2
 	anstyle-wincon@3.0.2
-	anyhow@1.0.82
+	anyhow@1.0.86
 	autocfg@1.1.0
 	backtrace@0.3.69
 	base64@0.21.7
@@ -74,13 +74,13 @@ CRATES="
 	indexmap@2.2.5
 	itoa@1.0.10
 	jsonpath-rust@0.5.0
-	k8s-openapi@0.21.1
-	kube@0.90.0
-	kube-client@0.90.0
-	kube-core@0.90.0
-	kube-derive@0.90.0
+	k8s-openapi@0.22.0
+	kube@0.91.0
+	kube-client@0.91.0
+	kube-core@0.91.0
+	kube-derive@0.91.0
 	lazy_static@1.4.0
-	libc@0.2.154
+	libc@0.2.155
 	lock_api@0.4.11
 	log@0.4.21
 	memchr@2.7.1
@@ -120,17 +120,17 @@ CRATES="
 	rustls-webpki@0.102.2
 	ryu@1.0.17
 	schannel@0.1.23
-	schemars@0.8.17
-	schemars_derive@0.8.17
+	schemars@0.8.20
+	schemars_derive@0.8.20
 	scopeguard@1.2.0
 	secrecy@0.8.0
 	security-framework@2.9.2
 	security-framework-sys@2.9.1
-	serde@1.0.199
+	serde@1.0.202
 	serde-value@0.7.0
-	serde_derive@1.0.199
+	serde_derive@1.0.202
 	serde_derive_internals@0.29.0
-	serde_json@1.0.116
+	serde_json@1.0.117
 	serde_yaml@0.9.34+deprecated
 	sha2@0.10.8
 	signal-hook-registry@1.4.1
@@ -141,7 +141,7 @@ CRATES="
 	strsim@0.10.0
 	strsim@0.11.0
 	subtle@2.5.0
-	syn@2.0.60
+	syn@2.0.65
 	thiserror@1.0.57
 	thiserror-impl@1.0.57
 	tokio@1.37.0
