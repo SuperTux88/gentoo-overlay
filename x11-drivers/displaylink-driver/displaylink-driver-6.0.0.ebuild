@@ -6,19 +6,20 @@ EAPI=8
 inherit systemd udev
 
 PV_MINOR=${PV%.*}
-PV_EXTRA="63.33"
+PV_EXTRA="24"
+PV_DATE="2024-05"
 UBUNTU_VERSION=1604
 
 DESCRIPTION="DisplayLink USB Graphics Software"
 HOMEPAGE="https://www.synaptics.com/products/displaylink-graphics"
-SRC_URI="https://www.synaptics.com/sites/default/files/exe_files/2023-08/DisplayLink%20USB%20Graphics%20Software%20for%20Ubuntu${PV_MINOR}-EXE.zip -> ${P}.zip"
+SRC_URI="https://www.synaptics.com/sites/default/files/exe_files/${PV_DATE}/DisplayLink%20USB%20Graphics%20Software%20for%20Ubuntu${PV_MINOR}-EXE.zip -> ${P}.zip"
 
 LICENSE="DisplayLink-EULA"
 SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
-	>=x11-drivers/evdi-1.14.1
+	>=x11-drivers/evdi-1.14.4
 	virtual/libusb:1
 "
 RDEPEND="${DEPEND}"
