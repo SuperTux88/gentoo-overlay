@@ -105,7 +105,7 @@ CRATES="
 	pin-project-internal@1.1.5
 	pin-project-lite@0.2.13
 	pin-utils@0.1.0
-	proc-macro2@1.0.80
+	proc-macro2@1.0.84
 	quote@1.0.36
 	redox_syscall@0.4.1
 	regex@1.10.3
@@ -120,15 +120,15 @@ CRATES="
 	rustls-webpki@0.102.2
 	ryu@1.0.17
 	schannel@0.1.23
-	schemars@0.8.20
-	schemars_derive@0.8.20
+	schemars@0.8.21
+	schemars_derive@0.8.21
 	scopeguard@1.2.0
 	secrecy@0.8.0
 	security-framework@2.9.2
 	security-framework-sys@2.9.1
-	serde@1.0.202
+	serde@1.0.203
 	serde-value@0.7.0
-	serde_derive@1.0.202
+	serde_derive@1.0.203
 	serde_derive_internals@0.29.0
 	serde_json@1.0.117
 	serde_yaml@0.9.34+deprecated
@@ -141,7 +141,7 @@ CRATES="
 	strsim@0.10.0
 	strsim@0.11.0
 	subtle@2.5.0
-	syn@2.0.65
+	syn@2.0.66
 	thiserror@1.0.57
 	thiserror-impl@1.0.57
 	tokio@1.37.0
