@@ -33,27 +33,35 @@ CRATES="
 	clap_complete@4.4.10
 	clap_derive@4.4.7
 	clap_lex@0.6.0
+	cmake@0.1.50
 	colorchoice@1.0.0
 	console@0.15.8
 	core-foundation-sys@0.8.6
 	cpufeatures@0.2.12
 	crypto-common@0.1.6
+	darling@0.20.9
+	darling_core@0.20.9
+	darling_macro@0.20.9
 	deranged@0.3.11
-	diffy@0.3.0
+	diffy@0.4.0
 	digest@0.10.7
 	dotenvy@0.15.7
+	either@1.12.0
 	encode_unicode@0.3.6
 	env_logger@0.8.4
 	equivalent@1.0.1
 	errno@0.3.8
 	fastrand@2.0.1
+	fnv@1.0.7
 	form_urlencoded@1.2.1
 	generic-array@0.14.7
 	getrandom@0.2.12
 	hashbrown@0.14.3
 	heck@0.4.1
+	heck@0.5.0
 	iana-time-zone@0.1.60
 	iana-time-zone-haiku@0.1.2
+	ident_case@1.0.1
 	idna@0.5.0
 	indexmap@2.2.2
 	insta@1.34.0
@@ -64,28 +72,36 @@ CRATES="
 	lazy_static@1.4.0
 	libc@0.2.153
 	libm@0.2.8
-	libsqlite3-sys@0.27.0
+	libsqlite3-sys@0.29.0
+	link-cplusplus@1.0.9
 	linked-hash-map@0.5.6
 	linux-raw-sys@0.4.13
 	lock_api@0.4.11
 	log@0.4.20
+	matchers@0.1.0
 	memchr@2.7.1
-	mysqlclient-sys@0.2.5
+	mysqlclient-src@0.1.1
+	mysqlclient-sys@0.4.0
 	nu-ansi-term@0.46.0
+	nu-ansi-term@0.50.1
 	num-bigint@0.4.4
 	num-conv@0.1.0
 	num-integer@0.1.45
 	num-traits@0.2.17
 	once_cell@1.19.0
+	openssl-src@300.3.0+3.3.0
+	openssl-sys@0.9.102
 	overload@0.1.1
 	parking_lot@0.12.1
 	parking_lot_core@0.9.9
 	password-hash@0.5.0
 	percent-encoding@2.3.1
+	pin-project-lite@0.2.14
 	pkg-config@0.3.29
 	powerfmt@0.2.0
 	ppv-lite86@0.2.17
-	pq-sys@0.4.8
+	pq-src@0.3.0
+	pq-sys@0.6.1
 	proc-macro2@1.0.78
 	quickcheck@1.0.3
 	quote@1.0.35
@@ -95,7 +111,9 @@ CRATES="
 	rand_core@0.6.4
 	redox_syscall@0.4.1
 	regex@1.10.3
+	regex-automata@0.1.10
 	regex-automata@0.4.5
+	regex-syntax@0.6.29
 	regex-syntax@0.8.2
 	rustix@0.38.31
 	ryu@1.0.16
@@ -105,21 +123,31 @@ CRATES="
 	serde_derive@1.0.196
 	serde_json@1.0.113
 	serde_regex@1.1.0
-	serde_spanned@0.6.5
+	serde_spanned@0.6.6
+	sharded-slab@0.1.7
 	similar@2.4.0
 	smallvec@1.13.1
 	strsim@0.10.0
+	strsim@0.11.1
 	subtle@2.5.0
 	syn@2.0.48
-	tempfile@3.9.0
+	tempfile@3.10.1
+	thiserror@1.0.61
+	thiserror-impl@1.0.61
+	thread_local@1.1.8
 	time@0.3.34
 	time-core@0.1.2
 	time-macros@0.2.17
 	tinyvec@1.6.0
 	tinyvec_macros@0.1.1
-	toml@0.7.8
-	toml_datetime@0.6.5
-	toml_edit@0.19.15
+	toml@0.8.13
+	toml_datetime@0.6.6
+	toml_edit@0.22.13
+	tracing@0.1.40
+	tracing-attributes@0.1.27
+	tracing-core@0.1.32
+	tracing-log@0.2.0
+	tracing-subscriber@0.3.18
 	typenum@1.17.0
 	unicode-bidi@0.3.15
 	unicode-ident@1.0.12
@@ -127,6 +155,7 @@ CRATES="
 	url@2.5.0
 	utf8parse@0.2.1
 	uuid@1.7.0
+	valuable@0.1.0
 	vcpkg@0.2.15
 	version_check@0.9.4
 	wasi@0.11.0+wasi-snapshot-preview1
@@ -156,26 +185,27 @@ CRATES="
 	windows_x86_64_gnullvm@0.52.0
 	windows_x86_64_msvc@0.48.5
 	windows_x86_64_msvc@0.52.0
-	winnow@0.5.37
+	winnow@0.6.9
 	yaml-rust@0.4.5
 "
 
 inherit cargo shell-completion
 
 MY_PN="diesel"
-MY_PV="2.1.4"
-MY_P="${MY_PN}-${MY_PV}"
+MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Provides the CLI for the Diesel crate"
 HOMEPAGE="https://github.com/diesel-rs/diesel"
 SRC_URI="
-	https://github.com/diesel-rs/${MY_PN}/archive/v${MY_PV}.tar.gz -> ${MY_P}.tar.gz
+	https://github.com/diesel-rs/${MY_PN}/archive/v${PV}.tar.gz -> ${MY_P}.tar.gz
 	${CARGO_CRATE_URIS}
 "
 
+S="${WORKDIR}/${MY_P}"
+
 LICENSE="|| ( Apache-2.0 MIT )"
 # Dependent crate licenses
-LICENSE+=" Apache-2.0 BSD MIT Unicode-DFS-2016"
+LICENSE+=" Apache-2.0 BSD GPL-2 MIT POSTGRESQL Unicode-DFS-2016"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="+mysql +postgres +sqlite"
@@ -198,9 +228,9 @@ DEPEND="
 	)
 "
 RDEPEND="${DEPEND}"
-BDEPEND=">=virtual/rust-1.65"
+BDEPEND=">=virtual/rust-1.78"
 
-S="${WORKDIR}/${MY_P}"
+PATCHES=( "${FILESDIR}"/${P}-version.patch )
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
