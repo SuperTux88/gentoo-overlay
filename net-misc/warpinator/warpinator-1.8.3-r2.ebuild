@@ -32,7 +32,6 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND="
 	>=dev-build/meson-0.45.0
-	>=dev-python/grpcio-tools-1.14.0
 	>=dev-python/protobuf-python-3.6.1
 "
 
