@@ -19,11 +19,13 @@ DESCRIPTION="Open Source IDE for Kubernetes"
 HOMEPAGE="https://github.com/MuhammedKalkan/OpenLens https://github.com/lensapp/lens"
 SRC_URI="https://github.com/MuhammedKalkan/${PN_CASE}/releases/download/v${VER}-${BUILD}/${PN_CASE}-${VER}-${BUILD}.amd64.deb"
 
+S="${WORKDIR}"
+
 LICENSE="MIT"
 # Electron bundles a bunch of things
 LICENSE+="
 	MIT BSD BSD-2 BSD-4 AFL-2.1 Apache-2.0 Ms-PL GPL-2 LGPL-2.1 APSL-2
-	unRAR OFL CC-BY-SA-3.0 MPL-2.0 android public-domain all-rights-reserved
+	unRAR OFL-1.1 CC-BY-SA-3.0 MPL-2.0 android public-domain all-rights-reserved
 "
 
 SLOT="0"
@@ -53,8 +55,6 @@ RDEPEND="${DEPEND}"
 RESTRICT="bindist mirror"
 QA_PREBUILT="opt/${PN_CASE}/*"
 QA_PRESTRIPPED="/opt/OpenLens/resources/x64/helm /opt/OpenLens/resources/x64/kubectl"
-
-S="${WORKDIR}"
 
 src_unpack() {
 	unpack_deb ${A}
