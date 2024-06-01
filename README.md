@@ -54,6 +54,9 @@ The following packages are available in this overlay:
 * app-shells/powerlevel10k
   * A theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience
   * https://github.com/romkatv/powerlevel10k
+* dev-python/grpcio
+  * High-performance RPC framework (python libraries)
+  * https://grpc.io
 * dev-util/cargo-auditable
   * Make production Rust binaries auditable
   * https://github.com/rust-secure-code/cargo-auditable
