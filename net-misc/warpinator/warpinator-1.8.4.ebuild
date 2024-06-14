@@ -38,8 +38,6 @@ BDEPEND="
 CONFIG_CHECK="~SECURITY_LANDLOCK"
 WARNING_SECURITY_LANDLOCK="SECURITY_LANDLOCK: enable to use landlock for incoming file isolation"
 
-PATCHES=( "${FILESDIR}"/${P}-fix-hardcoded-paths.patch )
-
 src_configure() {
 	local emesonargs=(
 		-Dbundle-zeroconf=false
