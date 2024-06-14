@@ -63,6 +63,9 @@ The following packages are available in this overlay:
 * dev-util/bacon
   * background rust code check
   * https://github.com/Canop/bacon
+* dev-util/cargo-deny
+  * Cargo plugin for linting your dependencies
+  * https://github.com/EmbarkStudios/cargo-deny
 * dev-util/cargo-expand
   * Wrapper around rustc -Zunpretty=expanded. Shows the result of macro expansion and #[derive] expansion.
   * https://github.com/dtolnay/cargo-expand
