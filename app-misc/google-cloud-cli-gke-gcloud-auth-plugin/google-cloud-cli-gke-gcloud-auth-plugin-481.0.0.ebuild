@@ -5,11 +5,11 @@ EAPI=8
 
 inherit unpacker
 
-DEB_SHA="c6e38b96c1c5fa9934817fc1787648a3fc802e3f3cc6344099e41cbae4a0d307"
+DEB_MD5="ea1a4944155a2b4e95e813d76804925d"
 
 DESCRIPTION="A kubectl authentication plugin for GKE"
 HOMEPAGE="https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke"
-SRC_URI="https://packages.cloud.google.com/apt/pool/${PN}_${PV}-0_amd64_${DEB_SHA}.deb"
+SRC_URI="https://packages.cloud.google.com/apt/pool/cloud-sdk/${PN}_${PV}-0_amd64_${DEB_MD5}.deb"
 
 S="${WORKDIR}/usr/lib/google-cloud-sdk"
 
