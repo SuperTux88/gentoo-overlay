@@ -22,6 +22,7 @@ CRATES="
 	autocfg@1.1.0
 	backtrace@0.3.71
 	base64@0.21.7
+	base64@0.22.1
 	base64-simd@0.8.0
 	bincode@1.3.3
 	bindgen@0.69.4
@@ -173,7 +174,7 @@ CRATES="
 	proc-maps@0.3.2
 	promising-future@0.2.4
 	psm@0.1.21
-	quick-xml@0.31.0
+	quick-xml@0.34.0
 	quote@1.0.35
 	radium@0.7.0
 	rand@0.8.5
@@ -189,14 +190,13 @@ CRATES="
 	regex@1.10.4
 	regex-automata@0.4.6
 	regex-syntax@0.8.2
-	reqwest@0.12.1
+	reqwest@0.12.4
 	ring@0.17.8
 	rustc-demangle@0.1.23
 	rustc-hash@1.1.0
 	rustix@0.38.32
 	rustls@0.22.2
 	rustls-native-certs@0.7.0
-	rustls-pemfile@1.0.4
 	rustls-pemfile@2.1.1
 	rustls-pki-types@1.4.0
 	rustls-webpki@0.102.2
@@ -241,7 +241,7 @@ CRATES="
 	thiserror-impl@1.0.58
 	threadpool@1.8.1
 	tiff@0.9.1
-	time@0.3.34
+	time@0.3.36
 	time-core@0.1.2
 	tiny-skia@0.11.4
 	tiny-skia-path@0.11.4
@@ -327,7 +327,7 @@ CRATES="
 	windows_x86_64_gnullvm@0.52.4
 	windows_x86_64_msvc@0.48.5
 	windows_x86_64_msvc@0.52.4
-	winreg@0.50.0
+	winreg@0.52.0
 	winx@0.36.3
 	witx@0.9.1
 	wyz@0.5.1
@@ -340,10 +340,10 @@ CRATES="
 "
 
 declare -A GIT_CRATES=(
-	[livesplit-auto-splitting]='https://github.com/LiveSplit/livesplit-core;a13ea1b3b0f15fb8e4474a755cbb5fbb6cdb1ecc;livesplit-core-%commit%/crates/livesplit-auto-splitting'
-	[livesplit-core]='https://github.com/LiveSplit/livesplit-core;a13ea1b3b0f15fb8e4474a755cbb5fbb6cdb1ecc;livesplit-core-%commit%'
-	[livesplit-hotkey]='https://github.com/LiveSplit/livesplit-core;a13ea1b3b0f15fb8e4474a755cbb5fbb6cdb1ecc;livesplit-core-%commit%/crates/livesplit-hotkey'
-	[livesplit-title-abbreviations]='https://github.com/LiveSplit/livesplit-core;a13ea1b3b0f15fb8e4474a755cbb5fbb6cdb1ecc;livesplit-core-%commit%/crates/livesplit-title-abbreviations'
+	[livesplit-auto-splitting]='https://github.com/LiveSplit/livesplit-core;bb8cb41fe60ce25e5147342bb3df2eeb27087524;livesplit-core-%commit%/crates/livesplit-auto-splitting'
+	[livesplit-core]='https://github.com/LiveSplit/livesplit-core;bb8cb41fe60ce25e5147342bb3df2eeb27087524;livesplit-core-%commit%'
+	[livesplit-hotkey]='https://github.com/LiveSplit/livesplit-core;bb8cb41fe60ce25e5147342bb3df2eeb27087524;livesplit-core-%commit%/crates/livesplit-hotkey'
+	[livesplit-title-abbreviations]='https://github.com/LiveSplit/livesplit-core;bb8cb41fe60ce25e5147342bb3df2eeb27087524;livesplit-core-%commit%/crates/livesplit-title-abbreviations'
 	[simdutf8]='https://github.com/CryZe/simdutf8;6462aef317a3685c5d2749d3d8e7221a693da0b5;simdutf8-%commit%'
 )
 
@@ -369,7 +369,7 @@ IUSE="+auto-splitting"
 DEPEND="media-video/obs-studio"
 RDEPEND="${DEPEND}"
 BDEPEND="
-	>=virtual/rust-1.77
+	>=virtual/rust-1.79
 	dev-util/patchelf
 "
 
