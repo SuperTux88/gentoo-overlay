@@ -24,6 +24,7 @@ pkg_setup() {
 }
 
 src_compile() {
+	MODULES_MAKEARGS+=( CONFIG_DRM_EVDI=m )
 	local modlist=( evdi=video:"${S}/module" )
 	linux-mod-r1_src_compile
 
