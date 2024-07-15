@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit linux-mod-r1
+inherit linux-mod-r1 flag-o-matic
 
 DESCRIPTION="Extensible Virtual Display Interface"
 HOMEPAGE="https://github.com/DisplayLink/evdi"
@@ -24,6 +24,10 @@ pkg_setup() {
 }
 
 src_compile() {
+	# The kernel module doesn't build with lto
+	# See: https://github.com/SuperTux88/gentoo-overlay/issues/8
+	filter-lto
+
 	MODULES_MAKEARGS+=( CONFIG_DRM_EVDI=m )
 	local modlist=( evdi=video:"${S}/module" )
 	linux-mod-r1_src_compile
