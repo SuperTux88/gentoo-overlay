@@ -52,8 +52,6 @@ BDEPEND="
 	)
 "
 
-PATCHES=( "${FILESDIR}/${P}-fix-prefix.patch" )
-
 # Set the EZIG environment variable.
 # Copied from:
 # https://github.com/gentoo/gentoo/blob/17b280061ae4915912092cb9ea6c7a6b89f6c86b/sys-fs/ncdu/ncdu-2.4.ebuild
