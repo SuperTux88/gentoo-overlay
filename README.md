@@ -172,6 +172,9 @@ The following packages are available in this overlay:
 * sys-apps/dool
   * Versatile replacement for vmstat, iostat and ifstat (clone of dstat)
   * https://github.com/scottchiefbaker/dool
+* sys-apps/fw-ectool
+  * ectool for the Framework laptop
+  * https://gitlab.howett.net/DHowett/ectool
 * sys-apps/hexyl
   * A command-line hex viewer
   * https://github.com/sharkdp/hexyl
