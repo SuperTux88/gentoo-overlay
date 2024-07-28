@@ -5,9 +5,6 @@
 		<name>Benjamin Neff</name>
 		<email>gentoo@benjaminneff.ch</email>
 	</maintainer>
-	<upstream>
-		<remote-id type="github">Ta180m/zenmonitor3</remote-id>
-	</upstream>
 	<use>
 		<flag name="cli">Enables the CLI</flag>
 	</use>

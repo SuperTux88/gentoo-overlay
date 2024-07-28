@@ -6,8 +6,10 @@ EAPI=8
 inherit linux-info
 
 DESCRIPTION="Monitoring software for AMD Zen-based CPUs with Zen 3 support"
-HOMEPAGE="https://github.com/Ta180m/zenmonitor3"
-SRC_URI="https://github.com/Ta180m/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="https://git.exozy.me/a/zenmonitor3"
+SRC_URI="https://git.exozy.me/a/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+
+S="${WORKDIR}/zenmonitor3"
 
 LICENSE="MIT"
 SLOT="0"

@@ -3,12 +3,14 @@
 
 EAPI=8
 
-inherit linux-info git-r3
-EGIT_REPO_URI="https://github.com/Ta180m/zenmonitor3.git"
-EGIT_BRANCH="master"
+inherit linux-info
 
 DESCRIPTION="Monitoring software for AMD Zen-based CPUs with Zen 3 support"
-HOMEPAGE="https://github.com/Ta180m/zenmonitor3"
+HOMEPAGE="https://git.exozy.me/a/zenmonitor3"
+
+inherit git-r3
+EGIT_REPO_URI="${HOMEPAGE}.git"
+EGIT_BRANCH="master"
 
 LICENSE="MIT"
 SLOT="0"
