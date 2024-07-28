@@ -7,13 +7,15 @@ inherit linux-mod-r1
 
 DESCRIPTION="Linux kernel driver for reading sensors of AMD Zen family CPUs"
 HOMEPAGE="https://git.exozy.me/a/zenpower3"
+SRC_URI="https://git.exozy.me/a/zenpower3/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-inherit git-r3
-EGIT_REPO_URI="https://git.exozy.me/a/zenpower3.git"
-EGIT_BRANCH="master"
+S="${WORKDIR}/zenpower3"
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~amd64"
+
+RDEPEND="!sys-kernel/zenpower"
 
 CONFIG_CHECK="HWMON PCI AMD_NB ~!SENSORS_K10TEMP"
 

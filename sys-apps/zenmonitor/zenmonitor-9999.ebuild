@@ -15,7 +15,7 @@ SLOT="0"
 
 CONFIG_CHECK="X86_MSR"
 
-DEPEND="sys-kernel/zenpower"
+DEPEND="sys-kernel/zenpower3"
 RDEPEND="${DEPEND}"
 
 src_install() {
