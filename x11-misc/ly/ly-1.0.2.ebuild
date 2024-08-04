@@ -7,9 +7,9 @@ inherit edo
 
 # From: https://github.com/fairyglade/ly/blob/v<ly version>/build.zig.zon
 CLAP_COMMIT="8c98e6404b22aafc0184e999d8f068b81cc22fa1"
-ZIGINI_COMMIT="ce1f322482099db058f5d9fdd05fbfa255d79723"
+ZIGINI_COMMIT="0bba97a12582928e097f4074cc746c43351ba4c8"
 # From: https://github.com/Kawaii-Ash/zigini/blob/<zigini commit>/build.zig.zon
-INI_COMMIT="19e1210063882ab7db73a8aaa60e733d4aaafe9f"
+INI_COMMIT="e18d36665905c1e7ba0c1ce3e8780076b33e3002"
 
 DESCRIPTION="a TUI display manager"
 HOMEPAGE="https://github.com/fairyglade/ly"
