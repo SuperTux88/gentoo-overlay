@@ -208,6 +208,9 @@ The following packages are available in this overlay:
 * sys-power/amd_s2idle
   * S0i3/s2idle analysis script for AMD systems
   * https://gitlab.freedesktop.org/drm/amd/-/blob/master/scripts/amd_s2idle.py
+* sys-power/poweralertd
+  * UPower-powered power alerter
+  * https://sr.ht/~kennylevinsen/poweralertd
 * sys-power/sntrack
   * Tracks the battery discharge rate during sleep
   * https://github.com/xsmile/sntrack
