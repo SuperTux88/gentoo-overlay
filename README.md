@@ -2,7 +2,13 @@
 
 Current build status: [![pkgcheck](https://github.com/SuperTux88/gentoo-overlay/actions/workflows/ci.yml/badge.svg)](https://github.com/SuperTux88/gentoo-overlay/actions/workflows/ci.yml)
 
-**use at your own risk**
+## use at your own risk
+
+Ebuilds are mostly provided "as is", as I only develop them for my own use-cases and can only test them on my environments, so they might not work as expected in some edge-cases.
+If you encounter a bug in an ebuild, you are welcome to open an issue, but there are no guarantees I'll fix them, as I might not be able to reproduce/test them in my environments.
+If you already know the fix, you can also create a PR, which I'm able to merge even when I can't reproduce/test the original issue, as long as it doesn't break anything for my use-cases.
+
+Ebuilds might be removed at any time, when I don't need something anymore and don't want to continue maintaining the ebuilds for it.
 
 ## Usage
 
