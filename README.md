@@ -54,6 +54,9 @@ The following packages are available in this overlay:
 * app-laptop/fw-ectool
   * ectool for the Framework laptop
   * https://gitlab.howett.net/DHowett/ectool
+* app-laptop/fw-fanctrl
+  * A simple systemd service to better control Framework Laptop's fan(s)
+  * https://github.com/TamtamHero/fw-fanctrl
 * app-misc/google-cloud-cli
   * Google Cloud SDK
   * https://cloud.google.com/sdk
