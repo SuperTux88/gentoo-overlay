@@ -28,7 +28,6 @@ src_compile() {
 	# See: https://github.com/SuperTux88/gentoo-overlay/issues/8
 	filter-lto
 
-	MODULES_MAKEARGS+=( CONFIG_DRM_EVDI=m )
 	local modlist=( evdi=video:"${S}/module" )
 	linux-mod-r1_src_compile
 
