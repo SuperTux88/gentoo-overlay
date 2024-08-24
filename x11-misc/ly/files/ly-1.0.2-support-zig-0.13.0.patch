@@ -1,0 +1,122 @@
+diff --git a/build.zig b/build.zig
+index 083bd2a..c7b5aa8 100644
+--- a/build.zig
++++ b/build.zig
+@@ -1,10 +1,24 @@
+ const std = @import("std");
++const builtin = @import("builtin");
++
++const min_zig_string = "0.12.0";
++const current_zig = builtin.zig_version;
++
++// Implementing zig version detection through compile time
++comptime {
++    const min_zig = std.SemanticVersion.parse(min_zig_string) catch unreachable;
++    if (current_zig.order(min_zig) == .lt) {
++        @compileError(std.fmt.comptimePrint("Your Zig version v{} does not meet the minimum build requirement of v{}", .{ current_zig, min_zig }));
++    }
++}
+ 
+ const ly_version = std.SemanticVersion{ .major = 1, .minor = 0, .patch = 2 };
+ var dest_directory: []const u8 = undefined;
+ var data_directory: []const u8 = undefined;
+ var exe_name: []const u8 = undefined;
+ 
++const ProgressNode = if (current_zig.minor == 12) *std.Progress.Node else std.Progress.Node;
++
+ pub fn build(b: *std.Build) !void {
+     dest_directory = b.option([]const u8, "dest_directory", "Specify a destination directory for installation") orelse "";
+     data_directory = b.option([]const u8, "data_directory", "Specify a default data directory (default is /etc/ly). This path gets embedded into the binary") orelse "/etc/ly";
+@@ -25,7 +39,7 @@ pub fn build(b: *std.Build) !void {
+ 
+     const exe = b.addExecutable(.{
+         .name = "ly",
+-        .root_source_file = .{ .path = "src/main.zig" },
++        .root_source_file = b.path("src/main.zig"),
+         .target = target,
+         .optimize = optimize,
+     });
+@@ -38,14 +52,14 @@ pub fn build(b: *std.Build) !void {
+     const clap = b.dependency("clap", .{ .target = target, .optimize = optimize });
+     exe.root_module.addImport("clap", clap.module("clap"));
+ 
+-    exe.addIncludePath(.{ .path = "include" });
++    exe.addIncludePath(b.path("include"));
+     exe.linkSystemLibrary("pam");
+     exe.linkSystemLibrary("xcb");
+     exe.linkLibC();
+ 
+     // HACK: Only fails with ReleaseSafe, so we'll override it.
+     const translate_c = b.addTranslateC(.{
+-        .root_source_file = .{ .path = "include/termbox2.h" },
++        .root_source_file = b.path("include/termbox2.h"),
+         .target = target,
+         .optimize = if (optimize == .ReleaseSafe) .ReleaseFast else optimize,
+     });
+@@ -94,8 +108,7 @@ pub fn build(b: *std.Build) !void {
+ 
+ pub fn ExeInstaller(install_conf: bool) type {
+     return struct {
+-        pub fn make(step: *std.Build.Step, progress: *std.Progress.Node) !void {
+-            _ = progress;
++        pub fn make(step: *std.Build.Step, _: ProgressNode) !void {
+             try install_ly(step.owner.allocator, install_conf);
+         }
+     };
+@@ -108,8 +121,7 @@ const InitSystem = enum {
+ };
+ pub fn ServiceInstaller(comptime init_system: InitSystem) type {
+     return struct {
+-        pub fn make(step: *std.Build.Step, progress: *std.Progress.Node) !void {
+-            _ = progress;
++        pub fn make(step: *std.Build.Step, _: ProgressNode) !void {
+             const allocator = step.owner.allocator;
+             switch (init_system) {
+                 .Openrc => {
+@@ -220,8 +232,7 @@ fn install_ly(allocator: std.mem.Allocator, install_config: bool) !void {
+     }
+ }
+ 
+-pub fn uninstallall(step: *std.Build.Step, progress: *std.Progress.Node) !void {
+-    _ = progress;
++pub fn uninstallall(step: *std.Build.Step, _: ProgressNode) !void {
+     try std.fs.cwd().deleteTree(data_directory);
+     const allocator = step.owner.allocator;
+ 
+diff --git a/build.zig.zon b/build.zig.zon
+index 557dcd9..c4c9cbd 100644
+--- a/build.zig.zon
++++ b/build.zig.zon
+@@ -4,8 +4,8 @@
+     .minimum_zig_version = "0.12.0",
+     .dependencies = .{
+         .clap = .{
+-            .url = "https://github.com/Hejsil/zig-clap/archive/8c98e6404b22aafc0184e999d8f068b81cc22fa1.tar.gz",
+-            .hash = "122014e73fd712190e109950837b97f6143f02d7e2b6986e1db70b6f4aadb5ba6a0d",
++            .url = "https://github.com/Hejsil/zig-clap/archive/refs/tags/0.9.1.tar.gz",
++            .hash = "122062d301a203d003547b414237229b09a7980095061697349f8bef41be9c30266b",
+         },
+         .zigini = .{
+             .url = "https://github.com/Kawaii-Ash/zigini/archive/0bba97a12582928e097f4074cc746c43351ba4c8.tar.gz",
+diff --git a/src/main.zig b/src/main.zig
+index ddee718..022ff54 100644
+--- a/src/main.zig
++++ b/src/main.zig
+@@ -512,7 +512,7 @@ pub fn main() !void {
+                     run = false;
+                 } else if (pressed_key == sleep_key) {
+                     if (config.sleep_cmd) |sleep_cmd| {
+-                        var sleep = std.ChildProcess.init(&[_][]const u8{ "/bin/sh", "-c", sleep_cmd }, allocator);
++                        var sleep = std.process.Child.init(&[_][]const u8{ "/bin/sh", "-c", sleep_cmd }, allocator);
+                         _ = sleep.spawnAndWait() catch .{};
+                     }
+                 }
+@@ -617,7 +617,7 @@ pub fn main() !void {
+ 
+                 update = true;
+ 
+-                var restore_cursor = std.ChildProcess.init(&[_][]const u8{ "/bin/sh", "-c", config.term_restore_cursor_cmd }, allocator);
++                var restore_cursor = std.process.Child.init(&[_][]const u8{ "/bin/sh", "-c", config.term_restore_cursor_cmd }, allocator);
+                 _ = restore_cursor.spawnAndWait() catch .{};
+             },
+             else => {
