@@ -6,7 +6,7 @@
 EAPI=8
 
 CRATES="
-	adler@1.0.2
+	adler2@2.0.0
 	aho-corasick@1.1.3
 	ansi_colours@1.2.3
 	anstream@0.6.15
@@ -23,13 +23,13 @@ CRATES="
 	bitflags@1.3.2
 	bitflags@2.6.0
 	bstr@1.10.0
-	bytemuck@1.16.3
+	bytemuck@1.17.0
 	bytesize@1.3.0
 	cargo-subcommand-metadata@0.1.0
 	cfg-if@1.0.0
-	clap@4.5.12
-	clap_builder@4.5.12
-	clap_derive@4.5.11
+	clap@4.5.16
+	clap_builder@4.5.15
+	clap_derive@4.5.13
 	clap_lex@0.7.2
 	clircle@0.4.0
 	colorchoice@1.0.2
@@ -42,8 +42,8 @@ CRATES="
 	equivalent@1.0.1
 	errno@0.3.9
 	fancy-regex@0.11.0
-	fastrand@2.1.0
-	flate2@1.0.30
+	fastrand@2.1.1
+	flate2@1.0.33
 	fnv@1.0.7
 	fs-err@2.11.0
 	globset@0.4.14
@@ -51,46 +51,46 @@ CRATES="
 	hashbrown@0.14.5
 	heck@0.5.0
 	home@0.5.9
-	indexmap@2.2.6
+	indexmap@2.4.0
 	is_terminal_polyfill@1.70.1
 	itoa@1.0.11
 	lazy_static@1.5.0
-	libc@0.2.155
+	libc@0.2.158
 	linux-raw-sys@0.4.14
 	log@0.4.22
 	memchr@2.7.4
-	miniz_oxide@0.7.4
+	miniz_oxide@0.8.0
 	nu-ansi-term@0.49.0
 	num-conv@0.1.0
 	once_cell@1.19.0
 	path_abs@0.5.1
 	plist@1.7.0
 	powerfmt@0.2.0
-	prettyplease@0.2.20
+	prettyplease@0.2.22
 	proc-macro2@1.0.86
 	quick-xml@0.32.0
-	quote@1.0.36
-	regex@1.10.5
+	quote@1.0.37
+	regex@1.10.6
 	regex-automata@0.4.7
 	regex-syntax@0.8.4
-	rgb@0.8.45
+	rgb@0.8.48
 	rustix@0.38.34
 	ryu@1.0.18
 	same-file@1.0.6
 	semver@1.0.23
-	serde@1.0.204
-	serde_derive@1.0.204
-	serde_json@1.0.121
+	serde@1.0.209
+	serde_derive@1.0.209
+	serde_json@1.0.127
 	serde_spanned@0.6.7
 	serde_yaml@0.9.34+deprecated
 	shell-words@1.1.0
 	shlex@1.3.0
 	std_prelude@0.2.12
 	strsim@0.11.1
-	syn@2.0.72
+	syn@2.0.76
 	syn-select@0.3.0
 	syntect@5.2.0
-	tempfile@3.10.1
+	tempfile@3.12.0
 	termcolor@1.4.1
 	thiserror@1.0.63
 	thiserror-impl@1.0.63
@@ -108,10 +108,11 @@ CRATES="
 	walkdir@2.5.0
 	winapi@0.3.9
 	winapi-i686-pc-windows-gnu@0.4.0
-	winapi-util@0.1.8
+	winapi-util@0.1.9
 	winapi-x86_64-pc-windows-gnu@0.4.0
 	windows-sys@0.48.0
 	windows-sys@0.52.0
+	windows-sys@0.59.0
 	windows-targets@0.48.5
 	windows-targets@0.52.6
 	windows_aarch64_gnullvm@0.48.5
