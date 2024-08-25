@@ -20,6 +20,8 @@ DEPEND="
 "
 RDEPEND="
 	${DEPEND}
+	dev-python/dbus-next
+	dev-python/tenacity
 	sys-apps/dbus
 "
 
