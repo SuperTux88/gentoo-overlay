@@ -25,7 +25,7 @@ CRATES="
 	block-buffer@0.10.4
 	bumpalo@3.14.0
 	byteorder@1.5.0
-	cc@1.0.83
+	cc@1.1.14
 	cfg-if@1.0.0
 	chrono@0.4.33
 	clap@4.4.18
@@ -72,7 +72,7 @@ CRATES="
 	lazy_static@1.4.0
 	libc@0.2.153
 	libm@0.2.8
-	libsqlite3-sys@0.29.0
+	libsqlite3-sys@0.30.1
 	link-cplusplus@1.0.9
 	linked-hash-map@0.5.6
 	linux-raw-sys@0.4.13
@@ -125,6 +125,7 @@ CRATES="
 	serde_regex@1.1.0
 	serde_spanned@0.6.6
 	sharded-slab@0.1.7
+	shlex@1.3.0
 	similar@2.4.0
 	smallvec@1.13.1
 	strsim@0.10.0
@@ -229,8 +230,6 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 BDEPEND=">=virtual/rust-1.78"
-
-PATCHES=( "${FILESDIR}"/${P}-version.patch )
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
