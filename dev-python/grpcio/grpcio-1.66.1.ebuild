@@ -5,7 +5,7 @@ EAPI=8
 
 DISTUTILS_EXT=1
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 
 inherit distutils-r1 flag-o-matic multiprocessing prefix pypi
 
@@ -17,10 +17,10 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="
-	>=dev-libs/openssl-1.1.1:0=[-bindist(-)]
-	>=dev-libs/re2-0.2021.11.01:=
-	<dev-python/protobuf-python-5[${PYTHON_USEDEP}]
-	>=dev-python/protobuf-python-4.21.3[${PYTHON_USEDEP}]
+	dev-libs/openssl:=[-bindist(-)]
+	dev-libs/re2:=
+	<dev-python/protobuf-python-6[${PYTHON_USEDEP}]
+	>=dev-python/protobuf-python-5.26.1[${PYTHON_USEDEP}]
 	net-dns/c-ares:=
 	sys-libs/zlib:=
 "
