@@ -175,6 +175,9 @@ The following packages are available in this overlay:
 * media-plugins/obs-wlrobs
   * An obs-studio plugin that allows you to screen capture on wlroots based wayland compositors
   * https://hg.sr.ht/~scoopta/wlrobs
+* net-analyzer/bandwhich
+  * Terminal bandwidth utilization tool
+  * https://github.com/imsnif/bandwhich
 * net-analyzer/gping
   * Ping, but with a graph
   * https://github.com/orf/gping
