@@ -202,6 +202,9 @@ The following packages are available in this overlay:
 * sys-apps/jless
   * A command-line JSON viewer designed for reading, exploring, and searching through JSON data
   * https://jless.io
+* sys-apps/sd
+  * Intuitive find & replace CLI (sed alternative)
+  * https://github.com/chmln/sd
 * sys-apps/skiller-ctl
   * Control the additional features (e.g., LEDs) of Sharkoon Skiller (Pro/Pro+) keyboards
   * https://github.com/anyc/skiller-ctl
