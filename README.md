@@ -57,6 +57,9 @@ The following packages are available in this overlay:
 * app-laptop/fw-fanctrl
   * A simple systemd service to better control Framework Laptop's fan(s)
   * https://github.com/TamtamHero/fw-fanctrl
+* app-misc/csvlens
+  * Command line csv viewer
+  * https://github.com/YS-L/csvlens
 * app-misc/google-cloud-cli
   * Google Cloud SDK
   * https://cloud.google.com/sdk
