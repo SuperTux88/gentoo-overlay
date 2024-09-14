@@ -6,44 +6,43 @@
 EAPI=8
 
 CRATES="
-	addr2line@0.21.0
-	adler@1.0.2
-	aho-corasick@1.1.2
+	addr2line@0.24.1
+	adler2@2.0.0
+	aho-corasick@1.1.3
 	anstream@0.6.13
-	anstyle@1.0.6
+	anstyle@1.0.8
 	anstyle-parse@0.2.3
 	anstyle-query@1.0.2
 	anstyle-wincon@3.0.2
-	anyhow@1.0.86
-	autocfg@1.1.0
-	backtrace@0.3.69
+	anyhow@1.0.87
+	autocfg@1.3.0
+	backtrace@0.3.74
 	base64@0.21.7
-	base64@0.22.0
-	bitflags@1.3.2
-	bitflags@2.4.2
+	base64@0.22.1
+	bitflags@2.6.0
 	block-buffer@0.10.4
-	bytes@1.5.0
-	cc@1.0.90
+	bytes@1.7.1
+	cc@1.1.18
 	cfg-if@1.0.0
-	chrono@0.4.35
-	clap@4.5.4
-	clap_builder@4.5.2
-	clap_complete@4.5.2
-	clap_derive@4.5.4
+	chrono@0.4.38
+	clap@4.5.17
+	clap_builder@4.5.17
+	clap_complete@4.5.26
+	clap_derive@4.5.13
 	clap_lex@0.7.0
 	colorchoice@1.0.0
 	core-foundation@0.9.4
-	core-foundation-sys@0.8.6
-	cpufeatures@0.2.12
+	core-foundation-sys@0.8.7
+	cpufeatures@0.2.14
 	crypto-common@0.1.6
 	darling@0.20.8
 	darling_core@0.20.8
 	darling_macro@0.20.8
 	digest@0.10.7
 	dyn-clone@1.0.17
-	either@1.10.0
+	either@1.13.0
 	env_filter@0.1.0
-	env_logger@0.11.3
+	env_logger@0.11.5
 	equivalent@1.0.1
 	fnv@1.0.7
 	form_urlencoded@1.2.1
@@ -55,137 +54,136 @@ CRATES="
 	futures-task@0.3.30
 	futures-util@0.3.30
 	generic-array@0.14.7
-	getrandom@0.2.12
-	gimli@0.28.1
-	hashbrown@0.14.3
+	getrandom@0.2.15
+	gimli@0.31.0
+	hashbrown@0.14.5
+	headers@0.4.0
+	headers-core@0.3.0
 	heck@0.5.0
 	hermit-abi@0.3.9
 	home@0.5.9
 	http@1.1.0
-	http-body@1.0.0
-	http-body-util@0.1.1
-	httparse@1.8.0
+	http-body@1.0.1
+	http-body-util@0.1.2
+	httparse@1.9.4
+	httpdate@1.0.3
 	humantime@2.1.0
-	hyper@1.2.0
-	hyper-rustls@0.27.0
+	hyper@1.4.1
+	hyper-http-proxy@1.0.0
+	hyper-rustls@0.27.3
 	hyper-timeout@0.5.1
-	hyper-util@0.1.3
+	hyper-util@0.1.7
 	ident_case@1.0.1
-	indexmap@2.2.5
-	itoa@1.0.10
-	jsonpath-rust@0.5.0
+	indexmap@2.5.0
+	itoa@1.0.11
+	jsonpath-rust@0.5.1
 	k8s-openapi@0.22.0
-	kube@0.91.0
-	kube-client@0.91.0
-	kube-core@0.91.0
-	kube-derive@0.91.0
-	lazy_static@1.4.0
-	libc@0.2.155
-	lock_api@0.4.11
-	log@0.4.21
-	memchr@2.7.1
+	kube@0.94.1
+	kube-client@0.94.1
+	kube-core@0.94.1
+	kube-derive@0.94.1
+	lazy_static@1.5.0
+	libc@0.2.158
+	lock_api@0.4.12
+	log@0.4.22
+	memchr@2.7.4
 	mime@0.3.17
-	miniz_oxide@0.7.2
-	mio@0.8.11
-	num-traits@0.2.18
-	num_cpus@1.16.0
-	object@0.32.2
+	miniz_oxide@0.8.0
+	mio@1.0.2
+	num-traits@0.2.19
+	object@0.36.4
 	once_cell@1.19.0
 	openssl-probe@0.1.5
 	ordered-float@2.10.1
-	parking_lot@0.12.1
-	parking_lot_core@0.9.9
-	pem@3.0.3
+	parking_lot@0.12.3
+	parking_lot_core@0.9.10
+	pem@3.0.4
 	percent-encoding@2.3.1
-	pest@2.7.8
-	pest_derive@2.7.8
-	pest_generator@2.7.8
-	pest_meta@2.7.8
+	pest@2.7.12
+	pest_derive@2.7.12
+	pest_generator@2.7.12
+	pest_meta@2.7.12
 	pin-project@1.1.5
 	pin-project-internal@1.1.5
-	pin-project-lite@0.2.13
+	pin-project-lite@0.2.14
 	pin-utils@0.1.0
-	proc-macro2@1.0.84
-	quote@1.0.36
-	redox_syscall@0.4.1
-	regex@1.10.3
-	regex-automata@0.4.6
-	regex-syntax@0.8.2
+	proc-macro2@1.0.86
+	quote@1.0.37
+	redox_syscall@0.5.3
+	regex@1.10.6
+	regex-automata@0.4.7
+	regex-syntax@0.8.4
 	ring@0.17.8
-	rustc-demangle@0.1.23
-	rustls@0.23.4
-	rustls-native-certs@0.7.0
-	rustls-pemfile@2.1.1
-	rustls-pki-types@1.4.1
-	rustls-webpki@0.102.2
-	ryu@1.0.17
-	schannel@0.1.23
+	rustc-demangle@0.1.24
+	rustls@0.23.12
+	rustls-native-certs@0.7.3
+	rustls-native-certs@0.8.0
+	rustls-pemfile@2.1.3
+	rustls-pki-types@1.8.0
+	rustls-webpki@0.102.7
+	ryu@1.0.18
+	schannel@0.1.24
 	schemars@0.8.21
 	schemars_derive@0.8.21
 	scopeguard@1.2.0
 	secrecy@0.8.0
-	security-framework@2.9.2
-	security-framework-sys@2.9.1
-	serde@1.0.203
+	security-framework@2.11.1
+	security-framework-sys@2.11.1
+	serde@1.0.210
 	serde-value@0.7.0
-	serde_derive@1.0.203
-	serde_derive_internals@0.29.0
-	serde_json@1.0.117
+	serde_derive@1.0.210
+	serde_derive_internals@0.29.1
+	serde_json@1.0.128
 	serde_yaml@0.9.34+deprecated
+	sha1@0.10.6
 	sha2@0.10.8
-	signal-hook-registry@1.4.1
+	shlex@1.3.0
+	signal-hook-registry@1.4.2
 	slab@0.4.9
-	smallvec@1.13.1
-	socket2@0.5.6
+	smallvec@1.13.2
+	socket2@0.5.7
 	spin@0.9.8
 	strsim@0.10.0
 	strsim@0.11.0
-	subtle@2.5.0
-	syn@2.0.66
-	thiserror@1.0.57
-	thiserror-impl@1.0.57
-	tokio@1.37.0
-	tokio-macros@2.2.0
+	subtle@2.6.1
+	syn@2.0.77
+	thiserror@1.0.63
+	thiserror-impl@1.0.63
+	tokio@1.40.0
+	tokio-macros@2.4.0
 	tokio-rustls@0.26.0
-	tokio-util@0.7.10
+	tokio-util@0.7.12
 	tower@0.4.13
 	tower-http@0.5.2
-	tower-layer@0.3.2
-	tower-service@0.3.2
+	tower-layer@0.3.3
+	tower-service@0.3.3
 	tracing@0.1.40
 	tracing-attributes@0.1.27
 	tracing-core@0.1.32
 	try-lock@0.2.5
-	typed-builder@0.18.2
-	typed-builder-macro@0.18.2
+	typed-builder@0.20.0
+	typed-builder-macro@0.20.0
 	typenum@1.17.0
 	ucd-trie@0.1.6
 	unicode-ident@1.0.12
 	unsafe-libyaml@0.2.11
 	untrusted@0.9.0
 	utf8parse@0.2.1
-	version_check@0.9.4
+	version_check@0.9.5
 	want@0.3.1
 	wasi@0.11.0+wasi-snapshot-preview1
-	windows-sys@0.48.0
 	windows-sys@0.52.0
-	windows-targets@0.48.5
-	windows-targets@0.52.4
-	windows_aarch64_gnullvm@0.48.5
-	windows_aarch64_gnullvm@0.52.4
-	windows_aarch64_msvc@0.48.5
-	windows_aarch64_msvc@0.52.4
-	windows_i686_gnu@0.48.5
-	windows_i686_gnu@0.52.4
-	windows_i686_msvc@0.48.5
-	windows_i686_msvc@0.52.4
-	windows_x86_64_gnu@0.48.5
-	windows_x86_64_gnu@0.52.4
-	windows_x86_64_gnullvm@0.48.5
-	windows_x86_64_gnullvm@0.52.4
-	windows_x86_64_msvc@0.48.5
-	windows_x86_64_msvc@0.52.4
-	zeroize@1.7.0
+	windows-sys@0.59.0
+	windows-targets@0.52.6
+	windows_aarch64_gnullvm@0.52.6
+	windows_aarch64_msvc@0.52.6
+	windows_i686_gnu@0.52.6
+	windows_i686_gnullvm@0.52.6
+	windows_i686_msvc@0.52.6
+	windows_x86_64_gnu@0.52.6
+	windows_x86_64_gnullvm@0.52.6
+	windows_x86_64_msvc@0.52.6
+	zeroize@1.8.1
 "
 
 inherit cargo shell-completion
