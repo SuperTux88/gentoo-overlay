@@ -62,7 +62,7 @@ CRATES="
 	similar@2.5.0
 	str_indices@0.4.3
 	strsim@0.11.1
-	syn@2.0.66
+	syn@2.0.76
 	syn_derive@0.1.8
 	thiserror@1.0.61
 	thiserror-impl@1.0.61
@@ -92,19 +92,16 @@ CRATES="
 
 inherit cargo
 
-TAG_PV="0.1.30" # looks like this was tagged wrong
-PRETTYPLEASE_COMMIT="f9800e0878bb2ec6433fd81862ca6b432ea718c2"
+PRETTYPLEASE_COMMIT="7aa7b6dbb6e0f56d2afb809c43e3c8894eb1cfd0"
 
 DESCRIPTION="view macro formatter CLI for the Leptos web framework"
 HOMEPAGE="https://github.com/bram209/leptosfmt"
 SRC_URI="
-	https://github.com/bram209/${PN}/archive/refs/tags/${TAG_PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/bram209/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/bram209/prettyplease/archive/${PRETTYPLEASE_COMMIT}.tar.gz
 		-> leptosfmt-prettyplease-${PRETTYPLEASE_COMMIT}.tar.gz
 	${CARGO_CRATE_URIS}
 "
-
-S="${WORKDIR}/${PN}-${TAG_PV}"
 
 LICENSE="|| ( Apache-2.0 MIT )"
 # Dependent crate licenses
