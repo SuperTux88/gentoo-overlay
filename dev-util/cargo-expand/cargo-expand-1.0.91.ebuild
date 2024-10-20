@@ -14,7 +14,7 @@ CRATES="
 	anstyle-parse@0.2.5
 	anstyle-query@1.1.1
 	anstyle-wincon@3.0.4
-	autocfg@1.3.0
+	autocfg@1.4.0
 	base64@0.22.1
 	bat@0.24.0
 	bincode@1.3.3
@@ -23,13 +23,13 @@ CRATES="
 	bitflags@1.3.2
 	bitflags@2.6.0
 	bstr@1.10.0
-	bytemuck@1.17.0
+	bytemuck@1.19.0
 	bytesize@1.3.0
 	cargo-subcommand-metadata@0.1.0
 	cfg-if@1.0.0
-	clap@4.5.16
-	clap_builder@4.5.15
-	clap_derive@4.5.13
+	clap@4.5.20
+	clap_builder@4.5.20
+	clap_derive@4.5.18
 	clap_lex@0.7.2
 	clircle@0.4.0
 	colorchoice@1.0.2
@@ -43,66 +43,66 @@ CRATES="
 	errno@0.3.9
 	fancy-regex@0.11.0
 	fastrand@2.1.1
-	flate2@1.0.33
+	flate2@1.0.34
 	fnv@1.0.7
 	fs-err@2.11.0
-	globset@0.4.14
-	grep-cli@0.1.10
-	hashbrown@0.14.5
+	globset@0.4.15
+	grep-cli@0.1.11
+	hashbrown@0.15.0
 	heck@0.5.0
 	home@0.5.9
-	indexmap@2.4.0
+	indexmap@2.6.0
 	is_terminal_polyfill@1.70.1
 	itoa@1.0.11
 	lazy_static@1.5.0
-	libc@0.2.158
+	libc@0.2.161
 	linux-raw-sys@0.4.14
 	log@0.4.22
 	memchr@2.7.4
 	miniz_oxide@0.8.0
 	nu-ansi-term@0.49.0
 	num-conv@0.1.0
-	once_cell@1.19.0
+	once_cell@1.20.2
 	path_abs@0.5.1
 	plist@1.7.0
 	powerfmt@0.2.0
-	prettyplease@0.2.22
-	proc-macro2@1.0.86
+	prettyplease@0.2.23
+	proc-macro2@1.0.88
 	quick-xml@0.32.0
 	quote@1.0.37
-	regex@1.10.6
-	regex-automata@0.4.7
-	regex-syntax@0.8.4
-	rgb@0.8.48
-	rustix@0.38.34
+	regex@1.11.0
+	regex-automata@0.4.8
+	regex-syntax@0.8.5
+	rgb@0.8.50
+	rustix@0.38.37
 	ryu@1.0.18
 	same-file@1.0.6
 	semver@1.0.23
-	serde@1.0.209
-	serde_derive@1.0.209
-	serde_json@1.0.127
-	serde_spanned@0.6.7
+	serde@1.0.210
+	serde_derive@1.0.210
+	serde_json@1.0.132
+	serde_spanned@0.6.8
 	serde_yaml@0.9.34+deprecated
 	shell-words@1.1.0
 	shlex@1.3.0
 	std_prelude@0.2.12
 	strsim@0.11.1
-	syn@2.0.76
+	syn@2.0.80
 	syn-select@0.3.0
 	syntect@5.2.0
-	tempfile@3.12.0
+	tempfile@3.13.0
 	termcolor@1.4.1
-	thiserror@1.0.63
-	thiserror-impl@1.0.63
+	thiserror@1.0.64
+	thiserror-impl@1.0.64
 	time@0.3.36
 	time-core@0.1.2
 	time-macros@0.2.18
 	toml@0.8.19
 	toml_datetime@0.6.8
-	toml_edit@0.22.20
+	toml_edit@0.22.22
 	toolchain_find@0.4.0
-	unicode-ident@1.0.12
-	unicode-width@0.1.13
+	unicode-ident@1.0.13
+	unicode-width@0.1.14
 	unsafe-libyaml@0.2.11
 	utf8parse@0.2.2
 	walkdir@2.5.0
@@ -130,7 +130,7 @@ CRATES="
 	windows_x86_64_gnullvm@0.52.6
 	windows_x86_64_msvc@0.48.5
 	windows_x86_64_msvc@0.52.6
-	winnow@0.6.18
+	winnow@0.6.20
 "
 
 inherit cargo
