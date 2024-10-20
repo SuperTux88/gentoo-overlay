@@ -16,6 +16,7 @@ KEYWORDS="~amd64"
 IUSE="man"
 
 DEPEND="
+	gui-libs/libdecor
 	gui-libs/wlroots
 	dev-libs/wayland-protocols
 	dev-libs/wayland
@@ -27,6 +28,7 @@ RDEPEND="${DEPEND}"
 
 src_configure() {
 	mycmakeargs=(
+		-DWITH_LIBDECOR=ON
 		-DINSTALL_DOCUMENTATION=$(usex man ON OFF)
 		-DFORCE_SYSTEM_WL_PROTOCOLS=ON
 		-DFORCE_SYSTEM_WLR_PROTOCOLS=OFF
