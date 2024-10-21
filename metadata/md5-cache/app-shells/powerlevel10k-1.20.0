@@ -11,5 +11,5 @@ LICENSE=MIT
 RDEPEND=app-shells/zsh app-shells/gitstatus[zsh-completion] nerd-fonts? ( || ( media-fonts/nerd-fonts-symbols media-fonts/meslo-nerd media-fonts/terminess-nerd ) )
 SLOT=0
 SRC_URI=https://github.com/romkatv/powerlevel10k/archive/refs/tags/v1.20.0.tar.gz -> powerlevel10k-1.20.0.tar.gz verify-sig? ( https://github.com/romkatv/powerlevel10k/releases/download/v1.20.0/powerlevel10k-1.20.0.tar.gz.asc )
-_eclasses_=verify-sig	a79ba011daaf532d71a219182474d150
+_eclasses_=verify-sig	745dccb7d4656514f1e966cce314d7db
 _md5_=ce50d9dc8bab6a95748b40a19985f263
