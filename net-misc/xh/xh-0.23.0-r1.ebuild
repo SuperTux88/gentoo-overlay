@@ -297,7 +297,7 @@ LICENSE+=" Apache-2.0 BSD ISC MIT MPL-2.0 Unicode-DFS-2016"
 SLOT="0"
 KEYWORDS="~amd64"
 
-BDEPEND=">=virtual/rust-1.74"
+RUST_MIN_VER="1.74.0"
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /

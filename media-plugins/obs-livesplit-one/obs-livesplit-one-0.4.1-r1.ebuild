@@ -366,12 +366,10 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="+auto-splitting"
 
+RUST_MIN_VER="1.79.0"
 DEPEND="media-video/obs-studio"
 RDEPEND="${DEPEND}"
-BDEPEND="
-	>=virtual/rust-1.79
-	dev-util/patchelf
-"
+BDEPEND="dev-util/patchelf"
 
 src_configure() {
 	local myfeatures=(

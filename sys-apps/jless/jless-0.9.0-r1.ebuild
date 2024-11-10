@@ -104,7 +104,7 @@ LICENSE+=" Boost-1.0 MIT Unicode-DFS-2016"
 SLOT="0"
 KEYWORDS="~amd64"
 
-BDEPEND=">=virtual/rust-1.67"
+RUST_MIN_VER="1.67.0"
 
 DOCS=( {CHANGELOG,README,SEARCH}.md )
 

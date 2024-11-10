@@ -315,7 +315,7 @@ LICENSE+=" Apache-2.0 BSD Boost-1.0 MIT Unicode-DFS-2016 ZLIB"
 SLOT="0"
 KEYWORDS="~amd64"
 
-BDEPEND=">=virtual/rust-1.74"
+RUST_MIN_VER="1.74.0"
 
 # https://github.com/imsnif/bandwhich?tab=readme-ov-file#1-setcap
 FILECAPS=(

@@ -293,7 +293,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="+scripting +watch"
 
-BDEPEND=">=virtual/rust-1.70"
+RUST_MIN_VER="1.70.0"
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /

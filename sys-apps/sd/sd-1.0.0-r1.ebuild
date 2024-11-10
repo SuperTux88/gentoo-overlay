@@ -123,7 +123,7 @@ CRATES="
 inherit cargo shell-completion
 
 DESCRIPTION="An intuitive find & replace CLI"
-HOMEPAGE="https://github.com/chmln/sd.git"
+HOMEPAGE="https://github.com/chmln/sd"
 SRC_URI="
 	https://github.com/chmln/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	${CARGO_CRATE_URIS}
@@ -135,7 +135,7 @@ LICENSE+=" Apache-2.0 MIT Unicode-DFS-2016"
 SLOT="0"
 KEYWORDS="~amd64"
 
-BDEPEND=">=virtual/rust-1.70"
+RUST_MIN_VER="1.70.0"
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
