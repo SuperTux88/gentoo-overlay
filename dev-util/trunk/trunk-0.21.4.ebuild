@@ -48,7 +48,7 @@ CRATES="
 	bzip2@0.4.4
 	bzip2-sys@0.1.11+1.0.8
 	camino@1.1.9
-	cargo-lock@9.0.0
+	cargo-lock@10.0.1
 	cargo-platform@0.1.8
 	cargo_metadata@0.18.1
 	cc@1.1.30
@@ -112,7 +112,7 @@ CRATES="
 	equivalent@1.0.1
 	errno@0.3.9
 	fastrand@2.1.1
-	file-id@0.2.1
+	file-id@0.2.2
 	filetime@0.2.25
 	flate2@1.0.34
 	fnv@1.0.7
@@ -191,7 +191,7 @@ CRATES="
 	libdeflater@1.22.0
 	libloading@0.8.5
 	libredox@0.1.3
-	lightningcss@1.0.0-alpha.59
+	lightningcss@1.0.0-alpha.60
 	lightningcss-derive@1.0.0-alpha.43
 	linked-hash-map@0.5.6
 	linux-raw-sys@0.4.14
@@ -241,7 +241,7 @@ CRATES="
 	outref@0.1.0
 	overload@0.1.1
 	oxipng@9.1.2
-	parcel_selectors@0.27.0
+	parcel_selectors@0.28.0
 	parcel_sourcemap@2.1.1
 	parking_lot@0.12.3
 	parking_lot_core@0.9.10
@@ -251,17 +251,14 @@ CRATES="
 	pbkdf2@0.12.2
 	percent-encoding@2.3.1
 	phf@0.8.0
-	phf@0.10.1
 	phf@0.11.2
 	phf_codegen@0.8.0
-	phf_codegen@0.10.0
+	phf_codegen@0.11.2
 	phf_generator@0.8.0
-	phf_generator@0.10.0
 	phf_generator@0.11.2
 	phf_macros@0.8.0
 	phf_macros@0.11.2
 	phf_shared@0.8.0
-	phf_shared@0.10.0
 	phf_shared@0.11.2
 	pin-project@1.1.6
 	pin-project-internal@1.1.6
@@ -386,10 +383,8 @@ CRATES="
 	tokio-stream@0.1.16
 	tokio-tungstenite@0.24.0
 	tokio-util@0.7.12
-	toml@0.7.8
 	toml@0.8.19
 	toml_datetime@0.6.8
-	toml_edit@0.19.15
 	toml_edit@0.22.22
 	tower@0.4.13
 	tower@0.5.1
@@ -434,7 +429,7 @@ CRATES="
 	web-sys@0.3.72
 	webpki-roots@0.26.6
 	which@4.4.2
-	which@6.0.3
+	which@7.0.0
 	widestring@1.1.0
 	winapi@0.3.9
 	winapi-i686-pc-windows-gnu@0.4.0
@@ -468,7 +463,6 @@ CRATES="
 	windows_x86_64_gnullvm@0.52.6
 	windows_x86_64_msvc@0.48.5
 	windows_x86_64_msvc@0.52.6
-	winnow@0.5.40
 	winnow@0.6.20
 	winreg@0.50.0
 	winsafe@0.0.19
@@ -503,7 +497,7 @@ LICENSE+="
 SLOT="0"
 KEYWORDS="~amd64"
 
-BDEPEND=">=virtual/rust-1.77"
+RUST_MIN_VER="1.77.0"
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
