@@ -9,11 +9,11 @@ CRATES="
 	adler2@2.0.0
 	aho-corasick@1.1.3
 	ansi_colours@1.2.3
-	anstream@0.6.15
-	anstyle@1.0.8
-	anstyle-parse@0.2.5
-	anstyle-query@1.1.1
-	anstyle-wincon@3.0.4
+	anstream@0.6.18
+	anstyle@1.0.10
+	anstyle-parse@0.2.6
+	anstyle-query@1.1.2
+	anstyle-wincon@3.0.6
 	autocfg@1.4.0
 	base64@0.22.1
 	bat@0.24.0
@@ -28,27 +28,29 @@ CRATES="
 	cargo-subcommand-metadata@0.1.0
 	cfg-if@1.0.0
 	clap@4.5.20
+	clap-cargo@0.14.1
 	clap_builder@4.5.20
 	clap_derive@4.5.18
 	clap_lex@0.7.2
 	clircle@0.4.0
-	colorchoice@1.0.2
+	colorchoice@1.0.3
 	console@0.15.8
 	content_inspector@0.2.4
 	crc32fast@1.4.2
 	deranged@0.3.11
 	encode_unicode@0.3.6
-	encoding_rs@0.8.34
+	encoding_rs@0.8.35
 	equivalent@1.0.1
 	errno@0.3.9
+	etcetera@0.8.0
 	fancy-regex@0.11.0
 	fastrand@2.1.1
 	flate2@1.0.34
 	fnv@1.0.7
-	fs-err@2.11.0
+	fs-err@3.0.0
 	globset@0.4.15
 	grep-cli@0.1.11
-	hashbrown@0.15.0
+	hashbrown@0.15.1
 	heck@0.5.0
 	home@0.5.9
 	indexmap@2.6.0
@@ -66,20 +68,20 @@ CRATES="
 	path_abs@0.5.1
 	plist@1.7.0
 	powerfmt@0.2.0
-	prettyplease@0.2.23
-	proc-macro2@1.0.88
+	prettyplease@0.2.25
+	proc-macro2@1.0.89
 	quick-xml@0.32.0
 	quote@1.0.37
-	regex@1.11.0
+	regex@1.11.1
 	regex-automata@0.4.8
 	regex-syntax@0.8.5
 	rgb@0.8.50
-	rustix@0.38.37
+	rustix@0.38.39
 	ryu@1.0.18
 	same-file@1.0.6
 	semver@1.0.23
-	serde@1.0.210
-	serde_derive@1.0.210
+	serde@1.0.214
+	serde_derive@1.0.214
 	serde_json@1.0.132
 	serde_spanned@0.6.8
 	serde_yaml@0.9.34+deprecated
@@ -87,13 +89,13 @@ CRATES="
 	shlex@1.3.0
 	std_prelude@0.2.12
 	strsim@0.11.1
-	syn@2.0.80
+	syn@2.0.87
 	syn-select@0.3.0
 	syntect@5.2.0
 	tempfile@3.13.0
 	termcolor@1.4.1
-	thiserror@1.0.64
-	thiserror-impl@1.0.64
+	thiserror@1.0.68
+	thiserror-impl@1.0.68
 	time@0.3.36
 	time-core@0.1.2
 	time-macros@0.2.18
@@ -148,7 +150,7 @@ LICENSE+=" Apache-2.0 BSD LGPL-3+ MIT Unicode-DFS-2016"
 SLOT="0"
 KEYWORDS="~amd64"
 
-BDEPEND=">=virtual/rust-1.70"
+RUST_MIN_VER="1.70.0"
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
