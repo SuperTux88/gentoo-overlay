@@ -6,7 +6,7 @@
 EAPI=8
 
 CRATES="
-	adler@1.0.2
+	adler2@2.0.0
 	ahash@0.8.11
 	aho-corasick@1.1.2
 	autocfg@1.1.0
@@ -16,9 +16,8 @@ CRATES="
 	bitflags@2.5.0
 	byteorder@0.5.3
 	camino@1.1.1
-	cargo-lock@9.0.0
 	cargo-platform@0.1.2
-	cargo_metadata@0.15.0
+	cargo_metadata@0.18.1
 	cfg-if@1.0.0
 	crc32fast@1.3.2
 	cyclonedx-bom@0.5.0
@@ -27,19 +26,17 @@ CRATES="
 	either@1.8.0
 	equivalent@1.0.1
 	fluent-uri@0.1.4
-	form_urlencoded@1.1.0
 	getrandom@0.2.12
 	hashbrown@0.12.3
 	hashbrown@0.13.2
 	hashbrown@0.14.3
-	idna@0.3.0
 	indexmap@1.9.1
 	indexmap@2.2.3
 	itoa@1.0.3
 	leb128@0.2.5
 	libc@0.2.153
 	memchr@2.7.1
-	miniz_oxide@0.6.2
+	miniz_oxide@0.8.0
 	num-conv@0.1.0
 	num-traits@0.2.18
 	object@0.30.3
@@ -62,33 +59,23 @@ CRATES="
 	serde_derive@1.0.197
 	serde_derive_internals@0.26.0
 	serde_json@1.0.114
-	serde_spanned@0.6.1
 	smallvec@1.13.1
 	spdx@0.10.3
 	syn@1.0.99
 	syn@2.0.50
 	thiserror@1.0.57
 	thiserror-impl@1.0.57
-	time@0.3.34
+	time@0.3.36
 	time-core@0.1.2
-	time-macros@0.2.17
-	tinyvec@1.6.0
-	tinyvec_macros@0.1.0
-	toml@0.7.3
-	toml_datetime@0.6.1
-	toml_edit@0.19.8
+	time-macros@0.2.18
 	topological-sort@0.2.2
-	unicode-bidi@0.3.8
 	unicode-ident@1.0.4
-	unicode-normalization@0.1.22
-	url@2.3.1
 	uuid@1.7.0
 	version_check@0.9.4
 	wasi@0.11.0+wasi-snapshot-preview1
 	wasm-gen@0.1.4
 	wasmparser@0.207.0
 	which@4.3.0
-	winnow@0.4.1
 	xml-rs@0.8.19
 	zerocopy@0.7.32
 	zerocopy-derive@0.7.32
