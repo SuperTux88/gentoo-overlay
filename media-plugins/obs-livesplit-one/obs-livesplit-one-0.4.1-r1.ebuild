@@ -384,10 +384,10 @@ src_compile() {
 	# obs-livesplit-one uses libobs.so, but the metadata of media-video/obs-studio only provide libobs.so.0
 	# (but libobs.so is available too, but not in metadata)
 	# This prevents the "QA Notice: Unresolved soname dependencies" warning
-	patchelf --replace-needed libobs.so libobs.so.0 "${S}/target/release/libobs_livesplit_one.so"
+	patchelf --replace-needed libobs.so libobs.so.0 "${S}/$(cargo_target_dir)/libobs_livesplit_one.so"
 }
 
 src_install() {
 	insinto /usr/lib64/obs-plugins
-	doins "${S}/target/release/libobs_livesplit_one.so"
+	doins "${S}/$(cargo_target_dir)/libobs_livesplit_one.so"
 }
