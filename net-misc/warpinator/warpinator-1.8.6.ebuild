@@ -20,7 +20,7 @@ DEPEND="
 	dev-python/ifaddr
 	dev-python/netaddr
 	dev-python/netifaces
-	dev-python/protobuf-python
+	dev-python/protobuf
 	dev-python/pygobject
 	dev-python/pynacl
 	>=dev-python/python3-xapp-1.6.0
@@ -32,7 +32,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND="
 	>=dev-build/meson-0.45.0
-	>=dev-python/protobuf-python-3.6.1
+	>=dev-python/protobuf-3.6.1
 "
 
 CONFIG_CHECK="~SECURITY_LANDLOCK"
