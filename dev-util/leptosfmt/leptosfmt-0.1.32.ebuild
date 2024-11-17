@@ -92,7 +92,7 @@ CRATES="
 
 inherit cargo
 
-PRETTYPLEASE_COMMIT="7aa7b6dbb6e0f56d2afb809c43e3c8894eb1cfd0"
+PRETTYPLEASE_COMMIT="bebc259d12bb0f9a53132f3700017b56d32a4dad"
 
 DESCRIPTION="view macro formatter CLI for the Leptos web framework"
 HOMEPAGE="https://github.com/bram209/leptosfmt"
