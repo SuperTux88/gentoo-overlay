@@ -102,6 +102,7 @@ CRATES="
 	gix-utils@0.1.13
 	gix-validate@0.9.1
 	gix-worktree@0.37.0
+	glob@0.3.1
 	hashbrown@0.14.5
 	hashbrown@0.15.0
 	heck@0.5.0
