@@ -9,6 +9,8 @@ DESCRIPTION="Nerd Font build of Terminus font, patched by ryanoasis"
 HOMEPAGE="https://github.com/ryanoasis/nerd-fonts"
 SRC_URI="https://github.com/ryanoasis/nerd-fonts/releases/download/v${PV}/Terminus.tar.xz -> ${P}.tar.xz"
 
+S="${WORKDIR}"
+
 LICENSE="Apache-2.0 MIT OFL-1.1"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -17,8 +19,6 @@ IUSE="+wide mono"
 REQUIRED_USE="|| ( wide mono )"
 
 FONT_SUFFIX="ttf"
-
-S="${WORKDIR}"
 
 src_prepare() {
 	default_src_prepare
