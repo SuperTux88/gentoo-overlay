@@ -196,7 +196,7 @@ MY_PN="diesel"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Provides the CLI for the Diesel crate"
-HOMEPAGE="https://github.com/diesel-rs/diesel"
+HOMEPAGE="https://diesel.rs https://github.com/diesel-rs/diesel"
 SRC_URI="
 	https://github.com/diesel-rs/${MY_PN}/archive/v${PV}.tar.gz -> ${MY_P}.tar.gz
 	${CARGO_CRATE_URIS}
