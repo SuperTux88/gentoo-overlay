@@ -10,41 +10,41 @@ CRATES="
 	android-tzdata@0.1.1
 	android_system_properties@0.1.5
 	ansi_term@0.12.1
-	anstream@0.6.15
-	anstyle@1.0.8
-	anstyle-parse@0.2.5
-	anstyle-query@1.1.1
-	anstyle-wincon@3.0.4
+	anstream@0.6.18
+	anstyle@1.0.10
+	anstyle-parse@0.2.6
+	anstyle-query@1.1.2
+	anstyle-wincon@3.0.6
 	arrayref@0.3.9
 	arrayvec@0.7.6
 	autocfg@1.4.0
 	bitflags@2.6.0
 	blake3@1.5.4
 	block-buffer@0.10.4
-	bstr@1.10.0
+	bstr@1.11.0
 	bumpalo@3.16.0
 	byteorder@1.5.0
 	camino@1.1.9
-	cc@1.1.23
+	cc@1.2.1
 	cfg-if@1.0.0
 	cfg_aliases@0.2.1
 	chrono@0.4.38
-	clap@4.5.18
-	clap_builder@4.5.18
-	clap_complete@4.5.29
+	clap@4.5.21
+	clap_builder@4.5.21
+	clap_complete@4.5.38
 	clap_derive@4.5.18
-	clap_lex@0.7.2
-	clap_mangen@0.2.23
-	colorchoice@1.0.2
+	clap_lex@0.7.3
+	clap_mangen@0.2.24
+	colorchoice@1.0.3
 	constant_time_eq@0.3.1
 	core-foundation-sys@0.8.7
-	cpufeatures@0.2.14
+	cpufeatures@0.2.15
 	crossbeam-deque@0.8.5
 	crossbeam-epoch@0.9.18
 	crossbeam-utils@0.8.20
 	crypto-common@0.1.6
 	ctrlc@3.4.5
-	derivative@2.2.0
+	derive-where@1.2.7
 	diff@0.1.13
 	digest@0.10.7
 	dirs@5.0.1
@@ -54,7 +54,7 @@ CRATES="
 	either@1.13.0
 	errno@0.3.9
 	executable-path@1.0.0
-	fastrand@2.1.1
+	fastrand@2.2.0
 	generic-array@0.14.7
 	getopts@0.2.21
 	getrandom@0.2.15
@@ -64,10 +64,10 @@ CRATES="
 	iana-time-zone@0.1.61
 	iana-time-zone-haiku@0.1.2
 	is_terminal_polyfill@1.70.1
-	itoa@1.0.11
-	js-sys@0.3.70
+	itoa@1.0.13
+	js-sys@0.3.72
 	lexiclean@0.0.1
-	libc@0.2.159
+	libc@0.2.164
 	libredox@0.1.3
 	linux-raw-sys@0.4.14
 	log@0.4.22
@@ -76,13 +76,12 @@ CRATES="
 	nix@0.29.0
 	num-traits@0.2.19
 	num_cpus@1.16.0
-	once_cell@1.20.1
+	once_cell@1.20.2
 	option-ext@0.2.0
 	percent-encoding@2.3.1
-	portable-atomic@1.9.0
 	ppv-lite86@0.2.20
 	pretty_assertions@1.4.1
-	proc-macro2@1.0.86
+	proc-macro2@1.0.89
 	pulldown-cmark@0.9.6
 	pulldown-cmark-to-cmark@10.0.4
 	quote@1.0.37
@@ -91,17 +90,17 @@ CRATES="
 	rand_core@0.6.4
 	rayon-core@1.12.1
 	redox_users@0.4.6
-	regex@1.11.0
-	regex-automata@0.4.8
+	regex@1.11.1
+	regex-automata@0.4.9
 	regex-syntax@0.8.5
 	roff@0.2.2
-	rustix@0.38.37
-	rustversion@1.0.17
+	rustix@0.38.41
+	rustversion@1.0.18
 	ryu@1.0.18
 	semver@1.0.23
-	serde@1.0.210
-	serde_derive@1.0.210
-	serde_json@1.0.128
+	serde@1.0.215
+	serde_derive@1.0.215
+	serde_json@1.0.133
 	sha2@0.10.8
 	shellexpand@3.1.0
 	shlex@1.3.0
@@ -111,31 +110,30 @@ CRATES="
 	strsim@0.11.1
 	strum@0.26.3
 	strum_macros@0.26.4
-	syn@1.0.109
-	syn@2.0.79
+	syn@2.0.87
 	target@2.1.0
-	tempfile@3.13.0
+	tempfile@3.14.0
 	temptree@0.2.0
-	terminal_size@0.3.0
-	thiserror@1.0.64
-	thiserror-impl@1.0.64
+	terminal_size@0.4.0
+	thiserror@1.0.69
+	thiserror-impl@1.0.69
 	typed-arena@2.0.2
 	typenum@1.17.0
-	unicase@2.7.0
-	unicode-ident@1.0.13
+	unicase@2.8.0
+	unicode-ident@1.0.14
 	unicode-segmentation@1.12.0
 	unicode-width@0.1.14
 	unicode-width@0.2.0
 	utf8parse@0.2.2
-	uuid@1.10.0
+	uuid@1.11.0
 	version_check@0.9.5
 	wasi@0.11.0+wasi-snapshot-preview1
-	wasm-bindgen@0.2.93
-	wasm-bindgen-backend@0.2.93
-	wasm-bindgen-macro@0.2.93
-	wasm-bindgen-macro-support@0.2.93
-	wasm-bindgen-shared@0.2.93
-	which@6.0.3
+	wasm-bindgen@0.2.95
+	wasm-bindgen-backend@0.2.95
+	wasm-bindgen-macro@0.2.95
+	wasm-bindgen-macro-support@0.2.95
+	wasm-bindgen-shared@0.2.95
+	which@7.0.0
 	winapi@0.3.9
 	winapi-i686-pc-windows-gnu@0.4.0
 	winapi-x86_64-pc-windows-gnu@0.4.0
@@ -169,7 +167,7 @@ CRATES="
 inherit cargo shell-completion
 
 DESCRIPTION="🤖 Just a command runner"
-HOMEPAGE="https://just.systems"
+HOMEPAGE="https://just.systems https://github.com/casey/just"
 SRC_URI="
 	https://github.com/casey/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz
 	${CARGO_CRATE_URIS}
@@ -177,7 +175,7 @@ SRC_URI="
 
 LICENSE="CC0-1.0"
 # Dependent crate licenses
-LICENSE+=" Apache-2.0 BSD-2 CC0-1.0 MIT MPL-2.0 Unicode-DFS-2016"
+LICENSE+=" Apache-2.0 BSD-2 CC0-1.0 MIT MPL-2.0 Unicode-3.0"
 SLOT="0"
 KEYWORDS="~amd64"
 
