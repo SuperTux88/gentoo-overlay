@@ -19,26 +19,26 @@ CRATES="
 	arrayvec@0.7.6
 	autocfg@1.4.0
 	bitflags@2.6.0
-	blake3@1.5.4
+	blake3@1.5.5
 	block-buffer@0.10.4
 	bstr@1.11.0
 	bumpalo@3.16.0
 	byteorder@1.5.0
 	camino@1.1.9
-	cc@1.2.1
+	cc@1.2.3
 	cfg-if@1.0.0
 	cfg_aliases@0.2.1
-	chrono@0.4.38
-	clap@4.5.21
-	clap_builder@4.5.21
+	chrono@0.4.39
+	clap@4.5.23
+	clap_builder@4.5.23
 	clap_complete@4.5.38
 	clap_derive@4.5.18
-	clap_lex@0.7.3
+	clap_lex@0.7.4
 	clap_mangen@0.2.24
 	colorchoice@1.0.3
 	constant_time_eq@0.3.1
 	core-foundation-sys@0.8.7
-	cpufeatures@0.2.15
+	cpufeatures@0.2.16
 	crossbeam-deque@0.8.5
 	crossbeam-epoch@0.9.18
 	crossbeam-utils@0.8.20
@@ -52,9 +52,9 @@ CRATES="
 	dotenvy@0.15.7
 	edit-distance@2.1.3
 	either@1.13.0
-	errno@0.3.9
+	errno@0.3.10
 	executable-path@1.0.0
-	fastrand@2.2.0
+	fastrand@2.3.0
 	generic-array@0.14.7
 	getopts@0.2.21
 	getrandom@0.2.15
@@ -64,10 +64,10 @@ CRATES="
 	iana-time-zone@0.1.61
 	iana-time-zone-haiku@0.1.2
 	is_terminal_polyfill@1.70.1
-	itoa@1.0.13
-	js-sys@0.3.72
+	itoa@1.0.14
+	js-sys@0.3.76
 	lexiclean@0.0.1
-	libc@0.2.164
+	libc@0.2.168
 	libredox@0.1.3
 	linux-raw-sys@0.4.14
 	log@0.4.22
@@ -81,7 +81,7 @@ CRATES="
 	percent-encoding@2.3.1
 	ppv-lite86@0.2.20
 	pretty_assertions@1.4.1
-	proc-macro2@1.0.89
+	proc-macro2@1.0.92
 	pulldown-cmark@0.9.6
 	pulldown-cmark-to-cmark@10.0.4
 	quote@1.0.37
@@ -94,7 +94,7 @@ CRATES="
 	regex-automata@0.4.9
 	regex-syntax@0.8.5
 	roff@0.2.2
-	rustix@0.38.41
+	rustix@0.38.42
 	rustversion@1.0.18
 	ryu@1.0.18
 	semver@1.0.23
@@ -110,11 +110,11 @@ CRATES="
 	strsim@0.11.1
 	strum@0.26.3
 	strum_macros@0.26.4
-	syn@2.0.87
+	syn@2.0.90
 	target@2.1.0
 	tempfile@3.14.0
 	temptree@0.2.0
-	terminal_size@0.4.0
+	terminal_size@0.4.1
 	thiserror@1.0.69
 	thiserror-impl@1.0.69
 	typed-arena@2.0.2
@@ -128,11 +128,11 @@ CRATES="
 	uuid@1.11.0
 	version_check@0.9.5
 	wasi@0.11.0+wasi-snapshot-preview1
-	wasm-bindgen@0.2.95
-	wasm-bindgen-backend@0.2.95
-	wasm-bindgen-macro@0.2.95
-	wasm-bindgen-macro-support@0.2.95
-	wasm-bindgen-shared@0.2.95
+	wasm-bindgen@0.2.99
+	wasm-bindgen-backend@0.2.99
+	wasm-bindgen-macro@0.2.99
+	wasm-bindgen-macro-support@0.2.99
+	wasm-bindgen-shared@0.2.99
 	which@7.0.0
 	winapi@0.3.9
 	winapi-i686-pc-windows-gnu@0.4.0
