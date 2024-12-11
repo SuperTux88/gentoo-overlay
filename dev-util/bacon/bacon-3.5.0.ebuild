@@ -225,7 +225,7 @@ CRATES="
 inherit cargo
 
 DESCRIPTION="background rust compiler"
-HOMEPAGE="https://dystroy.org/bacon"
+HOMEPAGE="https://dystroy.org/bacon https://github.com/Canop/bacon"
 SRC_URI="
 	https://github.com/Canop/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 	${CARGO_CRATE_URIS}
