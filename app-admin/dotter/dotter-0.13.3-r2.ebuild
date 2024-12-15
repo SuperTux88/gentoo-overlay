@@ -311,8 +311,8 @@ src_configure() {
 src_compile() {
 	cargo_src_compile
 
-	target/release/dotter gen-completions --shell bash > bash-completion.sh
-	target/release/dotter gen-completions --shell zsh > zsh-completion.zsh
+	$(cargo_target_dir)/${PN} gen-completions --shell bash > bash-completion.sh || die
+	$(cargo_target_dir)/${PN} gen-completions --shell zsh > zsh-completion.zsh || die
 }
 
 src_install() {
