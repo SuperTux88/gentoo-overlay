@@ -21,7 +21,7 @@ IUSE="nerd-fonts"
 DEPEND="app-shells/zsh
 		app-shells/gitstatus[zsh-completion]
 		nerd-fonts? ( || (
-			media-fonts/nerd-fonts-symbols
+			media-fonts/symbols-nerd-font
 			media-fonts/meslo-nerd
 			media-fonts/terminess-nerd
 		) )"
