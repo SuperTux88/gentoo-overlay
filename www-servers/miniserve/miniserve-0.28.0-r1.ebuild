@@ -387,10 +387,10 @@ QA_PRESTRIPPED="${QA_FLAGS_IGNORED}"
 src_compile() {
 	cargo_src_compile
 
-	target/release/miniserve --print-completions bash > bash-completion.sh
-	target/release/miniserve --print-completions zsh > zsh-completion.zsh
+	$(cargo_target_dir)/${PN} --print-completions bash > bash-completion.sh || die
+	$(cargo_target_dir)/${PN} --print-completions zsh > zsh-completion.zsh || die
 
-	target/release/miniserve --print-manpage > "${PN}.1"
+	$(cargo_target_dir)/${PN} --print-manpage > "${PN}.1" || die
 }
 
 src_install() {
