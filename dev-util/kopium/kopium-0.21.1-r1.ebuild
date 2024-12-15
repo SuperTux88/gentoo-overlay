@@ -208,8 +208,8 @@ QA_FLAGS_IGNORED="usr/bin/${PN}"
 src_compile() {
 	cargo_src_compile
 
-	target/release/${PN} completions bash > bash-completion.sh
-	target/release/${PN} completions zsh > zsh-completion.zsh
+	$(cargo_target_dir)/${PN} completions bash > bash-completion.sh || die
+	$(cargo_target_dir)/${PN} completions zsh > zsh-completion.zsh || die
 }
 
 src_install() {
