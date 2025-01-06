@@ -28,7 +28,7 @@ CRATES="
 	cargo-subcommand-metadata@0.1.0
 	cfg-if@1.0.0
 	clap@4.5.23
-	clap-cargo@0.15.0
+	clap-cargo@0.15.1
 	clap_builder@4.5.23
 	clap_derive@4.5.18
 	clap_lex@0.7.4
@@ -68,7 +68,7 @@ CRATES="
 	path_abs@0.5.1
 	plist@1.7.0
 	powerfmt@0.2.0
-	prettyplease@0.2.25
+	prettyplease@0.2.27
 	proc-macro2@1.0.92
 	quick-xml@0.32.0
 	quote@1.0.38
@@ -89,7 +89,7 @@ CRATES="
 	shlex@1.3.0
 	std_prelude@0.2.12
 	strsim@0.11.1
-	syn@2.0.94
+	syn@2.0.95
 	syn-select@0.3.0
 	syntect@5.2.0
 	tempfile@3.15.0
@@ -133,7 +133,7 @@ CRATES="
 	windows_x86_64_gnullvm@0.52.6
 	windows_x86_64_msvc@0.48.5
 	windows_x86_64_msvc@0.52.6
-	winnow@0.6.21
+	winnow@0.6.22
 "
 
 inherit cargo
