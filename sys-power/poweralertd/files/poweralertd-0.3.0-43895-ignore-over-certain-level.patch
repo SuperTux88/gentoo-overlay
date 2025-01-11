@@ -1,0 +1,82 @@
+diff --git a/main.c b/main.c
+index 99700e3..ec49327 100644
+--- a/main.c
++++ b/main.c
+@@ -156,6 +156,7 @@ static const char usage[] = "usage: %s [options]\n"
+ "  -v				show the version number\n"
+ "  -s				ignore the events at startup\n"
+ "  -i <device_type>		ignore this device type, can be use several times\n"
++"  -o <percentage>		ignores events over specified battery percentage\n"
+ "  -S				only use the events coming from power supplies\n";
+ 
+ 
+@@ -163,6 +164,7 @@ int main(int argc, char *argv[]) {
+ 	int opt = 0;
+ 	int device_type = 0;
+ 	int ignore_types_mask = 0;
++	int ignore_over = 0;
+ 	bool ignore_initial = false;
+ 	bool ignore_non_power_supplies = false;
+ 	bool initialized = false;
+@@ -173,7 +175,7 @@ int main(int argc, char *argv[]) {
+ 		return EXIT_FAILURE;
+ 	}
+ 
+-	while ((opt = getopt(argc, argv, "hvsi:S")) != -1) {
++	while ((opt = getopt(argc, argv, "hvsi:o:S")) != -1) {
+ 		switch (opt) {
+ 		case 'i':
+ 			device_type = upower_device_type_int(optarg);
+@@ -184,6 +186,9 @@ int main(int argc, char *argv[]) {
+ 				printf("Unrecognized device type: %s\n", optarg);
+ 			}
+ 			break;
++		case 'o':
++			ignore_over = atoi(optarg);
++			break;
+ 		case 's':
+ 			ignore_initial = true;
+ 			break;
+@@ -241,23 +246,27 @@ int main(int argc, char *argv[]) {
+ 				goto next_device;
+ 			}
+ 
+-			if (upower_device_has_battery(device)) {
+-				ret = send_state_update(user_bus, device);
+-				if (ret < 0) {
+-					fprintf(stderr, "could not send state update notification: %s\n", strerror(-ret));
+-					goto finish;
+-				}
+-				ret = send_warning_update(user_bus, device);
+-				if (ret < 0) {
+-					fprintf(stderr, "could not send warning update notification: %s\n", strerror(-ret));
+-					goto finish;
++			if (ignore_over == 0 || device->current.percentage < ignore_over) {
++				if (upower_device_has_battery(device)) {
++					ret = send_state_update(user_bus, device);
++					if (ret < 0) {
++						fprintf(stderr, "could not send state update notification: %s\n", strerror(-ret));
++						goto finish;
++					}
++					ret = send_warning_update(user_bus, device);
++					if (ret < 0) {
++						fprintf(stderr, "could not send warning update notification: %s\n", strerror(-ret));
++						goto finish;
++					}
++				} else {
++					ret = send_online_update(user_bus, device);
++					if (ret < 0) {
++						fprintf(stderr, "could not send online update notification: %s\n", strerror(-ret));
++						goto finish;
++					}
+ 				}
+ 			} else {
+-				ret = send_online_update(user_bus, device);
+-				if (ret < 0) {
+-					fprintf(stderr, "could not send online update notification: %s\n", strerror(-ret));
+-					goto finish;
+-				}
++				fprintf(stderr, "Ignored because -o: %i | percentage: %f\n", ignore_over, device->current.percentage);
+ 			}
+ next_device:
+ 			device->last = device->current;

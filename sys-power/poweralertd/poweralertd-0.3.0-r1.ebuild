@@ -26,6 +26,8 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND="man? ( app-text/scdoc )"
 
+PATCHES=( "${FILESDIR}/${P}-43895-ignore-over-certain-level.patch" )
+
 src_configure() {
 	local emesonargs=(
 		$(meson_feature man man-pages)
