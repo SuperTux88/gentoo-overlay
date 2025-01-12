@@ -69,6 +69,10 @@ The following packages are available in this overlay:
 * app-misc/htmlq
   * Like jq, but for HTML
   * https://github.com/mgdm/htmlq
+* app-misc/sl-patched
+  * SL (Steam Locomotive) runs across your terminal when you type "sl" as you meant to type "ls"
+  * Old patched long version, inspired by https://aur.archlinux.org/packages/sl-patched
+  * Patch from https://github.com/euank/docker-sl
 * app-misc/spacer
   * CLI tool to insert spacers when command output stops
   * https://github.com/samwho/spacer
