@@ -22,15 +22,15 @@ CRATES="
 	bit-set@0.5.3
 	bit-vec@0.6.3
 	bitflags@1.3.2
-	bitflags@2.6.0
+	bitflags@2.7.0
 	bstr@1.11.3
 	bytemuck@1.21.0
 	bytesize@1.3.0
 	cargo-subcommand-metadata@0.1.0
 	cfg-if@1.0.0
-	clap@4.5.24
+	clap@4.5.26
 	clap-cargo@0.15.1
-	clap_builder@4.5.24
+	clap_builder@4.5.26
 	clap_derive@4.5.24
 	clap_lex@0.7.4
 	clircle@0.6.1
@@ -65,7 +65,7 @@ CRATES="
 	itertools@0.13.0
 	itoa@1.0.14
 	libc@0.2.169
-	linux-raw-sys@0.4.14
+	linux-raw-sys@0.4.15
 	log@0.4.22
 	memchr@2.7.4
 	miniz_oxide@0.8.2
@@ -76,15 +76,15 @@ CRATES="
 	path_abs@0.5.1
 	plist@1.7.0
 	powerfmt@0.2.0
-	prettyplease@0.2.27
-	proc-macro2@1.0.92
+	prettyplease@0.2.29
+	proc-macro2@1.0.93
 	quick-xml@0.32.0
 	quote@1.0.38
 	regex@1.11.1
 	regex-automata@0.4.9
 	regex-syntax@0.8.5
 	rgb@0.8.50
-	rustix@0.38.42
+	rustix@0.38.43
 	ryu@1.0.18
 	same-file@1.0.6
 	semver@1.0.24
@@ -99,7 +99,7 @@ CRATES="
 	shlex@1.3.0
 	std_prelude@0.2.12
 	strsim@0.11.1
-	syn@2.0.95
+	syn@2.0.96
 	syn-select@0.3.0
 	syntect@5.2.0
 	tempfile@3.15.0
@@ -148,7 +148,7 @@ CRATES="
 	windows_x86_64_gnullvm@0.52.6
 	windows_x86_64_msvc@0.48.5
 	windows_x86_64_msvc@0.52.6
-	winnow@0.6.22
+	winnow@0.6.24
 "
 
 inherit cargo
