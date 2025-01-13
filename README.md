@@ -189,6 +189,9 @@ The following packages are available in this overlay:
 * net-analyzer/gping
   * Ping, but with a graph
   * https://github.com/orf/gping
+* net-analyzer/subfinder
+  * Fast passive subdomain enumeration tool
+  * https://github.com/projectdiscovery/subfinder
 * net-im/teams-for-linux
   * Unofficial Microsoft Teams for Linux client
   * https://github.com/IsmaelMartinez/teams-for-linux
