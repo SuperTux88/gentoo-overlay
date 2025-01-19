@@ -147,6 +147,10 @@ The following packages are available in this overlay:
 * gui-apps/wluma
   * Automatic brightness adjustment based on screen contents and ALS
   * https://github.com/maximbaz/wluma
+* gui-libs/gtk4-layer-shell
+  * A library to create panels and other desktop components for Wayland using the Layer Shell protocol and GTK4
+  * Dependency for mixxc
+  * https://github.com/wmww/gtk4-layer-shell
 * gui-libs/sway-systemd
   * Systemd integration for Sway session
   * https://github.com/alebastr/sway-systemd
