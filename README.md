@@ -189,6 +189,9 @@ The following packages are available in this overlay:
 * net-analyzer/gping
   * Ping, but with a graph
   * https://github.com/orf/gping
+* net-analyzer/gobuster
+  * Directory/File, DNS and VHost busting tool written in Go
+  * https://github.com/OJ/gobuster
 * net-analyzer/subfinder
   * Fast passive subdomain enumeration tool
   * https://github.com/projectdiscovery/subfinder
