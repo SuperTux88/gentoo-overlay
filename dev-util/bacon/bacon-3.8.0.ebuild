@@ -18,11 +18,13 @@ CRATES="
 	anstyle-query@1.1.2
 	anstyle-wincon@3.0.6
 	anyhow@1.0.95
+	arboard@3.4.1
 	arc-swap@1.7.1
 	arrayvec@0.5.2
 	autocfg@1.4.0
 	bitflags@1.3.2
 	bitflags@2.6.0
+	block2@0.5.1
 	bstr@1.11.1
 	bumpalo@3.16.0
 	camino@1.1.9
@@ -38,6 +40,7 @@ CRATES="
 	clap_derive@4.5.18
 	clap_lex@0.7.4
 	cli-log@2.1.0
+	clipboard-win@5.4.0
 	clru@0.6.2
 	colorchoice@1.0.3
 	coolor@1.0.0
@@ -53,12 +56,14 @@ CRATES="
 	crossbeam-utils@0.8.21
 	crossterm@0.28.1
 	crossterm_winapi@0.9.1
+	ctrlc@3.4.5
 	directories-next@2.0.0
 	dirs-sys-next@0.1.2
 	displaydoc@0.2.5
 	dunce@1.0.5
 	equivalent@1.0.1
 	errno@0.3.10
+	error-code@3.3.1
 	faster-hex@0.9.0
 	fastrand@2.3.0
 	file-size@1.0.3
@@ -67,6 +72,7 @@ CRATES="
 	fnv@1.0.7
 	form_urlencoded@1.2.1
 	fsevent-sys@4.1.0
+	gethostname@0.4.3
 	getrandom@0.2.15
 	gix@0.67.0
 	gix-actor@0.33.1
@@ -152,6 +158,15 @@ CRATES="
 	notify@7.0.0
 	notify-types@1.0.1
 	num-traits@0.2.19
+	objc-sys@0.3.5
+	objc2@0.5.2
+	objc2-app-kit@0.2.2
+	objc2-core-data@0.2.2
+	objc2-core-image@0.2.2
+	objc2-encode@4.0.3
+	objc2-foundation@0.2.2
+	objc2-metal@0.2.2
+	objc2-quartz-core@0.2.2
 	once_cell@1.20.2
 	parking_lot@0.12.3
 	parking_lot_core@0.9.10
@@ -226,18 +241,28 @@ CRATES="
 	windows-core@0.52.0
 	windows-sys@0.52.0
 	windows-sys@0.59.0
+	windows-targets@0.48.5
 	windows-targets@0.52.6
+	windows_aarch64_gnullvm@0.48.5
 	windows_aarch64_gnullvm@0.52.6
+	windows_aarch64_msvc@0.48.5
 	windows_aarch64_msvc@0.52.6
+	windows_i686_gnu@0.48.5
 	windows_i686_gnu@0.52.6
 	windows_i686_gnullvm@0.52.6
+	windows_i686_msvc@0.48.5
 	windows_i686_msvc@0.52.6
+	windows_x86_64_gnu@0.48.5
 	windows_x86_64_gnu@0.52.6
+	windows_x86_64_gnullvm@0.48.5
 	windows_x86_64_gnullvm@0.52.6
+	windows_x86_64_msvc@0.48.5
 	windows_x86_64_msvc@0.52.6
 	winnow@0.6.20
 	write16@1.0.0
 	writeable@0.5.5
+	x11rb@0.13.1
+	x11rb-protocol@0.13.1
 	xterm-query@0.5.0
 	yoke@0.7.5
 	yoke-derive@0.7.5
@@ -260,7 +285,7 @@ SRC_URI="
 
 LICENSE="AGPL-3"
 # Dependent crate licenses
-LICENSE+=" Apache-2.0 BSD CC0-1.0 ISC MIT Unicode-3.0"
+LICENSE+=" Apache-2.0 BSD Boost-1.0 CC0-1.0 ISC MIT Unicode-3.0"
 SLOT="0"
 KEYWORDS="~amd64"
 
