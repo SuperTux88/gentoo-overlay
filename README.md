@@ -181,6 +181,9 @@ The following packages are available in this overlay:
 * media-plugins/obs-wlrobs
   * An obs-studio plugin that allows you to screen capture on wlroots based wayland compositors
   * https://hg.sr.ht/~scoopta/wlrobs
+* media-sound/mixxc
+  * Minimalistic and flavorful volume mixer for widget enthusiasts
+  * https://github.com/Elvyria/Mixxc
 * media-sound/pwvucontrol
   * Pipewire Volume Control
   * https://github.com/saivert/pwvucontrol

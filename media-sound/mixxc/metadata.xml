@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Benjamin Neff</name>
+		<email>gentoo@benjaminneff.ch</email>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">Elvyria/Mixxc</remote-id>
+	</upstream>
+	<use>
+		<flag name="accent">Inherits the accent color from the system's settings</flag>
+		<flag name="sass">Allows you to use SCSS instead of CSS</flag>
+	</use>
+</pkgmetadata>
