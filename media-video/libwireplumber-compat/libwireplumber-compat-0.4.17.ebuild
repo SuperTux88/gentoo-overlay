@@ -7,11 +7,13 @@ MY_PN="wireplumber"
 
 LUA_COMPAT=( lua5-{3,4} )
 
-inherit lua-single meson systemd
+inherit lua-single meson
 
 DESCRIPTION="Compatibility version 4.x of libwireplumber - client library"
 HOMEPAGE="https://gitlab.freedesktop.org/pipewire/wireplumber"
 SRC_URI="https://gitlab.freedesktop.org/pipewire/${MY_PN}/-/archive/${PV}/${MY_PN}-${PV}.tar.bz2"
+
+S="${WORKDIR}/${MY_PN}-${PV}"
 
 LICENSE="MIT"
 SLOT="0.4"
@@ -35,9 +37,6 @@ DEPEND=">=media-video/wireplumber-0.5[elogind?,systemd?]"
 RDEPEND="${DEPEND}"
 
 DOCS=( {NEWS,README}.rst )
-
-S="${WORKDIR}/${MY_PN}-${PV}"
-
 
 src_configure() {
 	local emesonargs=(

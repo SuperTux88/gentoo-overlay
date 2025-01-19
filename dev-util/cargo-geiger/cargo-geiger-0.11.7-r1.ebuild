@@ -381,6 +381,8 @@ SRC_URI="
 	${CARGO_CRATE_URIS}
 "
 
+S="${WORKDIR}/${PN}-${PN}-v${PV}"
+
 # License set may be more restrictive as OR is not respected
 # use cargo-license for a more accurate license picture
 LICENSE="|| ( Apache-2.0 MIT )"
@@ -391,8 +393,6 @@ KEYWORDS="~amd64"
 
 DEPEND="dev-libs/libgit2:="
 RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/${PN}-${PN}-v${PV}"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-update-libgit2-sys.patch

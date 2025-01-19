@@ -16,6 +16,8 @@ SRC_URI="
 	https://gentoo.jss.hu/distfiles/sl.en.1.gz
 "
 
+S="${WORKDIR}/${MY_PN}"
+
 LICENSE="Toyoda"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -28,8 +30,6 @@ DEPEND="
 	${RDEPEND}
 	virtual/pkgconfig
 "
-
-S="${WORKDIR}/${MY_PN}"
 
 PATCHES=(
 	"${DISTDIR}"/${SL_PATCH}
@@ -46,4 +46,3 @@ src_install() {
 
 	einstalldocs
 }
-

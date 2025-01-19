@@ -10,6 +10,8 @@ DESCRIPTION="An obs-studio plugin for screen capture on wlroots based wayland co
 HOMEPAGE="https://hg.sr.ht/~scoopta/wlrobs"
 SRC_URI="https://hg.sr.ht/~scoopta/${MY_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
+S="${WORKDIR}/${MY_PN}-v${PV}"
+
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -24,8 +26,6 @@ RDEPEND="${DEPEND}"
 BDEPEND="
 	virtual/pkgconfig
 "
-
-S="${WORKDIR}/${MY_PN}-v${PV}"
 
 src_configure() {
 	local emesonargs=(
