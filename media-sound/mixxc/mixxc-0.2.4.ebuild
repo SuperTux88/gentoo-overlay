@@ -258,7 +258,7 @@ IUSE="+wayland X accent +sass"
 REQUIRED_USE="|| ( wayland X )"
 
 DEPEND="
-	gui-libs/gtk:4
+	>=gui-libs/gtk-4.15.1:4
 	media-libs/libpulse
 	wayland? ( gui-libs/gtk4-layer-shell )
 	X? ( x11-libs/libxcb )
