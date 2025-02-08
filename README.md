@@ -175,9 +175,6 @@ The following packages are available in this overlay:
 * media-video/libwireplumber-compat
   * Compatibility version 4.x of libwireplumber
   * Dependency for pwvucontrol (wireplumber.rs)
-* net-analyzer/bandwhich
-  * Terminal bandwidth utilization tool
-  * https://github.com/imsnif/bandwhich
 * net-analyzer/gobuster
   * Directory/File, DNS and VHost busting tool written in Go
   * https://github.com/OJ/gobuster
