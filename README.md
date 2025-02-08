@@ -48,9 +48,6 @@ The following packages are available in this overlay:
 * app-arch/nfpm
   * nFPM is Not FPM - a simple deb, rpm, apk, ipk, and arch linux packager written in Go
   * https://nfpm.goreleaser.com
-* app-containers/podman-compose
-  * A script to run docker-compose.yml using podman
-  * https://github.com/containers/podman-compose
 * app-laptop/fw-ectool
   * ectool for the Framework laptop
   * https://gitlab.howett.net/DHowett/ectool
