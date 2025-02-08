@@ -82,12 +82,9 @@ The following packages are available in this overlay:
 * app-shells/powerlevel10k
   * A theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience
   * https://github.com/romkatv/powerlevel10k
-* dev-build/make
+* dev-build/just
   * Just a command runner
   * https://github.com/casey/just
-* dev-python/grpcio
-  * High-performance RPC framework (python libraries)
-  * https://grpc.io
 * dev-util/cargo-auditable
   * Make production Rust binaries auditable
   * https://github.com/rust-secure-code/cargo-auditable
@@ -144,9 +141,6 @@ The following packages are available in this overlay:
 * gui-apps/wl-mirror
   * A simple Wayland output mirror client
   * https://github.com/Ferdi265/wl-mirror
-* gui-apps/wluma
-  * Automatic brightness adjustment based on screen contents and ALS
-  * https://github.com/maximbaz/wluma
 * gui-libs/gtk4-layer-shell
   * A library to create panels and other desktop components for Wayland using the Layer Shell protocol and GTK4
   * Dependency for mixxc
@@ -156,9 +150,6 @@ The following packages are available in this overlay:
   * https://github.com/alebastr/sway-systemd
 * media-fonts/meslo-nerd
   * Nerd Font build of Apple's Menlo font
-  * https://github.com/ryanoasis/nerd-fonts
-* media-fonts/nerd-fonts-symbols
-  * High number of extra glyphs from popular 'iconic fonts'
   * https://github.com/ryanoasis/nerd-fonts
 * media-fonts/terminess-nerd
   * Nerd Font build of Terminus font
