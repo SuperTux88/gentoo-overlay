@@ -226,6 +226,9 @@ The following packages are available in this overlay:
 * sys-kernel/it87
   * IT87 sensors module
   * https://github.com/a1wong/it87
+* sys-kernel/zenstats
+  * Zenstats is a Linux kernel driver for reading temperature, voltage(SVI2), current(SVI2) and power(SVI2) for AMD Zen family CPUs
+  * https://github.com/Sid127/zenstats
 * sys-power/amd_s2idle
   * S0i3/s2idle analysis script for AMD systems
   * https://gitlab.freedesktop.org/drm/amd/-/blob/master/scripts/amd_s2idle.py
