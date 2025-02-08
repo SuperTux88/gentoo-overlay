@@ -235,9 +235,6 @@ The following packages are available in this overlay:
 * sys-kernel/it87
   * IT87 sensors module
   * https://github.com/a1wong/it87
-* sys-kernel/zenpower3
-  * Linux kernel driver for reading sensors of AMD Zen family CPUs
-  * https://git.exozy.me/a/zenpower3
 * sys-power/amd_s2idle
   * S0i3/s2idle analysis script for AMD systems
   * https://gitlab.freedesktop.org/drm/amd/-/blob/master/scripts/amd_s2idle.py
