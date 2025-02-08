@@ -181,9 +181,6 @@ The following packages are available in this overlay:
 * net-analyzer/bandwhich
   * Terminal bandwidth utilization tool
   * https://github.com/imsnif/bandwhich
-* net-analyzer/gping
-  * Ping, but with a graph
-  * https://github.com/orf/gping
 * net-analyzer/gobuster
   * Directory/File, DNS and VHost busting tool written in Go
   * https://github.com/OJ/gobuster
