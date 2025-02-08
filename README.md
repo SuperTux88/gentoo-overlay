@@ -129,9 +129,6 @@ The following packages are available in this overlay:
   * https://github.com/MitMaro/git-interactive-rebase-tool
 * gnome-extra/gnome-tweaks
   * Same as upstream, with additional `gnome-shell` USE flag
-* gui-apps/clipman
-  * A simple clipboard manager for Wayland
-  * https://github.com/chmouel/clipman
 * gui-apps/wdisplays
   * A graphical application for configuring displays in Wayland compositors
   * https://github.com/artizirk/wdisplays
