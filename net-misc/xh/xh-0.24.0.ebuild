@@ -340,6 +340,9 @@ src_install() {
 
 	dosym "${PN}" /usr/bin/xhs
 
+	einstalldocs
+	doman "doc/${PN}.1"
+
 	newbashcomp completions/${PN}.bash ${PN}
 	dozshcomp completions/_${PN}
 	dofishcomp completions/${PN}.fish
