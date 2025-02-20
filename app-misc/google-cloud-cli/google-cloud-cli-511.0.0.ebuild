@@ -16,7 +16,6 @@ S="${WORKDIR}/google-cloud-sdk"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="anthoscli"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DEPEND="${PYTHON_DEPS}"
@@ -29,8 +28,6 @@ src_prepare() {
 	rm -rf "platform/gsutil/third_party/crcmod_osx"
 	rm -rf "platform/bundledpythonunix"
 	find -type d -name "python2" -prune -exec rm -rf "{}" \;
-
-	use anthoscli || rm bin/anthoscli
 
 	python_fix_shebang --force .
 }
@@ -45,8 +42,6 @@ src_install() {
 	dosym "../share/google-cloud-sdk/bin/bq" /usr/bin/bq
 	dosym "../share/google-cloud-sdk/bin/docker-credential-gcloud" /usr/bin/docker-credential-gcloud
 	dosym "../share/google-cloud-sdk/bin/git-credential-gcloud.sh" /usr/bin/git-credential-gcloud.sh
-
-	use anthoscli && dosym "../share/google-cloud-sdk/bin/anthoscli" /usr/bin/anthoscli
 
 	python_optimize "${ED}/usr/share/google-cloud-sdk"
 }
