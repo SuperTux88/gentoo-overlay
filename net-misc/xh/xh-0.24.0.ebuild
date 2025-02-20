@@ -15,7 +15,7 @@ CRATES="
 	anstyle@1.0.10
 	anstyle-parse@0.2.6
 	anstyle-query@1.1.2
-	anstyle-wincon@3.0.6
+	anstyle-wincon@3.0.7
 	anyhow@1.0.95
 	assert_cmd@2.0.16
 	atomic-waker@1.1.2
@@ -24,33 +24,32 @@ CRATES="
 	base64@0.22.1
 	bincode@1.3.3
 	bitflags@1.3.2
-	bitflags@2.6.0
+	bitflags@2.8.0
 	block-buffer@0.10.4
 	brotli@3.5.0
 	brotli-decompressor@2.5.1
-	bstr@1.11.1
-	bumpalo@3.16.0
+	bstr@1.11.3
+	bumpalo@3.17.0
 	byteorder@1.5.0
-	bytes@1.9.0
-	cc@1.2.6
+	bytes@1.10.0
+	cc@1.2.14
 	cfg-if@1.0.0
 	cfg_aliases@0.2.1
 	chardetng@0.1.17
-	clap@4.5.23
-	clap_builder@4.5.23
-	clap_complete@4.5.40
-	clap_derive@4.5.18
+	clap@4.5.30
+	clap_builder@4.5.30
+	clap_complete@4.5.45
+	clap_complete_nushell@4.5.5
+	clap_derive@4.5.28
 	clap_lex@0.7.4
 	colorchoice@1.0.3
 	console@0.15.10
-	cookie@0.17.0
 	cookie@0.18.1
-	cookie_store@0.20.0
 	cookie_store@0.21.1
 	core-foundation@0.9.4
 	core-foundation@0.10.0
 	core-foundation-sys@0.8.7
-	cpufeatures@0.2.16
+	cpufeatures@0.2.17
 	crc32fast@1.4.2
 	crypto-common@0.1.6
 	deranged@0.3.11
@@ -61,14 +60,14 @@ CRATES="
 	dirs-sys@0.4.1
 	displaydoc@0.2.5
 	doc-comment@0.3.3
-	document-features@0.2.10
+	document-features@0.2.11
 	either@1.13.0
 	encode_unicode@1.0.0
 	encoding_rs@0.8.35
 	encoding_rs_io@0.1.7
 	env_filter@0.1.3
 	env_logger@0.11.6
-	equivalent@1.0.1
+	equivalent@1.0.2
 	errno@0.3.10
 	fastrand@2.3.0
 	flate2@1.0.35
@@ -86,19 +85,19 @@ CRATES="
 	generic-array@0.14.7
 	getopts@0.2.21
 	getrandom@0.2.15
+	getrandom@0.3.1
 	gimli@0.31.1
 	h2@0.4.7
-	hashbrown@0.12.3
 	hashbrown@0.15.2
 	heck@0.5.0
 	hex@0.4.3
 	http@1.2.0
 	http-body@1.0.1
 	http-body-util@0.1.2
-	httparse@1.9.5
+	httparse@1.10.0
 	httpdate@1.0.3
 	humantime@2.1.0
-	hyper@1.5.2
+	hyper@1.6.0
 	hyper-rustls@0.27.5
 	hyper-tls@0.6.0
 	hyper-util@0.1.10
@@ -112,51 +111,49 @@ CRATES="
 	icu_properties_data@1.5.0
 	icu_provider@1.5.0
 	icu_provider_macros@1.5.0
-	idna@0.3.0
 	idna@1.0.3
 	idna_adapter@1.2.0
-	indexmap@1.9.3
-	indexmap@2.7.0
-	indicatif@0.17.9
+	indexmap@2.7.1
+	indicatif@0.17.11
 	indoc@2.0.5
-	ipnet@2.10.1
+	ipnet@2.11.0
 	is_terminal_polyfill@1.70.1
 	itoa@1.0.14
-	js-sys@0.3.76
+	js-sys@0.3.77
 	jsonxf@1.1.1
 	libc@0.2.169
 	libredox@0.1.3
 	linked-hash-map@0.5.6
-	linux-raw-sys@0.4.14
+	linux-raw-sys@0.4.15
 	litemap@0.7.4
 	litrs@0.4.1
-	log@0.4.22
+	log@0.4.25
 	md-5@0.10.6
 	memchr@2.7.4
 	mime@0.3.17
 	mime2ext@0.1.53
 	mime_guess@2.0.5
-	miniz_oxide@0.8.2
+	miniz_oxide@0.8.4
 	mio@1.0.3
-	native-tls@0.2.12
+	native-tls@0.2.13
 	network-interface@1.1.4
 	normalize-line-endings@0.3.0
 	num-conv@0.1.0
 	num-traits@0.2.19
 	number_prefix@0.4.0
 	object@0.36.7
-	once_cell@1.20.2
+	once_cell@1.20.3
 	onig@6.4.0
 	onig_sys@69.8.1
-	openssl@0.10.68
+	openssl@0.10.71
 	openssl-macros@0.1.1
-	openssl-probe@0.1.5
-	openssl-sys@0.9.104
+	openssl-probe@0.1.6
+	openssl-sys@0.9.106
 	option-ext@0.2.0
 	os_display@0.1.3
 	pem@3.0.4
 	percent-encoding@2.3.1
-	pin-project-lite@0.2.15
+	pin-project-lite@0.2.16
 	pin-utils@0.1.0
 	pkg-config@0.3.31
 	plist@1.7.0
@@ -166,13 +163,13 @@ CRATES="
 	predicates@3.1.3
 	predicates-core@1.0.9
 	predicates-tree@1.0.12
-	proc-macro2@1.0.92
+	proc-macro2@1.0.93
 	psl-types@2.0.11
 	publicsuffix@2.3.0
 	quick-xml@0.32.0
 	quinn@0.11.6
 	quinn-proto@0.11.9
-	quinn-udp@0.5.9
+	quinn-udp@0.5.10
 	quote@1.0.38
 	rand@0.8.5
 	rand_chacha@0.3.1
@@ -183,61 +180,62 @@ CRATES="
 	regex-lite@0.1.6
 	regex-syntax@0.8.5
 	reqwest@0.12.12
-	ring@0.17.8
+	reqwest_cookie_store@0.8.0
+	ring@0.17.9
 	roff@0.2.2
 	rpassword@7.3.1
 	rtoolbox@0.0.2
 	rustc-demangle@0.1.24
-	rustc-hash@2.1.0
-	rustix@0.38.42
-	rustls@0.23.20
+	rustc-hash@2.1.1
+	rustix@0.38.44
+	rustls@0.23.23
 	rustls-native-certs@0.8.1
 	rustls-pemfile@2.2.0
-	rustls-pki-types@1.10.1
+	rustls-pki-types@1.11.0
 	rustls-webpki@0.102.8
+	rustversion@1.0.19
 	ruzstd@0.7.3
-	ryu@1.0.18
+	ryu@1.0.19
 	same-file@1.0.6
 	schannel@0.1.27
 	security-framework@2.11.1
-	security-framework@3.1.0
-	security-framework-sys@2.13.0
+	security-framework@3.2.0
+	security-framework-sys@2.14.0
 	serde@1.0.217
 	serde-transcode@1.1.1
 	serde_derive@1.0.217
-	serde_json@1.0.134
+	serde_json@1.0.138
 	serde_urlencoded@0.7.1
 	sha2@0.10.8
 	shlex@1.3.0
 	slab@0.4.9
-	smallvec@1.13.2
+	smallvec@1.14.0
 	socket2@0.5.8
-	spin@0.9.8
 	stable_deref_trait@1.2.0
 	strsim@0.11.1
 	subtle@2.6.1
 	supports-hyperlinks@3.1.0
-	syn@2.0.94
+	syn@2.0.98
 	sync_wrapper@1.0.2
 	synstructure@0.13.1
 	syntect@5.2.0
 	system-configuration@0.6.1
 	system-configuration-sys@0.6.0
-	tempfile@3.14.0
+	tempfile@3.17.1
 	termcolor@1.4.1
 	terminal_size@0.4.1
 	termtree@0.5.1
 	thiserror@1.0.69
-	thiserror@2.0.9
+	thiserror@2.0.11
 	thiserror-impl@1.0.69
-	thiserror-impl@2.0.9
+	thiserror-impl@2.0.11
 	time@0.3.37
 	time-core@0.1.2
 	time-macros@0.2.19
 	tinystr@0.7.6
 	tinyvec@1.8.1
 	tinyvec_macros@0.1.1
-	tokio@1.42.0
+	tokio@1.43.0
 	tokio-native-tls@0.3.1
 	tokio-rustls@0.26.1
 	tokio-socks@0.5.2
@@ -248,11 +246,9 @@ CRATES="
 	tracing@0.1.41
 	tracing-core@0.1.33
 	try-lock@0.2.5
-	typenum@1.17.0
+	typenum@1.18.0
 	unicase@2.8.1
-	unicode-bidi@0.3.18
-	unicode-ident@1.0.14
-	unicode-normalization@0.1.24
+	unicode-ident@1.0.16
 	unicode-width@0.1.14
 	unicode-width@0.2.0
 	untrusted@0.9.0
@@ -262,19 +258,20 @@ CRATES="
 	utf8parse@0.2.2
 	vcpkg@0.2.15
 	version_check@0.9.5
-	wait-timeout@0.2.0
+	wait-timeout@0.2.1
 	walkdir@2.5.0
 	want@0.3.1
 	wasi@0.11.0+wasi-snapshot-preview1
-	wasm-bindgen@0.2.99
-	wasm-bindgen-backend@0.2.99
-	wasm-bindgen-futures@0.4.49
-	wasm-bindgen-macro@0.2.99
-	wasm-bindgen-macro-support@0.2.99
-	wasm-bindgen-shared@0.2.99
-	web-sys@0.3.76
+	wasi@0.13.3+wasi-0.2.2
+	wasm-bindgen@0.2.100
+	wasm-bindgen-backend@0.2.100
+	wasm-bindgen-futures@0.4.50
+	wasm-bindgen-macro@0.2.100
+	wasm-bindgen-macro-support@0.2.100
+	wasm-bindgen-shared@0.2.100
+	web-sys@0.3.77
 	web-time@1.1.0
-	webpki-roots@0.26.7
+	webpki-roots@0.26.8
 	winapi@0.3.9
 	winapi-i686-pc-windows-gnu@0.4.0
 	winapi-util@0.1.9
@@ -302,6 +299,7 @@ CRATES="
 	windows_x86_64_gnullvm@0.52.6
 	windows_x86_64_msvc@0.48.5
 	windows_x86_64_msvc@0.52.6
+	wit-bindgen-rt@0.33.0
 	write16@1.0.0
 	writeable@0.5.5
 	yaml-rust@0.4.5
