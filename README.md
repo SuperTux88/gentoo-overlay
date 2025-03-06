@@ -232,6 +232,9 @@ The following packages are available in this overlay:
 * sys-power/sntrack
   * Tracks the battery discharge rate during sleep
   * https://github.com/xsmile/sntrack
+* sys-power/wluma
+  * Automatic brightness adjustment based on screen contents and ALS
+  * https://github.com/maximbaz/wluma
 * www-servers/miniserve
   * A CLI tool to serve files and dirs over HTTP
   * https://github.com/svenstaro/miniserve
