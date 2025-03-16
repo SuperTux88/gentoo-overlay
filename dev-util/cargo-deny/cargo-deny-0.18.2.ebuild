@@ -231,7 +231,7 @@ CRATES="
 	regex-automata@0.4.9
 	regex-syntax@0.8.5
 	reqwest@0.12.12
-	ring@0.17.11
+	ring@0.17.13
 	rmp@0.8.14
 	rmp-serde@1.3.0
 	rustc-demangle@0.1.24
