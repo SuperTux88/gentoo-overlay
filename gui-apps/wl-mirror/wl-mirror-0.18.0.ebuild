@@ -1,4 +1,4 @@
-# Copyright 2023-2024 Gentoo Authors
+# Copyright 2023-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -13,7 +13,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE="man"
+IUSE="+dmabuf man"
 
 DEPEND="
 	gui-libs/libdecor
@@ -22,6 +22,10 @@ DEPEND="
 	dev-libs/wayland
 	dev-util/wayland-scanner
 	media-libs/libglvnd
+	dmabuf? (
+		media-libs/mesa[opengl]
+		x11-libs/libdrm
+	)
 	man? ( app-text/scdoc )
 "
 RDEPEND="${DEPEND}"
@@ -29,6 +33,7 @@ RDEPEND="${DEPEND}"
 src_configure() {
 	mycmakeargs=(
 		-DWITH_LIBDECOR=ON
+		-DWITH_GBM=$(usex dmabuf ON OFF)
 		-DINSTALL_DOCUMENTATION=$(usex man ON OFF)
 		-DFORCE_SYSTEM_WL_PROTOCOLS=ON
 		-DFORCE_SYSTEM_WLR_PROTOCOLS=OFF
