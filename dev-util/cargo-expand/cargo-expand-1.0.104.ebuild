@@ -41,7 +41,7 @@ CRATES="
 	darling@0.20.10
 	darling_core@0.20.10
 	darling_macro@0.20.10
-	deranged@0.3.11
+	deranged@0.4.1
 	either@1.15.0
 	encode_unicode@1.0.0
 	encoding_rs@0.8.35
@@ -52,7 +52,7 @@ CRATES="
 	flate2@1.1.0
 	fnv@1.0.7
 	fs-err@3.1.0
-	getrandom@0.3.1
+	getrandom@0.3.2
 	globset@0.4.16
 	grep-cli@0.1.11
 	hashbrown@0.15.2
@@ -64,26 +64,27 @@ CRATES="
 	itertools@0.13.0
 	itoa@1.0.15
 	libc@0.2.171
-	linux-raw-sys@0.9.2
-	log@0.4.26
+	linux-raw-sys@0.9.3
+	log@0.4.27
 	memchr@2.7.4
 	miniz_oxide@0.8.5
 	mio@1.0.3
 	nu-ansi-term@0.50.1
 	num-conv@0.1.0
-	once_cell@1.21.0
+	once_cell@1.21.1
 	path_abs@0.5.1
-	plist@1.7.0
+	plist@1.7.1
 	powerfmt@0.2.0
 	prettyplease@0.2.31
 	proc-macro2@1.0.94
 	quick-xml@0.32.0
 	quote@1.0.40
+	r-efi@5.2.0
 	regex@1.11.1
 	regex-automata@0.4.9
 	regex-syntax@0.8.5
 	rgb@0.8.50
-	rustix@1.0.2
+	rustix@1.0.3
 	ryu@1.0.20
 	same-file@1.0.6
 	semver@1.0.26
@@ -101,15 +102,15 @@ CRATES="
 	syn@2.0.100
 	syn-select@0.3.0
 	syntect@5.2.0
-	tempfile@3.18.0
+	tempfile@3.19.1
 	termcolor@1.4.1
 	terminal-colorsaurus@0.4.8
 	terminal-trx@0.2.4
 	thiserror@1.0.69
 	thiserror-impl@1.0.69
-	time@0.3.39
-	time-core@0.1.3
-	time-macros@0.2.20
+	time@0.3.41
+	time-core@0.1.4
+	time-macros@0.2.22
 	toml@0.8.20
 	toml_datetime@0.6.8
 	toml_edit@0.22.24
@@ -121,7 +122,7 @@ CRATES="
 	utf8parse@0.2.2
 	walkdir@2.5.0
 	wasi@0.11.0+wasi-snapshot-preview1
-	wasi@0.13.3+wasi-0.2.2
+	wasi@0.14.2+wasi-0.2.4
 	winapi-util@0.1.9
 	windows@0.56.0
 	windows-core@0.56.0
@@ -140,7 +141,7 @@ CRATES="
 	windows_x86_64_gnullvm@0.52.6
 	windows_x86_64_msvc@0.52.6
 	winnow@0.7.4
-	wit-bindgen-rt@0.33.0
+	wit-bindgen-rt@0.39.0
 	xterm-color@1.0.1
 "
 
