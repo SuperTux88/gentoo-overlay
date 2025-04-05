@@ -10,6 +10,6 @@ LICENSE=Apache-2.0
 RDEPEND=python_single_target_python3_13t? ( dev-lang/python:3.13t ) python_single_target_python3_10? ( dev-lang/python:3.10 ) python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_12? ( dev-lang/python:3.12 ) python_single_target_python3_13? ( dev-lang/python:3.13 )
 REQUIRED_USE=^^ ( python_single_target_python3_13t python_single_target_python3_10 python_single_target_python3_11 python_single_target_python3_12 python_single_target_python3_13 )
 SLOT=0
-SRC_URI=https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-515.0.0-linux-x86_64.tar.gz
+SRC_URI=https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-517.0.0-linux-x86_64.tar.gz
 _eclasses_=multiprocessing	1e32df7deee68372153dca65f4a7c21f	toolchain-funcs	6afdb6107430c1832ca7e16aacbf8fa1	multilib	b2a329026f2e404e9e371097dda47f96	python-utils-r1	b7726144f5af59e186d66746d0f513e5	python-single-r1	47d8ac9be330c9366112b78fd4f8ce57
 _md5_=92c9c9824d0888698a25c331fd6e8597
