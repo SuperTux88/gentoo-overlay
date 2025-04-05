@@ -5,11 +5,11 @@ DESCRIPTION=Tracks the battery discharge rate during sleep
 EAPI=8
 HOMEPAGE=https://github.com/xsmile/sntrack
 INHERIT=python-single-r1 git-r3
-IUSE=systemd python_single_target_python3_10 python_single_target_python3_11 python_single_target_python3_12
+IUSE=systemd python_single_target_python3_13t python_single_target_python3_10 python_single_target_python3_11 python_single_target_python3_12 python_single_target_python3_13
 LICENSE=GPL-3
 PROPERTIES=live
-RDEPEND=>=dev-python/matplotlib-3.5.0 systemd? ( sys-apps/systemd ) python_single_target_python3_10? ( dev-lang/python:3.10 ) python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_12? ( dev-lang/python:3.12 )
-REQUIRED_USE=^^ ( python_single_target_python3_10 python_single_target_python3_11 python_single_target_python3_12 )
+RDEPEND=>=dev-python/matplotlib-3.5.0 systemd? ( sys-apps/systemd ) python_single_target_python3_13t? ( dev-lang/python:3.13t ) python_single_target_python3_10? ( dev-lang/python:3.10 ) python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_12? ( dev-lang/python:3.12 ) python_single_target_python3_13? ( dev-lang/python:3.13 )
+REQUIRED_USE=^^ ( python_single_target_python3_13t python_single_target_python3_10 python_single_target_python3_11 python_single_target_python3_12 python_single_target_python3_13 )
 SLOT=0
 _eclasses_=multiprocessing	1e32df7deee68372153dca65f4a7c21f	toolchain-funcs	6afdb6107430c1832ca7e16aacbf8fa1	multilib	b2a329026f2e404e9e371097dda47f96	python-utils-r1	b7726144f5af59e186d66746d0f513e5	python-single-r1	47d8ac9be330c9366112b78fd4f8ce57	git-r3	875eb471682d3e1f18da124be97dcc81
-_md5_=74ef7bb9de48ba966fea58d9ad490efa
+_md5_=41dce95a9e289adea79b407d34e0bcf1
