@@ -8,4 +8,7 @@
 	<upstream>
 		<remote-id type="github">Ferdi265/wl-mirror</remote-id>
 	</upstream>
+	<use>
+		<flag name="dmabuf">Use libgbm and libdrm to enable the dmabuf backends</flag>
+	</use>
 </pkgmetadata>
