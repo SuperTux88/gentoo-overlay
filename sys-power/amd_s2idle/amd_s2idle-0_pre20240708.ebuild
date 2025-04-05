@@ -1,9 +1,9 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2024-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..13} )
+PYTHON_COMPAT=( python3_{10..13} python3_13t )
 inherit python-single-r1
 
 COMMIT_HASH="5ad0395be1aa457aa9a4128b358a4b005ffde3bf"
