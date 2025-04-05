@@ -8,4 +8,7 @@
 	<upstream>
 		<remote-id type="github">TamtamHero/fw-fanctrl</remote-id>
 	</upstream>
+	<use>
+		<flag name="no-battery-sensors">disable checking battery temperature sensors</flag>
+	</use>
 </pkgmetadata>

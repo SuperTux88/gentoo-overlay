@@ -3,8 +3,10 @@
 
 EAPI=8
 
+DISTUTILS_SINGLE_IMPL=1
+DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{12..13} python3_13t )
-inherit python-single-r1
+inherit distutils-r1
 
 inherit systemd
 
@@ -16,10 +18,12 @@ EGIT_REPO_URI="${HOMEPAGE}.git"
 
 LICENSE="BSD"
 SLOT="0"
+IUSE="no-battery-sensors"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DEPEND="
 	app-laptop/fw-ectool
+	dev-python/jsonschema
 	sys-apps/systemd
 "
 RDEPEND="
@@ -27,17 +31,20 @@ RDEPEND="
 	${PYTHON_DEPS}
 "
 
-src_compile() {
+python_compile() {
+	distutils-r1_python_compile
+
 	for file in services/${PN}.service services/system-sleep/${PN}-suspend; do
 		echo "Templating ${file}"
-		sed -i -e "s#%PREFIX_DIRECTORY%#/usr#" ${file} || die
+		sed -i -e "s#%DEFAULT_PYTHON_PATH%#/usr/bin/python3#" ${file} || die
+		sed -i -e "s#%PYTHON_SCRIPT_INSTALLATION_PATH%#/usr/bin/fw-fanctrl#" ${file} || die
 		sed -i -e "s#%SYSCONF_DIRECTORY%#/etc#" ${file} || die
+		sed -i -e "s#%NO_BATTERY_SENSOR_OPTION%#$(usex no-battery-sensors --no-battery-sensors)#" ${file} || die
 	done
 }
 
-src_install() {
-	exeinto /usr/bin
-	newexe fanctrl.py ${PN}
+python_install_all() {
+	distutils-r1_python_install_all
 
 	systemd_dounit "services/${PN}.service"
 
@@ -45,7 +52,6 @@ src_install() {
 	doexe services/system-sleep/${PN}-suspend
 
 	insinto /etc/${PN}
-	doins config.json
-
-	einstalldocs
+	doins src/fw_fanctrl/_resources/config.json
+	doins src/fw_fanctrl/_resources/config.schema.json
 }
