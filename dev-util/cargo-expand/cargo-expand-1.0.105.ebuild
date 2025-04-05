@@ -25,12 +25,12 @@ CRATES="
 	bitflags@2.9.0
 	bstr@1.11.3
 	bytemuck@1.22.0
-	bytesize@1.3.2
+	bytesize@1.3.3
 	cargo-subcommand-metadata@0.1.0
 	cfg-if@1.0.0
-	clap@4.5.32
+	clap@4.5.35
 	clap-cargo@0.15.2
-	clap_builder@4.5.32
+	clap_builder@4.5.35
 	clap_derive@4.5.32
 	clap_lex@0.7.4
 	clircle@0.6.1
@@ -38,18 +38,18 @@ CRATES="
 	console@0.15.11
 	content_inspector@0.2.4
 	crc32fast@1.4.2
-	darling@0.20.10
-	darling_core@0.20.10
-	darling_macro@0.20.10
+	darling@0.20.11
+	darling_core@0.20.11
+	darling_macro@0.20.11
 	deranged@0.4.1
 	either@1.15.0
 	encode_unicode@1.0.0
 	encoding_rs@0.8.35
 	equivalent@1.0.2
-	errno@0.3.10
+	errno@0.3.11
 	fancy-regex@0.11.0
 	fastrand@2.3.0
-	flate2@1.1.0
+	flate2@1.1.1
 	fnv@1.0.7
 	fs-err@3.1.0
 	getrandom@0.3.2
@@ -67,15 +67,15 @@ CRATES="
 	linux-raw-sys@0.9.3
 	log@0.4.27
 	memchr@2.7.4
-	miniz_oxide@0.8.5
+	miniz_oxide@0.8.7
 	mio@1.0.3
 	nu-ansi-term@0.50.1
 	num-conv@0.1.0
-	once_cell@1.21.1
+	once_cell@1.21.3
 	path_abs@0.5.1
 	plist@1.7.1
 	powerfmt@0.2.0
-	prettyplease@0.2.31
+	prettyplease@0.2.32
 	proc-macro2@1.0.94
 	quick-xml@0.32.0
 	quote@1.0.40
@@ -84,7 +84,7 @@ CRATES="
 	regex-automata@0.4.9
 	regex-syntax@0.8.5
 	rgb@0.8.50
-	rustix@1.0.3
+	rustix@1.0.5
 	ryu@1.0.20
 	same-file@1.0.6
 	semver@1.0.26
