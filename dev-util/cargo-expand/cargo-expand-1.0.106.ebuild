@@ -41,7 +41,7 @@ CRATES="
 	darling@0.20.11
 	darling_core@0.20.11
 	darling_macro@0.20.11
-	deranged@0.4.1
+	deranged@0.4.0
 	either@1.15.0
 	encode_unicode@1.0.0
 	encoding_rs@0.8.35
@@ -59,7 +59,7 @@ CRATES="
 	heck@0.5.0
 	home@0.5.11
 	ident_case@1.0.1
-	indexmap@2.8.0
+	indexmap@2.9.0
 	is_terminal_polyfill@1.70.1
 	itertools@0.13.0
 	itoa@1.0.15
