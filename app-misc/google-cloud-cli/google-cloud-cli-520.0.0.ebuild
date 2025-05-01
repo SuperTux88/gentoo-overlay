@@ -49,7 +49,5 @@ src_install() {
 	newbashcomp "${ED}/usr/share/google-cloud-sdk/completion.bash.inc" gcloud
 	bashcomp_alias gcloud bq gsutil
 
-	newzshcomp "${ED}/usr/share/google-cloud-sdk/completion.zsh.inc" _${PN}
-
 	python_optimize "${ED}/usr/share/google-cloud-sdk"
 }
