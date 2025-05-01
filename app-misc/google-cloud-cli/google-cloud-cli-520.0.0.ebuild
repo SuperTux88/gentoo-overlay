@@ -5,17 +5,20 @@ EAPI=8
 
 PYTHON_COMPAT=( python3_{10..13} python3_13t )
 
-inherit python-single-r1
+inherit python-single-r1 shell-completion
 
 DESCRIPTION="Google Cloud CLI"
 HOMEPAGE="https://cloud.google.com/sdk/"
-SRC_URI="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/${P}-linux-x86_64.tar.gz"
+SRC_URI="
+	amd64? ( https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/${P}-linux-x86_64.tar.gz )
+	arm64? ( https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/${P}-linux-arm.tar.gz )
+"
 
 S="${WORKDIR}/google-cloud-sdk"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DEPEND="${PYTHON_DEPS}"
@@ -42,6 +45,9 @@ src_install() {
 	dosym "../share/google-cloud-sdk/bin/bq" /usr/bin/bq
 	dosym "../share/google-cloud-sdk/bin/docker-credential-gcloud" /usr/bin/docker-credential-gcloud
 	dosym "../share/google-cloud-sdk/bin/git-credential-gcloud.sh" /usr/bin/git-credential-gcloud.sh
+
+	newbashcomp "${ED}/usr/share/google-cloud-sdk/completion.bash.inc" gcloud
+	bashcomp_alias gcloud bq gsutil
 
 	python_optimize "${ED}/usr/share/google-cloud-sdk"
 }
