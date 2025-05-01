@@ -9,8 +9,10 @@ inherit python-single-r1 shell-completion
 
 DESCRIPTION="Google Cloud CLI"
 HOMEPAGE="https://cloud.google.com/sdk/"
-SRC_URI="amd64? ( https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/${P}-linux-x86_64.tar.gz )
-		arm64? ( https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/${P}-linux-arm.tar.gz )"
+SRC_URI="
+	amd64? ( https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/${P}-linux-x86_64.tar.gz )
+	arm64? ( https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/${P}-linux-arm.tar.gz )
+"
 
 S="${WORKDIR}/google-cloud-sdk"
 
