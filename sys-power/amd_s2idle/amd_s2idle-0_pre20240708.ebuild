@@ -17,14 +17,15 @@ S="${DISTDIR}"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="systemd"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DEPEND="
 	dev-python/pyudev
-	dev-python/python-systemd
 	sys-apps/ethtool
 	sys-power/iasl
+	systemd? ( dev-python/python-systemd )
 "
 RDEPEND="
 	${DEPEND}

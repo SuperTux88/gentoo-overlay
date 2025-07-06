@@ -1,15 +1,15 @@
 DEFINED_PHASES=install setup
-DEPEND=dev-python/pyudev dev-python/python-systemd sys-apps/ethtool sys-power/iasl
+DEPEND=dev-python/pyudev sys-apps/ethtool sys-power/iasl systemd? ( dev-python/python-systemd )
 DESCRIPTION=S0i3/s2idle analysis script for AMD systems
 EAPI=8
 HOMEPAGE=https://gitlab.freedesktop.org/drm/amd/-/blob/master/scripts/amd_s2idle.py
 INHERIT=python-single-r1
-IUSE=python_single_target_python3_13t python_single_target_python3_11 python_single_target_python3_12 python_single_target_python3_13
+IUSE=systemd python_single_target_python3_13t python_single_target_python3_11 python_single_target_python3_12 python_single_target_python3_13
 KEYWORDS=~amd64
 LICENSE=MIT
-RDEPEND=dev-python/pyudev dev-python/python-systemd sys-apps/ethtool sys-power/iasl python_single_target_python3_13t? ( dev-lang/python:3.13t ) python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_12? ( dev-lang/python:3.12 ) python_single_target_python3_13? ( dev-lang/python:3.13 )
+RDEPEND=dev-python/pyudev sys-apps/ethtool sys-power/iasl systemd? ( dev-python/python-systemd ) python_single_target_python3_13t? ( dev-lang/python:3.13t ) python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_12? ( dev-lang/python:3.12 ) python_single_target_python3_13? ( dev-lang/python:3.13 )
 REQUIRED_USE=^^ ( python_single_target_python3_13t python_single_target_python3_11 python_single_target_python3_12 python_single_target_python3_13 )
 SLOT=0
 SRC_URI=https://gitlab.freedesktop.org/drm/amd/-/raw/5ad0395be1aa457aa9a4128b358a4b005ffde3bf/scripts/amd_s2idle.py?inline=false -> amd_s2idle-0_pre20240708.py
 _eclasses_=multiprocessing	1e32df7deee68372153dca65f4a7c21f	toolchain-funcs	a6df79c1e9bc84369dbf3d44206ac772	python-utils-r1	5ffe8ec396a751540949b565de0f048c	python-single-r1	47d8ac9be330c9366112b78fd4f8ce57
-_md5_=65f93acf2d0cbcf947686c3dd61f0dc4
+_md5_=5d5befa88baa1b813c64ec417f5827a2
