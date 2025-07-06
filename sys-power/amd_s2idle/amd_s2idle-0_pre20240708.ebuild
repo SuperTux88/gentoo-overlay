@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..13} python3_13t )
+PYTHON_COMPAT=( python3_{11..14} python3_13t )
 inherit python-single-r1
 
 COMMIT_HASH="5ad0395be1aa457aa9a4128b358a4b005ffde3bf"
