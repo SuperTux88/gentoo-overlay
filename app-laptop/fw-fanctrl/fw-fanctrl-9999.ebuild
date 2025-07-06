@@ -1,4 +1,4 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2024-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -48,7 +48,9 @@ python_install_all() {
 
 	systemd_dounit "services/${PN}.service"
 
-	exeinto "$(systemd_get_sleepdir)"
+	# strip EPREFIX from sleepdir
+	: "$(systemd_get_sleepdir)"
+	exeinto "${_#"${EPREFIX}"}"
 	doexe services/system-sleep/${PN}-suspend
 
 	insinto /etc/${PN}
