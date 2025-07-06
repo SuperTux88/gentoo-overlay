@@ -3,9 +3,9 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..13} python3_13t )
+PYTHON_COMPAT=( python3_{11..14} python3_13t )
 
-inherit python-single-r1 shell-completion
+inherit python-single-r1 bash-completion-r1
 
 DESCRIPTION="Google Cloud CLI"
 HOMEPAGE="https://cloud.google.com/sdk/"

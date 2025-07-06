@@ -1,0 +1,15 @@
+DEFINED_PHASES=install prepare setup
+DEPEND=python_single_target_python3_13t? ( dev-lang/python:3.13t ) python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_12? ( dev-lang/python:3.12 ) python_single_target_python3_13? ( dev-lang/python:3.13 ) python_single_target_python3_14? ( dev-lang/python:3.14 )
+DESCRIPTION=Google Cloud CLI
+EAPI=8
+HOMEPAGE=https://cloud.google.com/sdk/
+INHERIT=python-single-r1 bash-completion-r1
+IUSE=python_single_target_python3_13t python_single_target_python3_11 python_single_target_python3_12 python_single_target_python3_13 python_single_target_python3_14
+KEYWORDS=~amd64 ~arm64
+LICENSE=Apache-2.0
+RDEPEND=python_single_target_python3_13t? ( dev-lang/python:3.13t ) python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_12? ( dev-lang/python:3.12 ) python_single_target_python3_13? ( dev-lang/python:3.13 ) python_single_target_python3_14? ( dev-lang/python:3.14 )
+REQUIRED_USE=^^ ( python_single_target_python3_13t python_single_target_python3_11 python_single_target_python3_12 python_single_target_python3_13 python_single_target_python3_14 )
+SLOT=0
+SRC_URI=amd64? ( https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-529.0.0-linux-x86_64.tar.gz ) arm64? ( https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-529.0.0-linux-arm.tar.gz )
+_eclasses_=multiprocessing	1e32df7deee68372153dca65f4a7c21f	toolchain-funcs	a6df79c1e9bc84369dbf3d44206ac772	python-utils-r1	5ffe8ec396a751540949b565de0f048c	python-single-r1	47d8ac9be330c9366112b78fd4f8ce57	bash-completion-r1	767861f3744f589ee5291c1698b1c082
+_md5_=94e6bcc6ef0bc31a56ff80aeda086451
