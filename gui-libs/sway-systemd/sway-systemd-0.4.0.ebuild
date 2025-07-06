@@ -16,7 +16,6 @@ IUSE="autostart locale1"
 
 DEPEND="
 	gui-wm/sway
-	sys-apps/systemd
 "
 RDEPEND="
 	${DEPEND}
@@ -39,4 +38,10 @@ src_configure() {
 		-Dautoload-configs=$(join_comma ${args[@]})
 	)
 	meson_src_configure
+}
+
+pkg_postinst(){
+	if ! has_version sys-apps/systemd; then
+		ewarn "${PN} is not functional without sys-apps/systemd."
+	fi
 }

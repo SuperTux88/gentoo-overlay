@@ -1,6 +1,6 @@
 BDEPEND=>=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array
-DEFINED_PHASES=compile configure install test
-DEPEND=gui-wm/sway sys-apps/systemd
+DEFINED_PHASES=compile configure install postinst test
+DEPEND=gui-wm/sway
 DESCRIPTION=Systemd integration for Sway session
 EAPI=8
 HOMEPAGE=https://github.com/alebastr/sway-systemd
@@ -8,8 +8,8 @@ INHERIT=meson
 IUSE=autostart locale1
 KEYWORDS=~amd64
 LICENSE=MIT
-RDEPEND=gui-wm/sway sys-apps/systemd dev-python/dbus-next dev-python/tenacity sys-apps/dbus
+RDEPEND=gui-wm/sway dev-python/dbus-next dev-python/tenacity sys-apps/dbus
 SLOT=0
 SRC_URI=https://github.com/alebastr/sway-systemd/archive/v0.4.0.tar.gz -> sway-systemd-0.4.0.tar.gz
 _eclasses_=toolchain-funcs	a6df79c1e9bc84369dbf3d44206ac772	flag-o-matic	a7afe42e95fb46ce9691605acfb24672	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	5ffe8ec396a751540949b565de0f048c	meson	99466844dd8d4fcfb07578a76f5a9922
-_md5_=e6f1622254e3dd6cd6a5f6785cb53b21
+_md5_=77cb58ab4d9f7bbd41d20956722a5fc3
