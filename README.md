@@ -123,9 +123,6 @@ The following packages are available in this overlay:
   * https://github.com/MitMaro/git-interactive-rebase-tool
 * gnome-extra/gnome-tweaks
   * Same as upstream, with additional `gnome-shell` USE flag
-* gui-apps/wev
-  * wayland event viewer
-  * https://git.sr.ht/~sircmpwn/wev
 * gui-apps/wl-mirror
   * A simple Wayland output mirror client
   * https://github.com/Ferdi265/wl-mirror
