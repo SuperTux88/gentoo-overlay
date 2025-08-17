@@ -96,7 +96,7 @@ CRATES="
 	http-body-util@0.1.2
 	httparse@1.10.0
 	httpdate@1.0.3
-	humantime@2.1.0
+	humantime@2.2.0
 	hyper@1.6.0
 	hyper-rustls@0.27.5
 	hyper-tls@0.6.0
@@ -188,15 +188,16 @@ CRATES="
 	rustc-demangle@0.1.24
 	rustc-hash@2.1.1
 	rustix@0.38.44
-	rustls@0.23.23
+	rustls@0.23.25
 	rustls-native-certs@0.8.1
 	rustls-pemfile@2.2.0
 	rustls-pki-types@1.11.0
-	rustls-webpki@0.102.8
+	rustls-webpki@0.103.0
 	rustversion@1.0.19
 	ruzstd@0.7.3
 	ryu@1.0.19
 	same-file@1.0.6
+	sanitize-filename@0.6.0
 	schannel@0.1.27
 	security-framework@2.11.1
 	security-framework@3.2.0
