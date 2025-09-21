@@ -6,6 +6,9 @@
 EAPI=8
 
 CRATES="
+	accessory@2.1.0
+	addr2line@0.24.2
+	adler2@2.0.1
 	aho-corasick@1.1.3
 	android-tzdata@0.1.1
 	android_system_properties@0.1.5
@@ -15,16 +18,22 @@ CRATES="
 	anstyle-query@1.1.2
 	anstyle-wincon@3.0.6
 	argon2@0.5.3
+	assert_cmd@2.0.17
 	assert_matches@1.5.0
 	autocfg@1.4.0
+	backtrace@0.3.75
 	base64ct@1.6.0
 	bigdecimal@0.4.7
 	bitflags@2.6.0
 	blake2@0.10.6
 	block-buffer@0.10.4
+	bstr@1.12.0
 	bumpalo@3.16.0
 	byteorder@1.5.0
-	cc@1.2.3
+	camino@1.2.0
+	cargo-platform@0.1.9
+	cargo_metadata@0.19.2
+	cc@1.2.38
 	cfg-if@1.0.0
 	chrono@0.4.39
 	clap@4.5.23
@@ -38,25 +47,35 @@ CRATES="
 	core-foundation-sys@0.8.7
 	cpufeatures@0.2.16
 	crypto-common@0.1.6
-	darling@0.20.10
-	darling_core@0.20.10
-	darling_macro@0.20.10
+	darling@0.21.3
+	darling_core@0.21.3
+	darling_macro@0.21.3
+	delegate-display@3.0.0
 	deranged@0.3.11
+	derive_more@2.0.1
+	derive_more-impl@2.0.1
+	difflib@0.4.0
 	diffy@0.4.0
 	digest@0.10.7
 	displaydoc@0.2.5
+	doc-comment@0.3.3
 	dotenvy@0.15.7
+	downcast-rs@2.0.2
 	either@1.13.0
 	encode_unicode@0.3.6
 	env_logger@0.8.4
-	equivalent@1.0.1
 	errno@0.3.10
+	fancy_constructor@2.1.0
 	fastrand@2.3.0
+	fd-lock@4.0.4
+	find-msvc-tools@0.1.2
 	fnv@1.0.7
 	form_urlencoded@1.2.1
+	fragile@2.0.1
 	generic-array@0.14.7
 	getrandom@0.2.15
-	hashbrown@0.15.2
+	getrandom@0.3.3
+	gimli@0.31.1
 	heck@0.5.0
 	iana-time-zone@0.1.61
 	iana-time-zone-haiku@0.1.2
@@ -73,13 +92,16 @@ CRATES="
 	ident_case@1.0.1
 	idna@1.0.3
 	idna_adapter@1.2.0
-	indexmap@2.7.0
+	impartial-ord@1.0.6
+	indexed_db_futures@0.6.4
+	indexed_db_futures_macros_internal@1.0.0
 	insta@1.41.1
+	io-uring@0.7.10
 	ipnet@2.10.1
 	ipnetwork@0.20.0
 	is_terminal_polyfill@1.70.1
 	itoa@1.0.14
-	js-sys@0.3.76
+	js-sys@0.3.80
 	lazy_static@1.5.0
 	libc@0.2.168
 	libm@0.2.11
@@ -87,11 +109,19 @@ CRATES="
 	link-cplusplus@1.0.9
 	linked-hash-map@0.5.6
 	linux-raw-sys@0.4.14
+	linux-raw-sys@0.9.4
 	litemap@0.7.4
 	lock_api@0.4.12
 	log@0.4.22
+	macroific@2.0.0
+	macroific_attr_parse@2.0.0
+	macroific_core@2.0.0
+	macroific_macro@2.0.0
 	matchers@0.1.0
 	memchr@2.7.4
+	minicov@0.3.7
+	miniz_oxide@0.8.9
+	mio@1.0.4
 	mysqlclient-src@0.1.2
 	mysqlclient-sys@0.4.2
 	nu-ansi-term@0.46.0
@@ -100,7 +130,8 @@ CRATES="
 	num-conv@0.1.0
 	num-integer@0.1.46
 	num-traits@0.2.19
-	once_cell@1.20.2
+	object@0.36.7
+	once_cell@1.21.3
 	openssl-src@300.4.1+3.4.0
 	openssl-sys@0.9.104
 	overload@0.1.1
@@ -114,38 +145,57 @@ CRATES="
 	ppv-lite86@0.2.20
 	pq-src@0.3.2
 	pq-sys@0.6.3
+	predicates@3.1.3
+	predicates-core@1.0.9
+	predicates-tree@1.0.12
+	prettyplease@0.2.37
 	proc-macro2@1.0.92
 	quickcheck@1.0.3
-	quote@1.0.37
+	quote@1.0.40
+	r-efi@5.3.0
 	r2d2@0.8.10
 	rand@0.8.5
-	rand_chacha@0.3.1
+	rand@0.9.2
+	rand_chacha@0.9.0
 	rand_core@0.6.4
+	rand_core@0.9.3
 	redox_syscall@0.5.8
 	regex@1.11.1
 	regex-automata@0.1.10
 	regex-automata@0.4.9
 	regex-syntax@0.6.29
 	regex-syntax@0.8.5
+	rustc-demangle@0.1.26
 	rustix@0.38.42
+	rustix@1.0.8
+	rustversion@1.0.22
 	ryu@1.0.18
+	same-file@1.0.6
 	scheduled-thread-pool@0.2.7
 	scopeguard@1.2.0
-	serde@1.0.216
-	serde_derive@1.0.216
+	sealed@0.6.0
+	semver@1.0.27
+	serde@1.0.226
+	serde-wasm-bindgen@0.6.5
+	serde_core@1.0.226
+	serde_derive@1.0.226
 	serde_json@1.0.133
 	serde_regex@1.1.0
 	serde_spanned@1.0.0
 	sharded-slab@0.1.7
 	shlex@1.3.0
 	similar@2.6.0
+	similar-asserts@1.7.0
+	slab@0.4.11
 	smallvec@1.13.2
+	sqlite-wasm-rs@0.4.3
 	stable_deref_trait@1.2.0
 	strsim@0.11.1
 	subtle@2.6.1
-	syn@2.0.90
+	syn@2.0.106
 	synstructure@0.13.1
 	tempfile@3.14.0
+	termtree@0.5.1
 	thiserror@2.0.15
 	thiserror-impl@2.0.15
 	thread_local@1.1.8
@@ -153,10 +203,10 @@ CRATES="
 	time-core@0.1.2
 	time-macros@0.2.19
 	tinystr@0.7.6
+	tokio@1.47.1
 	toml@0.9.5
 	toml_datetime@0.7.0
 	toml_parser@1.0.2
-	toml_writer@1.0.2
 	tracing@0.1.41
 	tracing-attributes@0.1.28
 	tracing-core@0.1.33
@@ -164,6 +214,8 @@ CRATES="
 	tracing-subscriber@0.3.19
 	typenum@1.17.0
 	unicode-ident@1.0.14
+	unicode-segmentation@1.12.0
+	unicode-xid@0.2.6
 	url@2.5.4
 	utf16_iter@1.0.5
 	utf8_iter@1.0.4
@@ -172,14 +224,24 @@ CRATES="
 	valuable@0.1.0
 	vcpkg@0.2.15
 	version_check@0.9.5
+	wait-timeout@0.2.1
+	walkdir@2.5.0
 	wasi@0.11.0+wasi-snapshot-preview1
-	wasm-bindgen@0.2.99
-	wasm-bindgen-backend@0.2.99
-	wasm-bindgen-macro@0.2.99
-	wasm-bindgen-macro-support@0.2.99
-	wasm-bindgen-shared@0.2.99
+	wasi@0.14.7+wasi-0.2.4
+	wasip2@1.0.1+wasi-0.2.4
+	wasm-array-cp@0.1.1
+	wasm-bindgen@0.2.103
+	wasm-bindgen-backend@0.2.103
+	wasm-bindgen-futures@0.4.53
+	wasm-bindgen-macro@0.2.103
+	wasm-bindgen-macro-support@0.2.103
+	wasm-bindgen-shared@0.2.103
+	wasm-bindgen-test@0.3.53
+	wasm-bindgen-test-macro@0.3.53
+	web-sys@0.3.80
 	winapi@0.3.9
 	winapi-i686-pc-windows-gnu@0.4.0
+	winapi-util@0.1.11
 	winapi-x86_64-pc-windows-gnu@0.4.0
 	windows-core@0.52.0
 	windows-sys@0.52.0
@@ -194,6 +256,7 @@ CRATES="
 	windows_x86_64_gnullvm@0.52.6
 	windows_x86_64_msvc@0.52.6
 	winnow@0.7.12
+	wit-bindgen@0.46.0
 	write16@1.0.0
 	writeable@0.5.5
 	yoke@0.7.5
@@ -227,7 +290,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="+mysql +postgres +sqlite"
 
-RUST_MIN_VER="1.78.0"
+RUST_MIN_VER="1.86.0"
 DEPEND="
 	mysql? (
 		dev-db/mysql-connector-c
