@@ -9,12 +9,12 @@ CRATES="
 	adler2@2.0.1
 	aho-corasick@1.1.3
 	ansi_colours@1.2.3
-	anstream@0.6.19
+	anstream@0.6.20
 	anstyle@1.0.11
 	anstyle-parse@0.2.7
-	anstyle-query@1.1.3
-	anstyle-wincon@3.0.9
-	anyhow@1.0.98
+	anstyle-query@1.1.4
+	anstyle-wincon@3.0.10
+	anyhow@1.0.99
 	autocfg@1.5.0
 	base64@0.22.1
 	bat@0.25.0
@@ -22,16 +22,16 @@ CRATES="
 	bit-set@0.5.3
 	bit-vec@0.6.3
 	bitflags@1.3.2
-	bitflags@2.9.1
+	bitflags@2.9.4
 	bstr@1.12.0
-	bytemuck@1.23.1
+	bytemuck@1.23.2
 	bytesize@1.3.3
 	cargo-subcommand-metadata@0.1.0
-	cfg-if@1.0.1
-	clap@4.5.41
-	clap-cargo@0.16.0
-	clap_builder@4.5.41
-	clap_derive@4.5.41
+	cfg-if@1.0.3
+	clap@4.5.47
+	clap-cargo@0.17.0
+	clap_builder@4.5.47
+	clap_derive@4.5.47
 	clap_lex@0.7.5
 	clircle@0.6.1
 	colorchoice@1.0.4
@@ -42,7 +42,7 @@ CRATES="
 	darling@0.20.11
 	darling_core@0.20.11
 	darling_macro@0.20.11
-	deranged@0.4.0
+	deranged@0.5.3
 	either@1.15.0
 	encode_unicode@1.0.0
 	encoding_rs@0.8.35
@@ -56,17 +56,17 @@ CRATES="
 	getrandom@0.3.3
 	globset@0.4.16
 	grep-cli@0.1.11
-	hashbrown@0.15.4
+	hashbrown@0.15.5
 	heck@0.5.0
 	home@0.5.11
 	ident_case@1.0.1
-	indexmap@2.10.0
+	indexmap@2.11.0
 	is_terminal_polyfill@1.70.1
 	itertools@0.13.0
 	itoa@1.0.15
-	libc@0.2.174
+	libc@0.2.175
 	linux-raw-sys@0.9.4
-	log@0.4.27
+	log@0.4.28
 	memchr@2.7.5
 	miniz_oxide@0.8.9
 	mio@1.0.4
@@ -77,14 +77,14 @@ CRATES="
 	path_abs@0.5.1
 	plist@1.7.4
 	powerfmt@0.2.0
-	prettyplease@0.2.36
-	proc-macro2@1.0.95
-	quick-xml@0.38.0
+	prettyplease@0.2.37
+	proc-macro2@1.0.101
+	quick-xml@0.38.3
 	quote@1.0.40
 	r-efi@5.3.0
-	regex@1.11.1
-	regex-automata@0.4.9
-	regex-syntax@0.8.5
+	regex@1.11.2
+	regex-automata@0.4.10
+	regex-syntax@0.8.6
 	rgb@0.8.52
 	rustix@1.0.8
 	ryu@1.0.20
@@ -92,7 +92,7 @@ CRATES="
 	semver@1.0.26
 	serde@1.0.219
 	serde_derive@1.0.219
-	serde_json@1.0.141
+	serde_json@1.0.143
 	serde_spanned@0.6.9
 	serde_spanned@1.0.0
 	serde_with@3.14.0
@@ -102,24 +102,24 @@ CRATES="
 	shlex@1.3.0
 	std_prelude@0.2.12
 	strsim@0.11.1
-	syn@2.0.104
+	syn@2.0.106
 	syn-select@0.3.0
 	syntect@5.2.0
-	tempfile@3.20.0
+	tempfile@3.21.0
 	termcolor@1.4.1
 	terminal-colorsaurus@0.4.8
 	terminal-trx@0.2.4
 	thiserror@1.0.69
 	thiserror-impl@1.0.69
-	time@0.3.41
-	time-core@0.1.4
-	time-macros@0.2.22
+	time@0.3.43
+	time-core@0.1.6
+	time-macros@0.2.24
 	toml@0.8.23
-	toml@0.9.2
+	toml@0.9.5
 	toml_datetime@0.6.11
 	toml_datetime@0.7.0
 	toml_edit@0.22.27
-	toml_parser@1.0.1
+	toml_parser@1.0.2
 	toml_write@0.1.2
 	toml_writer@1.0.2
 	toolchain_find@0.4.0
@@ -130,18 +130,21 @@ CRATES="
 	utf8parse@0.2.2
 	walkdir@2.5.0
 	wasi@0.11.1+wasi-snapshot-preview1
-	wasi@0.14.2+wasi-0.2.4
-	winapi-util@0.1.9
+	wasi@0.14.3+wasi-0.2.4
+	winapi-util@0.1.10
 	windows@0.56.0
 	windows-core@0.56.0
 	windows-implement@0.56.0
 	windows-interface@0.56.0
+	windows-link@0.1.3
+	windows-link@0.2.0
 	windows-result@0.1.2
 	windows-sys@0.52.0
 	windows-sys@0.59.0
 	windows-sys@0.60.2
+	windows-sys@0.61.0
 	windows-targets@0.52.6
-	windows-targets@0.53.2
+	windows-targets@0.53.3
 	windows_aarch64_gnullvm@0.52.6
 	windows_aarch64_gnullvm@0.53.0
 	windows_aarch64_msvc@0.52.6
@@ -158,8 +161,8 @@ CRATES="
 	windows_x86_64_gnullvm@0.53.0
 	windows_x86_64_msvc@0.52.6
 	windows_x86_64_msvc@0.53.0
-	winnow@0.7.12
-	wit-bindgen-rt@0.39.0
+	winnow@0.7.13
+	wit-bindgen@0.45.0
 	xterm-color@1.0.1
 "
 
