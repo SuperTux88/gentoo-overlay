@@ -14,10 +14,10 @@ CRATES="
 	anstyle-parse@0.2.3
 	anstyle-query@1.0.2
 	anstyle-wincon@3.0.2
-	anyhow@1.0.97
+	anyhow@1.0.99
 	autocfg@1.3.0
+	automod@1.0.15
 	backtrace@0.3.74
-	base64@0.21.7
 	base64@0.22.1
 	bitflags@2.6.0
 	block-buffer@0.10.4
@@ -25,25 +25,35 @@ CRATES="
 	cc@1.1.18
 	cfg-if@1.0.0
 	chrono@0.4.38
-	clap@4.5.32
-	clap_builder@4.5.32
-	clap_complete@4.5.46
-	clap_derive@4.5.32
+	clap@4.5.47
+	clap_builder@4.5.47
+	clap_complete@4.5.58
+	clap_derive@4.5.47
 	clap_lex@0.7.4
 	colorchoice@1.0.0
+	content_inspector@0.2.4
 	core-foundation@0.9.4
 	core-foundation-sys@0.8.7
 	cpufeatures@0.2.14
+	crossbeam-deque@0.8.6
+	crossbeam-epoch@0.9.18
+	crossbeam-utils@0.8.21
 	crypto-common@0.1.6
-	darling@0.20.8
-	darling_core@0.20.8
-	darling_macro@0.20.8
+	darling@0.21.3
+	darling_core@0.21.3
+	darling_macro@0.21.3
+	derive_more@2.0.1
+	derive_more-impl@2.0.1
 	digest@0.10.7
+	dunce@1.0.5
 	dyn-clone@1.0.17
 	either@1.13.0
 	env_filter@0.1.0
 	env_logger@0.11.6
 	equivalent@1.0.1
+	errno@0.3.14
+	fastrand@2.3.0
+	filetime@0.2.26
 	fnv@1.0.7
 	form_urlencoded@1.2.1
 	futures@0.3.30
@@ -55,10 +65,10 @@ CRATES="
 	futures-util@0.3.30
 	generic-array@0.14.7
 	getrandom@0.2.15
+	getrandom@0.3.3
 	gimli@0.31.0
+	glob@0.3.3
 	hashbrown@0.14.5
-	headers@0.4.0
-	headers-core@0.3.0
 	heck@0.5.0
 	hermit-abi@0.3.9
 	home@0.5.9
@@ -66,34 +76,38 @@ CRATES="
 	http-body@1.0.1
 	http-body-util@0.1.2
 	httparse@1.9.4
-	httpdate@1.0.3
 	humantime@2.1.0
-	hyper@1.4.1
-	hyper-http-proxy@1.0.0
+	humantime-serde@1.1.1
+	hyper@1.6.0
 	hyper-rustls@0.27.3
 	hyper-timeout@0.5.1
-	hyper-util@0.1.9
+	hyper-util@0.1.16
 	ident_case@1.0.1
 	indexmap@2.5.0
+	io-uring@0.7.8
 	itoa@1.0.11
 	jsonpath-rust@0.7.3
-	k8s-openapi@0.24.0
-	kube@0.98.0
-	kube-client@0.98.0
-	kube-core@0.98.0
-	kube-derive@0.98.0
-	libc@0.2.170
+	k8s-openapi@0.26.0
+	kube@2.0.1
+	kube-client@2.0.1
+	kube-core@2.0.1
+	kube-derive@2.0.1
+	libc@0.2.175
+	libredox@0.1.6
+	linux-raw-sys@0.11.0
 	lock_api@0.4.12
-	log@0.4.26
+	log@0.4.28
 	memchr@2.7.4
 	mime@0.3.17
 	miniz_oxide@0.8.0
 	mio@1.0.2
+	normalize-line-endings@0.3.0
 	num-traits@0.2.19
 	object@0.36.4
 	once_cell@1.19.0
 	openssl-probe@0.1.5
 	ordered-float@2.10.1
+	os_pipe@1.2.2
 	parking_lot@0.12.3
 	parking_lot_core@0.9.10
 	pem@3.0.4
@@ -105,54 +119,68 @@ CRATES="
 	pin-project-lite@0.2.14
 	pin-utils@0.1.0
 	proc-macro2@1.0.92
-	quote@1.0.39
+	quote@1.0.40
+	r-efi@5.3.0
+	rayon@1.11.0
+	rayon-core@1.13.0
 	redox_syscall@0.5.3
-	regex@1.11.1
+	ref-cast@1.0.24
+	ref-cast-impl@1.0.24
+	regex@1.11.2
 	regex-automata@0.4.8
 	regex-syntax@0.8.5
 	ring@0.17.8
 	rustc-demangle@0.1.24
+	rustix@1.1.2
 	rustls@0.23.18
-	rustls-native-certs@0.7.3
 	rustls-native-certs@0.8.0
 	rustls-pemfile@2.1.3
 	rustls-pki-types@1.10.0
 	rustls-webpki@0.102.8
 	ryu@1.0.18
+	same-file@1.0.6
 	schannel@0.1.24
-	schemars@0.8.22
-	schemars_derive@0.8.22
+	schemars@1.0.4
+	schemars_derive@1.0.4
 	scopeguard@1.2.0
 	secrecy@0.10.3
 	security-framework@2.11.1
 	security-framework-sys@2.11.1
-	serde@1.0.219
+	serde@1.0.225
 	serde-value@0.7.0
-	serde_derive@1.0.219
+	serde_core@1.0.225
+	serde_derive@1.0.225
 	serde_derive_internals@0.29.1
-	serde_json@1.0.140
+	serde_json@1.0.145
+	serde_spanned@1.0.1
 	serde_yaml@0.9.34+deprecated
-	sha1@0.10.6
 	sha2@0.10.8
 	shlex@1.3.0
 	signal-hook-registry@1.4.2
+	similar@2.7.0
 	slab@0.4.9
 	smallvec@1.13.2
-	socket2@0.5.7
+	snapbox@0.6.21
+	snapbox-macros@0.3.10
+	socket2@0.6.0
 	spin@0.9.8
-	strsim@0.10.0
-	strsim@0.11.0
+	strsim@0.11.1
 	subtle@2.6.1
-	syn@2.0.100
+	syn@2.0.106
 	sync_wrapper@0.1.2
+	tempfile@3.22.0
 	thiserror@1.0.63
 	thiserror@2.0.3
 	thiserror-impl@1.0.63
 	thiserror-impl@2.0.3
-	tokio@1.44.0
+	tokio@1.47.1
 	tokio-macros@2.5.0
 	tokio-rustls@0.26.0
 	tokio-util@0.7.12
+	toml_datetime@0.7.1
+	toml_edit@0.23.5
+	toml_parser@1.0.2
+	toml_writer@1.0.2
 	tower@0.5.1
 	tower-http@0.6.1
 	tower-layer@0.3.3
@@ -161,8 +189,9 @@ CRATES="
 	tracing-attributes@0.1.27
 	tracing-core@0.1.32
 	try-lock@0.2.5
-	typed-builder@0.20.0
-	typed-builder-macro@0.20.0
+	trycmd@0.15.10
+	typed-builder@0.22.0
+	typed-builder-macro@0.22.0
 	typenum@1.17.0
 	ucd-trie@0.1.6
 	unicode-ident@1.0.12
@@ -170,19 +199,37 @@ CRATES="
 	untrusted@0.9.0
 	utf8parse@0.2.1
 	version_check@0.9.5
+	wait-timeout@0.2.1
+	walkdir@2.5.0
 	want@0.3.1
 	wasi@0.11.0+wasi-snapshot-preview1
+	wasi@0.14.7+wasi-0.2.4
+	wasip2@1.0.1+wasi-0.2.4
+	winapi-util@0.1.11
+	windows-link@0.1.3
 	windows-sys@0.52.0
 	windows-sys@0.59.0
+	windows-sys@0.60.2
 	windows-targets@0.52.6
+	windows-targets@0.53.3
 	windows_aarch64_gnullvm@0.52.6
+	windows_aarch64_gnullvm@0.53.0
 	windows_aarch64_msvc@0.52.6
+	windows_aarch64_msvc@0.53.0
 	windows_i686_gnu@0.52.6
+	windows_i686_gnu@0.53.0
 	windows_i686_gnullvm@0.52.6
+	windows_i686_gnullvm@0.53.0
 	windows_i686_msvc@0.52.6
+	windows_i686_msvc@0.53.0
 	windows_x86_64_gnu@0.52.6
+	windows_x86_64_gnu@0.53.0
 	windows_x86_64_gnullvm@0.52.6
+	windows_x86_64_gnullvm@0.53.0
 	windows_x86_64_msvc@0.52.6
+	windows_x86_64_msvc@0.53.0
+	winnow@0.7.13
+	wit-bindgen@0.46.0
 	zeroize@1.8.1
 "
 
