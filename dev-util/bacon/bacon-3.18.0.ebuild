@@ -45,7 +45,7 @@ CRATES="
 	chrono@0.4.41
 	clang-sys@1.8.1
 	clap@4.5.45
-	clap-help@1.4.0
+	clap-help@1.5.0
 	clap_builder@4.5.44
 	clap_complete@4.5.57
 	clap_derive@4.5.45
@@ -63,8 +63,8 @@ CRATES="
 	cpal@0.15.3
 	cpufeatures@0.2.17
 	crc32fast@1.5.0
-	crokey@1.2.0
-	crokey-proc_macros@1.2.0
+	crokey@1.3.0
+	crokey-proc_macros@1.3.0
 	crossbeam@0.8.4
 	crossbeam-channel@0.5.15
 	crossbeam-deque@0.8.6
@@ -279,7 +279,7 @@ CRATES="
 	syn@2.0.106
 	synstructure@0.13.2
 	tempfile@3.20.0
-	termimad@0.32.0
+	termimad@0.34.0
 	terminal-light@1.8.0
 	thiserror@1.0.69
 	thiserror@2.0.15
