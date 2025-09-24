@@ -208,9 +208,6 @@ The following packages are available in this overlay:
 * sys-cluster/kustomize-bin
   * Customization of kubernetes YAML configurations
   * https://github.com/kubernetes-sigs/kustomize
-* sys-cluster/open-lens
-  * Open Source IDE for Kubernetes
-  * https://github.com/MuhammedKalkan/OpenLens
 * sys-kernel/it87
   * IT87 sensors module
   * https://github.com/a1wong/it87
