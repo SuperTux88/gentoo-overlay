@@ -129,6 +129,8 @@ LICENSE+=" Apache-2.0 ISC MIT Unicode-3.0"
 SLOT="0"
 KEYWORDS="~amd64"
 
+RUST_MIN_VER="1.85.0"
+
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
 QA_FLAGS_IGNORED="usr/bin/${PN}"
