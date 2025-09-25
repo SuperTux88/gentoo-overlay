@@ -6,8 +6,8 @@ EAPI=8
 inherit systemd udev
 
 PV_MINOR=${PV%.*}
-PV_EXTRA="17"
-PV_DATE="2024-10"
+PV_EXTRA="30"
+PV_DATE="2025-09"
 UBUNTU_VERSION=1604
 
 DESCRIPTION="DisplayLink USB Graphics Software"
@@ -29,7 +29,7 @@ BDEPEND="
 	sys-apps/grep[pcre]
 "
 
-RESTRICT="mirror bindist"
+RESTRICT="bindist mirror"
 QA_PRESTRIPPED="/opt/displaylink/DisplayLinkManager"
 
 src_unpack() {
