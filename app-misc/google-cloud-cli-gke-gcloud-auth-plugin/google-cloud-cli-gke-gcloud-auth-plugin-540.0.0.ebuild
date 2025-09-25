@@ -5,7 +5,7 @@ EAPI=8
 
 inherit unpacker
 
-DEB_MD5="c9b87d1f4ed471a99d7e0477abc1db55"
+DEB_MD5="59273fef18e228c5c2d2fe2ab9783b1f"
 
 DESCRIPTION="A kubectl authentication plugin for GKE"
 HOMEPAGE="https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke"
