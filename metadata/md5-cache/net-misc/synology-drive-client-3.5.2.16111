@@ -12,5 +12,5 @@ RDEPEND=>=dev-libs/glib-2.16.0:2 >=x11-libs/gtk+-2.12.0:2 nautilus? ( gnome-base
 RESTRICT=bindist mirror strip
 SLOT=0
 SRC_URI=https://global.synologydownload.com/download/Utility/SynologyDriveClient/3.5.2-16111/Ubuntu/Installer/synology-drive-client-16111.x86_64.deb
-_eclasses_=desktop	3a72ffe0d8e1dd73af3a1c8c15a59fed	multiprocessing	1e32df7deee68372153dca65f4a7c21f	toolchain-funcs	a6df79c1e9bc84369dbf3d44206ac772	unpacker	3b4ee72d1e2e0374fd8cd3eddfa00627	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	xdg	3ef49a87c52c8b77c476351195dfe575
+_eclasses_=desktop	3a72ffe0d8e1dd73af3a1c8c15a59fed	multiprocessing	1e32df7deee68372153dca65f4a7c21f	toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0	unpacker	3b4ee72d1e2e0374fd8cd3eddfa00627	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	xdg	3ef49a87c52c8b77c476351195dfe575
 _md5_=6b5519c74d2e52d3446609c127bdfc19

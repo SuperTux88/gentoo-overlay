@@ -10,5 +10,5 @@ LICENSE=MIT
 PROPERTIES=live
 RDEPEND=!sys-apps/zenmonitor || ( sys-kernel/zenpower3 sys-kernel/zenstats )
 SLOT=0
-_eclasses_=toolchain-funcs	a6df79c1e9bc84369dbf3d44206ac772	linux-info	efd923656513c879204fec6638eadee5	git-r3	875eb471682d3e1f18da124be97dcc81
+_eclasses_=toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0	linux-info	efd923656513c879204fec6638eadee5	git-r3	875eb471682d3e1f18da124be97dcc81
 _md5_=a5ee23bf0aaf69a2ae6d520608a754f5
