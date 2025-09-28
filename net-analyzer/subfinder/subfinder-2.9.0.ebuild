@@ -12,8 +12,6 @@ SRC_URI="
 	https://raw.githubusercontent.com/SuperTux88/gentoo-overlay-deps/main/${CATEGORY}/${PN}/${P}-vendor.tar.xz
 "
 
-S="${WORKDIR}/${P}/v2"
-
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
