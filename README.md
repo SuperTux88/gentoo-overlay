@@ -240,4 +240,4 @@ The following packages are available in this overlay:
   * https://github.com/DisplayLink/evdi
 * x11-misc/ly
   * a TUI display manager
-  * https://github.com/fairyglade/ly
+  * https://codeberg.org/fairyglade/ly

@@ -6,27 +6,30 @@ EAPI=8
 inherit edo
 
 # From: https://github.com/fairyglade/ly/blob/v<ly version>/build.zig.zon
-CLAP_REF="refs/tags/0.9.1"
-ZIGINI_REF="0bba97a12582928e097f4074cc746c43351ba4c8"
+# From: https://codeberg.org/fairyglade/ly/src/tag/v<ly version>/build.zig.zon
+CLAP_REF="refs/tags/0.10.0"
+ZIGINI_REF="2ed3d417f17fab5b0ee8cad8a63c6d62d7ac1042"
 # From: https://github.com/Kawaii-Ash/zigini/blob/<zigini ref>/build.zig.zon
 INI_REF="e18d36665905c1e7ba0c1ce3e8780076b33e3002"
 
 DESCRIPTION="a TUI display manager"
-HOMEPAGE="https://github.com/fairyglade/ly"
+HOMEPAGE="https://codeberg.org/fairyglade/ly"
 SRC_URI="
-	https://github.com/fairyglade/ly/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
+	https://codeberg.org/fairyglade/ly/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/Hejsil/zig-clap/archive/${CLAP_REF}.tar.gz -> zig-clap-${CLAP_REF##*/}.gh.tar.gz
 	https://github.com/Kawaii-Ash/zigini/archive/${ZIGINI_REF}.tar.gz -> zigini-${ZIGINI_REF##*/}.gh.tar.gz
 	https://github.com/ziglibs/ini/archive/${INI_REF}.tar.gz -> ziglibs-ini-${INI_REF##*/}.gh.tar.gz
 "
+
+S="${WORKDIR}/${PN}"
 
 LICENSE="WTFPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="openrc runit systemd"
 
-EZIG_MIN="0.12"
-EZIG_MAX_EXCLUSIVE="0.14"
+EZIG_MIN="0.14"
+EZIG_MAX_EXCLUSIVE="0.15"
 
 DEPEND="
 	sys-libs/ncurses:=
@@ -138,7 +141,7 @@ src_compile() {
 }
 
 src_install() {
-	use openrc && ezig_build installopenrc
-	use runit && ezig_build installrunit
-	use systemd && ezig_build installsystemd
+	use openrc && ezig_build installexe -Dinit_system=openrc
+	use runit && ezig_build installexe -Dinit_system=runit
+	use systemd && ezig_build installexe -Dinit_system=systemd
 }
