@@ -123,10 +123,6 @@ The following packages are available in this overlay:
   * https://github.com/MitMaro/git-interactive-rebase-tool
 * gnome-extra/gnome-tweaks
   * Same as upstream, with additional `gnome-shell` USE flag
-* gui-apps/waybar
-  * Highly customizable Wayland bar for Sway and Wlroots based compositors.
-  * https://github.com/Alexays/Waybar
-  * Copy of https://github.com/gentoo/gentoo/pull/43508 until it's merged to main repo
 * gui-apps/wl-mirror
   * A simple Wayland output mirror client
   * https://github.com/Ferdi265/wl-mirror
