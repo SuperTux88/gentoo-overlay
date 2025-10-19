@@ -1,0 +1,15 @@
+BDEPEND=|| ( >=dev-lang/zig-0.15 >=dev-lang/zig-bin-0.15 ) || ( <dev-lang/zig-0.16 <dev-lang/zig-bin-0.16 )
+DEFINED_PHASES=compile install setup unpack
+DEPEND=sys-libs/ncurses:= sys-libs/pam x11-libs/libxcb x11-base/xorg-server x11-apps/xauth
+DESCRIPTION=a TUI display manager
+EAPI=8
+HOMEPAGE=https://codeberg.org/fairyglade/ly
+INHERIT=edo
+IUSE=openrc runit systemd
+KEYWORDS=~amd64
+LICENSE=WTFPL-2
+RDEPEND=sys-libs/ncurses:= sys-libs/pam x11-libs/libxcb x11-base/xorg-server x11-apps/xauth openrc? ( sys-apps/openrc ) runit? ( sys-process/runit ) systemd? ( sys-apps/systemd )
+SLOT=0
+SRC_URI=https://codeberg.org/fairyglade/ly/archive/v1.2.0.tar.gz -> ly-1.2.0.tar.gz https://github.com/Hejsil/zig-clap/archive/refs/tags/0.11.0.tar.gz -> zig-clap-0.11.0.gh.tar.gz https://github.com/Kawaii-Ash/zigini/archive/96ca1d9f1a7ec741f07ceb104dae2b3a7bdfd48a.tar.gz -> zigini-96ca1d9f1a7ec741f07ceb104dae2b3a7bdfd48a.gh.tar.gz https://github.com/AnErrupTion/termbox2/archive/290ac6b8225aacfd16851224682b851b65fcb918.tar.gz -> termbox2-290ac6b8225aacfd16851224682b851b65fcb918.gh.tar.gz https://github.com/ziglibs/ini/archive/ac6e656157b2ac6c98392283a139b47c44a85d54.tar.gz -> ziglibs-ini-ac6e656157b2ac6c98392283a139b47c44a85d54.gh.tar.gz
+_eclasses_=edo	a5e294016aa84979fcb2459749eb80b2
+_md5_=a0d67d73c288eed075366ca57f36566f

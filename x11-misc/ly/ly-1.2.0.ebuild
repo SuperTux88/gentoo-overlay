@@ -5,12 +5,12 @@ EAPI=8
 
 inherit edo
 
-# From: https://github.com/fairyglade/ly/blob/v<ly version>/build.zig.zon
 # From: https://codeberg.org/fairyglade/ly/src/tag/v<ly version>/build.zig.zon
-CLAP_REF="refs/tags/0.10.0"
-ZIGINI_REF="2ed3d417f17fab5b0ee8cad8a63c6d62d7ac1042"
+CLAP_REF="refs/tags/0.11.0"
+ZIGINI_REF="96ca1d9f1a7ec741f07ceb104dae2b3a7bdfd48a"
+TERMBOX2_REF="290ac6b8225aacfd16851224682b851b65fcb918"
 # From: https://github.com/Kawaii-Ash/zigini/blob/<zigini ref>/build.zig.zon
-INI_REF="e18d36665905c1e7ba0c1ce3e8780076b33e3002"
+INI_REF="ac6e656157b2ac6c98392283a139b47c44a85d54"
 
 DESCRIPTION="a TUI display manager"
 HOMEPAGE="https://codeberg.org/fairyglade/ly"
@@ -18,6 +18,7 @@ SRC_URI="
 	https://codeberg.org/fairyglade/ly/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/Hejsil/zig-clap/archive/${CLAP_REF}.tar.gz -> zig-clap-${CLAP_REF##*/}.gh.tar.gz
 	https://github.com/Kawaii-Ash/zigini/archive/${ZIGINI_REF}.tar.gz -> zigini-${ZIGINI_REF##*/}.gh.tar.gz
+	https://github.com/AnErrupTion/termbox2/archive/${TERMBOX2_REF}.tar.gz -> termbox2-${TERMBOX2_REF##*/}.gh.tar.gz
 	https://github.com/ziglibs/ini/archive/${INI_REF}.tar.gz -> ziglibs-ini-${INI_REF##*/}.gh.tar.gz
 "
 
@@ -28,8 +29,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="openrc runit systemd"
 
-EZIG_MIN="0.14"
-EZIG_MAX_EXCLUSIVE="0.15"
+EZIG_MIN="0.15"
+EZIG_MAX_EXCLUSIVE="0.16"
 
 DEPEND="
 	sys-libs/ncurses:=
@@ -133,6 +134,7 @@ src_unpack() {
 
 	ezig fetch "${WORKDIR}/zig-clap-${CLAP_REF##*/}"
 	ezig fetch "${WORKDIR}/zigini-${ZIGINI_REF##*/}"
+	ezig fetch "${WORKDIR}/termbox2-${TERMBOX2_REF##*/}"
 	ezig fetch "${WORKDIR}/ini-${INI_REF##*/}"
 }
 
