@@ -29,6 +29,8 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+RUST_MIN_VER="1.80.0"
+
 src_configure() {
 	meson_src_configure
 
