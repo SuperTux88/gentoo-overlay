@@ -57,5 +57,6 @@ src_install() {
 	insinto /usr/share
 	doins -r usr/share/icons
 
+	dodoc usr/share/doc/synology-drive/changelog.gz
 	dodoc usr/share/doc/synology-drive/copyright
 }
