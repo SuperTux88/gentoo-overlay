@@ -8,7 +8,7 @@ EAPI=8
 CRATES="
 	adler2@2.0.1
 	ahash@0.8.12
-	aho-corasick@1.1.3
+	aho-corasick@1.1.4
 	allocator-api2@0.2.21
 	alsa@0.9.1
 	alsa-sys@0.3.1
@@ -25,30 +25,30 @@ CRATES="
 	autocfg@1.5.0
 	bindgen@0.72.1
 	bitflags@1.3.2
-	bitflags@2.9.4
+	bitflags@2.10.0
 	block-buffer@0.10.4
-	bstr@1.12.0
+	block2@0.6.2
+	bstr@1.12.1
 	bumpalo@3.19.0
 	bytemuck@1.24.0
 	byteorder@1.5.0
 	bytes@1.10.1
 	camino@1.2.1
-	cargo-platform@0.2.0
-	cargo-util-schemas@0.8.2
-	cargo_metadata@0.21.0
-	cc@1.2.41
+	cargo-platform@0.3.1
+	cargo_metadata@0.23.1
+	cc@1.2.45
 	cesu8@1.1.0
 	cexpr@0.6.0
-	cfg-if@1.0.3
+	cfg-if@1.0.4
 	cfg_aliases@0.2.1
 	chrono@0.4.42
 	clang-sys@1.8.1
-	clap@4.5.48
+	clap@4.5.51
 	clap-help@1.5.0
-	clap_builder@4.5.48
-	clap_complete@4.5.58
-	clap_derive@4.5.47
-	clap_lex@0.7.5
+	clap_builder@4.5.51
+	clap_complete@4.5.60
+	clap_derive@4.5.49
+	clap_lex@0.7.6
 	cli-log@2.1.0
 	clipboard-win@5.4.1
 	clru@0.6.2
@@ -72,8 +72,8 @@ CRATES="
 	crossbeam-utils@0.8.21
 	crossterm@0.29.0
 	crossterm_winapi@0.9.1
-	crypto-common@0.1.6
-	ctrlc@3.5.0
+	crypto-common@0.1.7
+	ctrlc@3.5.1
 	dasp_sample@0.11.0
 	derive_more@2.0.1
 	derive_more-impl@2.0.1
@@ -81,15 +81,14 @@ CRATES="
 	digest@0.10.7
 	directories-next@2.0.0
 	dirs-sys-next@0.1.2
-	dispatch@0.2.0
 	dispatch2@0.3.0
 	displaydoc@0.2.5
-	document-features@0.2.11
+	document-features@0.2.12
 	dunce@1.0.5
+	dyn-clone@1.0.20
 	either@1.15.0
 	encoding_rs@0.8.35
 	equivalent@1.0.2
-	erased-serde@0.4.8
 	errno@0.3.14
 	error-code@3.3.2
 	faster-hex@0.10.0
@@ -97,23 +96,23 @@ CRATES="
 	file-size@1.0.3
 	filetime@0.2.26
 	find-msvc-tools@0.1.4
-	flate2@1.1.4
+	flate2@1.1.5
 	fnv@1.0.7
 	form_urlencoded@1.2.2
 	fsevent-sys@4.1.0
-	generic-array@0.14.9
-	gethostname@1.0.2
+	generic-array@0.14.7
+	gethostname@1.1.0
 	getrandom@0.2.16
-	getrandom@0.3.3
+	getrandom@0.3.4
 	gix@0.72.1
-	gix-actor@0.35.4
-	gix-bitmap@0.2.14
-	gix-chunk@0.4.11
-	gix-command@0.6.2
+	gix-actor@0.35.6
+	gix-bitmap@0.2.15
+	gix-chunk@0.4.12
+	gix-command@0.6.3
 	gix-commitgraph@0.28.0
 	gix-config@0.45.1
-	gix-config-value@0.15.1
-	gix-date@0.10.5
+	gix-config-value@0.15.3
+	gix-date@0.10.7
 	gix-diff@0.52.1
 	gix-discover@0.40.1
 	gix-features@0.42.1
@@ -127,10 +126,10 @@ CRATES="
 	gix-object@0.49.1
 	gix-odb@0.69.1
 	gix-pack@0.59.1
-	gix-packetline@0.19.1
-	gix-path@0.10.20
+	gix-packetline@0.19.3
+	gix-path@0.10.21
 	gix-protocol@0.50.1
-	gix-quote@0.6.0
+	gix-quote@0.6.1
 	gix-ref@0.52.1
 	gix-refspec@0.30.1
 	gix-revision@0.34.1
@@ -138,12 +137,12 @@ CRATES="
 	gix-sec@0.11.0
 	gix-shallow@0.4.0
 	gix-tempfile@17.1.0
-	gix-trace@0.1.13
+	gix-trace@0.1.15
 	gix-transport@0.47.0
 	gix-traverse@0.46.2
 	gix-url@0.31.0
-	gix-utils@0.3.0
-	gix-validate@0.10.0
+	gix-utils@0.3.1
+	gix-validate@0.10.1
 	gix-worktree@0.41.0
 	glob@0.3.3
 	hash32@0.3.1
@@ -151,56 +150,56 @@ CRATES="
 	hashbrown@0.16.0
 	heapless@0.8.0
 	heck@0.5.0
-	home@0.5.11
+	home@0.5.12
 	iana-time-zone@0.1.64
 	iana-time-zone-haiku@0.1.2
-	icu_collections@2.0.0
-	icu_locale_core@2.0.0
-	icu_normalizer@2.0.0
-	icu_normalizer_data@2.0.0
-	icu_properties@2.0.1
-	icu_properties_data@2.0.1
-	icu_provider@2.0.0
+	icu_collections@2.1.1
+	icu_locale_core@2.1.1
+	icu_normalizer@2.1.1
+	icu_normalizer_data@2.1.1
+	icu_properties@2.1.1
+	icu_properties_data@2.1.1
+	icu_provider@2.1.1
 	idna@1.1.0
 	idna_adapter@1.2.1
-	indexmap@2.11.4
+	indexmap@2.12.0
 	inotify@0.11.0
 	inotify-sys@0.1.5
 	iq@0.4.0
 	is_executable@1.0.5
-	is_terminal_polyfill@1.70.1
+	is_terminal_polyfill@1.70.2
 	itertools@0.13.0
 	itoa@1.0.15
-	jiff@0.2.15
-	jiff-static@0.2.15
+	jiff@0.2.16
+	jiff-static@0.2.16
 	jiff-tzdb@0.1.4
 	jiff-tzdb-platform@0.1.3
 	jni@0.21.1
 	jni-sys@0.3.0
 	jobserver@0.1.34
-	js-sys@0.3.81
+	js-sys@0.3.82
 	kqueue@1.1.1
 	kqueue-sys@1.0.4
-	lazy-regex@3.4.1
-	lazy-regex-proc_macros@3.4.1
+	lazy-regex@3.4.2
+	lazy-regex-proc_macros@3.4.2
 	lazy_static@1.5.0
 	libc@0.2.177
 	libloading@0.8.9
 	libredox@0.1.10
 	libz-rs-sys@0.5.2
 	linux-raw-sys@0.11.0
-	litemap@0.8.0
-	litrs@0.4.2
+	litemap@0.8.1
+	litrs@1.0.0
 	lock_api@0.4.14
 	log@0.4.28
 	mach2@0.4.3
 	maybe-async@0.2.10
 	memchr@2.7.6
-	memmap2@0.9.8
+	memmap2@0.9.9
 	minimad@0.13.1
 	minimal-lexical@0.2.1
 	miniz_oxide@0.8.9
-	mio@1.0.4
+	mio@1.1.0
 	ndk@0.8.0
 	ndk-context@0.1.1
 	ndk-sys@0.5.0+25.2.9519653
@@ -211,8 +210,8 @@ CRATES="
 	notify-types@2.0.0
 	num-derive@0.4.2
 	num-traits@0.2.19
-	num_enum@0.7.4
-	num_enum_derive@0.7.4
+	num_enum@0.7.5
+	num_enum_derive@0.7.5
 	objc2@0.6.3
 	objc2-app-kit@0.3.2
 	objc2-core-foundation@0.3.2
@@ -223,8 +222,7 @@ CRATES="
 	oboe@0.6.1
 	oboe-sys@0.6.1
 	once_cell@1.21.3
-	once_cell_polyfill@1.70.1
-	ordered-float@2.10.1
+	once_cell_polyfill@1.70.2
 	parking_lot@0.12.5
 	parking_lot_core@0.9.12
 	paste@1.0.15
@@ -232,16 +230,18 @@ CRATES="
 	pkg-config@0.3.32
 	portable-atomic@1.11.1
 	portable-atomic-util@0.2.4
-	potential_utf@0.1.3
+	potential_utf@0.1.4
 	pretty_assertions@1.4.1
 	proc-macro-crate@3.4.0
-	proc-macro2@1.0.101
+	proc-macro2@1.0.103
 	proc-status@0.1.1
 	prodash@29.0.2
-	quote@1.0.41
+	quote@1.0.42
 	r-efi@5.3.0
 	redox_syscall@0.5.18
 	redox_users@0.4.6
+	ref-cast@1.0.25
+	ref-cast-impl@1.0.25
 	regex@1.12.2
 	regex-automata@0.4.13
 	regex-syntax@0.8.8
@@ -251,13 +251,14 @@ CRATES="
 	rustversion@1.0.22
 	ryu@1.0.20
 	same-file@1.0.6
+	schemars@1.1.0
+	schemars_derive@1.1.0
 	scopeguard@1.2.0
 	semver@1.0.27
 	serde@1.0.228
-	serde-untagged@0.1.9
-	serde-value@0.7.0
 	serde_core@1.0.228
 	serde_derive@1.0.228
+	serde_derive_internals@0.29.1
 	serde_json@1.0.145
 	serde_spanned@0.6.9
 	sha1@0.10.6
@@ -265,7 +266,7 @@ CRATES="
 	shell-words@1.1.0
 	shlex@1.3.0
 	signal-hook@0.3.18
-	signal-hook-mio@0.2.4
+	signal-hook-mio@0.2.5
 	signal-hook-registry@1.4.6
 	simd-adler32@0.3.7
 	smallvec@1.15.1
@@ -276,7 +277,7 @@ CRATES="
 	symphonia-bundle-mp3@0.5.5
 	symphonia-core@0.5.5
 	symphonia-metadata@0.5.5
-	syn@2.0.106
+	syn@2.0.110
 	synstructure@0.13.2
 	tempfile@3.23.0
 	termimad@0.34.0
@@ -285,7 +286,7 @@ CRATES="
 	thiserror@2.0.17
 	thiserror-impl@1.0.69
 	thiserror-impl@2.0.17
-	tinystr@0.8.1
+	tinystr@0.8.2
 	tinyvec@1.10.0
 	tinyvec_macros@0.1.1
 	toml@0.8.23
@@ -295,15 +296,13 @@ CRATES="
 	toml_edit@0.23.7
 	toml_parser@1.0.4
 	toml_write@0.1.2
-	typeid@1.0.3
 	typenum@1.19.0
 	unicode-bom@2.0.3
-	unicode-ident@1.0.19
-	unicode-normalization@0.1.24
+	unicode-ident@1.0.22
+	unicode-normalization@0.1.25
 	unicode-segmentation@1.12.0
 	unicode-width@0.1.14
 	unicode-width@0.2.2
-	unicode-xid@0.2.6
 	url@2.5.7
 	utf8_iter@1.0.4
 	utf8parse@0.2.2
@@ -311,15 +310,13 @@ CRATES="
 	vte@0.15.0
 	walkdir@2.5.0
 	wasi@0.11.1+wasi-snapshot-preview1
-	wasi@0.14.7+wasi-0.2.4
 	wasip2@1.0.1+wasi-0.2.4
-	wasm-bindgen@0.2.104
-	wasm-bindgen-backend@0.2.104
-	wasm-bindgen-futures@0.4.54
-	wasm-bindgen-macro@0.2.104
-	wasm-bindgen-macro-support@0.2.104
-	wasm-bindgen-shared@0.2.104
-	web-sys@0.3.81
+	wasm-bindgen@0.2.105
+	wasm-bindgen-futures@0.4.55
+	wasm-bindgen-macro@0.2.105
+	wasm-bindgen-macro-support@0.2.105
+	wasm-bindgen-shared@0.2.105
+	web-sys@0.3.82
 	winapi@0.3.9
 	winapi-i686-pc-windows-gnu@0.4.0
 	winapi-util@0.1.11
@@ -365,20 +362,20 @@ CRATES="
 	windows_x86_64_msvc@0.53.1
 	winnow@0.7.13
 	wit-bindgen@0.46.0
-	writeable@0.6.1
+	writeable@0.6.2
 	x11rb@0.13.2
 	x11rb-protocol@0.13.2
 	xterm-query@0.5.2
 	yansi@1.0.1
-	yoke@0.8.0
-	yoke-derive@0.8.0
+	yoke@0.8.1
+	yoke-derive@0.8.1
 	zerocopy@0.8.27
 	zerocopy-derive@0.8.27
 	zerofrom@0.1.6
 	zerofrom-derive@0.1.6
-	zerotrie@0.2.2
-	zerovec@0.11.4
-	zerovec-derive@0.11.1
+	zerotrie@0.2.3
+	zerovec@0.11.5
+	zerovec-derive@0.11.2
 	zlib-rs@0.5.2
 "
 
@@ -399,7 +396,7 @@ LICENSE+="
 SLOT="0"
 KEYWORDS="~amd64"
 
-RUST_MIN_VER="1.86.0"
+RUST_MIN_VER="1.88.0"
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
