@@ -6,97 +6,101 @@
 EAPI=8
 
 CRATES="
-	adler2@2.0.0
-	aho-corasick@1.1.3
-	autocfg@1.4.0
+	adler2@2.0.1
+	aho-corasick@1.1.4
+	autocfg@1.5.0
 	base64@0.21.7
 	binfarce@0.2.1
 	bitflags@1.3.2
-	bitflags@2.6.0
+	bitflags@2.10.0
+	bumpalo@3.19.0
 	byteorder@0.5.3
-	camino@1.1.9
-	cargo-platform@0.1.8
-	cargo_metadata@0.18.1
-	cfg-if@1.0.0
-	crc32fast@1.4.2
+	camino@1.2.1
+	cargo-platform@0.3.1
+	cargo_metadata@0.23.0
+	cfg-if@1.0.4
+	crc32fast@1.5.0
 	cyclonedx-bom@0.8.0
 	cyclonedx-bom-macros@0.1.0
-	deranged@0.3.11
-	dyn-clone@1.0.17
-	either@1.13.0
-	equivalent@1.0.1
-	errno@0.3.9
+	deranged@0.5.5
+	dyn-clone@1.0.20
+	env_home@0.1.0
+	equivalent@1.0.2
+	errno@0.3.14
 	fluent-uri@0.1.4
-	foldhash@0.1.3
-	getrandom@0.2.15
-	hashbrown@0.15.1
+	foldhash@0.1.5
+	getrandom@0.3.4
+	hashbrown@0.15.5
+	hashbrown@0.16.0
 	heck@0.5.0
 	hex@0.4.3
-	home@0.5.9
-	indexmap@2.6.0
-	itoa@1.0.13
+	indexmap@2.12.0
+	itoa@1.0.15
+	js-sys@0.3.82
 	leb128@0.2.5
-	libc@0.2.164
-	linux-raw-sys@0.4.14
-	memchr@2.7.4
-	miniz_oxide@0.8.0
+	libc@0.2.177
+	linux-raw-sys@0.11.0
+	memchr@2.7.6
+	miniz_oxide@0.8.9
 	num-conv@0.1.0
 	num-traits@0.2.19
-	object@0.36.5
-	once_cell@1.20.2
-	ordered-float@4.5.0
-	percent-encoding@2.3.1
+	object@0.37.3
+	once_cell@1.21.3
+	ordered-float@4.6.0
+	percent-encoding@2.3.2
 	pico-args@0.5.0
 	powerfmt@0.2.0
-	proc-macro2@1.0.92
-	purl@0.1.3
-	quote@1.0.37
-	regex@1.11.1
-	regex-automata@0.4.9
-	regex-syntax@0.8.5
-	rustix@0.38.41
-	rustversion@1.0.18
-	ryu@1.0.18
-	schemars@0.8.21
-	schemars_derive@0.8.21
-	semver@1.0.26
-	serde@1.0.217
-	serde_derive@1.0.217
+	proc-macro2@1.0.103
+	purl@0.1.6
+	quote@1.0.42
+	r-efi@5.3.0
+	regex@1.12.2
+	regex-automata@0.4.13
+	regex-syntax@0.8.8
+	rustix@1.1.2
+	rustversion@1.0.22
+	ryu@1.0.20
+	schemars@0.8.22
+	schemars_derive@0.8.22
+	semver@1.0.27
+	serde@1.0.228
+	serde_core@1.0.228
+	serde_derive@1.0.228
 	serde_derive_internals@0.29.1
-	serde_json@1.0.133
+	serde_json@1.0.145
 	serde_spanned@0.6.9
-	smallvec@1.13.2
-	spdx@0.10.7
+	smallvec@1.15.1
+	spdx@0.10.9
 	strum@0.26.3
 	strum_macros@0.26.4
-	syn@2.0.89
+	syn@2.0.109
 	thiserror@1.0.69
+	thiserror@2.0.17
 	thiserror-impl@1.0.69
-	time@0.3.36
-	time-core@0.1.2
-	time-macros@0.2.18
+	thiserror-impl@2.0.17
+	time@0.3.44
+	time-core@0.1.6
+	time-macros@0.2.24
 	toml@0.8.23
 	toml_datetime@0.6.11
 	toml_edit@0.22.27
 	topological-sort@0.2.2
-	unicode-ident@1.0.14
-	uuid@1.11.0
-	wasi@0.11.0+wasi-snapshot-preview1
+	unicode-ident@1.0.22
+	uuid@1.18.1
+	wasip2@1.0.1+wasi-0.2.4
+	wasm-bindgen@0.2.105
+	wasm-bindgen-macro@0.2.105
+	wasm-bindgen-macro-support@0.2.105
+	wasm-bindgen-shared@0.2.105
 	wasm-gen@0.1.4
 	wasmparser@0.207.0
-	which@4.4.2
-	windows-sys@0.52.0
-	windows-targets@0.52.6
-	windows_aarch64_gnullvm@0.52.6
-	windows_aarch64_msvc@0.52.6
-	windows_i686_gnu@0.52.6
-	windows_i686_gnullvm@0.52.6
-	windows_i686_msvc@0.52.6
-	windows_x86_64_gnu@0.52.6
-	windows_x86_64_gnullvm@0.52.6
-	windows_x86_64_msvc@0.52.6
-	winnow@0.7.11
-	xml-rs@0.8.23
+	which@8.0.0
+	windows-link@0.2.1
+	windows-sys@0.61.2
+	winnow@0.7.13
+	winsafe@0.0.19
+	wit-bindgen@0.46.0
+	xml-rs@0.8.28
 "
 
 inherit cargo
@@ -116,7 +120,7 @@ LICENSE+="
 SLOT="0"
 KEYWORDS="~amd64"
 
-RUST_MIN_VER="1.85.0"
+RUST_MIN_VER="1.86.0"
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
