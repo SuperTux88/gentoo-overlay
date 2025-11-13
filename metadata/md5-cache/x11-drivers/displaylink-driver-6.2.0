@@ -11,5 +11,5 @@ RDEPEND=>=x11-drivers/evdi-1.14.4 virtual/libusb:1
 RESTRICT=bindist mirror
 SLOT=0
 SRC_URI=https://www.synaptics.com/sites/default/files/exe_files/2025-09/DisplayLink%20USB%20Graphics%20Software%20for%20Ubuntu6.2-EXE.zip -> displaylink-driver-6.2.0.zip
-_eclasses_=toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0	systemd	a964c0cbe818b5729da1dbfcee5be861	udev	f3d9a4376ebd22131726a68e1a0a058f
+_eclasses_=toolchain-funcs	98d9f464d912ae6b7316fb8a3721f5db	systemd	a964c0cbe818b5729da1dbfcee5be861	udev	f3d9a4376ebd22131726a68e1a0a058f
 _md5_=21145c49384f985cc5aa6b25dc097faf

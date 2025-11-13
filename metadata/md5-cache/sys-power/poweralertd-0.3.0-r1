@@ -12,5 +12,5 @@ RDEPEND=sys-power/upower elogind? ( sys-auth/elogind ) systemd? ( sys-apps/syste
 REQUIRED_USE=?? ( elogind systemd )
 SLOT=0
 SRC_URI=https://git.sr.ht/~kennylevinsen/poweralertd/archive/0.3.0.tar.gz -> poweralertd-0.3.0.tar.gz
-_eclasses_=toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0	flag-o-matic	a7afe42e95fb46ce9691605acfb24672	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	b7eb9c3a6dc6662368634584aab44a2c	meson	99466844dd8d4fcfb07578a76f5a9922
+_eclasses_=toolchain-funcs	98d9f464d912ae6b7316fb8a3721f5db	flag-o-matic	a7afe42e95fb46ce9691605acfb24672	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	dbb8c4d794033ad7e7221eaf567a6c90	meson	99466844dd8d4fcfb07578a76f5a9922
 _md5_=f6051b97092e6a276fe3e6b7bc4e1a1b

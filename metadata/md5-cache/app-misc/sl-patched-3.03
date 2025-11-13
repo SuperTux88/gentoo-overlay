@@ -9,5 +9,5 @@ LICENSE=Toyoda
 RDEPEND=sys-libs/ncurses:= !app-misc/sl
 SLOT=0
 SRC_URI=http://www.tkl.iis.u-tokyo.ac.jp/~toyoda/sl/sl.tar -> sl-3.03.tar https://github.com/euank/docker-sl/raw/c605aaacb0078fecc864e5f1726d7bbea2d01623/sl5-1.patch https://gentoo.jss.hu/distfiles/sl.en.1.gz
-_eclasses_=toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0
+_eclasses_=toolchain-funcs	98d9f464d912ae6b7316fb8a3721f5db
 _md5_=cffc22dbededd65ce9ee4ab6c2f6e5c8

@@ -1,4 +1,4 @@
-BDEPEND=verify-sig? ( sec-keys/openpgp-keys-romkatv ) verify-sig? ( app-crypt/gnupg >=app-portage/gemato-20 )
+BDEPEND=verify-sig? ( sec-keys/openpgp-keys-romkatv ) verify-sig? ( || ( app-alternatives/gpg app-crypt/gnupg[-alternatives(-)] ) >=app-portage/gemato-20 )
 DEFINED_PHASES=compile install postinst prepare unpack
 DEPEND=app-shells/zsh app-shells/gitstatus[zsh-completion] nerd-fonts? ( || ( media-fonts/symbols-nerd-font media-fonts/meslo-nerd media-fonts/terminess-nerd media-fonts/nerdfonts ) )
 DESCRIPTION=A theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience.
@@ -11,5 +11,5 @@ LICENSE=MIT
 RDEPEND=app-shells/zsh app-shells/gitstatus[zsh-completion] nerd-fonts? ( || ( media-fonts/symbols-nerd-font media-fonts/meslo-nerd media-fonts/terminess-nerd media-fonts/nerdfonts ) )
 SLOT=0
 SRC_URI=https://github.com/romkatv/powerlevel10k/archive/refs/tags/v1.20.0.tar.gz -> powerlevel10k-1.20.0.tar.gz verify-sig? ( https://github.com/romkatv/powerlevel10k/releases/download/v1.20.0/powerlevel10k-1.20.0.tar.gz.asc )
-_eclasses_=eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	verify-sig	4e83419d7fb5d336f6a4de8193968319
+_eclasses_=eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	verify-sig	2cf23b136af9fd4c3fceadc34d0f98ad
 _md5_=256076d9952a6a04dc9b624b6393a9d7
