@@ -1,0 +1,15 @@
+BDEPEND=>=dev-build/cmake-3.12 dev-qt/qttools:6[linguist] app-alternatives/ninja >=dev-build/cmake-3.28.5
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
+DEPEND=>=dev-qt/qtbase-6.2.0:6[gui,opengl,widgets] >=sci-libs/fftw-3 virtual/libusb:1
+DESCRIPTION=DSO software for Hantek USB digital signal oscilloscopes 6022BE / BL
+EAPI=8
+HOMEPAGE=https://github.com/OpenHantek/OpenHantek6022
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=xdg cmake toolchain-funcs
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=>=dev-qt/qtbase-6.2.0:6[gui,opengl,widgets] >=sci-libs/fftw-3 virtual/libusb:1
+SLOT=0
+SRC_URI=https://github.com/OpenHantek/OpenHantek6022/archive/3.4.1-rc2.tar.gz -> openhantek6022-3.4.1_rc2.tar.gz
+_eclasses_=xdg-utils	42869b3c8d86a70ef3cf75165a395e09	xdg	3ef49a87c52c8b77c476351195dfe575	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	flag-o-matic	fd3558f73f6503093adee69adf41020d	multiprocessing	45d0620f25c2f063ad6276ecd9ed9399	ninja-utils	d063ea1900a793f93eb095010d6d9156	cmake	c54f532543a549f7318d6c49aaf8e953
+_md5_=fb244c459c0e9addce59c5c447c8b638
