@@ -1,8 +1,8 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-PYTHON_COMPAT=( python3_{10..13} )
+PYTHON_COMPAT=( python3_{11..14} )
 
 inherit gnome.org gnome2-utils meson python-single-r1 xdg
 
@@ -27,7 +27,7 @@ RDEPEND="${DEPEND}
 	x11-themes/sound-theme-freedesktop
 
 	>=dev-libs/glib-2.78:2
-	>=dev-libs/gobject-introspection-1.78.0
+	>=dev-libs/gobject-introspection-1.82.0-r2
 	>=gui-libs/gtk-4.10.0:4[introspection]
 	>=gui-libs/libadwaita-1.4.0:1[introspection]
 	>=dev-libs/libgudev-238[introspection]
