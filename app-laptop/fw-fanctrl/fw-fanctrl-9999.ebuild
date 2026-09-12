@@ -1,11 +1,11 @@
-# Copyright 2024-2025 Gentoo Authors
+# Copyright 2024-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 DISTUTILS_SINGLE_IMPL=1
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{12..14} python3_13t )
+PYTHON_COMPAT=( python3_{12..15} python3_13t )
 inherit distutils-r1
 
 inherit systemd
@@ -22,7 +22,7 @@ IUSE="no-battery-sensors"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DEPEND="
-	app-laptop/fw-ectool
+	app-laptop/framework_tool
 	dev-python/jsonschema
 	sys-apps/systemd
 "
@@ -34,7 +34,7 @@ RDEPEND="
 python_compile() {
 	distutils-r1_python_compile
 
-	for file in services/${PN}.service services/system-sleep/${PN}-suspend; do
+	for file in services/${PN}.service services/${PN}-suspend.service; do
 		echo "Templating ${file}"
 		sed -i -e "s#%DEFAULT_PYTHON_PATH%#/usr/bin/python3#" ${file} || die
 		sed -i -e "s#%PYTHON_SCRIPT_INSTALLATION_PATH%#/usr/bin/fw-fanctrl#" ${file} || die
@@ -47,11 +47,7 @@ python_install_all() {
 	distutils-r1_python_install_all
 
 	systemd_dounit "services/${PN}.service"
-
-	# strip EPREFIX from sleepdir
-	: "$(systemd_get_sleepdir)"
-	exeinto "${_#"${EPREFIX}"}"
-	doexe services/system-sleep/${PN}-suspend
+	systemd_dounit "services/${PN}-suspend.service"
 
 	insinto /etc/${PN}
 	doins src/fw_fanctrl/_resources/config.json
