@@ -9,6 +9,7 @@
 		<remote-id type="github">SuperCuber/dotter</remote-id>
 	</upstream>
 	<use>
+		<flag name="copy">Use the copy branch as the source</flag>
 		<flag name="scripting">Enable scripting support with rhai helpers</flag>
 		<flag name="watch">Enable watch sub-command</flag>
 	</use>

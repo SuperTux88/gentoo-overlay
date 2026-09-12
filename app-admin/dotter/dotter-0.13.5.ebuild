@@ -306,10 +306,17 @@ inherit cargo shell-completion optfeature
 
 DESCRIPTION="A dotfile manager and templater written in rust"
 HOMEPAGE="https://github.com/SuperCuber/dotter"
+
 SRC_URI="
-	https://github.com/SuperCuber/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
+	copy? (
+		https://github.com/SuperTux88/${PN}/archive/copy.tar.gz -> ${P}-copy.tar.gz
+	)
+	!copy? (
+		https://github.com/SuperCuber/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
+	)
 	${CARGO_CRATE_URIS}
 "
+S="${WORKDIR}/${P}"
 
 LICENSE="Unlicense"
 # Dependent crate licenses
@@ -319,7 +326,7 @@ LICENSE+="
 "
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="+scripting +watch"
+IUSE="+scripting +watch copy"
 
 RUST_MIN_VER="1.88.0"
 
@@ -327,6 +334,15 @@ RUST_MIN_VER="1.88.0"
 # update with proper path to binaries this crate installs, omit leading /
 QA_FLAGS_IGNORED="usr/bin/${PN}"
 QA_PRESTRIPPED="${QA_FLAGS_IGNORED}"
+
+src_unpack() {
+	cargo_src_unpack
+
+	if use copy; then
+		rmdir "${S}" || die
+		mv "${WORKDIR}/${PN}-copy" "${S}" || die
+	fi
+}
 
 src_configure() {
 	local myfeatures=(
