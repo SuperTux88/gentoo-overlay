@@ -157,9 +157,6 @@ The following packages are available in this overlay:
 * media-sound/mixxc
   * Minimalistic and flavorful volume mixer for widget enthusiasts
   * https://github.com/Elvyria/Mixxc
-* media-sound/pwvucontrol
-  * Pipewire Volume Control
-  * https://github.com/saivert/pwvucontrol
 * media-video/libwireplumber-compat
   * Compatibility version 4.x of libwireplumber
   * Dependency for pwvucontrol (wireplumber.rs)
