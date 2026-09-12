@@ -6,8 +6,8 @@ EAPI=8
 inherit systemd udev
 
 PV_MINOR=${PV%.*}
-PV_EXTRA="30"
-PV_DATE="2025-09"
+PV_EXTRA="48"
+PV_DATE="2026-06"
 UBUNTU_VERSION=1604
 
 DESCRIPTION="DisplayLink USB Graphics Software"
