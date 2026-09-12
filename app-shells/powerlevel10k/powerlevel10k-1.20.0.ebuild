@@ -1,4 +1,4 @@
-# Copyright 2022-2025 Gentoo Authors
+# Copyright 2022-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -6,7 +6,7 @@ EAPI=8
 VERIFY_SIG_OPENPGP_KEY_PATH=/usr/share/openpgp-keys/romkatv.asc
 inherit verify-sig
 
-DESCRIPTION="A theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience."
+DESCRIPTION="A theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience"
 HOMEPAGE="https://github.com/romkatv/powerlevel10k"
 SRC_URI="
 	https://github.com/romkatv/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
@@ -22,8 +22,6 @@ DEPEND="app-shells/zsh
 		app-shells/gitstatus[zsh-completion]
 		nerd-fonts? ( || (
 			media-fonts/symbols-nerd-font
-			media-fonts/meslo-nerd
-			media-fonts/terminess-nerd
 			media-fonts/nerdfonts
 		) )"
 RDEPEND="${DEPEND}"
