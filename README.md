@@ -133,9 +133,6 @@ The following packages are available in this overlay:
 * gui-libs/sway-systemd
   * Systemd integration for Sway session
   * https://github.com/alebastr/sway-systemd
-* media-fonts/terminess-nerd
-  * Nerd Font build of Terminus font
-  * https://github.com/ryanoasis/nerd-fonts
 * media-fonts/terminus-ttf
   * A TrueType version of Terminus Font
   * https://files.ax86.net/terminus-ttf/
