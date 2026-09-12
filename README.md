@@ -133,9 +133,6 @@ The following packages are available in this overlay:
 * gui-libs/sway-systemd
   * Systemd integration for Sway session
   * https://github.com/alebastr/sway-systemd
-* media-fonts/meslo-nerd
-  * Nerd Font build of Apple's Menlo font
-  * https://github.com/ryanoasis/nerd-fonts
 * media-fonts/terminess-nerd
   * Nerd Font build of Terminus font
   * https://github.com/ryanoasis/nerd-fonts
